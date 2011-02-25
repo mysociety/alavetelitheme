@@ -1,0 +1,19 @@
+Alavetelitheme
+==============
+
+This is a "hello world" type theme package for Alaveteli.
+
+The intention is to support simple overlaying of templates and
+resources without the need to touch the core Alaveteli software.
+
+Typical usage should be limited to:
+
+ * Putting CSS-based customisations in lib/views/general/custom_css.rhtml
+
+ * Creating your own versions of non-functional pages (like "about
+   us", at lib/views/help/about.rhtml -- and/or localised versions at
+   lib/views/help/about.es.rhtml)
+
+
+
+Copyright (c) 2011 Seb Bacon, released under the MIT license

@@ -1,0 +1,10 @@
+/tmp
+/log
+/coverage
+/sqlitedbs
+/cache
+/old-cache
+.*.swp
+*~
+*#*#
+TAGS
