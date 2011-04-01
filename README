@@ -14,6 +14,10 @@ Typical usage should be limited to:
    us", at lib/views/help/about.rhtml -- and/or localised versions at
    lib/views/help/about.es.rhtml)
 
+To install::
+ 
+  ./script/plugin install git://github.com/sebbacon/alavetelitheme.git
 
+Look in the lib/ folder of the plugin to see how the overrides happen.
 
-Copyright (c) 2011 Seb Bacon, released under the MIT license
+Copyright (c) 2011 mySociety, released under the MIT license
