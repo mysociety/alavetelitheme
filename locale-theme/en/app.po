@@ -1,0 +1,7 @@
+# Your theme's locale files will override the core locale files.  This
+# is a good place to put both translations specific to your theme, and
+# "translations" of the core English words (e.g. you might want to
+# call FOI "RTI" throughougout, like this:
+
+msgid "Make and browse Freedom of Information (FOI) requests"
+msgstr "Make and browse Right to Know (RTI) requests"

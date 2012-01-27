@@ -1,0 +1,9 @@
+<% @title = "Help out" %>
+
+<%= render :partial => 'sidebar' %>
+
+<h1>Help us!</h1>
+
+<p>This is a custom "help out" page, showing how you can add new pages to Alaveteli from a theme. There's no navigation to it, though!  You'd need to add that in your own custom <code>_sidebar.rhtml</code></p>
+
+
