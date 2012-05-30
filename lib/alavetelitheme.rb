@@ -16,12 +16,9 @@ end
 end
 
 # Monkey patch app code
-require 'controller_patches.rb'
-require 'model_patches.rb'
-require 'patch_mailer_paths.rb'
-
-# Extend routes
-require 'config/custom-routes.rb'
-
-# Plug theme-specific locale strings
-require 'gettext_setup.rb'
+for patch in ['controller_patches.rb', 
+              'model_patches.rb', 
+              'config/custom-routes.rb', 
+              'gettext_setup.rb']
+    require File.expand_path "../#{patch}", __FILE__
+end
