@@ -29,4 +29,4 @@ for patch in ['controller_patches.rb',
     require File.expand_path "../#{patch}", __FILE__
 end
 
-$alaveteli_route_extensions << 'config/custom-routes.rb'
+$alaveteli_route_extensions << 'custom-routes.rb'
