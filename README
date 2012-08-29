@@ -15,8 +15,8 @@ Typical usage should be limited to:
    lib/views/help/about.es.rhtml)
 
 To install::
- 
-  ./script/plugin install git://github.com/sebbacon/alavetelitheme.git
+
+  ./script/plugin install git://github.com/mysociety/alavetelitheme.git
 
 Look in the lib/ folder of the plugin to see how the overrides happen.
 
