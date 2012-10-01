@@ -80,7 +80,7 @@ use.</p>
 <p>Requests are sometimes not delivered because they are quietly removed by
 "spam filters" in the IT department of the authority. Authorities can make
 sure this doesn't happen by asking their IT departments to "whitelist"
-any email from <strong>@<%= MySociety::Config.get('INCOMING_EMAIL_DOMAIN', 'localhost') %></strong>.
+any email from <strong>@<%= Configuration::incoming_email_domain %></strong>.
 If you <a href="/help/contact">ask us</a> we will resend any request,
 and/or give technical details of delivery so an IT department can chase
 up what happened to the message.
