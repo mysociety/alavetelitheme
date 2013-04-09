@@ -6,5 +6,5 @@ Rails.configuration.to_prepare do
     # Override mailer templates with theme ones. Note doing this in a before_filter,
     # as we do with the controller paths, doesn't seem to have any effect when
     # running in production
-    ActionMailer::Base.view_paths.unshift File.join(File.dirname(__FILE__), "views")
+    ActionMailer::Base.prepend_view_path File.join(File.dirname(__FILE__), "views")
 end
