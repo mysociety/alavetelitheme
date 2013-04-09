@@ -11,4 +11,8 @@ Rails.configuration.to_prepare do
             @say_something = "Greetings friend"
         end
     end
+    HelpController.class_eval do
+        def help_out
+        end
+    end
 end
