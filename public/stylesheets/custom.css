@@ -48,11 +48,9 @@ color:#92B3FF;
 
 h1,h2,h3 {
  font-family:Trebuchet, Trebuchet MS, Helvetica, sans-serif;
- color:#555;
 }
 
 h1 {
-color:#93278F;
 font-size:42px;
 font-family:'DeliciousBold', Arial, sans-serif;
 }
@@ -63,13 +61,11 @@ font-size:1.4em;
 
 
 h2,dt {
-color:#93278F;
 font-family:'DeliciousBold', Arial, sans-serif;
 font-weight:400;
 }
 
 h3 {
-color:#6B3C6A;
 font-family:'DeliciousRoman', Arial, sans-serif;
 font-weight:400;
 }
