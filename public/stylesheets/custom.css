@@ -191,13 +191,16 @@ font-family:Georgia;
 
 
 #ui-datepicker-div.ui-widget {
+color:#000000;
 font-family:Arial, sans-serif;
-color:#93278F;
 }
 
 #ui-datepicker-div .ui-datepicker-header,#ui-datepicker-div .ui-widget-header {
-color:#93278F;
 font-family:'DeliciousRoman';
+}
+
+#ui-datepicker-div .ui-icon-circle-triangle-w, #ui-datepicker-div .ui-icon-circle-triangle-e {
+background-image:url("/stylesheets/admin-theme/images/ui-icons_222222_256x240.png");
 }
 
 #ui-datepicker-div .ui-state-default:hover {
