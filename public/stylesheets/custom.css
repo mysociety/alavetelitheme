@@ -76,7 +76,7 @@ color:#93278F;
 
 p.subtitle {
 font-family:'DeliciousRoman';
-color:#6B3C7F;
+color:#000000;
 }
 
 .request_listing span.head a,.user_listing span.head a,.body_listing span.head a {
@@ -91,11 +91,11 @@ color:#444;
 }
 
 .feed_link a,.act_link a,#header_right > a {
-color:#6B3C6A;
+color:#000000;
 }
 
 #request_form label,label.form_label,span#to_public_body {
-color:#6B3C6A;
+color:#000000;
 }
 
 span#to_public_body {
@@ -111,7 +111,7 @@ background-color:#d0d0d0;
 background:url(/images/stripes.png);
 border:1px solid #DEBEDD;
 font-family:'DeliciousRoman', Arial, sans-serif;
-color:#6B3C6A;
+color:#000000;
 }
 
 div.comment_in_request {
@@ -138,7 +138,7 @@ div.frontpage-box {
 background:url(/images/stripes.png);
 border:1px solid #DEBEDD;
 font-family:'DeliciousRoman', Arial, sans-serif;
-color:#6B3C6A;
+color:#000000;
 }
 
 
@@ -151,13 +151,13 @@ background:url(/images/stripes-70-light.png);
 }
 
 #frontpage_splash {
-background:url(/images/flying-computer.png) no-repeat 175px bottom;
+background:none;
 }
 
 #frontpage_splash h1 {
 font-family:'DeliciousRoman', Arial, sans-serif;
 font-size:39px;
-color:#6B3C6A;
+color:#000000;
 font-weight:400;
 margin:0 0 20px;
 }
@@ -174,13 +174,13 @@ font-family:Georgia;
 font-style:italic;
 font-weight:400;
 font-size:25px;
-color:#6B3C6A;
+color:#000000;
 }
 
 #frontpage_splash h2 {
 font-size:26px;
 font-weight:400;
-color:#6B3C6A;
+color:#000000;
 font-family:'DeliciousRoman', Arial, sans-serif;
 }
 
@@ -191,7 +191,8 @@ font-family:'DeliciousBold', Arial, sans-serif;
 }
 
 #frontpage_splash h2 span {
-color:#6B3C6A;
+color:#000000
+;
 font-style:italic;
 font-size:19px;
 font-family:Georgia;
@@ -253,11 +254,11 @@ padding:0;
 
 div.correspondence p.preview_subject {
 font-family:'DeliciousRoman';
-color:#6B3C7F;
+color:#000000;
 }
 
 div.correspondence p.preview_subject strong {
-color:#6B3C7F;
+color:#000000;
 }
 
 div.controller_help h1 a,#logged_in_bar a,#logged_in_bar a:visited,#stepwise_make_request strong {
