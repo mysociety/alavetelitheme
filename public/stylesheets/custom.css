@@ -31,7 +31,11 @@ color:#fff;
 }
 
 #topnav ul li a {
-color:#6B3C6A !important;
+color:#FE0000 !important;
+}
+
+#navigation_search input#navigation_search_button {
+ background-image: url(/alavetelitheme/images/search-button.png);
 }
 
 #logged_in_bar {
