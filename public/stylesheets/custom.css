@@ -217,14 +217,13 @@ background:#FE0000;
 color:#FFF;
 }
 
-p.public-body-name-prefix {
-color:#DEB4D8;
-}
-
 #other-country-notice a {
 color:#FFF;
 }
 
+#follow_count {
+    color: #FE0000;
+}
 
 #link_box {
 position:absolute;
