@@ -234,13 +234,13 @@ z-index:999;
 opacity:0.9px;
 border-radius:6px;
 -moz-border-radius:6px;
-border:1px solid #93278F;
+border:1px solid #FE0000;
 display:none;
 padding:5px;
 }
 
 #link_box .close-button {
-background-color:#93278F;
+background-color:#FE0000;
 margin-left:15px;
 padding:0;
 }
