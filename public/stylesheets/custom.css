@@ -10,6 +10,10 @@ background-color:#F0F0F0;
 background:url(/images/stripes.png);
 }
 
+#banner_inner a#logo {
+    top: 15px;
+}
+
 #topnav {
 font-family:'DeliciousRoman', Arial, sans-serif;
 }
