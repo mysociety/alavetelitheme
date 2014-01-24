@@ -7,7 +7,7 @@ font-family:Arial, sans-serif;
 background-repeat:no-repeat;
 background-position:center top;
 background-color:#F0F0F0;
-background:url(/images/stripes.png);
+background:image-url('stripes.png');
 }
 
 #topnav {
@@ -82,7 +82,7 @@ font-weight:400;
 }
 
 .request_listing span.desc {
-background:url(/images/quote-marks.png) no-repeat;
+background:image-url('quote-marks.png') no-repeat;
 color:#444;
 }
 
@@ -104,14 +104,14 @@ color:#93278F;
 
 #stepwise_make_request {
 background-color:#d0d0d0;
-background:url(/images/stripes.png);
+background:image-url('stripes.png');
 border:1px solid #DEBEDD;
 font-family:'DeliciousRoman', Arial, sans-serif;
 color:#6B3C6A;
 }
 
 div.comment_in_request {
-background:url(/images/stripes-70-light2.png);
+background:image-url('stripes-70-light2.png');
 border-color:#5F5F5F;
 border-style:dotted;
 border-width:1px;
@@ -131,7 +131,7 @@ font-family:'DeliciousRoman', Arial, sans-serif;
 }
 
 div.frontpage-box {
-background:url(/images/stripes.png);
+background:image-url('stripes.png');
 border:1px solid #DEBEDD;
 font-family:'DeliciousRoman', Arial, sans-serif;
 color:#6B3C6A;
@@ -139,15 +139,15 @@ color:#6B3C6A;
 
 
 div.correspondence,div.comment_in_request {
-background:url(/images/stripes-70.png);
+background:image-url('stripes-70.png');
 }
 
 div.outgoing.correspondence {
-background:url(/images/stripes-70-light.png);
+background:image-url('stripes-70-light.png');
 }
 
 #frontpage_splash {
-background:url(/images/flying-computer.png) no-repeat 175px bottom;
+background:image-url('flying-computer.png') no-repeat 175px bottom;
 }
 
 #frontpage_splash h1 {
@@ -262,13 +262,13 @@ color:#93278F;
 
 
 body.front {
-background:url(../images/home-grad.png) repeat-x 0 160px;
+background:image-url('home-grad.png') repeat-x 0 160px;
 }
 
 .request_listing span.desc {
-background:url(../images/quote-marks.png) no-repeat;
+background:image-url('quote-marks.png') no-repeat;
 }
 
 #frontpage_examples .excerpt {
-background:url(../images/quote-marks.png) no-repeat;
+background:image-url('quote-marks.png') no-repeat;
 }
