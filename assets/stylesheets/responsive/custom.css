@@ -335,7 +335,9 @@ a.link_button_green_large {
 #banner {
 
   /* locale border */
-   border-top: 4px solid $locale-bg;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    border-top: 4px solid $locale-bg;
+  }
 
   /* Hide the greeting on smaller devices */
   .greeting {
@@ -366,6 +368,9 @@ a.link_button_green_large {
   #logo_wrapper{
       @media(max-width: $main_menu-mobile_menu_cutoff ){
         padding: 0.5em 0 0.5em 0.9375em;
+        img {
+          height: 30px;
+        }
       }
 
   }
