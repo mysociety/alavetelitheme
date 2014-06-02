@@ -7,7 +7,9 @@ $body-bg: #f7eee1;
 $button-bg: #8b9352;
 $button-color: #fff;
 $heading-color: #3d3b38;
-$font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-family: "Roboto Slab", Georgia, serif;
+$sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font-family: "Bitter", Georgia, serif;
 
 $main_menu-bg: #2c5d74;
 $main_menu-search_text: #333;
@@ -106,6 +108,7 @@ a{
 
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
+  font-family: $heading-font-family;
 }
 
 /* Let h1s be a little smaller on small screens */
@@ -317,7 +320,7 @@ a.link_button_green_large {
   }
   a {
     @extend .menu-item;
-
+    font-family: $sans-serif-font-family;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       padding: 0.5em 0.2em;
       background-color: $locale-bg;
@@ -383,6 +386,7 @@ a.link_button_green_large {
   background-color: $footer-bg;
   color: $footer-color;
   padding: 2em 4em;
+  font-family: $sans-serif-font-family;
   a {
     text-decoration: none;
     color: $footer-link-color;
