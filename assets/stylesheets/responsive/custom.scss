@@ -9,7 +9,6 @@ $button-color: #fff;
 $heading-color: #3d3b38;
 $font-family: "Roboto Slab", Georgia, serif;
 $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$heading-font-family: "Bitter", Georgia, serif;
 
 $main_menu-bg: #2c5d74;
 $main_menu-search_text: #333;
@@ -108,7 +107,7 @@ a{
 
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
-  font-family: $heading-font-family;
+  font-family: $font-family;
 }
 
 /* Let h1s be a little smaller on small screens */
