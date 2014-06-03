@@ -312,9 +312,12 @@ a.link_button_green_large {
 
 #user_locale_switcher {
   @include respond-min( $main_menu-mobile_menu_cutoff ){
+    background-image: image-url('locale-switcher.png');
+    background-repeat: no-repeat;
+    background-position: 0.5em 0.5em;
     background-color: $locale-bg;
     border-radius: 0 0 1.25em 1.25em;
-    padding: 0 0.8em;
+    padding: 0 1em 0 2.5em;
     right: 15px;
   }
   a {
