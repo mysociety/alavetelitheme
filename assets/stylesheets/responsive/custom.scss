@@ -371,13 +371,18 @@ a.link_button_green_large {
 
   /* Pad evenly top and bottom on smaller devices */
   #logo_wrapper{
-      @media(max-width: $main_menu-mobile_menu_cutoff ){
-        padding: 0.5em 0 0.5em 0.9375em;
-        img {
-          height: 30px;
-        }
-      }
 
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include lte-ie7 {
+        padding-bottom: 1.5em;
+      }
+    }
+    @media(max-width: $main_menu-mobile_menu_cutoff ){
+      padding: 0.5em 0 0.5em 0.9375em;
+      img {
+        height: 30px;
+      }
+    }
   }
 
 }
