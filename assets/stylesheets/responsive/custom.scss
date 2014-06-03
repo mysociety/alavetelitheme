@@ -438,6 +438,9 @@ div.correspondence {
 
 a.link_to_this {
   background-image: image-url('link-icon.png');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+     background-image:image-url('link-icon@2.png');
+  }
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 70% 70%;
