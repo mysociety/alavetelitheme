@@ -374,7 +374,7 @@ a.link_button_green_large {
 
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       @include lte-ie7 {
-        padding-bottom: 1.5em;
+        padding-bottom: 2em;
       }
     }
     @media(max-width: $main_menu-mobile_menu_cutoff ){
