@@ -1,0 +1,557 @@
+$locale-bg: #333;
+$locale-color: #999999;
+$locale-hover-color: #fff;
+$link-color: #336C86;
+$body-font-color: #333;
+$body-bg: #f7eee1;
+$button-bg: #8b9352;
+$button-color: #fff;
+$heading-color: #3d3b38;
+$font-family: "Roboto Slab", Georgia, serif;
+$sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$main_menu-bg: #2c5d74;
+$main_menu-search_text: #333;
+$main_menu-link_text: #fff;
+$main_menu-search_bg: #67848c;
+$banner_bg: #354c56;
+$submenu-color: #9aa6ab;
+
+$main_menu-link_bg: #2c5d74;
+$main_menu-active_link_text: $main_menu-link_bg;
+$main_menu-active_link_bg: $body-bg;
+
+$footer-bg: #333;
+$footer-color: #ccc;
+$footer-link-color: #fff;
+
+$incoming-correspondence-color: #8c6673;
+$outgoing-correspondence-color: #6d918d;
+$correspondence-bg: #fff;
+$correspondence-shadow: #d3d3d3;
+
+$status-success: #aab26e;
+$status-failure: #ff7959;
+$status-pending: #e69e5d;
+
+$notice-bg: #D7DABD;
+$notice-border: #839310;
+
+$error-bg: #ebc3a9;
+$error-border: #a1432c;
+
+$action-bg: #edd3b8;
+$action-border: #d69457;
+
+/* Mixin styles */
+
+/* Hide text when it's replaced by an image */
+.image-replacement {
+  overflow: hidden;
+  text-indent: 150%;
+  white-space: nowrap;
+}
+
+/* General styling of nav menu items */
+.menu-item {
+  text-decoration: none;
+  background-color: $main_menu-link_bg;
+  color: transparentize($main_menu-link_text, 0.2);
+  @include ie8 {
+    color: $main_menu-link_text;
+  }
+  transition: background-color 0.5s ease-out;
+
+  &:hover{
+      background-color: darken($main_menu-bg, 5%);
+      color: transparentize($main_menu-link_text, 0);
+  }
+
+}
+
+/* Selected menu item */
+.selected-menu-item {
+  font-weight: bold;
+  color: $main_menu-active_link_text;
+  background-color: $main_menu-active_link_bg;
+  &:hover{
+      background-color: $main_menu-active_link_bg;
+  }
+}
+
+/* Styling if not part of the main menu on larger screens */
+.sub-menu-item {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    background-color: $banner_bg;
+    color: $submenu-color;
+    &:hover{
+        background-color: $banner_bg;
+        color: transparentize($main_menu-link_text, 0);
+    }
+  }
+}
+
+/* General styles */
+body{
+  background-color: $body-bg;
+  color: $body-font-color;
+}
+
+.entirebody {
+  font-family: $font-family;
+}
+
+a{
+  color: $link-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+  font-family: $font-family;
+}
+
+/* Let h1s be a little smaller on small screens */
+@media( max-width: $main_menu-mobile_menu_cutoff ){
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* Square corners for text type inputs */
+form input[type="text"],
+form input[type="password"],
+form input[type="search"],
+form input[type="email"],
+form input[type="url"],
+form input[type="tel"],
+form input[type="number"] {
+    border-radius: 0;
+    background-color: $main_menu-link_text;
+    /* Set a fixed height for text inputs in older IE 8 */
+    @include ie8{
+        height: 2.3125em;
+    }
+    /* Do the same in px for IE < 7 */
+    @include lte-ie7{
+        height: 22px;
+    }
+}
+
+input.use-datepicker[type=text] {
+  width: 130px;
+  background:image-url('calendar.png') no-repeat 100px 5px $main_menu-link_text;
+}
+
+form input[type=submit], a.link_button_green, a.link_button_green_large {
+  text-decoration: none;
+  color: $button-color;
+  background-color: darken($button-bg, 5%);
+  display: inline-block;
+  cursor: pointer;
+  /* This style is expressed for all borders to avoid triggering an IE9 border rendering bug */
+  border-style: solid; border-color: darken($button-bg, 15%); border-width: 0 0 4px 0;
+  border-radius: 0;
+  padding: 3px 7px;
+  line-height: normal;
+  font-size: 1.1rem;
+  /* Same height as form elements */
+  height: 2.3125rem;
+  @include ie8 {
+     height: 2.3125em;
+     font-size: 1.1em;
+   }
+  vertical-align: top;
+  &:focus, &:hover{
+    text-decoration: none;
+    background-color: darken($button-bg, 10%);
+    border-bottom: 4px solid darken($button-bg, 20%);
+  }
+}
+
+@include lte-ie7{
+
+  a.link_button_green, a.link_button_green_large {
+    padding: 0 7px;
+    height: 31px;
+    font-weight: bold;
+  }
+
+  form input[type=submit] {
+    padding: 0;
+    height: 35px;
+  }
+}
+
+a.link_button_green_large {
+  font-size: 2.2rem;
+  height: inherit;
+  padding: 0 10px;
+  @include ie8 {
+     font-size: 2.2em;
+     height: 66px;
+   }
+   @include lte-ie7 {
+     height: 50px;
+   }
+}
+
+/* Popups */
+
+.popup {
+  background-color: $notice-bg;
+  border: 3px solid $notice-border;
+}
+
+
+/* Header */
+
+#banner_inner {
+  background-color: $banner-bg;
+}
+
+#topnav {
+  background-color: $main_menu-bg;
+}
+
+#navigation{
+  border-bottom: none;
+  a {
+    @extend .menu-item;
+  }
+  /* Show which section is currently selected */
+  li.selected a{
+    @extend .selected-menu-item;
+  }
+
+  /* Vertically align the search box */
+  #navigation_search{
+    input{
+      margin-top:0.313em;
+      margin-bottom:0.313em;
+      height: 1.875em;
+      @include ie8 {
+        height: 33px;
+        font-size: 1.1em;
+        padding: 0;
+      }
+    }
+  }
+
+  /* Vertically align the label image for older IE*/
+  @include ie8 {
+    img {
+      margin-top: 0.626em;
+    }
+  }
+
+  #navigation_search_button{
+    background-color: mix($main_menu-search_bg, $main_menu-bg, 50%);
+    border: none;
+    transition: all 0.3s ease-out;
+    color: $main_menu-search_text;
+    border-radius: 0;
+    font-size: inherit;
+    &:focus{
+        background-color: $main_menu-link_text;
+    }
+  }
+}
+
+.greeting {
+  color: $body-bg;
+}
+/* Notices, errors */
+
+#notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests {
+  border-top: 10px solid;
+  font-size: 1.2em;
+  border-radius: 0;
+  margin:1em 0;
+  padding: 1.5em;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom:0;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+#notice, #request_header_text {
+  background-color: $notice-bg;
+  border-color: $notice-border;
+}
+
+#error, .errorExplanation, #hidden_request {
+  background-color: $error-bg;
+  border-color: $error-border;
+
+}
+
+.undescribed_requests {
+  background-color: $action-bg;
+  border-color: $action-border;
+}
+
+/* Logged and local options act like submenus */
+#logged_in_bar{
+  a {
+    @extend .menu-item;
+    @extend .sub-menu-item;
+    font-weight: normal;
+  }
+  #logged_in_links {
+    top: 4em;
+    .greeting, a {
+      font-weight: normal;
+    }
+  }
+}
+
+#user_locale_switcher {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    background-image: image-url('locale-switcher.png');
+    background-repeat: no-repeat;
+    background-position: 0.5em 0.5em;
+    background-color: $locale-bg;
+    border-radius: 0 0 1.25em 1.25em;
+    padding: 0 1em 0 2.5em;
+    right: 15px;
+  }
+  a {
+    @extend .menu-item;
+    font-family: $sans-serif-font-family;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      padding: 0.5em 0.2em;
+      background-color: $locale-bg;
+      border-radius: 0 0 1.25em 1.25em;
+      color: $locale-color;
+      &:hover{
+          background-color: $locale-bg;
+          color: $locale-hover-color;
+      }
+    }
+  }
+}
+
+
+#banner {
+
+  /* locale border */
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    border-top: 4px solid $locale-bg;
+  }
+
+  /* Hide the greeting on smaller devices */
+  .greeting {
+    display: none;
+  }
+
+  .rsp_menu_button{
+    position: absolute;
+    top: 0;
+    /* 15px for margin minus 9 for background offset*/
+    right: 4px;
+    @extend .image-replacement;
+    background-image: image-url('hamburger.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    background-size: 28px 26px;
+    width: 44px;
+    height: 38px;
+    padding: 0;
+    /* Make sure clickable area covers image */
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* Pad evenly top and bottom on smaller devices */
+  #logo_wrapper{
+
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include lte-ie7 {
+        padding-bottom: 2em;
+      }
+    }
+    @media(max-width: $main_menu-mobile_menu_cutoff ){
+      padding: 0.5em 0 0.5em 0.9375em;
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+}
+
+
+/* Footer */
+#footer {
+  background-color: $footer-bg;
+  color: $footer-color;
+  padding: 2em 4em;
+  font-family: $sans-serif-font-family;
+  a {
+    text-decoration: none;
+    color: $footer-link-color;
+  }
+  ul > li:nth-child(4n+1) {
+    padding-top: 0;
+  }
+
+  ul li {
+    padding: 1em 0 0 0 ;
+    text-align: bottom;
+  }
+}
+
+/* Request page */
+div.correspondence {
+  background-color: $correspondence-bg;
+  padding-bottom: 0.5em;
+  .event_actions {
+    margin-bottom: 0;
+  }
+}
+
+.incoming.correspondence {
+  border: none;
+  border-top: 8px solid $incoming-correspondence-color;
+  box-shadow: 0 3px 3px $correspondence-shadow;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  @include ie8 {
+    font-size: 0.9em;
+  }
+  a.link_to_this {
+    background-color: $incoming-correspondence-color;
+  }
+}
+
+.outgoing.correspondence {
+  border: none;
+  border-top: 8px solid $outgoing-correspondence-color;
+  box-shadow: 0 3px 3px $correspondence-shadow;
+  a.link_to_this {
+    background-color: $outgoing-correspondence-color;
+  }
+}
+
+.describe_state_form input[type="radio"] + label {
+  display:inline;
+}
+
+a.link_to_this {
+  background-image: image-url('link-icon.png');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+     background-image:image-url('link-icon@2.png');
+  }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+#link_box {
+  font-family: $font-family;
+  border-radius: 0;
+  border: 1px solid $heading-color;
+  .close-button {
+    background-color: $correspondence-bg;
+    float: right;
+  }
+}
+
+.describe_state_form {
+  padding: 0;
+
+  form{
+    background-color: $action-bg;
+    border-color: $action-border;
+    h2 {
+      margin-top: 0;
+    }
+    hr {
+      border-color: $action-border;
+    }
+  }
+}
+
+/* Status lines and icons */
+.icon_waiting_classification,
+.icon_waiting_response,
+.icon_waiting_clarification,
+.icon_requires_admin,
+.icon_waiting_response_overdue,
+.icon_gone_postal,
+.icon_error_message,
+.icon_internal_review,
+.icon_user_withdrawn {
+  color: $status-pending;
+}
+
+.icon_attention_requested,
+.icon_not_held,
+.icon_waiting_response_very_overdue,
+.icon_failed,
+.icon_rejected {
+  color: $status-failure;
+}
+
+.icon_successful,
+.icon_partially_successful {
+  color: $status-success;
+}
+
+/* Attachments*/
+
+.view_html_prefix {
+  font-family: $font-family;
+  background-color: $banner-bg;
+  color: transparentize($main_menu-link_text, 0.2);
+  @include ie8 {
+    color: $main_menu-link_text;
+  }
+  a {
+    color: $main_menu-link_text;
+  }
+  .view_html_logo, .view_html_description {
+    padding-top: 1em;
+  }
+}
+
+/* User page */
+#user_photo_on_profile {
+  img, #set_photo {
+    margin-top:0.5em;
+  }
+}
+
+/* Help pages */
+
+dt {
+  color: $heading-color;
+  font-weight: 700;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    font-size: 2em;
+    line-height: 1.1em;
+  }
+}
+
+/* Front page */
+/* Drop the extract indentation on small screens */
+#frontpage_examples .excerpt {
+    padding: 0.2em 0 0 0;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      padding: 0 0 0 2em;
+    }
+}
+
