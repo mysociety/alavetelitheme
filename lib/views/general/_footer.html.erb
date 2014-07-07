@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="grid-container">
+    <div class="grid-70">
+      <nav class="nav-main nav-footer">
+        <%= render 'general/topnav' %>
+
+        <%# TODO: Create translation for 'Search authorities' %>
+        <%= link_to 'Search authorities', admin_body_list_path if is_admin? %>
+      </nav>
+      <nav class="nav-main nav-footer nav-footer-sub">
+        <%= link_to 'Request guide ', '' %>
+        <%= link_to 'About', '' %>
+        <%= link_to 'News & Stats', '' %>
+        <%= link_to 'Help &  FAQ', '' %>
+        <%= link_to 'Privacy Policy', '' %>
+        <%= link_to 'Contact', help_contact_path %>
+      </nav>
+    </div>
+    <div class="grid-30">
+      <h4 class="search-title">STAY UPDATED</h4>
+      <%= form_tag class: 'search-form' do %>
+        <%= email_field_tag 'email', '', class: 'search-field', placeholder: 'Your e-mail address', pattern: "[^ @]*@[^ @]*" %>
+        <%= submit_tag '→', class: 'search-submit' %>
+      <% end %>
+    </div>
+    <div class="grid-100 footer-credits">
+      <div class="grid-70 footer-rights">
+        <%= image_tag 'footer-banner.jpg', class: 'footer-banner' %>
+        This website is powered by <%= link_to 'Alaveteli', 'http://alaveteli.org/', class: 'brand-link', target: '_blank'  %>. Other original content was developed by Access Info
+        Europe and is made public under a Creative Commons Attribution, Share Alike licence.
+      </div>
+      <div class="grid-30 text-justify">
+        <%= link_to image_tag('mysociety.jpg'), 'https://www.mysociety.org', target: '_blank', class: "pull-left" %>
+        <%= link_to image_tag('rational.jpg'),  'http://rationalinternational.net/', target: '_blank', class: "pull-right" %>
+      </div>
+    </div>
+  </div>
+</footer>

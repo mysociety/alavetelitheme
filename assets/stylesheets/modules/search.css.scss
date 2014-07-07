@@ -1,0 +1,39 @@
+.search-form {
+
+}
+
+.search-title {
+  margin: 0;
+  padding: 0 0 15px 0 ;
+  font-size: 15px;
+}
+
+.search-field {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 79%;
+  height: 36px;
+  float: left;
+  text-indent: 10px;
+  border: solid 1px #bebebe;
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+}
+
+input[type=submit].search-submit {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 20%;
+  height: 38px;
+  float: left;
+  font-size: 25px;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  background: #d1233e;
+
+  &:hover {
+    background: #2C5E3D;
+  }
+}

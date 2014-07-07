@@ -5,7 +5,9 @@
       <%= render 'general/orglink' %>
     </div>
     <div class="grid-35">
-       <%= render 'general/topnav' %>
+      <nav class="nav-main">
+        <%= render 'general/topnav' %>
+      </nav>
     </div>
     <div class="grid-30 mobile-grid-5">
       <%= form_tag search_redirect_path, method: :post, class: 'form-search' do %>

@@ -1,5 +1,3 @@
 <%# TODO: Refactoring condition %>
-<nav class="nav-main">
-  <%= link_to _("Make a request"), select_authority_path, id: 'make-request-link', class: (params[:controller] == 'request' && ['new', 'select_authority'].include?(params[:action]) ? 'selected' : '' )%>
-  <%= link_to _("View requests"), request_list_successful_path, class: (params[:controller] == 'request' && !['new', 'select_authority'].include?(params[:action]) ? 'selected' : '') %>
-</nav>
+<%= link_to _("Make a request"), select_authority_path, id: 'make-request-link', class: (params[:controller] == 'request' && ['new', 'select_authority'].include?(params[:action]) ? 'selected' : '' )%>
+<%= link_to _("View requests"), request_list_successful_path, class: (params[:controller] == 'request' && !['new', 'select_authority'].include?(params[:action]) ? 'selected' : '') %>
