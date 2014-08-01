@@ -1,0 +1,62 @@
+msgid "Contact us"
+msgstr "Пишете ни"
+
+msgid "Contact an authority to get official information"
+msgstr "Свържете се с орган, за да поискате официална информация"
+
+msgid "<a href=\"{{url}}\">Go here</a> to make a request, in public, for information from public authorities."
+msgstr "Продължете към <a href=\"{{url}}\">тази страница</a>, за да създадете Заявление по публичен начин, за информация от публични органи."
+
+msgid "Asking for private information about yourself?"
+msgstr "Искате информация лично за Вас?"
+
+msgid "Please read our <a href=\"{{url}}\">help page</a>."
+msgstr "Молим, прочетете за това на <a href=\"{{url}}\">тази страница</a>."
+
+msgid "Contact the {{site_name}} team"
+msgstr "Връзка с екипа на {{site_name}}"
+
+msgid "Please read the <a href="{{url}}">help page</a> first, as it may answer your question quicker."
+msgstr "Молим, прочетете първо страниците ни с <a href="{{url}}">помощна информация</a>, тъй като там може по-бързо да намерите отговор на Вашия въпрос."
+
+msgid "We'd love to hear how you've found using this site. Either fill in this form, or send an email to <a href=\"mailto:{{mail}}\">{{mail}}</a>"
+msgstr "Ние ще се радваме да узнаем доколко Вие сте удовлетворени от ползването на този сайт. Можете да попълните тази форма или да ни изпратите имейл на <a href=\"mailto:{{mail}}\">{{mail}}</a>"
+
+msgid "We are a <strong>charity</strong> and not part of the Government."
+msgstr "Ние сме <strong>фондация</strong> и не сме част от Правителството."
+
+msgid "Your name"
+msgstr "Вашето име"
+
+msgid "Your email"
+msgstr "Вашата поща"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Message to website"
+msgstr "Съобщение към сайта"
+
+msgid "Include link to request"
+msgstr "Добави връзка към заявление"
+
+msgid "Include link to authority"
+msgstr "Добави връзка към орган"
+
+msgid "We can only help you with <strong>technical problems</strong>, or questions about Freedom of Information."
+msgstr "Ние можем да Ви помогнем само за <strong>технически проблеми</strong>, или по въпроси относно Достъпа до Обществена Информация."
+
+msgid "Send message to the charity"
+msgstr "Изпращане съобщение до фондацията"
+
+msgid "Sending..."
+msgstr "Изпращане..."
+
+msgid "we run this site, not the Government!"
+msgstr "ние управляваме този сайт, а не Правителството!"
+
+msgid "or"
+msgstr "или"
+
+msgid "sign in"
+msgstr "влез в системата"
