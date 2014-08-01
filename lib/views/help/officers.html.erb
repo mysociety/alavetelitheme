@@ -1,4 +1,4 @@
-<% @title = "FOI officer questions" %>
+<% @title = _("FOI officer questions") %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
@@ -7,46 +7,56 @@
 
 <dl>
 
-<dt id="top">I just got here from bottom of an FOI request, what is going on? <a href="#top">#</a> </dt>
+<dt id="top">Оказах се тук, след като последвах връзка
+от заявление за Достъп до Информация. Защо? <a href="#top">#</a> </dt>
 
-<dd><p><%= site_name %> is a service run by a charity. It helps ordinary members
-of the public make FOI requests, and easily track and share the responses.</p>
+<dd><p><%= site_name %> е услуга, предоставяна от
+благотворителна организация в помощ на хората, желаещи да създават
+заявления за ДдИ, позволяваща им лесно проследяване и
+споделяне на получените отговори.</p>
 
-<p>The FOI request you received was made by someone using <%= site_name %>. You can
-simply reply to the request as you would any other request from an individual.
-The only difference is that your response will be automatically published on
-the Internet.
+<p>Заявлението за ДдИ, което сте получили е създадено от
+потребител, използващ Alaveteli България. Вие може просто да отговорите
+на Заявлението, както бихте го направили, когато е от конкретен човек.
+Единствената разлика е, че отговорът Ви автоматично ще бъде публикуван
+в Интернет.
 </p>
-<p>If you have privacy or other concerns, please read the answers below.
-You might also like to read the <a
-href="/help/about">introduction to <%= site_name %></a> to find out more about what
-the site does from the point of view of a user. You can also search the
-site to find the authority that you work for, and view the status of
-any requests made using the site.
+<p>Ако имате опасения относно лични данни или други подобни,
+молим, прочетете отговорите по-долу.
+Също така, може да прочетете <a href="/help/about">Въведението към
+<%= site_name %></a>, за да научите повече за сайта от гледната
+точка на потребителите. Вие може също да потърсите в сайта
+организацията, в която работите и да видите състоянието на други
+заявления, направени чрез сайта.</p>
 
-<p>Finally, we welcome comments and
-thoughts from FOI officers, please <a href="/help/contact">get in touch</a>.
+<p>И накрая, ние сме особено благодарни за всякакви коментари
+и мнения от служители, обработващи заявления за ДдИ. Молим, <a href="/help/contact">пишете ни</a>.
 </p>
 </dd>
 
-<dt id="responses">Why are you publishing responses to FOI requests? <a href="#responses">#</a> </dt>
+<dt id="responses">Защо Вие публикувате отговори към
+Заявления за ДдИ? <a href="#responses">#</a> </dt>
 
-<dd>We think there are lots of benefits. Most importantly it will encourage the
-public to be more interested and involved in the work of government. We
-also hope that it will reduce the number of duplicate requests on any
-subject that a public body will receive. Given that Freedom of Information
-responses contain public information, which anybody could easily request
-again from the public authority, we think there should be no reason not to
-publish it widely.
+<dd>Ние смятаме, че от това има много ползи. Основната е, че
+това насърчава хората да се интересуват повече и да са съпричастни с
+работата на правителството. Също така, ние се надяваме, че ще се намали
+броя на дублираните заявления на дадена тема, отправени към публичен
+орган. Тъй като отговорите на Заявленията съдържат публична информация,
+която всеки може лесно да поиска отново от публичния орган, ние
+смятаме, че не би трябвало да има причина, поради която те да не може
+да се публикуват.
 </dd>
 
-<dt id="realpeople">Are the people making requests real people? <a href="#realpeople">#</a> </dt>
+<dt id="realpeople">Реални личности ли са хората,
+създаващи заявленията? <a href="#realpeople">#</a> </dt>
 
-<dd>Yes. For the purposes of keeping track of responses we use
-computer-generated email addresses for each request. However, before
-they can send a request, each user must register on the site with a
-unique email address that we then verify. You can search this site and
-find a page listing all requests that each person has made.
+<dd>Да. С цел проследяване на отговорите, ние използваме
+компютърно генериран имейл адрес за всяко Заявление. Но от друга
+страна, преди&nbsp;да може да създаде заявление, потребителят
+на сайта трябва да се регистрира с уникален, собствен имейл адрес,
+чиято валидност ние проверяваме. Вие може да намерите в сайта страница,
+на която са изредени всички заявления, създадени от който и да е
+потребител.
 </dd>
 
 <dt id="email_only">An email isn't a sufficient address for an FOI request! <a href="#email_only">#</a> </dt>
@@ -56,96 +66,121 @@ find a page listing all requests that each person has made.
 in the context of requests made via <%= site_name %>.
 </dd>
 
-<dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
+<dt id="vexatious">Не сте ли вие авторите на повечето
+досадни заявления? <a href="#vexatious">#</a> </dt>
 
-<dd><p><%= site_name %> is not making any requests. We are sending requests on
-behalf of our users, who are real people making the requests. </p>
-<p>Look at it like this - if lots of different people made requests from
-different Hotmail email addresses, then you would not think that Microsoft were
-making vexatious requests. It is exactly the same if lots of requests are made
-via <%= site_name %>. Moreover, since all requests are public it is much easier
-for you to see if one of our users is making vexatious requests. </p>
-<p>If that isn't enough for you, the
-<a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives some guidance on the matter.</p>
+<dd><p><%= site_name %> не създава заявления. Ние изпращаме
+заявления от името на нашите потребители, които са реални хора,
+създаващи заявленията. </p>
+<p>Приемете го така - ако много от заявленията, които
+получавате, са изпратени от хора с електронни пощи в Gmail, не би могло
+да се мисли, че Google създават досадни заявления. Същото е, ако
+повечето заявления са направени чрез Alaveteli България. Още повече, че
+тъй като всички заявления са публични, за Вас ще е много лесно да
+откриете кой от потребителите ни създава досадни заявления. </p>
+<p>(За UK: Ако това не Ви е достатъчно,
+<a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter
+from the ICO to Rother District Council</a> дава някои напътствия
+в материята.)</p>
 </dd>
 
-<dt id="spam_problems">I can see a request on <%= site_name %>, but we never got it by email!<a href="#spam_problems">#</a> </dt>
+<dt id="spam_problems">Аз виждам заявлението в <%= site_name %>, но ние никога не сме го получавали с имейл!<a href="#spam_problems">#</a> </dt>
 
-<dd><p>If a request appears on the site, then we have attempted to send it to
-the authority by email. Any delivery failure messages will automatically
-appear on the site. You can check the address we're using with the "View FOI
-email address" link which appears on the page for the authority. <a
-href="/help/contact">Contact us</a> if there is a better address we can
-use.</p>
-<p>Requests are sometimes not delivered because they are quietly removed by
-"spam filters" in the IT department of the authority. Authorities can make
-sure this doesn't happen by asking their IT departments to "whitelist"
-any email from <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
-If you <a href="/help/contact">ask us</a> we will resend any request,
-and/or give technical details of delivery so an IT department can chase
-up what happened to the message.
+<dd><p>Ако виждате заявление в нашия сайт, то ние сме направили
+опит да го изпратим на органа с имейл. Каквито и да са съобщения за
+грешка при доставянето, автоматично се появяват на сайта. Може да
+проверите адреса, на който&nbsp;изпращаме заявления до органа като
+използвате
+връзката "Имейл адрес за ДдИ", появяваща се на страницата на органа в
+нашия сайт. <a href="/help/contact">Пишете
+ни</a> ако има по-подходящ адрес, който можем да ползваме.</p>
+<p>Понякога заявленията не се доставят, понеже тихомълком се
+премахват от "спам филтри", инсталирани и поддържани от IT отдела на
+органа. Органите биха могли да направят така, че това да не се случва,
+като поискат от IT отдела си да включат в т.нар.&nbsp;"бели
+списъци"
+имейлите, пристигащи от <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
+Ако <a href="/help/contact">поискате</a>
+ние ще Ви изпратим отново което и да е заявление, и/или ще Ви
+предоставим технически данни за изпращането му, така че IT отделът да
+може да проследи какво се е случило с писмото.
 </p>
-<p>Finally, you can respond to any request from your web browser, without
-needing any email, using the "respond to request" link at the bottom of
-each request page.
+<p>И накрая, Вие може да отговорите на което и да е заявление
+през
+Вашия уеб браузър, без какъвто и да е имейл, като използвате връзката
+"Отговаряне на заявлението" долу в страницата на&nbsp;заявлението.
 </dd>
 
-<dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
+<dt id="days">Как изчислявате срока за отговор, показван
+в страниците на заявленията?<a href="#days">#</a> </dt>
 
 <dd>
-<p>The Freedom of Information Act says:</p>
+<p>Според Закона за достъп до обществена информация:</p>
 
-<blockquote><p>A public authority must comply with section 1(1) <strong>promptly</strong> and
-in any event not later than the twentieth working day following the date of
-receipt.</p></blockquote>
+<blockquote><p>Заявленията за предоставяне на достъп до обществена
+информация се разглеждат <strong>във възможно най-кратък срок</strong>,
+но не по-късно
+от 14 дни след датата на регистриране.</p></blockquote>
 
-<p>The nerdy detail of exactly how weekends are counted, and what happens if
-the request arrives out of office hours, is just that - detail. What matters
-here is that the law says authorities must respond <strong>promptly</strong>.</p>
+<p>Това, дали се броят почивните дни, или пък какво се
+случва, ако Заявлението е пристигнало в извън работното време на
+служителите,&nbsp;са подробности. Това, което е важно тук е, че
+законът изисква органът да отговори <strong>в най-кратък срок</strong>.</p>
 
-<p>If you've got a good reason why the request is going to take a while to
-process, requesters find it really helpful if you can send a quick email with a
-sentence or two saying what is happening. </p>
+<p>Ако има основателна причина, поради която обработката на
+заявлението ще отнеме повече време, ще бъде полезно да изпратите на
+заявителя кратък имейл с едно-две изречения, с които да му обясните
+какво се случва.</p>
 
-<p>FOI officers often have to do a lot of <strong>hard work</strong> to answer
-requests, and this is hidden from the public. We think it would help everyone
-to have more of that complexity visible.</p>
+<p>Служителите, отговарящи на заявления за ДдИ често
+трябва да свършат <strong>доста и обемна работа</strong>,
+но това остава скрито за публиката. Ние смятаме, че ще е полезно за
+всички, ако е известна по-голяма част от сложността на процедурата.</p>
 
 </dd>
 
-<dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
+<dt id="days2">И все пак, как Вие изчислявате крайния
+срок?<a href="#days2">#</a> </dt>
 
 <dd>
 
-<p>Please read the answer to the previous question first. Legally, authorities
-must respond <strong>promptly</strong> to FOI requests. If they fail to do that,
-it is best if they show the hard work they are doing by explaining what is
-taking the extra time to do.
+<p>Молим, първо прочетете отговора на предишния въпрос.
+По закон, органите трябва да отговарят на заявления за ДдИ във <strong>възможно
+най-кратък срок</strong>. Ако те не успеят да го направят,
+най-добре е да покажат трудността на работата, която вършат, като
+обяснят причината за забавянето.
 </p>
 
-<p>That said, <%= site_name %> does show the maximum legal deadline
-for response on each request. Here's how we calculate it.</p>
+<p><%= site_name %> показва максимално допустимия срок за
+отговор на всяко заявление. Ето как го изчисляваме:</p>
 
 <ul>
 
-<li>If the day we deliver the request by email is a working day, we count that
-as "day zero", even if it was delivered late in the evening. Days end at
-midnight.  We then count the next working day as "day one", and so on up to
-<strong>20 working days</strong>.</li>
+<li>Ако денят, в който изпращаме Заявлението по имейл е
+работен, ние го броим за "ден нула", дори и да е изпратен късно
+вечерта. Денят завършва в полунощ. Следващият работен ден ние броим за
+"ден едно"и така нататък до <strong>14 работни дни</strong>.</li>
 
-<li>If the day the request email was delivered was a non-working day, we count
-the next working day as "day one". Delivery is delivery, even if it happened on
-the weekend. Some authorities <a href="http://www.whatdotheyknow.com/request/policy_regarding_body_scans#incoming-1100">disagree with this</a>, our lawyer disagrees with them. </li>
+<li>Ако денят, в който имейлът е доставен е
+почивен, ние броим следващия работен ден за "ден едно". Доставката си е
+доставка, даже и ако се е случила в почивен ден. Някои органи <a href="http://www.whatdotheyknow.com/request/policy_regarding_body_scans#incoming-1100">не
+са съгласни с това</a> (за UK), а нашите адвокати не са съгласни
+с тях.</li>
 
-<li>Requesters are encouraged to mark when they have <strong>clarified</strong>
-their request so the clock resets, but sometimes they get this wrong. If you
-see a problem with a particular request, let us know and we'll fix it.</li>
+<li>На заявителите се казва да отбележат деня, в <strong>който
+поясняват</strong> заявленията си, понеже срокът започва да тече
+отначало, но понякога те грешно разбират това. Ако Вие виждате проблем
+с конкретно заявление, уведомете ни, за да го отстраним.</li>
 </ul>
 
-<p>The date thus calculated is shown on requests with the text "By law,
-Liverpool City Council should normally have responded by...". There is only
+<p>Така изчислена, датата се показва на заявлението с текста:
+"По закон,
+Министерството на образованието и науката би трябвало да отговори до
+...". There is
+only
 one case which is not normal, see the next question about
-<a href="#public_interest_test">public interest test time extensions</a>.
+<a href="#public_interest_test">public interest test
+time extensions</a>.
 </p>
 
 <p>Schools are also a special case, which <%= site_name %> displays differently.
@@ -195,42 +230,50 @@ of the UK Act through Parliament).
 </p>
 </dd>
 
-<dt id="large_file">How can I send a large file, which won't go by email?<a href="#large_file">#</a> </dt>
+<dt id="large_file">Как мога да изпратя голям файл,
+който не би могъл да мине чрез имейл?<a href="#large_file">#</a> </dt>
 
-<dd>Instead of email, you can respond to a request directly from your web
-browser, including uploading a file. To do this, choose "respond to request" at
-the bottom of the request's page. <a href="/help/contact">Contact us</a> if it
-is too big for even that (more than, say, 50Mb).
+<dd>Вместо чрез имейл, Вие можете да отговорите на заявление
+директно от Вашия уеб четец, включително и да качите файл. За да го
+направите, изберете "отговор на заявлението" в края на страницата на
+заявлението. <a href="/help/contact">Пишете
+ни</a>, ако файлът е голям даже и за този начин (да речем,
+по-голям от 50Mb).
 </dd>
 
-<dt id="names">Why do you publish the names of civil servants and the text of emails? <a href="#names">#</a> </dt>
+<dt id="names">Защо Вие публикувате имената на държавни
+служители и текста на имейли? <a href="#names">#</a> </dt>
 
-<dd>We consider what officers or servants do in the course of their employment
-to be public information. We will only remove content in exceptional
-circumstances, see our <a href="/help/privacy#takedown">take down policy</a>.
+<dd>Ние считаме, че това, което ръководителите и служителите
+правят в работно време, е публична информация. Ние премахваме
+съдържание само при изключителни обстоятелства, вижте нашата <a href="/help/privacy#takedown">политика
+за премахване на данни</a>.
 </dd>
 
-<dt id="mobiles">Do you publish email addresses or mobile phone numbers? <a href="#mobiles">#</a> </dt>
+<dt id="mobiles">Публикувате ли имейл адреси или
+телефонни номера? <a href="#mobiles">#</a> </dt>
 
-<dd><p>To prevent spam, we automatically remove most emails and some mobile numbers from
-responses to requests.  Please <a href="/help/contact">contact us</a> if we've
-missed one.
-For technical reasons we don't always remove them from attachments, such as certain PDFs.</p>
-<p>If you need to know what an address was that we've removed, please <a
-  href="/help/contact">get in touch with us</a>. Occasionally, an email address
-forms an important part of a response and we will post it up in an obscured
-form in an annotation.
+<dd><p>За да избегнем спам, ние автоматично премахваме повечето
+имейл адреси и някои мобилни номера от отговорите на заявления. Молим <a href="/help/contact">пишете ни</a>
+ако сме пропуснали нещо. По технически причини, ние не можем винаги да
+премахваме такива данни от приложени файлове, като например от PDF-и.</p>
+<p>Ако желаете да знаете кой е адреса, който сме премахнали,
+молим, <a href="/help/contact">пишете
+ни</a>. Понякога имейл адресът е важна част от отговора и ние го
+публикуваме в прикрита форма, в коментар.</p>
 </dd>
 
-<dt id="copyright"><a name="commercial"></a>What is your policy on copyright of documents?<a href="#copyright">#</a> </dt>
+<dt id="copyright"><a name="commercial"></a>Каква
+е Вашата политика за авторско право върху документите?<a href="#copyright">#</a> </dt>
 
-<dd>Our Freedom of Information law is "applicant blind", so anyone in the
-world can request the same document and get a copy of it.
-
-If you think our making a document available on the internet infringes your
-copyright, you may <a href="/help/contact">contact us</a> and ask us
-to take it down.  However, to save tax payers' money by preventing duplicate
-requests, and for good public relations, we'd advise you not to do that.
+<dd>Our Freedom of Information law is "applicant blind", така
+че, всеки по света може да поиска същия документ и да получи копие от
+него. Ако Вие считате, че с публикуването на документ в Интернет, ние
+нарушаваме Ваши авторски права, можете <a href="/help/contact">да се свържете
+с нас</a> и да поискате да го премахнем. Все пак, за да спестим
+напразно изразходване на парите на данъкоплатците за дублирани
+заявления и за добри връзки с обществеността, ние Ви съветваме
+да не го правите.
 </dd>
 
 </dl>
@@ -238,8 +281,8 @@ requests, and for good public relations, we'd advise you not to do that.
 
 </dl>
 
-<p><strong>If you haven't already</strong>, read <a href="/help/about">the introduction</a> --&gt;
-<br><strong>Otherwise</strong>, the <a href="/help/credits">credits</a> or the <a href="/help/api">programmers API</a> --&gt;
+<p><strong>Ако все още не сте</strong>, прочетете <a href="/help/about">въведението</a> --&gt;
+<br><strong>Или пък</strong>, страниците <a href="/help/credits">Заслуги</a> или <a href="/help/api">За разработчици</a> --&gt;
 
 <div id="hash_link_padding"></div>
 

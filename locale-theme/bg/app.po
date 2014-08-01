@@ -63,3 +63,6 @@ msgstr "влез в системата"
 
 msgid "Your privacy"
 msgstr "Личните Ви данни"
+
+msgid "FOI officer questions"
+msgstr "Въпроси от служители, обработващи заявления за ДдИ"
