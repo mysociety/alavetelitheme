@@ -60,3 +60,6 @@ msgstr "или"
 
 msgid "sign in"
 msgstr "влез в системата"
+
+msgid "Your privacy"
+msgstr "Личните Ви данни"

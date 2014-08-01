@@ -1,4 +1,4 @@
-<% @title = "Your privacy" %>
+<% @title = _("Your privacy") %>
 
 <%= render :partial => 'sidebar' %>
 
@@ -7,90 +7,117 @@
 
 <dl>
 
-<dt id="email_address">Who gets to see my email address? <a href="#email_address">#</a> </dt>
+<dt id="email_address">Кой може да вижда моя имейл адрес? <a href="#email_address">#</a> </dt>
 
-<dd><p>We will not disclose your email address to anyone unless we are obliged to by law,
-or you ask us to. This includes the public authority that you are sending a
-request to.  They only get to see an email address
-@<%= AlaveteliConfiguration::incoming_email_domain %> which is specific to that request.  </p>
-<p>If you send a message to another user on the site, then it will reveal your
-email address to them. You will be told that this is going to happen.</p>
+<dd><p>Ние няма да разкрием имейл адреса Ви на никого, освен ако
+не сме задължени по силата на закон, или Вие не поискате да го
+направим. Това включва публичния орган, на който изпращате Заявление.
+Те ще получат само специален за това Заявление
+@<%= AlaveteliConfiguration::incoming_email_domain %> имейл адрес.</p>
+<p>Ако Вие изпратите съобщение към друг потребител на сайта,
+той ще узнае имейл адреса Ви. Вие ще бъдете предупреден, че това ще се
+случи.</p>
 </dd>
 
-<dt id="nasty_spam">Will you send nasty, brutish spam to my email address? <a href="#nasty_spam">#</a> </dt>
-<dd>Nope. After you sign up to <%= site_name %> we will only send you emails
-relating to a request you made, an email alert that you have signed up for,
-or for other reasons that you specifically authorise. We will never give or
-sell your email addresses to anyone else, unless we are obliged to by law, or
-you ask us to.
+<dt id="nasty_spam">Ще изпращате ли брутално досаден
+спам към моя имейл адрес? <a href="#nasty_spam">#</a> </dt>
+<dd>Никога. След като се регистрирате в Alaveteli България,
+ние
+ще Ви изпращаме единствено имейли, свързани със заявлението, което сте
+направили, съобщение, уведомяващо Ви за регистрацията,
+или за други неща, за които конкретно сте ни разрешили. Ние никога не
+ще предоставим или продадем имейл адреса Ви на който и да е, освен ако
+не сме задължени от закон, или ако Вие не поискате да го направим.
 </dd>
 
-<dt id="public_request">Why will my name and my request appear publicly on the site? <a href="#public_request">#</a> </dt>
+<dt id="public_request">Защо моето име и заявлението ми
+ще се появят публично на сайта? <a href="#public_request">#</a> </dt>
 
 <dd>
-<p>We publish your request on the Internet so that anybody can read it and
-make use of the information that you have found. We do not normally delete
-requests (<a href="#delete_requests">more details</a>).
+<p>Ние публикуваме Вашето заявление в Интернет, за да може
+който и да
+е, да го прочете и да използва информацията, която сте получили.
+Обикновено, ние не изтриваме заявления (<a href="#delete_requests">още
+за това</a>).
 </p>
 <p>
-Your name is tangled up with your request, so has to be published as well.
-It is only fair, as we're going to publish the name of the civil servant who
-writes the response to your request.  Using your real name also helps people
-get in touch with you to assist you with your research or to campaign with you.
+Името Ви е вписано в Заявлението, така че трябва също да
+бъде публикувано. Това е справедливо, тъй като ние ще публикуваме и
+името на държавния служител, който пише отговора на Вашето Заявление.
+Използването на истинското Ви име, също така, улеснява хората да се
+свържат с Вас, за да ви подпомогнат в разследването или в усилията Ви.
 </p>
-<p>By law, you must use your real name for the request to be a valid Freedom of
-Information request. See the next question for alternatives if you do not want
-to publish your full name.
+<p>По закон, Вие трябва да използвате истинското си име, за
+да бъде Заявлението Ви за Достъп до Информация валидно. Вижте следващия
+въпрос за възможностите в случай, че не искате да публикувате
+истинското си име.
 </p>
 </dd>
 
-<dt id="real_name">Can I make an FOI request using a pseudonym? <a href="#real_name">#</a> </dt>
+<dt id="real_name">Мога ли да отправя Заявление за ДдИ
+като използвам псевдоним? <a href="#real_name">#</a> </dt>
 
 
 <dd>
-<p>Technically, you must use your real name for your request to be a valid Freedom of Information request in law. See this
-<a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/name_of_applicant_fop083_v1.pdf">guidance from the Information Commissioner</a> (January 2009).
+<p>Технически, Вие трябва да използвате истинското си име, за
+да бъде Заявлението Ви за Достъп до Информация валидно. Според
+чл.25 в Закона за достъп до обществена информация, заявления, в които
+липсват трите имена (или наименование и седалище ако е
+организация) и адрес за кореспонденция на заявителя, се оставят БЕЗ
+разглеждане.
 </p>
 
-<p>However, the same guidance also says it is good practice for the public
-authority to still consider a request made using an obvious pseudonym.
-You should refer to this if a public authority refuses a request because you
-used a pseudonym.</p>
+<p>Във Великобритания няма толкова строги ограничения, както
+ще видите от тези напътствия (за UK): <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/name_of_applicant_fop083_v1.pdf">guidance
+from the Information Commissioner</a> (January 2009) и текста
+по-надолу.</p>
 
-<p>Be careful though, even if the authority follows this good practice, the
-pseudonym will probably make it impossible for you to complain to the
-Information Commissioner later about the handling of your request.
+<p>В тези напътствия се казва, че добра практика за
+публичния орган ще е да отговаря и на заявления, очевидно подписани с
+псевдоним. Вие може да посочите това ако публичен орган отхвърли
+заявление, понеже сте използвали псевдоним.
 </p>
 
-<p>There are several good alternatives to using a pseudonym.</p>
+<p>От друга страна, даже и ако органът спазва тази добра
+практика, псевдонимът вероятно ще Ви попречи, ако решите да се оплачете
+пред по-висшестоящ орган, относно обработката на Заявлението Ви.</p>
+
+<p>Ето няколко добри алтернативи в използването на псевдоним,
+като някои от тях са подходящи и за прилагане и в България.
+</p>
 
 <ul>
-<li>Use a different form of your name. The guidance says
-that "Mr Arthur Thomas Roberts" can make a valid request as "Arthur Roberts",
-"A. T. Roberts", or "Mr Roberts", but <strong>not</strong> as "Arthur" or "A.T.R.".
+<li>Използване
+на различна форма на Вашето име. В напътствията (за UK) се посочва, че
+"Димитър Кирилов Петров" може да отправи валидно заявление като
+"Димитър Петров", "Д. К. Петров", или "Г-н Петров", но <strong>не</strong>
+като "Димитър" или "Д.К.П.".
 </li>
-<li>Women may use their maiden name.</li>
-<li>In most cases, you may use any name by which you are "widely known and/or
-is regularly used".
-<li>Use the name of an organisation, the name of a company, the trading name of
-a company, or the trading name of a sole trader.
-<li>Ask someone else to make the request on your behalf.
-<li>You may, if you are really stuck, ask us to make the request on
-your behalf. Please <a href="/help/contact">contact us</a> with
-a good reason why you cannot make the request yourself and cannot
-ask a friend to. We don't have the resources to do this for everyone.
+<li>Омъжените жени могат да ползват моминското си име.</li>
+<li>В повечето случаи Вие можете да използвате името, с
+което сте "широко известен и/или използвате обикновено". (за UK)</li>
+<li>Да използвате име на организация, името на фирма,
+търговското име на фирма, или търговското име на едноличен търговец.</li>
+<li>Да поискате някой друг да направи заявлението от Ваше
+име.</li>
+<li>Вие можете, ако действително нямате други варианти, да
+помолите ние да направим заявлението от Ваше име. Молим <a href="/bg/help/contact">свържете се с нас</a>,
+като посочите добра причина, поради която не можете да отправите
+заявлението от Ваше име и не можете да помолите приятел да го направи.
+Ние не разполагаме с ресурсите да правим това за всеки.</li>
 </ul>
 
-<p>Please do not try to impersonate someone else.</p>
+<p>Молим, не опитвайте да се представите за някой друг.</p>
 
 </dd>
 
-<dt id="full_address">They've asked for my postal address! <a href="#full_address">#</a> </dt>
+<dt id="full_address">Те поискаха моя пощенски адрес! <a href="#full_address">#</a> </dt>
 
 <dd>
-<p>If a public authority asks you for your full, physical address, reply to them saying
-that section 8.1.b of the FOI Act asks for an "address for correspondence",
-and that the email address you are using is sufficient.
+<p>Ако публичният орган поиска пълният Ви, физически адрес,
+отговорете им че в член 8.1.b of the FOI Act относно "адрес за
+кореспонденция",
+се казва, че имейл адреса, който ползвате, е напълно достатъчен.
 </p>
 <p>
 The Ministry of Justice has <a href="http://www.justice.gov.uk/guidance/foi-procedural-what.htm">guidance
@@ -107,78 +134,91 @@ address should be treated as the return address."
 </p>
 </dd>
 
-<dt id="postal_answer">No no, they need a postal address to send a paper response! <a href="#postal_answer">#</a> </dt>
+<dt id="postal_answer">Не, те искат пощенския Ви адрес,
+за да изпратят писмен отговор по пощата! <a href="#postal_answer">#</a> </dt>
 
 <dd>
-<p>If an authority only has a paper copy of the information that you want,
-they may ask you for a postal address. To start with, try persuading them
-to scan in the documents for you. You can even <a href="http://www.whatdotheyknow.com/request/car_parking_charges_policy_and_a#outgoing-532">offer to gift them a scanner</a>, which in that particular case
-embarrassed the authority into finding one they had already.</p>
+<p>Ако органът разполага само с копие на хартия на
+информацията, която искате,
+те може да поискат пощенския Ви адрес. Като начало, пробвайте да ги
+убедите да Ви сканират документа. Вие може даже да им <a href="http://www.whatdotheyknow.com/request/car_parking_charges_policy_and_a#outgoing-532">предложите
+да им подарите</a> скенер, което вероятно ще ги накара да си
+спомнят, че вече имат такъв.</p>
 
-<p>If that doesn't work, and you want to provide your postal address privately
-in order to receive the documents, mark your request as "They are going to reply by post", and it will
-give you an email address to use for that purpose.</p>
+<p>Ако това не проработи и Вие решите да им предоставите
+пощенския си адрес, за да получите документите, отбележете Заявлението
+си с "Те ще отговорят по пощата" и ще получите имейл адрес, на който де
+изпратите Вашия пощенски адрес.</p>
 </dd>
 
-<dt id="delete_requests">Can you delete my requests, or alter my name?  <a href="#delete_requests">#</a> </dt>
+<dt id="delete_requests">Може ли да изтриете моите
+заявления, или да промените името ми?  <a href="#delete_requests">#</a> </dt>
 
 <dd>
 
-<p><%= site_name %> is a permanent, public archive of Freedom of
-Information requests. Even though you may not find the response to
-a request useful any more, it may be of interest to others. For this
-reason, we will not delete requests.
+<p><%= site_name %> е постоянен, публичен архив на
+Заявления за Достъп до Информация. Даже и вече да не намирате отговора
+на заявлението Ви за полезно, то може да представлява интерес за други.
+Поради това, ние не изтриваме заявления.
 </p>
 
-<p>Under exceptional circumstances we may remove or change your name
-on the website, <a href="#takedown">see the next question</a>.
-Similarly, we may also remove other personal information.
+<p>Поради изключителни обстоятелства ние може да премахнем
+или променим името Ви в сайта, <a href="#takedown">вижте
+следващия въпрос</a>.
+Също така, ние може да премахнем и друга лична информация.
 </p>
 
-<p>If you're worried about this before you make your request,
-see the section on <a href="#real_name">pseudonyms</a>.</p>
+<p>Ако се притеснявате за това преди да сте направили Вашето
+Заявление,
+вижте секцията <a href="#real_name">псевдоними</a>.</p>
 
 </dd>
 
-<dt id="takedown">Can you take down personal information about me? <a href="#takedown">#</a> </dt>
+<dt id="takedown">Може ли да премахнете лична
+информация, отнасяща се до мен? <a href="#takedown">#</a> </dt>
 
 <dd>
 
-<p>If you see any personal information about you on the site which you'd like
-us to remove or hide, then please <a href="/help/contact">let us know</a>.
-Specify exactly what information you believe to be problematic and why, and
-where it appears on the site.</p>
+<p>Ако видите в сайта каквато и да е лична информация за Вас,
+която искате да премахнем или да скрием, молим <a href="/bg/help/contact">уведомете ни</a> за това.
+Посочете точно каква информация намирате за проблемна и защо,
+и мястото, където тя се появява на сайта.</p>
 
-<p>If it is sensitive personal information that has been accidentally
-posted, then we will usually remove it. Normally we will only consider
-requests to remove personal information which come from the individual
-concerned, but for sensitive information we would appreciate anyone
-pointing out anything they see.</p>
+<p>Ако това е неволно публикувана лична информация, ние
+обикновено я премахваме. Обикновено ние разглеждаме искания за
+премахване на лична информация, идващи от засегнатия потребител на
+сайта, но всеки може да посочи като чувствителна която и да е
+информация, видяна на сайта.</p>
 
-<p>We consider that there is a strong public interest in
-retaining the names of officers or servants of public authorities. We will only
-remove such names in exceptional circumstances, such as where the disclosure of
-a name and position of employment would substantially risk an individual's
-safety. If you are such an official and you wish to have your name removed for
-such an urgent reason, you must supply us with a request to do so from your
-line manager. This request must demonstrate that a risk has been perceived
-which outweighs the public interest, and must demonstrate that efforts have
-been made to conceal the name on the organisation's own website.</p>
+<p>Ние считаме, че е налице силен обществен интерес от
+запазване на
+имената на служители на публични органи. Ние ще премахваме такива имена
+само при изключителни обстоятелства, например, когато разкриването на
+името и позицията на служител би създало риск за личната му сигурност.
+Ако Вие сте такъв служител и бихте искали името Ви да бъде премахнато
+поради подобна основателна причина, трябва да ни предоставите заявление
+за това от Вашия пряк ръководител. Това заявление трябва да докаже, че
+се създава риск, превишаващ обществения интерес и трябва да докаже, че
+са положени усилия за скриване на името даже от собствения на
+организацията уеб сайт.</p>
 
-<p>For all other requests we apply a public interest test to decide
-whether information should be removed.
+<p>За всички останали заявления, ние прилагаме проверката на
+публичния
+интерес, за да решим дали информацията трябва да бъде премахната.
 <a href="http://www.statutelaw.gov.uk/content.aspx?ActiveTextDocId=3190650"> Section 32</a>
-of the Data Protection Act 1998 permits us to do this, as the material we
-publish is journalistic. We cannot easily edit many types of attachments (such
-as PDFs, or Microsoft Word or Excel files), so we will usually ask
-that authorities resend these with the personal information removed.</p>
+от Data Protection Act 1998 ни позволява да го направим, тъй като
+материалът, който публикуваме е журналистически. Ние не можем да
+редактираме лесно някои типове приложения (като PDF, Microsoft Word или
+Excel файлове), поради което ние обикновено молим органите да ни
+изпратят отново тези файлове с премахната лична информация.</p>
 
 </dd>
 
 
 </dl>
 
-<p><strong>Learn more</strong> from the help for <a href="/help/officers">FOI officers</a> --&gt;
+<p><strong>Вижте повече</strong> в секцията
+за <a href="/bg/help/officers">служители по ДдИ</a> --&gt;
 
 <div id="hash_link_padding"></div>
 
