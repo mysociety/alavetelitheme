@@ -1,4 +1,4 @@
-<% @title = "Making requests" %>
+<% @title = _("Making requests") %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
@@ -6,280 +6,334 @@
 <h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a> </h1>
 <dl>
 
-<dt id="which_authority">I'm not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
+<dt id="which_authority">Не съм сигурен към кой орган
+точно да отправя Заявлението си. Как да узная това? <a href="#which_authority">#</a> </dt>
 
 <dd>
-<p>It can be hard to untangle government's complicated structured, and work out
-who knows the information that you want. Here are a few tips:
+<p>Може да Ви е трудно да се ориентирате в сложната структура
+на правителството и да решите кой орган притежава информацията, която
+търсите. Ето няколко съвета:
 <ul>
-<li>Browse or search <%= site_name %> looking for similar requests to yours.</li>
-<li>When you've found an authority you think might have the information, use
-the "home page" link on the right hand side of their page to check what they do
-on their website.</li>
-<li>Contact the authority by phone or email to ask if they hold the kind of
-information you're after.</li>
-<li>Don't worry excessively about getting the right authority. If you get it
-wrong, they ought to advise you who to make the request to instead.
+<li>Разгледайте <%= site_name %> или потърсете заявления,
+подобни на Вашето.</li>
+<li>Когато намерите орган, за който смятате, че разполага с
+исканата от
+Вас информация, използвайте препратката "Сайт на публичния орган" в
+дясно в страницата им, за да узнаете повече от техния уеб сайт.</li>
+<li>Свържете се с органа по телефона или чрез имейл и ги
+попитайте дали те разполагат с този тип информация.</li>
+<li>Не се притеснявайте твърде много, ако не попаднете на
+правилния орган. Те би трябвало да Ви посъветват към кой друг орган да отправите
+Заявлението си.
 </li>
-<li>If you've got a thorny case, please <a href="/help/contact">contact us</a> for help.</li>
+<li>Ако попаднете в заплетена ситуация, молим, <a href="/help/contact">пишете ни</a> за помощ.</li>
 </ul>
 
 </dd>
 
 
 
-<dt id="missing_body">You're missing the public authority that I want to request from! <a href="#missing_body">#</a> </dt>
+<dt id="missing_body">Тук липсва публичният орган, към
+който искам да отправя Заявлението си! <a href="#missing_body">#</a> </dt>
 
 <dd>
-<p>Please <a href="<%= new_change_request_path %>">contact us</a> with the name of the public authority and,
-if you can find it, their contact email address for Freedom of Information requests.
+<p>PМолим, <a href="/help/contact">свържете
+се с нас</a> и ни изпратете наименованието на публичния орган, а
+ако сте успели да го намерите, и техния имейл адрес за Заявления за
+Достъп
+до Информация.
 </p>
-<p>If you'd like to help add a whole category of public authority to the site, we'd love
-to hear from you too.
+<p>Ако желаете да ни помогнете, като добавите цяла категория
+публични органи към сайта, ние също ще се радваме да се свържем с Вас.
 </p>
 
 </dd>
 
-<dt id="authorities">Why do you include some authorities that aren't formally subject to FOI?<a href="#authorities">#</a> </dt>
+<dt id="authorities">Защо сте включили някои органи,
+които формално не са задължени субекти по Закона за достъп до
+обществена информация?<a href="#authorities">#</a> </dt>
 
 <dd>
-<p><%= site_name %> lets you make requests for information to a range of
-organisations:</p>
+<p>Чрез <%= site_name %> можете да отправяте Заявления за
+Достъп до Информация към следните категории организации:</p>
 
 <ul>
-  <li> Those formally subject to the FOI Act</li>
-  <li> Those formally subject to the Environmental Regulations (a less well  
-  defined group)</li>
-  <li> Those which voluntarily comply with the FOI Act</li>
-  <li> Those which aren't subject to the Act but we think should be, on grounds
-  such as them having significant public responsibilities. 
+  <li>Тези, които са задължени субекти според
+Закона за достъп до обществена информация</li>
+  <li>Тези, които са обект на нормативни актове, свързани с
+околната среда (не толкова добре дефинирана група)</li>
+  <li>Тези, които доброволно се съобразяват с разпоредбите
+на Закона за достъп до обществена информация</li>
+  <li>Такива, които не са обекти на Закона, но според нас,
+трябва да бъдат, на основание например, значителните им обществени
+отговорности.
   </li>
 </ul>
 
-<p>In the last case, we're using the site to lobby for expansion of the
-scope of the FOI Act. Even if an organisation is not legally obliged to respond
-to an FOI request, they can still do so voluntarily.
+<p>В последния случай, ние използваме сайта за да лобираме за
+разширяване обхвата на Закона за достъп до обществена
+информация. Въпреки че дадена организация не е задължена от Закона да
+отговаря на Заявления за Достъп до Информация, тя би могла да го прави
+доброволно.
 </p>
 
 </dd>
 
-<dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+<dt id="focused">Защо трябва да съм конкретен в Заявлението си?<a href="#focused">#</a> </dt>
 
 <dd>
 
 <p>
-Please put in your request only what is needed so that someone can
-easily identify what information you are asking for. Please do
-<i>not</i> include any of the following:
+Молим, напишете в Заявлението си само това, което искате,
+за да може
+четящият го, да разбере каква точно информация търсите. Молим, <i>не
+включвайте</i> нищо от следните:
 </p>
 
 <ul>
-<li>arguments about your cause</li>
-<li>statements that could defame or insult others</li>
+<li>аргументи за Вашето питане</li>
+<li>изявления, които биха могли да наклеветят или обидят някого</li>
 </ul>
 
 <p>
-If you do, we may have to remove your request to avoid problems with
-libel law, which is a pain for both you and us. Short, succinct messages
-make it easier for authorities to be clear what information you are
-requesting, which means you will get a reply more quickly.
+Ако все пак го направите, може да премахнем Заявлението Ви, за да
+избегнем проблеми с правосъдието, което ще е неприятно както за Вас,
+така и за нас. С две думи, сбитите съобщения помагат на органите да
+разберат каква точно информация искате, което означава, че Вие ще
+получите отговор по-скоро.
 </p>
 
 <p>
-If you want information to support an argument or campaign, Freedom of
-Information is a powerful tool. Although you may not use this site to
-run your campaign, we encourage you to use it to get the information you
-need. We also encourage to run your campaign elsewhere - one effective
-and very easy way is to <%= link_to 'start your own blog',
-"http://wordpress.com/"%>. You are welcome to link to your campaign
-from this site in an annotation to your request (you can make
-annotations after submitting the request).
+Ако искате информация в подкрепа на аргумент или кампания, Достъпът до
+обществена информация е мощен инструмент. Въпреки че може да не
+използвате този сайт за да осъществите кампанията си, ние ще Ви
+насърчим да го използвате, за да получите нужната Ви информация. Ние ще
+Ви подкрепим и в осъществяването на кампанията Ви, където и да е
+другаде
+- един много лесен начин е да <a href="http://wordpress.com/">стартирате
+собствен блог</a>. Вие можете да поставите препратка от този сайт
+към кампанията Ви в коментар към Вашето Заявление (можете да пишете
+коментари и след подаването на Заявлението).
 </p>
 
 </dd>
 
-<dt id="fees">Does it cost me anything to make a request?<a href="#fees">#</a> </dt>
+<dt id="fees">Ще трябва ли да платя някаква сума, за да направя Заявлението?<a href="#fees">#</a> </dt>
 
 <dd>
 
-<p>Making an FOI request is nearly always free.</p>
+<p>По закон, отправянето на Заявление за ДдИ в Република
+България е безплатно. Ако желаете, Вие може да поискате информация за
+разходите, направени от органа, във връзка с отговарянето на заявления
+за ДдИ. Текстът до края на този отговор е от оригиналния сайт, отнася
+се за Великобритания и е оставен тук единствено с познавателна цел.</p>
 
-<p>Authorities often include unnecessary, scary, boilerplate in
-acknowledgement messages saying they "may" charge a fee. Ignore such notices.
-They hardly ever will actually charge a fee.  If they do, they can only charge you if
-you have specifically agreed in advance to pay.  <a
-    href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/practical_application/chargingafee.pdf">More
-    details</a> from the Information Commissioner.
+<p>Отправянето на Заявление за ДдИ почти винаги е безплатно.</p>
+
+<p>Органите често включват ненужни, заплашителни, шаблонни
+потвърждаващи съобщения, в които обясняват, че те "може" да поискат
+заплащане на такса. Не обръщайте внимание на подобни текстове. Едва ли
+някога те действително ще начислият някаква такса. Ако го направят,
+това може да стане, ако Вие предварително сте се съгласили да
+заплатите.
+<a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/practical_application/chargingafee.pdf">Повече
+подробности</a> от Information Commissioner (на английски).
 </p>
-
-<p>Sometimes an authority will refuse your request, saying that the cost
-of handling it exceeds £600 (for central government) or £450 (for all other
-public authorities). At this point you can refine your
-request. e.g. it would be much cheaper for an authority to tell you the amount
-spent on marshmallows in the past year than in the past ten years.
+<p>Някой орган може да откаже Заявлението Ви с аргумента, че
+цената на
+обработката му би надхвърлила £600 (за Правителството на
+Великобритания) или £450 (за всички други публични органи). В такъв
+случай Вие може да прецизирате Вашето Заявление. Например, ще бъде
+доста по-евтино за органа да посочи сумата, изразходвана за бонбони
+през изминалата година вместо за последните десет години.
 </p>
 
 </dd>
 
 
 
-<dt id="quickly_response">How quickly will I get a response? <a href="#quickly_response">#</a> </dt>
+<dt id="quickly_response">Колко бързо ще получа отговор? <a href="#quickly_response">#</a> </dt>
 
 <dd>
-<p>By law, public authorities must respond <strong>promptly</strong> to
-requests.
+<p>По закон, публичният орган трябва да отговаря на
+заявленията незабавно.
 </p>
 
-<p>Even if they are not prompt, in nearly all cases they must respond within
-20 working days. If you had to clarify your request, or they are a school,
-or one or two other cases, then they may have more time
-(<a href="/help/officers#days">full details</a>).
+<p>Дори и да не отговорят веднага, в почти всички случаи те
+трябва да отговорят в рамките на 14 работни дни. Ако трябва да изясните
+Заявлението си, или те са училище,
+или две-три други изключения, то тогава може да отнеме повече време
+(<a href="/help/officers#days">пълни
+детайли</a>).</p>
 
-<p><%= site_name %> will email you if you don't get a timely response.  You can
-then send the public authority a message to remind them, and tell them if they
-are breaking the law.</p>
+<p><%= site_name %> ще Ви уведоми с имейл ако не получите
+отговора навреме. След това Вие може да изпратите на органа напомнящо
+съобщение и да ги предупредите, че със забавянето си нарушават закона.</p>
 
 </dd>
 
-<dt id="no_response">What if I never get a response?<a href="#no_response">#</a> </dt>
+<dt id="no_response">Ако те не отговорят никога?<a href="#no_response">#</a> </dt>
 
 <dd>
-<p>There are several things you can do if you never get a response.</p>
+<p>Има няколко неща, които може да направите ако те въобще не отговорят.</p>
 <ul>
-    <li>Sometimes there has been a genuine problem and the authority never
-    received the request. It is worth telephoning the authority and politely
-    checking that they received the request. It was sent to them by email.
+    <li>Може, поради някакъв проблем, органът да не е получил
+Заявлението Ви. Заслужава си да звъннете и учтиво да проверите дали са
+получили Заявлението. То им е било изпратено като имейл.
     </li>
-    <li>If they have not received it, the problem is most likely due to
-    "spam filters". Refer the authority to the measures in the answer 
-    '<a href="/help/officers#spam_problems">I can see a request on <%= site_name %>, but we never got it by email!</a>' 
-    in the FOI officers section of this help. 
+    <li>Ако не са го получили, проблемът може да е,
+например, в някакъв тъп "спам филтър". Информирайте органа за мерките,
+предложени в темата '<a href="/help/officers#spam_problems">Аз
+виждам Заявлението в сайта Alaveteli България, но тук никога не сме го
+получавали като имейл!</a>'
+в секцията за служители по ДдИ в този наръчник.
     </li>
-    <li>If you're still having no luck, then you can ask for an internal review,
-    and then complain to the Information Commissioner about the authority.
-    Read our page '<a href="/help/unhappy">Unhappy about the response you got?</a>'.
+    <li>Ако все още нямате успех, то Вие може да поискате
+вътрешно разглеждане и тогава да се оплачете на Information
+Commissioner (за UK) относно органа. Прочетете нашата страница '<a href="/help/unhappy">Не съм доволен
+от отговора, който получих?</a>'.</li>
 </ul>
 </dd>
 
-<dt id="not_satifised">What if I'm not satisfied with the response? <a href="#not_satifised">#</a> </dt>
-<dd>If you didn't get the information you asked for, or you didn't get it in time,
-then read our page '<a href="/help/unhappy">Unhappy about the response you got?</a>'.
+<dt id="not_satifised">Ами ако аз не съм удовлетворен от отговора? <a href="#not_satifised">#</a> </dt>
+<dd>
+<p>Ако не сте получили информацията, за която сте питали, или
+не сте я получили навреме,
+прочетете нашата страница '<a href="/help/unhappy">Не съм доволен
+от отговора, който получих?</a>'.</p>
 </dd>
 
-<dt id="reuse">It says I can't re-use the information I got!<a href="#reuse">#</a> </dt>
+<dt id="reuse">Казва се, че не мога да използвам повторно получената информация!<a href="#reuse">#</a> </dt>
 <dd>
-<p>Authorities often add legal boilerplate about the 
-"<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of Public Sector
-Information Regulations 2005</a>", which at first glance implies you may not
-be able do anything with the information.
+<p>Органите често добавят шаблонна правна информация относно "<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of
+Public Sector Information Regulations 2005</a>", което на пръв
+поглед
+предполага, че Вие няма да можете да направите каквото и да е с тази
+информация.
 </p>
 
-<p>You can, of course, write articles about the information or summarise it, or
-quote parts of it. We also think you should feel free to republish the
-information in full, just as we do, even though in theory you might not be
-allowed to do so.  See <a href="/help/officers#copyright">our policy on copyright</a>.</p>
+<p>Вие, разбира се, можете да пишете статии относно
+информацията или да я обобщавате, или да цитирате части от нея. Ние
+смятаме също, че Вие би трябвало да се чувствате свободни да
+препубликувате информацията изцяло, точно както го правим ние, въпреки
+че на теория, може да не Ви е разрешено да направите това. Вижте <a href="/help/officers#copyright">нашата
+политика за авторско право</a>.</p>
 
 </dd>
 
-<dt id="ico_help">Can you tell me more of the nitty gritty about the process of making requests? <a href="#ico_help">#</a> </dt>
+<dt id="ico_help">Може ли да ми кажете нещо повече от кухнята на процеса на създаване на Заявления? <a href="#ico_help">#</a> </dt>
 
 <dd>
 <p>Have a look at the
 <a href="http://www.ico.gov.uk/for_the_public/access_to_official_information.aspx">access to official information</a>
 pages on the Information Commissioner's website.</p>
 
-<p>If you're requesting information from a Scottish public authority,
-the process is very similar. There are differences around time
-limits for compliance.
-See the <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
-Information Commissioner's guidance</a> for details.</p> 
+<p>Погледнете страниците
+<a href="http://www.ico.gov.uk/for_the_public/access_to_official_information.aspx">access
+to official information</a> в уеб сайта на Information
+Commissioner.</p>
+<p>Ако искате информация от шотландски публичен орган,
+процесът е почти същият. Има някои разлики относно сроковете на
+процедурата. Вижте <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
+Information Commissioner's guidance</a> за подробности.</p>
 </dd>
 
-<dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a> </dt>
+<dt id="data_protection">Мога ли да поискам информация за себе си? <a href="#data_protection">#</a> </dt>
 
 <dd>
-<p>No. Requests made using <%= site_name %> are public, made under the Freedom of
-Information Act, and cannot help you find information about a private
-individual.</p>
-
-<p>If you would like to know what information a public
-authority holds about yourself, you should make a "Subject Access Request" in
-private using Data Protection law.  The leaflet "<a
-href="http://www.ico.gov.uk/upload/documents/library/data_protection/introductory/subject_access_rights.pdf">How to access your information</a>" (on the Information Commissioner's
+<p>Не. Заявленията, направени чрез Alaveteli България са
+публични,
+правят се съгласно Закона за достъп до обществена информация и не може
+да Ви послужат да откриете информация за частно лице.</p>
+<p>Ако искате да знаете с каква информация за Вас самия
+разполага публичен орган, би трябвало лично да отправите до
+него&nbsp;Заявление с писмо по пощата или подписано с цифров подпис
+по електронната поща. Това право се урежда в Закона за защита на
+личните данни. The leaflet "<a href="http://www.ico.gov.uk/upload/documents/library/data_protection/introductory/subject_access_rights.pdf">How
+to access your information</a>" (on the Information
+Commissioner's
 website) explains how to do this.</p>
-
-<p>If you see that somebody has included personal information, perhaps
-unwittingly, in a request, please <a href="/help/contact">contact us</a>
-immediately so we can remove it.</p>
+<p>Ако забележите, че някой, вероятно
+несъзнателно, е включил лични данни в Заявление или коментар тук, в
+този сайт, молим <a href="/help/contact">уведомете
+ни</a> веднага, за да ги премахнем.</p>
 </dd>
 
 
-<dt id="private_requests">I'd like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a> </dt>
+<dt id="private_requests">Бих желал да запазя моето Заявление в тайна! (Поне докато публикувам моето разследване) <a href="#private_requests">#</a> </dt>
 
-<dd><p><%= site_name %> is currently only designed for public requests. All
-responses that we receive are automatically published on the website for anyone
-to read.  </p>
-<p>You should contact the public authority directly if you would like to
-make a request in private.  If you're interested in buying a system which helps
-you manage FOI requests in secret, then <a href="/help/contact">contact us</a>.
+<dd><p>Към момента, <%= site_name %> е направен само за
+публични Заявления. Всички, получавани при нас отговори, се публикуват
+автоматично на сайта, за да може всеки да ги прочете.</p>
+<p>Вие може да се свържете директно с публичния орган, ако
+желаете Заявлението Ви да не е известно за широката публика.
+Ако се интересувате от закупуване на система, с която да управлявате
+такива Заявления по Закона за достъп до обществена информация, <a href="/help/contact">свържете се с нас</a>.
 </p>
 </dd>
 
-<dt id="eir">Why can I only request information about the environment from some authorities? <a href="#eir">#</a> </dt>
+<dt id="eir">Защо от някои органи мога да искам само информация, свързана с околната среда?<a href="#eir">#</a> </dt>
 
 <dd>
-<p>Some public authorities, such as <a href="http://www.whatdotheyknow.com/body/south_east_water">South East Water</a>,
-don't come under the Freedom of Information Act, but do come under another law called
-the Environmental Information Regulations (EIR). 
+<p>Някои публични органи, като <a href="http://www.whatdotheyknow.com/body/south_east_water">South
+East Water</a>,
+не са обект на Закона за достъп до обществена информация, но попадат
+под регулациите на друг закон - Environmental Information Regulations
+(EIR). </p>
+<p>Този закон е много подобен, така че Вие можете да
+отправяте Заявления към тези органи чрез Alaveteli България по същия
+начин, както по ЗДОИ. Единствената разлика е, че на страницата за
+създаване на Вашето Заявление, ще виждате напомняне, че можете да
+искате единствено информация, свързана с околната среда.
 </p>
-
-<p>It's a very similar law, so you make a request
-to them using <%= site_name %> in just the same way as an FOI request. The only
-difference is that on the page where your write you request, it reminds you
-that you can only request "environmental information" and tells you what that
-means. It is quite broad.
-</p>
-
-<p>You can, of course, request environmental information from other
-authorities. Just make a Freedom of Information (FOI) request as normal. The
-authority has a duty to work out if the Environmental Information Regulations
-(EIR) is the more appropriate legislation to reply under. 
-</p>
+<p>Вие, разбира се, можете да искате информация, свързана с
+околната среда и от други органи. Просто създайте обикновено Заявление
+за ДдИ. Органът има задължението да отговори съгласно Закона за
+опазване на околната среда, ако прецени, че е по-подходящ за случая. </p>
 </dd>
 
-<dt id="multiple">Can I make the same to request to lots of authorities, e.g. all councils? <a href="#multiple">#</a> </dt>
+<dt id="multiple">Мога ли да отправя едно и също
+Заявление към няколко органа, напр. към всички Регионални инспекторати
+по образованието? <a href="#multiple">#</a> </dt>
 
-<dd>We ask you to first send a test version of your request to a few
-authorities. Their responses will help you improve the wording of your request,
-so that you get the best information when you send the request to all of
-the authorities. There is currently no automated system for sending the request
-to the other authorities, you must copy and paste it by hand.
+<dd>
+<p>Бихме Ви помолили първо да отправите Заявлението си към
+малко органи. Техните отговори ще Ви помогнат да подобрите изказа в
+Заявлението, така че да получите най-добър резултат, когато го
+изпратите до всички органи. Към момента, в тази версия на сайта, няма
+автоматизирана система за изпращане на заявлението до повече органи,
+така че ще трябва да го копирате и отправяте ръчно, но това скоро ще се
+промени.</p>
 
 </dd>
 
-<dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a> </dt>
+<dt id="offsite">Отправих Заявление не чрез сайта, как да го кача в архива тук?<a href="#offsite">#</a> </dt>
 
-<dd><%= site_name %> is an archive of requests made through the site,
-and does not try to be an archive of all FOI requests. We'll never support uploading
-other requests. For one thing, we wouldn't be able to verify that other
-responses actually came from the authority. If this really matters to you,
-you can always make the same request again via <%= site_name %>.
+<dd><%= site_name %> е архив на заявленията, направени
+чрез сайта и не се опитва да бъде архив на всички заявления за
+ДдИ. Ние никога няма да поддържаме възможност за качване на други
+заявления. Ние няма да можем да удостоверим, че отговорите на дадено
+заявление действително са дошли от органа. Ако това действително е
+важно за Вас,
+Вие винаги можете да създадете същото заявление отново чрез <%= site_name %>.
 </dd>
 
-<dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+<dt id="moderation">Как управлявате коментарите към заявленията? <a href="#moderation">#</a> </dt>
 
-<dd> 
-<p>Annotations on <%= site_name %> are to help
-people get the information they want, or to give them pointers to places they
-can go to help them act on it. We reserve the right to remove anything else.
+<dd>
+<p>Коментарите в <%= site_name %> са за да помогнат на
+хората да намерят информацията, която търсят, или да им дадат насоки
+към местата, където могат да се произнесат за нея. Ние си запазваме
+правото да премахваме всичко останало.
 </p>
-<p>Endless, political discussions are not allowed.
-Post a link to a suitable forum or campaign site elsewhere.</p>
+<p>И накрая, политически дискусии не са позволени.
+Поставете препратка към подходящ форум или публикация в друг сайт.</p>
 <dd>
 
 </dl>
 
-<p><strong>Next</strong>, read about <a href="/help/privacy">your privacy</a> --&gt;
+<p><strong>Нататък</strong>, прочетете относно
+опазването на <a href="/help/privacy">личните Ви данни</a> --&gt;
 
 <div id="hash_link_padding"></div>
 

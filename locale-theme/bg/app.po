@@ -66,3 +66,6 @@ msgstr "Личните Ви данни"
 
 msgid "FOI officer questions"
 msgstr "Въпроси от служители, обработващи заявления за ДдИ"
+
+msgid "Making requests"
+msgstr "Създаване на заявления"
