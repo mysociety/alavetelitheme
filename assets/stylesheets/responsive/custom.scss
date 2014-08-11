@@ -53,7 +53,7 @@ $action-border: #d69457;
 }
 
 /* General styling of nav menu items */
-.menu-item {
+%menu-item {
   text-decoration: none;
   background-color: $main_menu-link_bg;
   color: transparentize($main_menu-link_text, 0.2);
@@ -70,7 +70,7 @@ $action-border: #d69457;
 }
 
 /* Selected menu item */
-.selected-menu-item {
+%selected-menu-item {
   font-weight: bold;
   color: $main_menu-active_link_text;
   background-color: $main_menu-active_link_bg;
@@ -80,7 +80,7 @@ $action-border: #d69457;
 }
 
 /* Styling if not part of the main menu on larger screens */
-.sub-menu-item {
+%sub-menu-item {
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     background-color: $banner_bg;
     color: $submenu-color;
@@ -216,11 +216,11 @@ a.link_button_green_large {
 #navigation{
   border-bottom: none;
   a {
-    @extend .menu-item;
+    @extend %menu-item;
   }
   /* Show which section is currently selected */
   li.selected a{
-    @extend .selected-menu-item;
+    @extend %selected-menu-item;
   }
 
   /* Vertically align the search box */
@@ -301,8 +301,8 @@ a.link_button_green_large {
 /* Logged and local options act like submenus */
 #logged_in_bar{
   a {
-    @extend .menu-item;
-    @extend .sub-menu-item;
+    @extend %menu-item;
+    @extend %sub-menu-item;
     font-weight: normal;
   }
   #logged_in_links {
@@ -324,7 +324,7 @@ a.link_button_green_large {
     right: 15px;
   }
   a {
-    @extend .menu-item;
+    @extend %menu-item;
     font-family: $sans-serif-font-family;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       padding: 0.5em 0.2em;
