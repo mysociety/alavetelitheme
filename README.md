@@ -11,7 +11,7 @@ Typical usage should be limited to that described in the [documentation](http://
 
 ## To install:
 
-In the Alaveteli general.yml configuration file change the default mysociety  theme repository to your theme repository in the THEME_URLS setting:
+In the Alaveteli `general.yml` configuration file change the default mysociety  theme repository to your theme repository in the [`THEME_URLS`](http://alaveteli.org/docs/customising/config/#theme_urls) setting:
 
     THEME_URLS:
       - 'git://github.com/YOUR_GITHUB_USERNAME/YOUR_THEME_NAME.git'
