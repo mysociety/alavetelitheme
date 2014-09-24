@@ -6,21 +6,18 @@ This is a "hello world" type theme package for Alaveteli.
 The intention is to support simple overlaying of templates and
 resources without the need to touch the core Alaveteli software.
 
-Typical usage should be limited to:
+Typical usage should be limited to that described in the [documentation](http://alaveteli.org/docs/customising/themes/):
 
- * Putting CSS-based customisations in `public/stylesheets/custom.css`
 
- * Creating your own versions of non-functional pages (like "about
-   us", at `lib/views/help/about.rhtml` -- and/or localised versions at
-   lib/views/help/about.es.rhtml)
+## To install:
 
-To install::
+In the Alaveteli `general.yml` configuration file change the default mysociety  theme repository to your theme repository in the [`THEME_URLS`](http://alaveteli.org/docs/customising/config/#theme_urls) setting:
 
-  ./script/plugin install git://github.com/mysociety/alavetelitheme.git
+    THEME_URLS:
+      - 'git://github.com/YOUR_GITHUB_USERNAME/YOUR_THEME_NAME.git'
 
-Look in the lib/ folder of the plugin to see how the overrides happen.
+You can then switch the theme the application is using:
 
-Note that the `install.rb` plugin point sets up a symlink to include
-local resource files within the Rails `public/` directory.
+    bundle exec rake themes:install
 
 Copyright (c) 2011 mySociety, released under the MIT license
