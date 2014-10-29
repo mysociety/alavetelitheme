@@ -14,7 +14,21 @@ img {
   max-width: 100%;
 }
 
+.request-left, #header_left {
+  width: 220px;
+  padding-right: 50px;
+  float: left;
+}
 
+form input[type=text], form input[type=password] {
+  height: 28px;
+}
+
+form input[type=text]#query {
+  background-image: url(requests/magnifier-icon.png);
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+}
 
 #banner {
   background-repeat:no-repeat;
