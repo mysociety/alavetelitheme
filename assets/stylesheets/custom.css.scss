@@ -23,6 +23,10 @@ img {
 form input[type=text], form input[type=password] {
   height: 28px;
 }
+form input.use-datepicker[type=text]#request_date_after {
+  height: 28px;
+  margin-bottom: 20px !important;
+}
 
 form input[type=text]#query {
   background-image: url(requests/magnifier-icon.png);
@@ -123,6 +127,14 @@ color:#6B3C6A;
 
 span#to_public_body {
 font-family:'DeliciousBold', Arial, sans-serif;
+
+;
+}
+span#to_public_body .authority-text {
+  color: rgb(209, 35, 62);
+}
+span#to_public_body .authority-text[disabled] {
+  background-color: #fff;
 }
 
 #middle_strip {
