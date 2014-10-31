@@ -139,20 +139,41 @@ div.form_button input[name = commit] {
   color:#6B3C6A;
 }
 
-#request_form  #outgoing_message_body{
-  width:380px;
-  height: 296px;
-  border-color: rgb(209, 35, 62);
+#request_form label#your-adress {
+  display: block;
+  width: 100%;
+}
+
+div#request_form .form_label {
+  display: inline-block;
+  width: 46%;
+  padding-right: inherit;
+}
+
+label.form_label {
+  display:inline-block;
+  width:100%;
+}
+
+#request_form  #outgoing_message_body {
+  width: 386px;
+  height: 300px;
+  border-color: #d1233e;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 span#to_public_body {
   font-family:'DeliciousBold', Arial, sans-serif;
+  margin-bottom: 25px;
 }
 
-span#to_public_body .authority-text, #typeahead_search{
+span#to_public_body .authority-text, #typeahead_search {
   color: rgb(209, 35, 62);
   font-weight: bold;
+  border-width: 2px;
 }
+
 span#to_public_body .authority-text[disabled] {
   background-color: #fff;
 }
@@ -181,6 +202,30 @@ border-width:1px;
   font-weight: bold;
   color: #4F4F4F;
   font-size: 16px;
+}
+
+div#request_new.controller_request {
+  border: 1px solid;
+  margin-top: 36px;
+  padding-left: 48px;
+}
+
+div.form_item_note {
+  margin-left: 0px;
+}
+.page-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+  color: #4F4F4F;
+  font-size: 23px;
+}
+
+div#request_header {
+  background-color: transparent;
+}
+
+div#request_header_text {
+  margin: 0px;
 }
 
 #navigation_search input[type=text] {

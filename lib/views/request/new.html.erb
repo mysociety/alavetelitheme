@@ -23,7 +23,7 @@
 <% else %>
   <% @title = _("Make an {{law_used_short}} request to '{{public_body_name}}'",:law_used_short=>h(@info_request.law_used_short),:public_body_name=>h(@info_request.public_body.name))  %>
 <% end %>
-    <h1><%= _('2. Ask for Information') %></h1>
+    <h1 class="page-title"><%= _('2. Ask for information') %></h1>
 
     <% if @existing_request %>
       <div class="errorExplanation" id="errorExplanation"><ul>
@@ -49,7 +49,8 @@
     <div id="request_header">
         <div id="request_header_body">
             <label class="form_label"><%= _('To:') %></label>
-
+            <br/>
+            <br/>
             <% if @batch %>
                 <span id="to_public_body">
                   <%= _("Your selected authorities") %>
@@ -115,6 +116,8 @@
         <div id="request_header_subject">
             <p>
                 <label class="form_label" for="typeahead_search"><%= _('Summary:') %></label>
+              <br/>
+              <br/>
                 <%= f.text_field :title, :size => 50, :id =>"typeahead_search" %>
             </p>
             <div class="form_item_note">
@@ -142,7 +145,7 @@
             <%= o.text_area :body, :rows => 20, :cols => 60 %>
         </p>
         <p>
-            <label class="form_label" for="typeahead_search"><%= _('Your address:') %></label>
+            <label class="form_label" id= "your-adress" for="typeahead_search"><%= _('Your address:') %></label>
             <%= o.text_field :address,
                              :size => 50,
                              :id =>"typeahead_search",
