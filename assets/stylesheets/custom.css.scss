@@ -118,20 +118,40 @@ color:#444;
 }
 
 .feed_link a,.act_link a,#header_right > a {
-color:#6B3C6A;
+  color:#6B3C6A;
+}
+
+div.form_button input[name = commit] {
+  height: 46px;
+  background-image: none;
+  background-color: #BABABA;
+  border-color:inherit;
+  border-width: 0px;
+  text-shadow: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  padding: 5px 25px;
+  border-radius: 5px;
 }
 
 #request_form label,label.form_label,span#to_public_body {
-color:#6B3C6A;
+  color:#6B3C6A;
+}
+
+#request_form  #outgoing_message_body{
+  width:380px;
+  height: 296px;
+  border-color: rgb(209, 35, 62);
 }
 
 span#to_public_body {
-font-family:'DeliciousBold', Arial, sans-serif;
-
-;
+  font-family:'DeliciousBold', Arial, sans-serif;
 }
-span#to_public_body .authority-text {
+
+span#to_public_body .authority-text, #typeahead_search{
   color: rgb(209, 35, 62);
+  font-weight: bold;
 }
 span#to_public_body .authority-text[disabled] {
   background-color: #fff;
@@ -157,7 +177,10 @@ border-width:1px;
 }
 
 #request_form label,label.form_label {
-font-family:'DeliciousRoman', Arial, sans-serif;
+  font-family:'OpenSansSemibold', Arial, sans-serif;
+  font-weight: bold;
+  color: #4F4F4F;
+  font-size: 16px;
 }
 
 #navigation_search input[type=text] {
@@ -284,6 +307,10 @@ padding:5px;
 background-color:#93278F;
 margin-left:15px;
 padding:0;
+}
+
+div #request_header_text{
+  margin-bottom: 20px;
 }
 
 div.correspondence p.preview_subject {
