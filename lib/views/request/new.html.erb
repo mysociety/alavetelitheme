@@ -19,12 +19,12 @@
   </script>
 <% end %>
 <% if @batch %>
-  <% @title = _("Make an {{law_used_short}} request", :law_used_short=>h(@info_request.law_used_short))  %>
+    <% @title = _("Make an {{law_used_short}} request", :law_used_short=>h(@info_request.law_used_short))  %>
 <% else %>
   <% @title = _("Make an {{law_used_short}} request to '{{public_body_name}}'",:law_used_short=>h(@info_request.law_used_short),:public_body_name=>h(@info_request.public_body.name))  %>
 <% end %>
-    <h1 class="page-title"><%= _('2. Ask for information') %></h1>
 
+    <h1 class="page-title"><%= _('Ask for information') %></h1>
     <% if @existing_request %>
       <div class="errorExplanation" id="errorExplanation"><ul>
       <li>
@@ -45,100 +45,119 @@
     <%= foi_error_messages_for :info_request, :outgoing_message %>
 
     <%= form_for(@info_request, :url => (@batch ? new_batch_path : new_request_path), :html => { :id => 'write_form' }  ) do |f| %>
+    <div class="page-title">
+      <h1>Make a request</h1>
+    </div>
+    <div class="left-menu" >
+      <span class="title-left-menu"> MAKE REQUEST </span>
+      <ol>
+        <li> <a href = "#"> Choose authority </a> </li>
+        </br>
+        <li> <a href = "#">  Ask for information </a> </li>
+        </br>
+        <li> <a href = "#">  Preview request </a> </li>
+      </ol>
+    </div>
+    <div class="right-make-request">
+        <div id="request_header">
+            <div id="request_header_body">
+                <label class="form_label"><%= _('To:') %></label>
+                <br/>
+                <br/>
+                <% if @batch %>
+                    <span id="to_public_body">
+                      <%= _("Your selected authorities") %>
+                      <span class="batch_public_body_toggle" data-hidetext="<%= _("(hide)") %>" data-showtext="<%= _("(show)") %>"><a class="toggle-message"></a></span>
+                    </span>
 
-    <div id="request_header">
-        <div id="request_header_body">
-            <label class="form_label"><%= _('To:') %></label>
-            <br/>
-            <br/>
-            <% if @batch %>
-                <span id="to_public_body">
-                  <%= _("Your selected authorities") %>
-                  <span class="batch_public_body_toggle" data-hidetext="<%= _("(hide)") %>" data-showtext="<%= _("(show)") %>"><a class="toggle-message"></a></span>
-                </span>
+                    <div class="batch_public_body_list">
+                      <ul>
+                      <% @public_bodies.each do |public_body| %>
+                        <li><%= public_body.name %></li>
+                      <% end %>
+                      </ul>
+                    </div>
 
-                <div class="batch_public_body_list">
-                  <ul>
-                  <% @public_bodies.each do |public_body| %>
-                    <li><%= public_body.name %></li>
-                  <% end %>
-                  </ul>
-                </div>
+                <% else %>
+                  <span id="to_public_body">
+                    <input class="authority-text" disabled type="text" value="<%=h(@info_request.public_body.name)%>"/>
+                  </span>
+                <% end %>
 
-            <% else %>
-              <span id="to_public_body">
-                <input class="authority-text" disabled type="text" value="<%=h(@info_request.public_body.name)%>"/>
-              </span>
-            <% end %>
+                <% unless @batch %>
+                  <!--<div class="form_item_note">-->
+                      <!--<% if @info_request.public_body.info_requests.size > 0 %>-->
+                          <!--<%= _("Browse <a href='{{url}}'>other requests</a> to '{{public_body_name}}' for examples of how to word your request.", :public_body_name=>h(@info_request.public_body.name), :url=>public_body_path(@info_request.public_body)) %>-->
+                      <!--<% else %>-->
+                          <!--<%= _("Browse <a href='{{url}}'>other requests</a> for examples of how to word your request.", :url=>request_list_url) %>-->
+                      <!--<% end %>-->
+                  <!--</div>-->
 
-            <% unless @batch %>
-              <div class="form_item_note">
-                  <% if @info_request.public_body.info_requests.size > 0 %>
-                      <%= _("Browse <a href='{{url}}'>other requests</a> to '{{public_body_name}}' for examples of how to word your request.", :public_body_name=>h(@info_request.public_body.name), :url=>public_body_path(@info_request.public_body)) %>
-                  <% else %>
-                      <%= _("Browse <a href='{{url}}'>other requests</a> for examples of how to word your request.", :url=>request_list_url) %>
-                  <% end %>
-              </div>
+                  <!--<% if @info_request.public_body.has_notes? %>-->
+                    <!--<div id="request_header_text">-->
+                      <!--<h3><%= _('Special note for this authority!') %></h3>-->
+                      <!--<p><%= @info_request.public_body.notes_as_html.html_safe %></p>-->
+                    <!--</div>-->
+                  <!--<% end %>-->
 
-              <% if @info_request.public_body.has_notes? %>
-                <div id="request_header_text">
-                  <h3><%= _('Special note for this authority!') %></h3>
-                  <p><%= @info_request.public_body.notes_as_html.html_safe %></p>
-                </div>
+                  <% if @info_request.public_body.eir_only? %>
+                    <h3><%= _('Please ask for environmental information only') %></h3>
+
+                    <p><%= _('The Freedom of Information Act <strong>does not apply</strong> to') %> <%=h(@info_request.public_body.name)%>.
+                    <%= _('However, you have the right to request environmental
+                information under a different law') %> (<a href="/help/requesting#eir">explanation</a>).
+                    <%= _('This covers a very wide spectrum of information about the state of
+                the <strong>natural and built environment</strong>, such as:') %>
+
+                    <ul>
+                    <li><%= _('Air, water, soil, land, flora and fauna (including how these effect
+                human beings)') %></li>
+                    <li><%= _('Information on emissions and discharges (e.g. noise, energy,
+                radiation, waste materials)') %></li>
+                    <li><%= _('Human health and safety') %></li>
+                    <li><%= _('Cultural sites and built structures (as they may be affected by the
+                environmental factors listed above)') %></li>
+                    <li><%= _('Plans and administrative measures that affect these matters') %></li>
+                    </ul>
+
+                    <p><%= _('Please only request information that comes under those categories, <strong>do not waste your
+                time</strong> or the time of the public authority by requesting unrelated information.') %></p>
+                <% end %>
               <% end %>
+            </div>
 
-              <% if @info_request.public_body.eir_only? %>
-                <h3><%= _('Please ask for environmental information only') %></h3>
+            <div id="request_header_subject">
+                <p>
+                    <label class="form_label" for="typeahead_search"><%= _('Summary:') %></label>
+                  <br/>
+                  <br/>
+                    <%= f.text_field :title, :size => 50, :id =>"typeahead_search" %>
+                </p>
+                <!--<div class="form_item_note">-->
+                    <!--(-->
+              <%= nil
+                    _("a one line summary of the information you are requesting, \n\t\t\te.g.")
+              %>
+                      <%= nil
+                         render :partial => "summary_suggestion"
+                      %>
+                  <!--)-->
+                <!--</div>-->
+            </div>
 
-                <p><%= _('The Freedom of Information Act <strong>does not apply</strong> to') %> <%=h(@info_request.public_body.name)%>.
-                <%= _('However, you have the right to request environmental
-            information under a different law') %> (<a href="/help/requesting#eir">explanation</a>).
-                <%= _('This covers a very wide spectrum of information about the state of
-            the <strong>natural and built environment</strong>, such as:') %>
-
-                <ul>
-                <li><%= _('Air, water, soil, land, flora and fauna (including how these effect
-            human beings)') %></li>
-                <li><%= _('Information on emissions and discharges (e.g. noise, energy,
-            radiation, waste materials)') %></li>
-                <li><%= _('Human health and safety') %></li>
-                <li><%= _('Cultural sites and built structures (as they may be affected by the
-            environmental factors listed above)') %></li>
-                <li><%= _('Plans and administrative measures that affect these matters') %></li>
-                </ul>
-
-                <p><%= _('Please only request information that comes under those categories, <strong>do not waste your
-            time</strong> or the time of the public authority by requesting unrelated information.') %></p>
-            <% end %>
-          <% end %>
-        </div>
-
-        <div id="request_header_subject">
-            <p>
-                <label class="form_label" for="typeahead_search"><%= _('Summary:') %></label>
-              <br/>
-              <br/>
-                <%= f.text_field :title, :size => 50, :id =>"typeahead_search" %>
-            </p>
-            <div class="form_item_note">
-                (<%= _("a one line summary of the information you are requesting, \n\t\t\te.g.") %>
-                  <%= render :partial => "summary_suggestion" %>)
+            <div id="typeahead_response">
             </div>
         </div>
 
-        <div id="typeahead_response">
+        <div id="request_advice">
+            <ul>
+            <li><%= _('Write your request in <strong>simple, precise language</strong>.') %></li>
+            <li><%= _('Ask for <strong>specific</strong> documents or information, this site is not suitable for general enquiries.') %></li>
+            <li><%= _('Keep it <strong>focused</strong>, you\'ll be more likely to get what you want (<a href="{{url}}">why?</a>).', :url => (help_requesting_path + '#focused').html_safe) %></li>
+            </ul>
         </div>
-    </div>
 
-    <div id="request_advice">
-        <ul>
-        <li><%= _('Write your request in <strong>simple, precise language</strong>.') %></li>
-        <li><%= _('Ask for <strong>specific</strong> documents or information, this site is not suitable for general enquiries.') %></li>
-        <li><%= _('Keep it <strong>focused</strong>, you\'ll be more likely to get what you want (<a href="{{url}}">why?</a>).', :url => (help_requesting_path + '#focused').html_safe) %></li>
-        </ul>
-    </div>
-
-    <div id="request_form">
+        <div id="request_form">
         <%= fields_for :outgoing_message do |o| %>
         <p>
             <label class="form_label" for="outgoing_message_body"><%= _('Your request:') %></label>
@@ -204,6 +223,7 @@
             </p>
         <% end %>
 
+    </div>
     </div>
 <% end %>
 <% if @batch %>

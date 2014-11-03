@@ -161,6 +161,8 @@ label.form_label {
   border-color: #d1233e;
   margin-top: 10px;
   border-radius: 5px;
+  font-family: 'Open Sans';
+  font-size: 15px;
 }
 
 span#to_public_body {
@@ -204,10 +206,23 @@ border-width:1px;
   font-size: 16px;
 }
 
-div#request_new.controller_request {
+#request_new.controller_request {
   border: 1px solid;
   margin-top: 36px;
-  padding-left: 48px;
+}
+
+.left-menu {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 36px;
+  width: 20%;
+  border: 1px solid;
+  padding: 5px;
+  font-family: 'Open Sans';
+}
+
+.right-make-request {
+  display: inline-block;
 }
 
 div.form_item_note {
@@ -652,4 +667,12 @@ background:image-url('quote-marks.png') no-repeat;
 
 .pull-left {
   float: left;
+}
+
+.form_button {
+  margin: 0px;
+}
+
+.form_item_note, .form_note {
+  margin-left: 0px;
 }

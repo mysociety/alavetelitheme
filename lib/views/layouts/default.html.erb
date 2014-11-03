@@ -93,7 +93,6 @@
                 <% if flash[:error] %>
                     <div id="error"><%= flash[:error] %></div>
                 <% end %>
-
                 <div id="<%= controller.controller_name + "_" + controller.action_name %>" class="controller_<%= controller.controller_name %>">
                 <%= yield :layout %>
                 </div>
