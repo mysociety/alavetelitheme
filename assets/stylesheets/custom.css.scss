@@ -21,10 +21,10 @@ img {
 }
 
 form input[type=text], form input[type=password] {
-  height: 28px;
+  height: 26px;
 }
 form input.use-datepicker[type=text]#request_date_after {
-  height: 28px;
+  height: 26px;
   margin-bottom: 20px !important;
 }
 
@@ -174,6 +174,8 @@ span#to_public_body .authority-text, #typeahead_search {
   color: rgb(209, 35, 62);
   font-weight: bold;
   border-width: 2px;
+  border-radius: 6px;
+  width: 378px;
 }
 
 span#to_public_body .authority-text[disabled] {
@@ -200,29 +202,71 @@ border-width:1px;
 }
 
 #request_form label,label.form_label {
-  font-family:'OpenSansSemibold', Arial, sans-serif;
+  font-family:'OpenSans', Arial, sans-serif;
   font-weight: bold;
   color: #4F4F4F;
   font-size: 16px;
 }
 
 #request_new.controller_request {
-  border: 1px solid;
   margin-top: 36px;
+  width: 946px;
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #ccc;
 }
 
 .left-menu {
   display: inline-block;
   vertical-align: top;
-  margin-top: 36px;
-  width: 20%;
-  border: 1px solid;
-  padding: 5px;
+  width: 248px;
+  height: 980px;
   font-family: 'Open Sans';
+  background: #F6F8F8;
+  padding-top: 21px;
+  border-right: 1px solid;
+  border-right-color: #ccc;
+  font-size: 17px;
+
+
+}
+a.second-line {
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: bold;
+
 }
 
+a.first-line {
+  background-color: #fff;
+  padding-right: 44px;
+  padding-bottom: 7px;
+}
+
+.left-list {
+  list-style-type: none;
+  color: #666;
+  padding-left: 60px;
+  a:not(.second-line) {
+    text-decoration: none;
+    color: #666;
+    font-family: 'Open Sans';
+    font-weight: bold;
+  }
+}
+
+.title-left-menu {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  padding-left: 42px;
+  text-decoration: none
+}
 .right-make-request {
   display: inline-block;
+  width: 65%;
+  padding-left: 40px;
 }
 
 div.form_item_note {

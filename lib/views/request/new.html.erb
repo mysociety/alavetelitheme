@@ -23,8 +23,6 @@
 <% else %>
   <% @title = _("Make an {{law_used_short}} request to '{{public_body_name}}'",:law_used_short=>h(@info_request.law_used_short),:public_body_name=>h(@info_request.public_body.name))  %>
 <% end %>
-
-    <h1 class="page-title"><%= _('Ask for information') %></h1>
     <% if @existing_request %>
       <div class="errorExplanation" id="errorExplanation"><ul>
       <li>
@@ -45,21 +43,22 @@
     <%= foi_error_messages_for :info_request, :outgoing_message %>
 
     <%= form_for(@info_request, :url => (@batch ? new_batch_path : new_request_path), :html => { :id => 'write_form' }  ) do |f| %>
-    <div class="page-title">
-      <h1>Make a request</h1>
-    </div>
+    <!--<div class="page-title">-->
+      <!--<h1>Make a request</h1>-->
+    <!--</div>-->
     <div class="left-menu" >
       <span class="title-left-menu"> MAKE REQUEST </span>
-      <ol>
-        <li> <a href = "#"> Choose authority </a> </li>
+      <ol class='left-list'>
+        <li><a href = "#" class="first-line">1. Choose authority </a> </li>
         </br>
-        <li> <a href = "#">  Ask for information </a> </li>
+        <li><a href = "#" class="second-line">2. Ask for information </a> </li>
         </br>
-        <li> <a href = "#">  Preview request </a> </li>
+        <li><a href = "#">3. Preview request </a> </li>
       </ol>
     </div>
     <div class="right-make-request">
-        <div id="request_header">
+      <h1 class="page-title"><%= _('Ask for information') %></h1>
+      <div id="request_header">
             <div id="request_header_body">
                 <label class="form_label"><%= _('To:') %></label>
                 <br/>
