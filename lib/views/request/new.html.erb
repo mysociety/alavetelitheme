@@ -53,7 +53,7 @@
         </br>
         <li><a href = "#" class="second-line">2. Ask for information </a> </li>
         </br>
-        <li><a href = "#">3. Preview request </a> </li>
+        <li><a href = "#" class="third-line">3. Preview request </a> </li>
       </ol>
     </div>
     <div class="right-make-request">
@@ -149,10 +149,11 @@
         </div>
 
         <div id="request_advice">
+            <%= image_tag 'requests/triangle-icon.png', class: 'hint-triangle'%>
             <ul>
             <li><%= _('Write your request in <strong>simple, precise language</strong>.') %></li>
-            <li><%= _('Ask for <strong>specific</strong> documents or information, this site is not suitable for general enquiries.') %></li>
-            <li><%= _('Keep it <strong>focused</strong>, you\'ll be more likely to get what you want (<a href="{{url}}">why?</a>).', :url => (help_requesting_path + '#focused').html_safe) %></li>
+            <li><%= _('Ask for <strong>specific</strong> documents or i') %></li>
+            <li><%= _('Keep it <strong>focused</strong>, you\'ll be hat you want (<a href="{{url}}">why?</a>).', :url => (help_requesting_path + '#focused').html_safe) %></li>
             </ul>
         </div>
 

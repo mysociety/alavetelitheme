@@ -170,8 +170,10 @@ label.form_label {
   border-color: #d1233e;
   margin-top: 10px;
   border-radius: 5px;
-  font-family: 'Open Sans';
+  font-family: 'OpenSans', sans-serif;
   font-size: 15px;
+  padding: 15px;
+  color: #4F4F4F
 }
 
 span#to_public_body {
@@ -182,7 +184,7 @@ span#to_public_body {
 span#to_public_body .authority-text, #typeahead_search {
   color: rgb(209, 35, 62);
   font-weight: bold;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 6px;
   width: 378px;
 }
@@ -239,24 +241,44 @@ border-width:1px;
 
 
 }
+
+a.first-line {
+  padding-right: 67px;
+  padding-left: 17px;
+  padding-bottom: 7px;
+  background: #fff url('requests/check-icon.png');
+  background-repeat: no-repeat;
+  background-position: 200px 4px;
+}
+
 a.second-line {
   text-decoration: none;
-  color: black;
+  color: #3E3E3E;
   font-family: 'Open Sans';
   font-weight: bold;
+  background: #FBFCFC;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-left: 1px solid;
+  border-color: #ccc;
+  border-right-color: #F6F8F8;
+  padding: 7px;
+  padding-right: 48px;
+  padding-left: 16px;
 
 }
 
-a.first-line {
-  background-color: #fff;
-  padding-right: 44px;
-  padding-bottom: 7px;
+a.third-line {
+  padding-left: 20px;
 }
 
 .left-list {
   list-style-type: none;
   color: #666;
-  padding-left: 60px;
+  padding-left: 20px;
   a:not(.second-line) {
     text-decoration: none;
     color: #666;
@@ -276,6 +298,32 @@ a.first-line {
   display: inline-block;
   width: 65%;
   padding-left: 40px;
+  padding-top: 14px;
+}
+
+#request_advice ul {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  padding: 15px;
+
+
+}
+
+#request_advice {
+  display: inline-block;
+  width: 180px;
+  height: 188px;
+  font-size: 12px;
+}
+
+.hint-triangle {
+  display: inline-block;
+//  width: 20px;
+//  height: 20px;
+  position: relative;
+  left: -10px;
+  top: 50px;
 }
 
 div.form_item_note {
@@ -288,8 +336,12 @@ div.form_item_note {
   font-size: 23px;
 }
 
+  #request_header {
+    background-color: white;
+  }
+
 div#request_header {
-  background-color: transparent;
+  background-color: white;
 }
 
 div#request_header_text {
