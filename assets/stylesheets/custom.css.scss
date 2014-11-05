@@ -14,7 +14,7 @@ img {
   max-width: 100%;
 }
 
-.request-left, #header_left {
+.request-left {
   width: 220px;
   padding-right: 50px;
   float: left;
@@ -23,15 +23,16 @@ img {
 form input[type=text], form input[type=password] {
   height: 26px;
 }
-form input.use-datepicker[type=text]#request_date_after {
+form input.use-datepicker[type=text] {
   height: 26px;
   margin-bottom: 20px !important;
+  background-position: 94% 50%;
 }
 
-form input[type=text]#query {
+#header_left form input[type=text]#query {
   background-image: url(requests/magnifier-icon.png);
   background-repeat: no-repeat;
-  background-position: 90% 50%;
+  background-position: 94% 50%;
 }
 
 #banner {
@@ -39,6 +40,10 @@ form input[type=text]#query {
   background-position:center top;
   background-color:#F0F0F0;
   background:image-url('stripes.png');
+}
+
+form input[type=text], form input[type=password] {
+  width: inherit;
 }
 
 #topnav {
@@ -104,6 +109,10 @@ color:#93278F;
 p.subtitle {
 font-family:'DeliciousRoman';
 color:#6B3C7F;
+}
+
+#content {
+  width: 945px;
 }
 
 .request_listing span.head a,.user_listing span.head a,.body_listing span.head a {
@@ -719,4 +728,28 @@ background:image-url('quote-marks.png') no-repeat;
 
 .form_item_note, .form_note {
   margin-left: 0px;
+}
+
+//@import 'sprites';
+@import 'requests_listing';
+
+.request_listing span.head a, .user_listing span.head a, .body_listing span.head a {
+  font-family: 'OpenSansSemibold', sans-serif;
+  font-weight: bold;
+  color: #e7604a;
+}
+
+.request_listing .requester {
+  a {
+    color: #e7604a;
+    text-decoration: initial;
+    font-family: OpenSansSemibold, sans-serif;
+    font-weight: 700;
+  }
+}
+
+.request_listing, .user_listing, .body_listing {
+  border: 1px solid #ccc;
+  margin: 0 0 -1px;
+  padding: 12px 80px 6px;
 }
