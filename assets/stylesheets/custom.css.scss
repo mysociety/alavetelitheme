@@ -10,6 +10,18 @@ font-family:Arial, sans-serif;
 text-align:left;
 }
 
+#wrapper {
+
+  #content {
+    padding: inherit;
+
+    div.header {
+      background-color: #ededed;
+      padding: 20px;
+    }
+  }
+}
+
 img {
   max-width: 100%;
 }
