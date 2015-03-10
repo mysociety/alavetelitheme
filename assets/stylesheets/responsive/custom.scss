@@ -581,4 +581,21 @@ dt {
   font-size: 1.1rem;
 }
 
+/* Widget  */
+.alaveteli-widget {
+  background-color: $body-bg;
+  color: $heading-color;
+}
 
+.alaveteli-widget__people-count {
+  top: 28px;
+}
+
+.alaveteli-widget__count {
+  font-weight: bold;
+  color: $button-bg;
+}
+
+.alaveteli-widget__button {
+  top: 167px;
+}
