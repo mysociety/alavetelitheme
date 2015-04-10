@@ -45,7 +45,7 @@ body {
     font-size: 1em;
 }
 
-a{
+a{ 
   color: #336c86;
   text-decoration: none;
 }
@@ -174,12 +174,7 @@ a:active {
     text-decoration: none;
 }
 
-.alaveteli-widget__button--down,
 .alaveteli-widget__button {
-    position: absolute;
-    left: 16px;
-    text-align: center;
-    top: 167px;
     @extend .button-base;
     color: #fff;
     background-color: $button-bg;
@@ -194,3 +189,5 @@ a:active {
         color: #fff;
     }
 }
+
+
