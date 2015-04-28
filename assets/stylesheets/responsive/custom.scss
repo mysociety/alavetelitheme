@@ -9,6 +9,7 @@ $link-color: #336C86;
 $heading-color: #3d3b38;
 $font-family: "Roboto Slab", Georgia, serif;
 $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$form_input-bg: #fff;
 
 $button-bg: #8b9352;
 $button-color: #fff;
@@ -129,7 +130,7 @@ form input[type="url"],
 form input[type="tel"],
 form input[type="number"] {
     border-radius: 0;
-    background-color: $main_menu-link_text;
+    background-color: $form_input-bg;
     /* Set a fixed height for text inputs in older IE 8 */
     @include ie8{
         height: 2.3125em;
@@ -142,7 +143,7 @@ form input[type="number"] {
 
 input.use-datepicker[type=text] {
   width: 130px;
-  background:image-url('calendar.png') no-repeat 100px 5px $main_menu-link_text;
+  background:image-url('calendar.png') no-repeat 100px 5px $form_input-bg;
 }
 
 form input[type=submit], a.link_button_green, a.link_button_green_large {
@@ -255,7 +256,7 @@ a.link_button_green_large {
     border-radius: 0;
     font-size: inherit;
     &:focus{
-        background-color: $main_menu-link_text;
+        background-color: $form_input-bg;
     }
   }
 }
