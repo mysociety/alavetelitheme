@@ -1,51 +1,76 @@
-$body-bg: #f7eee1;
+$color_sand: #f7eee1;
+$color_light_blue: #67848C;
+$color_blue: #336C86;
+$color_dark_blue: #2c5d74;
+$color_darker_blue: #354C56;
+$color_red: #8c6673;
+$color_dark_red: #A1432C;
+$color_teal: #6d918d;
+$color_green: #8b9352;
+$color_bright_green: #839310;
+$color_light_green: #AAB26E;
+$color_pale_green: #D7DABD;
+$color_orange: #CC8245;
+$color_bright_orange: #FF7959;
+$color_pale_orange: #EBC3A9;
+$color_yellow: #E69E5D;
+$color_pale_yellow: #EDD3B8;
+$color_black_alt: #3d3b38;
+$color_black: #333333;
+$color_mid_grey: #999999;
+$color_light_grey: #CCCCCC;
+$color_lighter_grey: #D3D3D3;
+$color_mid_cold_grey: #9AA6AB;
+$colour_white: #ffffff;
 
-$locale-bg: #333;
-$locale-color: #999999;
-$locale-hover-color: #fff;
+$body-bg: $color_sand;
 
-$body-font-color: #333;
-$link-color: #336C86;
-$heading-color: #3d3b38;
+$locale-bg: $color_black;
+$locale-color: $color_mid_grey;
+$locale-hover-color: $colour_white;
+
+$body-font-color: $color_black;
+$link-color: $color-blue;
+$heading-color: $color_black-alt;
 $font-family: "Roboto Slab", Georgia, serif;
 $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$form_input-bg: #fff;
+$form_input-bg: $colour_white;
 
-$button-bg: #8b9352;
-$button-color: #fff;
+$button-bg: $color_green;
+$button-color: $colour_white;
 
-$banner_bg: #354c56;
+$banner_bg: $color_darker_blue;
 
-$main_menu-bg: #2c5d74;
-$main_menu-search_text: #333;
-$main_menu-link_text: #fff;
-$main_menu-search_bg: #67848c;
-$main_menu-link_bg: #2c5d74;
+$main_menu-bg: $color_dark_blue;
+$main_menu-search_text: $color_black;
+$main_menu-link_text: $colour_white;
+$main_menu-search_bg: $color_light_blue;
+$main_menu-link_bg: $color_dark_blue;
 $main_menu-active_link_text: $main_menu-link_bg;
 $main_menu-active_link_bg: $body-bg;
-$submenu-color: #9aa6ab;
+$submenu-color: $color_mid_cold_grey;
 
-$footer-bg: #333;
-$footer-color: #ccc;
-$footer-link-color: #fff;
+$footer-bg: $color_black;
+$footer-color: $color_light_grey;
+$footer-link-color: $colour_white;
 
-$incoming-correspondence-color: #8c6673;
-$outgoing-correspondence-color: #6d918d;
-$correspondence-bg: #fff;
-$correspondence-shadow: #d3d3d3;
+$incoming-correspondence-color: $color_red;
+$outgoing-correspondence-color: $color_teal;
+$correspondence-bg: $colour_white;
+$correspondence-shadow: $color_light_grey;
 
-$status-success: #aab26e;
-$status-failure: #ff7959;
-$status-pending: #e69e5d;
+$status-success: $color_light_green;
+$status-failure: $color_bright_orange;
+$status-pending: $color_yellow;
 
-$notice-bg: #D7DABD;
-$notice-border: #839310;
+$notice-bg: $color_pale_green;
+$notice-border: $color_bright_green;
 
-$error-bg: #ebc3a9;
-$error-border: #a1432c;
+$error-bg: $color_pale_orange;
+$error-border: $color_dark_red;
 
-$action-bg: #edd3b8;
-$action-border: #d69457;
+$action-bg: $color_pale_yellow;
+$action-border: $color_orange;
 
 /* Mixin styles */
 
