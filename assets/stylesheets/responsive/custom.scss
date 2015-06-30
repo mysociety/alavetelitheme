@@ -171,57 +171,94 @@ input.use-datepicker[type=text] {
   background:image-url('calendar.png') no-repeat 100px 5px $form_input-bg;
 }
 
-form input[type=submit], a.link_button_green, a.link_button_green_large {
-  text-decoration: none;
-  color: $button-color;
-  background-color: darken($button-bg, 5%);
-  display: inline-block;
-  cursor: pointer;
-  /* This style is expressed for all borders to avoid triggering an IE9 border rendering bug */
-  border-style: solid; border-color: darken($button-bg, 15%); border-width: 0 0 4px 0;
-  border-radius: 0;
-  padding: 3px 7px;
-  line-height: normal;
-  font-size: 1.1rem;
-  /* Same height as form elements */
-  height: 2.3125rem;
-  @include ie8 {
-     height: 2.3125em;
-     font-size: 1.1em;
-   }
-  vertical-align: top;
-  &:focus, &:hover{
+/* Button styles */
+.button-base {
+    padding: 0.5em 1.25em;
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: 600;
     text-decoration: none;
-    background-color: darken($button-bg, 10%);
-    border-bottom: 4px solid darken($button-bg, 20%);
+    transition: background-color 300ms ease-out;
+    margin-bottom: 0;
+    font-family: $font-family;
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        transition: background-color 300ms ease-out;
+    }
+}
+
+a.button,
+.button,
+.button:visited {
+    @extend .button-base;
+    color: #fff;
+    background-color: $button-bg;
+    border: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:active,
+    &:visited:focus {
+        background-color: darken($button-bg, 10%);
+        color: #fff;
+    }
+}
+
+a.button-secondary,
+.button-secondary,
+.button-secondary:visited {
+    @extend .button-base;
+    background-color: $color_light_grey;
+    color: $color_black;
+    font-weight: normal;
+    &:hover,
+    &:active,
+    &:focus {
+        color: #333;
+        background-color: darken($color_light_grey, 7.5%);
+        color: $color_black;
+    }
+}
+
+.button-tertiary {
+    @extend .button-base;
+    background-color: transparent;
+    color: #333;
+    font-weight: normal;
+    border: 1px solid #e9e9e9;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken(#edece8, 7.5%);
+        border: 1px solid #ddd;
+    }
+}
+
+.button-large {
+  font-size: 2.2em;
+}
+
+.button-disabled {
+  opacity: 0.333;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: inherit;
+    color: inherit;
   }
 }
 
-@include lte-ie7{
-
-  a.link_button_green, a.link_button_green_large {
-    padding: 0 7px;
-    height: 31px;
-    font-weight: bold;
-  }
-
-  form input[type=submit] {
-    padding: 0;
-    height: 35px;
-  }
+form input[type=submit], a.link_button_green, a.link_button_green_large {
+  @extend .button;
+  text-decoration: none;
 }
 
 a.link_button_green_large {
-  font-size: 2.2rem;
-  height: inherit;
-  padding: 0 10px;
-  @include ie8 {
-     font-size: 2.2em;
-     height: 66px;
-   }
-   @include lte-ie7 {
-     height: 50px;
-   }
+  @extend .button;
+  @extend .button-large;
 }
 
 /* Popups */
