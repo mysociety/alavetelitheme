@@ -342,30 +342,169 @@ a.link_button_green_large {
   }
 }
 
+/* LANGUAGE SWITCHER */
 #user_locale_switcher {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    background-image: image-url('locale-switcher.png');
-    background-repeat: no-repeat;
-    background-position: 0.5em 0.5em;
-    background-color: $locale-bg;
-    border-radius: 0 0 1.25em 1.25em;
-    padding: 0 1em 0 2.5em;
-    right: 15px;
+  background-color: $main_menu-bg;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: transparent;
+    right: auto;
+    left: 300px;
+    top: 1.5em;
   }
-  a {
-    @extend %menu-item;
-    font-family: $sans-serif-font-family;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      padding: 0.5em 0.2em;
-      background-color: $locale-bg;
-      border-radius: 0 0 1.25em 1.25em;
-      color: $locale-color;
-      &:hover{
-          background-color: $locale-bg;
-          color: $locale-hover-color;
+}
+
+/* ui-dropdown-list */
+.ui-dropdown-list {
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    position: absolute;
+    left: 160px;
+    top: 0.8em;
+  }
+}
+
+p.ui-dropdown-list-trigger {
+  margin-bottom: 0;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5em 1em;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    margin-top: 0;
+    border: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
+    border-radius: 3px;
+    color: $link-color;
+    padding: 0;
+  }
+}
+
+.ui-dropdown-list-trigger .current-locale {
+  position: relative;
+  z-index: 999;
+  border-radius: 3px;
+  color: #fff;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    padding: 0.66em 2em 0.66em 0.66em;
+  }
+}
+
+.ui-dropdown-list-trigger .current-locale:after {
+  display: block;
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  @include ie8 {
+    border-top: 5px solid #fff;
+  }
+  border-top: 5px solid rgba(255,255,255,0.4);
+}
+
+.ui-dropdown-list-trigger .current-locale,
+.ui-dropdown-list .available-languages a {
+  display: block;
+  cursor: pointer;
+  font-weight: normal;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    font-size: 0.8125em;
+    line-height: 1em;
+  }
+}
+
+.ui-dropdown-list .available-languages {
+  display: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.8125em;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 1000;
+    border-radius: 3px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+}
+
+.ui-dropdown-list li {
+  list-style-type: none;
+  border-bottom: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    border-bottom-color: darken($color_mid_grey,30%);
+  }
+  &:last-child {
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      border-bottom: 0;
+      a {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
       }
     }
   }
+}
+
+.ui-dropdown-list .available-languages a,
+.ui-dropdown-list .available-languages a:link,
+.ui-dropdown-list .available-languages a:visited {
+  display: block;
+  background-color: $main_menu-bg;
+  padding: 0.66em 1em;
+  width: 100%;
+  text-decoration: none;
+  color: transparentize($main_menu-link_text, 0.2);
+  @include ie8 {
+    color: $main_menu-link_text;
+  }
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: #424242;
+  }
+  transition: background-color 0.5s ease-out;
+}
+
+.ui-dropdown-list .available-languages a:hover,
+.ui-dropdown-list .available-languages a:focus {
+  border-bottom: none;
+  background-color: darken($main_menu-bg, 5%);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: darken($color_mid_grey, 20%);
+  }
+  color: #fff;
+
+}
+
+/* JS interactivity */
+.no-js .ui-dropdown-list .available-languages,
+.ui-dropdown-list.active .available-languages {
+  display: block;
+}
+
+.ui-dropdown-list.active .current-locale {
+  background-color: $main_menu-bg;
+  color: #fff;
+  border-color: $main_menu-bg;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: #424242;
+    border-color: $color_black;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.ui-dropdown-list.active .current-locale:after {
+  @include ie8 {
+    border-top-color: #fff;
+  }
+  border-top-color: rgba(255,255,255,0.4);
+}
+
+
+.ui-dropdown-list.active .ui-dropdown-list-trigger {
+  border: 0;
 }
 
 
