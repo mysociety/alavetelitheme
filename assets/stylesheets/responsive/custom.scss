@@ -335,37 +335,175 @@ a.link_button_green_large {
     font-weight: normal;
   }
   #logged_in_links {
-    top: 4em;
+    top: 2em;
     .greeting, a {
       font-weight: normal;
     }
   }
 }
 
+/* LANGUAGE SWITCHER */
 #user_locale_switcher {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    background-image: image-url('locale-switcher.png');
-    background-repeat: no-repeat;
-    background-position: 0.5em 0.5em;
-    background-color: $locale-bg;
-    border-radius: 0 0 1.25em 1.25em;
-    padding: 0 1em 0 2.5em;
-    right: 15px;
+  background-color: $main_menu-bg;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: transparent;
+    right: auto;
+    top: 1.5em;
   }
-  a {
-    @extend %menu-item;
-    font-family: $sans-serif-font-family;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      padding: 0.5em 0.2em;
-      background-color: $locale-bg;
-      border-radius: 0 0 1.25em 1.25em;
-      color: $locale-color;
-      &:hover{
-          background-color: $locale-bg;
-          color: $locale-hover-color;
+}
+
+/* Dropdown list for switching locale */
+.locale-list {
+  border-bottom: 0;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    position: absolute;
+    left: 160px;
+    top: 0.8em;
+  }
+  .locale-list-trigger {
+    margin-bottom: 0;
+    color: $color_white;
+    color: transparentize($color_white, 0.8);
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      margin-top: 0;
+      border: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
+      border-radius: 3px;
+      color: $link-color;
+      padding: 0;
+    }
+  }
+}
+
+.locale-list-trigger .current-locale {
+  position: relative;
+  z-index: 999;
+  border-radius: 3px;
+  color: $color_white;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    padding: 0.66em 2em 0.66em 0.66em;
+  }
+}
+
+.locale-list-trigger .current-locale:after {
+  display: block;
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  @include ie8 {
+    border-top: 5px solid $color_white;
+  }
+  border-top: 5px solid transparentize($color_white, 0.6);
+}
+
+.locale-list-trigger .current-locale,
+.locale-list .available-languages a {
+  display: block;
+  cursor: pointer;
+  font-weight: normal;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    font-size: 0.8125em;
+    line-height: 1em;
+  }
+}
+
+.locale-list .available-languages {
+  display: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.8125em;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 1000;
+    border-radius: 3px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+}
+
+.locale-list li {
+  list-style-type: none;
+  border-bottom: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    border-bottom-color: darken($color_mid_grey,30%);
+    display: block;
+  }
+  &:last-child {
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      border-bottom: 0;
+      a {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
       }
     }
   }
+}
+
+.locale-list .available-languages a,
+.locale-list .available-languages a:link,
+.locale-list .available-languages a:visited {
+  display: block;
+  background-color: $main_menu-bg;
+  padding: 0.66em 1em;
+  width: 100%;
+  text-decoration: none;
+  color: transparentize($main_menu-link_text, 0.2);
+  @include ie8 {
+    color: $main_menu-link_text;
+  }
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: lighten($color_black, 6%);
+  }
+  transition: background-color 0.5s ease-out;
+}
+
+.locale-list .available-languages a:hover,
+.locale-list .available-languages a:focus {
+  border-bottom: none;
+  background-color: darken($main_menu-bg, 5%);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: darken($color_mid_grey, 20%);
+  }
+  color: $color_white;
+
+}
+
+/* JS interactivity */
+.no-js .locale-list .available-languages,
+.locale-list.active .available-languages {
+  display: block;
+}
+
+.locale-list.active .current-locale {
+  background-color: $main_menu-bg;
+  color: $color_white;
+  border-color: $main_menu-bg;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: lighten($color_black, 6%);
+    border-color: $color_black;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.locale-list.active .current-locale:after {
+  @include ie8 {
+    border-top-color: $color_white;
+  }
+  border-top-color: transparentize($color_white, 0.6);
+}
+
+
+.locale-list.active .locale-list-trigger {
+  border-color: transparent;
 }
 
 
