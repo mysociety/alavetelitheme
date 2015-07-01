@@ -422,21 +422,29 @@ a.link_button_green_large {
 
 /* Footer */
 #footer {
-  background-color: $footer-bg;
-  color: $footer-color;
-  padding: 2em 4em;
-  font-family: $sans-serif-font-family;
+  background-color: $color_black;
+  color: $color_mid_grey;
   a {
     text-decoration: none;
-    color: $footer-link-color;
+    color: $color_white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_bright_green;
+      text-decoration: underline;
+    }
   }
-  ul > li:nth-child(4n+1) {
-    padding-top: 0;
-  }
+}
 
-  ul li {
-    padding: 1em 0 0 0 ;
-    text-align: bottom;
+.footer__about {
+  h2 {
+    color: $color_white;
+  }
+}
+
+.footer__final {
+  .row {
+    border-top: 1px solid lighten($color_black, 6%);
   }
 }
 
