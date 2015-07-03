@@ -45,7 +45,7 @@ body {
     font-size: 1em;
 }
 
-a{ 
+a{
   color: #336c86;
   text-decoration: none;
 }
@@ -54,6 +54,38 @@ a:hover,
 a:focus,
 a:active {
     color: #333;
+}
+
+/* Button styles */
+.button-base {
+    padding: 0.5em 1.25em;
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 300ms ease-out;
+    margin-bottom: 0;
+    font-size: 0.875em;
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        transition: background-color 300ms ease-out;
+        cursor: pointer;
+    }
+}
+
+.button-disabled {
+  background-color: $body-bg !important;
+  border: 1px solid #e9e9e9 !important;
+  cursor: default !important;
+  color: #333 !important;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $body-bg !important;
+    color: #333 !important;
+  }
 }
 
 .alaveteli-widget {
@@ -141,11 +173,23 @@ a:active {
     text-decoration: none;
 }
 
+.alaveteli-widget__button--down,
 .alaveteli-widget__button {
     position: absolute;
     left: 16px;
     text-align: center;
     top: 167px;
+    @extend .button-base;
+    color: #fff;
+    background-color: $button-bg;
+    border: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:active,
+    &:visited:focus {
+        background-color: darken($button-bg, 10%);
+        color: #fff;
+    }
 }
-
-
