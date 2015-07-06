@@ -353,30 +353,29 @@ a.link_button_green_large {
   }
 }
 
-/* ui-dropdown-list */
-.ui-dropdown-list {
+/* Dropdown list for switching locale */
+.locale-list {
+  border-bottom: 0;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     position: absolute;
     left: 160px;
     top: 0.8em;
   }
-}
-
-p.ui-dropdown-list-trigger {
-  margin-bottom: 0;
-  color: #fff;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 0.5em 1em;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    margin-top: 0;
-    border: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
-    border-radius: 3px;
-    color: $link-color;
-    padding: 0;
+  .locale-list-trigger {
+    margin-bottom: 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      margin-top: 0;
+      border: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
+      border-radius: 3px;
+      color: $link-color;
+      padding: 0;
+    }
   }
 }
 
-.ui-dropdown-list-trigger .current-locale {
+.locale-list-trigger .current-locale {
   position: relative;
   z-index: 999;
   border-radius: 3px;
@@ -386,7 +385,7 @@ p.ui-dropdown-list-trigger {
   }
 }
 
-.ui-dropdown-list-trigger .current-locale:after {
+.locale-list-trigger .current-locale:after {
   display: block;
   position: absolute;
   content: '';
@@ -402,8 +401,8 @@ p.ui-dropdown-list-trigger {
   border-top: 5px solid rgba(255,255,255,0.4);
 }
 
-.ui-dropdown-list-trigger .current-locale,
-.ui-dropdown-list .available-languages a {
+.locale-list-trigger .current-locale,
+.locale-list .available-languages a {
   display: block;
   cursor: pointer;
   font-weight: normal;
@@ -413,7 +412,7 @@ p.ui-dropdown-list-trigger {
   }
 }
 
-.ui-dropdown-list .available-languages {
+.locale-list .available-languages {
   display: none;
   padding: 0;
   margin-bottom: 0;
@@ -431,11 +430,12 @@ p.ui-dropdown-list-trigger {
 
 }
 
-.ui-dropdown-list li {
+.locale-list li {
   list-style-type: none;
   border-bottom: 1px solid desaturate(lighten($main_menu-bg, 3%), 5%);
   @include respond-min($main_menu-mobile_menu_cutoff) {
     border-bottom-color: darken($color_mid_grey,30%);
+    display: block;
   }
   &:last-child {
     @include respond-min($main_menu-mobile_menu_cutoff) {
@@ -448,9 +448,9 @@ p.ui-dropdown-list-trigger {
   }
 }
 
-.ui-dropdown-list .available-languages a,
-.ui-dropdown-list .available-languages a:link,
-.ui-dropdown-list .available-languages a:visited {
+.locale-list .available-languages a,
+.locale-list .available-languages a:link,
+.locale-list .available-languages a:visited {
   display: block;
   background-color: $main_menu-bg;
   padding: 0.66em 1em;
@@ -466,8 +466,8 @@ p.ui-dropdown-list-trigger {
   transition: background-color 0.5s ease-out;
 }
 
-.ui-dropdown-list .available-languages a:hover,
-.ui-dropdown-list .available-languages a:focus {
+.locale-list .available-languages a:hover,
+.locale-list .available-languages a:focus {
   border-bottom: none;
   background-color: darken($main_menu-bg, 5%);
   @include respond-min($main_menu-mobile_menu_cutoff) {
@@ -478,12 +478,12 @@ p.ui-dropdown-list-trigger {
 }
 
 /* JS interactivity */
-.no-js .ui-dropdown-list .available-languages,
-.ui-dropdown-list.active .available-languages {
+.no-js .locale-list .available-languages,
+.locale-list.active .available-languages {
   display: block;
 }
 
-.ui-dropdown-list.active .current-locale {
+.locale-list.active .current-locale {
   background-color: $main_menu-bg;
   color: #fff;
   border-color: $main_menu-bg;
@@ -495,7 +495,7 @@ p.ui-dropdown-list-trigger {
   }
 }
 
-.ui-dropdown-list.active .current-locale:after {
+.locale-list.active .current-locale:after {
   @include ie8 {
     border-top-color: #fff;
   }
@@ -503,8 +503,8 @@ p.ui-dropdown-list-trigger {
 }
 
 
-.ui-dropdown-list.active .ui-dropdown-list-trigger {
-  border: 0;
+.locale-list.active .locale-list-trigger {
+  border-color: transparent;
 }
 
 
