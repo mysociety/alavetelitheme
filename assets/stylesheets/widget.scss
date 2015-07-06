@@ -1,11 +1,9 @@
-
 $body-bg: #f7eee1;
 $button-bg: #8b9352;
 $heading-color: #3d3b38;
 $status-success: #aab26e;
 $status-failure: #ff7959;
 $status-pending: #e69e5d;
-
 
 /* CSS Mini Reset */
 
@@ -66,6 +64,7 @@ a:active {
     transition: background-color 300ms ease-out;
     margin-bottom: 0;
     font-size: 0.875em;
+    text-align: center;
     &:hover,
     &:active,
     &:focus {
@@ -162,12 +161,21 @@ a:active {
   text-align: center;
   line-height: 1.3em;
 }
+
 .alaveteli-widget__count {
     font-size: 55px;
     line-height: 55px;
     text-align: center;
     font-weight: bold;
     color: $button-bg;
+}
+
+.alaveteli-widget__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 72%;
+  padding: 1em 0 0.9em 1em;
 }
 
 .alaveteli-widget__bottom a {
@@ -179,6 +187,8 @@ a:active {
     color: #fff;
     background-color: $button-bg;
     border: none;
+    position: relative;
+    top: 0.375em;
     &:hover,
     &:active,
     &:focus,
@@ -188,4 +198,15 @@ a:active {
         background-color: darken($button-bg, 10%);
         color: #fff;
     }
+}
+
+.alaveteli-widget__button--sign-in-to-track {
+  @extend .alaveteli-widget__button;
+  font-size: 13px;
+}
+
+.alaveteli-widget__button--unsubscribe,
+.alaveteli-widget__button--create-track,
+.alaveteli-widget__button--create-vote {
+  @extend .alaveteli-widget__button;
 }
