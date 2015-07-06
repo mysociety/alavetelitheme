@@ -66,6 +66,7 @@ a:active {
     transition: background-color 300ms ease-out;
     margin-bottom: 0;
     font-size: 0.875em;
+    text-align: center;
     &:hover,
     &:active,
     &:focus {
@@ -162,6 +163,7 @@ a:active {
   text-align: center;
   line-height: 1.3em;
 }
+
 .alaveteli-widget__count {
     font-size: 55px;
     line-height: 55px;
@@ -170,20 +172,25 @@ a:active {
     color: $button-bg;
 }
 
+.alaveteli-widget__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 72%;
+  padding: 1em 0 0.9em 1em;
+}
+
 .alaveteli-widget__bottom a {
     text-decoration: none;
 }
 
-.alaveteli-widget__button--down,
 .alaveteli-widget__button {
-    position: absolute;
-    left: 16px;
-    text-align: center;
-    top: 167px;
     @extend .button-base;
     color: #fff;
     background-color: $button-bg;
     border: none;
+    position: relative;
+    top: 0.375em;
     &:hover,
     &:active,
     &:focus,
@@ -193,4 +200,15 @@ a:active {
         background-color: darken($button-bg, 10%);
         color: #fff;
     }
+}
+
+.alaveteli-widget__button--sign-in-to-track {
+  @extend .alaveteli-widget__button;
+  font-size: 13px;
+}
+
+.alaveteli-widget__button--unsubscribe,
+.alaveteli-widget__button--create-track,
+.alaveteli-widget__button--create-vote {
+  @extend .alaveteli-widget__button;
 }
