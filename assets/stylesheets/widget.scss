@@ -1,0 +1,212 @@
+$body-bg: #f7eee1;
+$button-bg: #8b9352;
+$heading-color: #3d3b38;
+$status-success: #aab26e;
+$status-failure: #ff7959;
+$status-pending: #e69e5d;
+
+/* CSS Mini Reset */
+
+html, body, div, form, fieldset, legend, label
+{
+ margin: 0;
+ padding: 0;
+}
+
+table
+{
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+th, td
+{
+ text-align: left;
+ vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+
+img { border: 0; }
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, Helvetica, Helmet, Freesans, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5em;
+    position: relative;
+    cursor: default;
+    font-size: 1em;
+}
+
+a{
+  color: #336c86;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #333;
+}
+
+/* Button styles */
+.button-base {
+    padding: 0.5em 1.25em;
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 300ms ease-out;
+    margin-bottom: 0;
+    font-size: 0.875em;
+    text-align: center;
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        transition: background-color 300ms ease-out;
+        cursor: pointer;
+    }
+}
+
+.button-disabled {
+  background-color: #f4f4f4 !important;
+  border: 1px solid #e9e9e9 !important;
+  cursor: default !important;
+  color: #333 !important;
+  font-weight: normal;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #f4f4f4 !important;
+    color: #333 !important;
+  }
+}
+
+.alaveteli-widget {
+    width: 318px;
+    height: 213px;
+    border: 1px solid #e9e9e9;
+    background: #e9e9e9 url("widget-base.png") top left no-repeat;
+    position: relative;
+    background-color: $body-bg;
+    color: $heading-color;
+}
+
+.alaveteli-widget__title {
+    position: absolute;
+    top: 1em;
+    left: 16px;
+    width: 160px;
+    height: 75px;
+    overflow: hidden;
+  }
+
+.alaveteli-widget__status {
+    position: absolute;
+    top: 97px;
+    left: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 200px;
+    text-transform: none;
+
+    &.successful,
+    &.partially_successful {
+      color: $status-success;
+    }
+
+    &.requires_admin,
+    &.waiting_response_very_overdue,
+    &.not_held,
+    &.rejected {
+      color: $status-failure;
+    }
+
+    &.waiting_response,
+    &.waiting_response_overdue,
+    &.user_withdrawn,
+    &.waiting_clarification,
+    &.gone_postal,
+    &.internal_review,
+    &.attention_requested  {
+      color: $status-pending;
+    }
+}
+
+.alaveteli-widget__status__status-label {
+    margin: 0;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 1.1em;
+    color: #555;
+    text-transform: capitalize;
+}
+
+.alaveteli-widget__left {
+    position: absolute;
+    width: 145px;
+}
+
+.alaveteli-widget__people-count {
+  position: absolute;
+  top: 22px;
+  left: 197px;
+  width: 100px;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.alaveteli-widget__count {
+    font-size: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-weight: bold;
+    color: $button-bg;
+}
+
+.alaveteli-widget__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 72%;
+  padding: 1em 0 0.9em 1em;
+}
+
+.alaveteli-widget__bottom a {
+    text-decoration: none;
+}
+
+.alaveteli-widget__button {
+    @extend .button-base;
+    color: #fff;
+    background-color: $button-bg;
+    border: none;
+    position: relative;
+    top: 0.375em;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:active,
+    &:visited:focus {
+        background-color: darken($button-bg, 10%);
+        color: #fff;
+    }
+}
+
+.alaveteli-widget__button--sign-in-to-track {
+  @extend .alaveteli-widget__button;
+  font-size: 13px;
+}
+
+.alaveteli-widget__button--unsubscribe,
+.alaveteli-widget__button--create-track,
+.alaveteli-widget__button--create-vote {
+  @extend .alaveteli-widget__button;
+}
