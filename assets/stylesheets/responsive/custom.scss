@@ -575,6 +575,61 @@ dt {
     }
 }
 
+/* How it works section */
+.steps__list {
+  li {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      width: 33.3333%;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.steps__step-box {
+  background-color: $color_white;
+  padding: 2em;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    min-height: 11em;
+  }
+  p {
+    line-height: 1.5em;
+    color: $color_black_alt;
+  }
+}
+
+.steps__step-number {
+  height: 3.5em;
+  width: 3.5em;
+  background-color:$color_green;
+  padding: 1em;
+  border-radius: 100%;
+  color: $color_white;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    left: 50%;
+    margin-left: -1.75em;
+    bottom: -1em;
+    top: auto;
+  }
+}
+
+li:nth-child(2) {
+  .steps__step-number {
+    background-color: $color_blue;
+  }
+}
+
+li:nth-child(3) {
+  .steps__step-number {
+    background-color: $color_orange;
+  }
+}
+
+.learn-more-foi {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    margin-top: 2em;
+  }
+}
+
 /* Authority page */
 .action-bar__follower-count {
   padding: 3px;
