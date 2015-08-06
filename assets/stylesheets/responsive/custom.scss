@@ -746,13 +746,19 @@ dt {
 
 /* Front page */
 /* Drop the extract indentation on small screens */
-#frontpage_examples .excerpt {
+#frontpage_examples {
+  .excerpt {
     padding: 0.2em 0 0 0;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       padding: 0 0 0 2em;
     }
+  }
+  p strong a {
+    @include button-secondary;
+  }
 }
 
+<<<<<<< HEAD
 /* How it works section */
 .steps__list {
   li {
@@ -811,6 +817,13 @@ li:nth-child(3) {
   }
 }
 
+=======
+.latest-requests {
+  .button-secondary {
+    @include button-secondary();
+  }
+}
+>>>>>>> wire up homepage buttons
 /* Authority page */
 .action-bar__follower-count {
   padding: 3px;
