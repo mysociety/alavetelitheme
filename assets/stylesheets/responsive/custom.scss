@@ -172,93 +172,88 @@ input.use-datepicker[type=text] {
 }
 
 /* Button styles */
-.button-base {
-    padding: 0.5em 1.25em;
-    border-radius: 3px;
-    display: inline-block;
-    font-weight: 600;
+
+@mixin button-base($size: normal, $disabled: false) {
+  padding: 0.5em 1.25em;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 300ms ease-out;
+  margin-bottom: 0;
+  font-family: $font-family;
+  @if $size == large {
+    font-size: 2.2em;
+  }
+  &:hover,
+  &:active,
+  &:focus {
     text-decoration: none;
     transition: background-color 300ms ease-out;
-    margin-bottom: 0;
-    font-family: $font-family;
+  }
+  @if $disabled {
+    opacity: 0.333;
     &:hover,
     &:active,
     &:focus {
-        text-decoration: none;
-        transition: background-color 300ms ease-out;
+      background-color: inherit;
+      color: inherit;
+      cursor: default;
     }
+  }
 }
 
-a.button,
-.button,
-.button:visited {
-    @extend .button-base;
-    color: #fff;
-    background-color: $button-bg;
-    border: none;
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited:hover,
-    &:visited:active,
-    &:visited:focus {
-        background-color: darken($button-bg, 10%);
-        color: #fff;
-    }
+@mixin button-primary($args...) {
+  @include button-base($args...);
+  color: #fff;
+  background-color: $button-bg;
+  border: none;
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited:hover,
+  &:visited:active,
+  &:visited:focus {
+      background-color: darken($button-bg, 10%);
+      color: #fff;
+  }
 }
 
-a.button-secondary,
-.button-secondary,
-.button-secondary:visited {
-    @extend .button-base;
+@mixin button-secondary($args...) {
+  @include button-base($args...);
     background-color: $color_light_grey;
     color: $color_black;
     font-weight: normal;
     &:hover,
     &:active,
     &:focus {
-        color: #333;
-        background-color: darken($color_light_grey, 7.5%);
-        color: $color_black;
+      color: #333;
+      background-color: darken($color_light_grey, 7.5%);
+      color: $color_black;
     }
 }
 
-.button-tertiary {
-    @extend .button-base;
-    background-color: transparent;
-    color: #333;
-    font-weight: normal;
-    border: 1px solid #e9e9e9;
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: darken(#edece8, 7.5%);
-        border: 1px solid #ddd;
-    }
-}
-
-.button-large {
-  font-size: 2.2em;
-}
-
-.button-disabled {
-  opacity: 0.333;
+@mixin button-tertiary($args...) {
+  @include button-base($args...);
+  background-color: transparent;
+  color: #333;
+  font-weight: normal;
+  border: 1px solid #e9e9e9;
   &:hover,
   &:active,
   &:focus {
-    background-color: inherit;
-    color: inherit;
+    background-color: darken(#edece8, 7.5%);
+    border: 1px solid #ddd;
   }
 }
 
 form input[type=submit], a.link_button_green, a.link_button_green_large {
-  @extend .button;
+  @include button-primary;
   text-decoration: none;
 }
 
 a.link_button_green_large {
-  @extend .button;
-  @extend .button-large;
+  @include button-primary($size: large);
 }
 
 /* Popups */
