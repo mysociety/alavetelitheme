@@ -31,15 +31,14 @@ $color_light_grey: #CCCCCC;
 $color_lighter_grey: #D3D3D3;
 $color_mid_cold_grey: #9AA6AB;
 
-$body-bg: $color_sand;
+$body-bg: $color_neutral_light;
 
 $locale-bg: $color_black;
 $locale-color: $color_mid_grey;
 $locale-hover-color: $color_white;
 
-$body-font-color: $color_black;
-$link-color: $color-blue;
-$heading-color: $color_black-alt;
+$body-font-color: $color_neutral_dark;
+$link-color: $color_primary;
 $font-family: "Roboto Slab", Georgia, serif;
 $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
@@ -138,13 +137,16 @@ body{
   font-family: $font-family;
 }
 
-a{
-  color: $link-color;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $heading-color;
-  font-family: $font-family;
+a {
+  &:link,
+  &:visited {
+    color: $link-color;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($link-color, 10%);
+  }
 }
 
 /* Let h1s be a little smaller on small screens */
@@ -512,15 +514,13 @@ a.link_button_green_large {
 
 .locale-list.active .locale-list-trigger {
   border-color: transparent;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    border-color: $color_neutral_dark;
+  }
 }
 
 
 #banner {
-
-  /* locale border */
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    border-top: 4px solid $locale-bg;
-  }
 
   /* Hide the greeting on smaller devices */
   .greeting {
@@ -712,7 +712,6 @@ a.link_to_this {
 /* Help pages */
 
 dt {
-  color: $heading-color;
   font-weight: 700;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     font-size: 2em;
