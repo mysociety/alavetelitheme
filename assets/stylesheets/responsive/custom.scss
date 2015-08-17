@@ -32,8 +32,7 @@ $locale-hover-color: $color_white;
 $body-font-color: $color_black;
 $link-color: $color-blue;
 $heading-color: $color_black-alt;
-$font-family: "Roboto Slab", Georgia, serif;
-$sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
 $button-bg: $color_green;
@@ -136,7 +135,6 @@ a{
 
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
-  font-family: $font-family;
 }
 
 /* Let h1s be a little smaller on small screens */
