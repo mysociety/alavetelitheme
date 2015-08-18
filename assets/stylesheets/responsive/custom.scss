@@ -14,24 +14,6 @@ $color_neutral_dark: $color_slate;
 $color_primary: $color_violet;
 $color_secondary: $color_green;
 
-$color_light_blue: #67848C;
-$color_dark_blue: #2c5d74;
-$color_darker_blue: #354C56;
-$color_dark_red: #A1432C;
-$color_teal: #6d918d;
-$color_bright_green: #839310;
-$color_light_green: #AAB26E;
-$color_pale_green: #D7DABD;
-$color_bright_orange: #FF7959;
-$color_pale_orange: #EBC3A9;
-$color_pale_yellow: #EDD3B8;
-$color_black_alt: #3d3b38;
-$color_black: #333333;
-$color_mid_grey: #999999;
-$color_light_grey: #CCCCCC;
-$color_lighter_grey: #D3D3D3;
-$color_mid_cold_grey: #9AA6AB;
-
 $body-bg: $color_neutral_light;
 
 $body-font-color: $color_neutral_dark;
@@ -462,7 +444,7 @@ a.link_button_green_large {
   color: $color_white;
   border-color: $color_primary;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: lighten($color_black, 6%);
+    background-color: lighten($color_neutral_dark, 6%);
     border-bottom: 1px solid lighten($color_neutral_dark, 2%);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -562,7 +544,7 @@ a.link_button_green_large {
 /* Request page */
 div.correspondence {
   background-color: $color_white;
-  box-shadow: 0 2px 2px transparentize($color_black, 0.8);
+  box-shadow: 0 2px 2px transparentize($color_slate, 0.8);
   border: none;
   border-radius: 5px;
   margin-bottom: 2em;
@@ -709,7 +691,7 @@ dt {
 .steps__step-box {
   background-color: $color_white;
   padding: 2em;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
+  box-shadow: 0 1px 2px transparentize($color_slate, 0.75);
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     min-height: 11em;
   }
@@ -723,7 +705,7 @@ dt {
   height: 3.5em;
   width: 3.5em;
   background-color: $color_primary;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
+  box-shadow: 0 1px 2px transparentize($color_slate, 0.75);
   padding: 1em;
   border-radius: 100%;
   color: $color_white;
@@ -791,7 +773,7 @@ dt {
 
 .intro__title {
   color: $color_white;
-  text-shadow: 0 1px 2px transparentize($color_black, 0.7);
+  text-shadow: 0 1px 2px transparentize($color_slate, 0.7);
 }
 
 .new-request__content {
