@@ -42,10 +42,6 @@ $form_input-bg: $color_white;
 $button-bg: $color_green;
 $button-color: $color_white;
 
-$footer-bg: $color_black;
-$footer-color: $color_light_grey;
-$footer-link-color: $color_white;
-
 $status-success: $color_light_green;
 $status-failure: $color_bright_orange;
 $status-pending: $color_yellow;
@@ -537,15 +533,15 @@ a.link_button_green_large {
 
 /* Footer */
 #footer {
-  background-color: $color_black;
-  color: $color_mid_grey;
+  background-color: $color_neutral_dark;
+  color: darken($color_neutral_light, 10%);
   a {
     text-decoration: none;
     color: $color_white;
     &:hover,
     &:active,
     &:focus {
-      color: $color_bright_green;
+      color: lighten($color_primary, 10%);
       text-decoration: underline;
     }
   }
@@ -559,7 +555,7 @@ a.link_button_green_large {
 
 .footer__final {
   .row {
-    border-top: 1px solid lighten($color_black, 6%);
+    border-top: 1px solid lighten($color_neutral_dark, 6%);
   }
 }
 
