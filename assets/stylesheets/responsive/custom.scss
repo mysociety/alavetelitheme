@@ -721,14 +721,14 @@ dt {
   }
   p {
     line-height: 1.5em;
-    color: $color_black_alt;
+    color: $color_neutral_dark;
   }
 }
 
 .steps__step-number {
   height: 3.5em;
   width: 3.5em;
-  background-color: $color_green;
+  background-color: $color_primary;
   box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   padding: 1em;
   border-radius: 100%;
@@ -738,18 +738,6 @@ dt {
     margin-left: -1.75em;
     bottom: -1em;
     top: auto;
-  }
-}
-
-li:nth-child(2) {
-  .steps__step-number {
-    background-color: $color_blue;
-  }
-}
-
-li:nth-child(3) {
-  .steps__step-number {
-    background-color: $color_orange;
   }
 }
 
