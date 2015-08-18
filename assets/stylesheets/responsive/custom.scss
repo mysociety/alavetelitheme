@@ -46,11 +46,6 @@ $footer-bg: $color_black;
 $footer-color: $color_light_grey;
 $footer-link-color: $color_white;
 
-$incoming-correspondence-color: $color_red;
-$outgoing-correspondence-color: $color_teal;
-$correspondence-bg: $color_white;
-$correspondence-shadow: $color_light_grey;
-
 $status-success: $color_light_green;
 $status-failure: $color_bright_orange;
 $status-pending: $color_yellow;
@@ -570,24 +565,27 @@ a.link_button_green_large {
 
 /* Request page */
 div.correspondence {
-  background-color: $correspondence-bg;
+  background-color: $color_white;
+  box-shadow: 0 2px 2px transparentize($color_black, 0.8);
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 2em;
 }
 
 .incoming.correspondence {
-  border: none;
-  border-top: 8px solid $incoming-correspondence-color;
-  box-shadow: 0 3px 3px $correspondence-shadow;
+  border-top: 8px solid $color_secondary;
+  a {
+    color: $color_secondary;
+  }
   a.link_to_this {
-    background-color: $incoming-correspondence-color;
+    background-color: $color_secondary;
   }
 }
 
 .outgoing.correspondence {
-  border: none;
-  border-top: 8px solid $outgoing-correspondence-color;
-  box-shadow: 0 3px 3px $correspondence-shadow;
+  border-top: 8px solid $color_primary;
   a.link_to_this {
-    background-color: $outgoing-correspondence-color;
+    background-color: $color_primary;
   }
 }
 
@@ -613,7 +611,7 @@ a.link_to_this {
   border-radius: 0;
   border: 1px solid $color_neutral_dark;
   .close-button {
-    background-color: $correspondence-bg;
+    background-color: $color_secondary;
     float: right;
   }
 }
