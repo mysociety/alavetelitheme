@@ -768,7 +768,7 @@ li:nth-child(3) {
 
 
 .homepage-hero {
-  background-color: $color_black;
+  background-color: $color_neutral_dark;
   background-image: image-url('homepage-background-small.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -782,7 +782,7 @@ li:nth-child(3) {
   }
 
   a {
-    color: $color_yellow;
+    color: $color_orange;
     &:hover,
     &:active,
     &:focus {
@@ -791,17 +791,17 @@ li:nth-child(3) {
   }
 
   .button {
-    color: $color_white;
-    background-color: $color_yellow;
-    border-color: darken($color_yellow, 15%);
-    color: $color_black;
+    color: $color_orange;
+    background-color: $color_secondary;
+    border-color: darken($color_secondary, 15%);
+    color: $color_neutral_dark;
     transition: color 300ms ease-out;
     &:hover,
     &:active,
     &:focus {
       color: $color_white;
-      background-color: $color_blue;
-      border-color: darken($color_blue, 15%);
+      background-color: $color_primary;
+      border-color: darken($color_primary, 15%);
       transition: color 300ms ease-out;
     }
   }
@@ -813,7 +813,7 @@ li:nth-child(3) {
 }
 
 .new-request__content {
-  background-color: $color_black;
+  background-color: $color_neutral_dark;
   border-radius: 5px;
   padding: 1.888888889em;
 }
@@ -826,4 +826,7 @@ li:nth-child(3) {
 
 .new-request__description {
   color: transparentize($color_white, 0.2);
+  @include ie8 {
+    color: $color_white;
+  }
 }
