@@ -1,7 +1,12 @@
-$color_violet: #a94ca6;
 $color_sand: #f3f1eb;
 $color_slate: #333333;
+$color_orange: #f4a140;
+$color_blue: #4faded;
 $color_green: #62b356;
+$color_yellow: #ffd836;
+$color_red: #e04b4b;
+$color_violet: #a94ca6;
+$color_purple: #5c377f;
 $color_white: #ffffff;
 
 $color_neutral_light: $color_sand;
@@ -10,19 +15,15 @@ $color_primary: $color_violet;
 $color_secondary: $color_green;
 
 $color_light_blue: #67848C;
-$color_blue: #336C86;
 $color_dark_blue: #2c5d74;
 $color_darker_blue: #354C56;
-$color_red: #8c6673;
 $color_dark_red: #A1432C;
 $color_teal: #6d918d;
 $color_bright_green: #839310;
 $color_light_green: #AAB26E;
 $color_pale_green: #D7DABD;
-$color_orange: #CC8245;
 $color_bright_orange: #FF7959;
 $color_pale_orange: #EBC3A9;
-$color_yellow: #E69E5D;
 $color_pale_yellow: #EDD3B8;
 $color_black_alt: #3d3b38;
 $color_black: #333333;
@@ -46,14 +47,14 @@ $status-success: $color_light_green;
 $status-failure: $color_bright_orange;
 $status-pending: $color_yellow;
 
-$notice-bg: $color_pale_green;
-$notice-border: $color_bright_green;
+$notice-color: $color_green;
+$notice-color-pale: desaturate(lighten($notice-color, 30%),10%);
 
-$error-bg: $color_pale_orange;
-$error-border: $color_dark_red;
+$error-color: $color_red;
+$error-color-pale: desaturate(lighten($error-color, 30%),10%);
 
-$action-bg: $color_pale_yellow;
-$action-border: $color_orange;
+$action-color: $color_orange;
+$action-color-pale: desaturate(lighten($action-color, 30%),10%);;
 
 /* Mixin styles */
 
@@ -199,8 +200,8 @@ a.link_button_green_large {
 /* Popups */
 
 .popup {
-  background-color: $notice-bg;
-  border: 3px solid $notice-border;
+  background-color: $notice-color-pale;
+  border: 3px solid $notice-color;
 }
 
 
@@ -262,8 +263,7 @@ a.link_button_green_large {
 
 #notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
   border-top: 10px solid;
-  font-size: 1.2em;
-  border-radius: 0;
+  font-size: 1em;
   margin:1em 0;
   padding: 1.5em;
 
@@ -281,19 +281,19 @@ a.link_button_green_large {
 }
 
 #notice, #request_header_text {
-  background-color: $notice-bg;
-  border-color: $notice-border;
+  background-color: $notice-color-pale;
+  border-color: $notice-color;
 }
 
 #error, .errorExplanation, #hidden_request, .warning {
-  background-color: $error-bg;
-  border-color: $error-border;
+  background-color: $error-color-pale;
+  border-color: $error-color;
 
 }
 
 .undescribed_requests {
-  background-color: $action-bg;
-  border-color: $action-border;
+  background-color: $action-color-pale;
+  border-color: $action-color;
 }
 
 /* Logged and local options act like submenus */
@@ -616,13 +616,13 @@ a.link_to_this {
   padding: 0;
 
   form{
-    background-color: $action-bg;
-    border-color: $action-border;
+    background-color: $action-color-pale;
+    border-color: $action-color;
     h2 {
       margin-top: 0;
     }
     hr {
-      border-color: $action-border;
+      border-color: $action-color;
     }
   }
 }
