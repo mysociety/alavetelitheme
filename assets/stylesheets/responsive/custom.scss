@@ -43,9 +43,9 @@ $form_input-bg: $color_white;
 $button-bg: $color_green;
 $button-color: $color_white;
 
-$status-success: $color_light_green;
-$status-failure: $color_bright_orange;
-$status-pending: $color_yellow;
+$status-success: $color_green;
+$status-failure: $color_red;
+$status-pending: $color_orange;
 
 $notice-color: $color_green;
 $notice-color-pale: desaturate(lighten($notice-color, 30%),10%);
