@@ -31,13 +31,8 @@ $status-failure: $color_red;
 $status-pending: $color_orange;
 
 $notice-color: $color_green;
-$notice-color-pale: desaturate(lighten($notice-color, 30%),10%);
-
 $error-color: $color_red;
-$error-color-pale: desaturate(lighten($error-color, 30%),10%);
-
 $action-color: $color_orange;
-$action-color-pale: desaturate(lighten($action-color, 30%),10%);;
 
 /* Mixin styles */
 
@@ -183,7 +178,7 @@ a.link_button_green_large {
 /* Popups */
 
 .popup {
-  background-color: $notice-color-pale;
+  background-color: desaturate(lighten($notice-color, 30%),10%);
   border: 3px solid $notice-color;
 }
 
@@ -264,18 +259,18 @@ a.link_button_green_large {
 }
 
 #notice, #request_header_text {
-  background-color: $notice-color-pale;
+  background-color: desaturate(lighten($notice-color, 30%),10%);
   border-color: $notice-color;
 }
 
 #error, .errorExplanation, #hidden_request, .warning {
-  background-color: $error-color-pale;
+  background-color: desaturate(lighten($error-color, 30%),10%);
   border-color: $error-color;
 
 }
 
 .undescribed_requests {
-  background-color: $action-color-pale;
+  background-color: desaturate(lighten($action-color, 30%),10%);
   border-color: $action-color;
 }
 
@@ -599,7 +594,7 @@ a.link_to_this {
   padding: 0;
 
   form{
-    background-color: $action-color-pale;
+    background-color: desaturate(lighten($action-color, 30%),10%);
     border-color: $action-color;
     h2 {
       margin-top: 0;
