@@ -18,11 +18,12 @@ $body-bg: $color_neutral_light;
 
 $body-font-color: $color_neutral_dark;
 $link-color: $color_primary;
+$action-color: $color_green;
 $font-family: "Roboto Slab", Georgia, serif;
 $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
-$button-bg: $color_green;
+$button-bg: $action-color;
 $button-color: $color_white;
 
 $status-success: $color_green;
