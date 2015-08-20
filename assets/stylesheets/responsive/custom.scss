@@ -742,27 +742,11 @@ dt {
   }
 
   a {
-    color: $color_orange;
+    color: $color_secondary;
     &:hover,
     &:active,
     &:focus {
       color: $color_white;
-    }
-  }
-
-  .button {
-    color: $color_orange;
-    background-color: $color_secondary;
-    border-color: darken($color_secondary, 15%);
-    color: $color_neutral_dark;
-    transition: color 300ms ease-out;
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color_white;
-      background-color: $color_primary;
-      border-color: darken($color_primary, 15%);
-      transition: color 300ms ease-out;
     }
   }
 }
