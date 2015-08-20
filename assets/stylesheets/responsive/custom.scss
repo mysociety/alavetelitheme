@@ -17,7 +17,7 @@ $color_secondary: $color_orange;
 $body-bg: $color_neutral_light;
 
 $body-font-color: $color_neutral_dark;
-$link-color: $color_primary;
+$link-color: darken($color_blue, 20%);
 $action-color: $color_green;
 $font-family: "Roboto Slab", Georgia, serif;
 $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
