@@ -644,6 +644,10 @@ a.link_to_this {
 
 .report-this-request {
   @include button-secondary();
+  color: $color_black !important;
+  /* Using !important here as a temporary fix for a bad declaration (a:link)
+    in Alaveteli core. When this is fixed it can be removed.
+  */
 }
 
 /* Status lines and icons */
