@@ -639,7 +639,7 @@ a.link_to_this {
 }
 
 .feed_link_sidebar .link_button_green {
-  @include button-secondary();
+  @include button-primary();
 }
 
 .report-this-request {
