@@ -1,5 +1,5 @@
 $color_sand: #f3f1eb;
-$color_slate: #333333;
+$color_black: #333333;
 $color_orange: #f4a140;
 $color_blue: #4faded;
 $color_green: #62b356;
@@ -10,7 +10,7 @@ $color_purple: #5c377f;
 $color_white: #ffffff;
 
 $color_neutral_light: $color_sand;
-$color_neutral_dark: $color_slate;
+$color_neutral_dark: $color_black;
 $color_primary: $color_violet;
 $color_secondary: $color_orange;
 
@@ -539,7 +539,7 @@ a.link_button_green_large {
 /* Request page */
 div.correspondence {
   background-color: $color_white;
-  box-shadow: 0 2px 2px transparentize($color_slate, 0.8);
+  box-shadow: 0 2px 2px transparentize($color_black, 0.8);
   border: none;
   border-radius: 5px;
   margin-bottom: 2em;
@@ -686,7 +686,7 @@ dt {
 .steps__step-box {
   background-color: $color_white;
   padding: 2em;
-  box-shadow: 0 1px 2px transparentize($color_slate, 0.75);
+  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     min-height: 11em;
   }
@@ -700,7 +700,7 @@ dt {
   height: 3.5em;
   width: 3.5em;
   background-color: $color_primary;
-  box-shadow: 0 1px 2px transparentize($color_slate, 0.75);
+  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   padding: 1em;
   border-radius: 100%;
   color: $color_white;
@@ -752,7 +752,7 @@ dt {
 
 .intro__title {
   color: $color_white;
-  text-shadow: 0 1px 2px transparentize($color_slate, 0.7);
+  text-shadow: 0 1px 2px transparentize($color_black, 0.7);
 }
 
 .new-request__content {
