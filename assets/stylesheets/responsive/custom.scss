@@ -167,22 +167,21 @@ input.use-datepicker[type=text] {
   &:visited:active,
   &:visited:focus {
     background-color: darken($button-bg, 10%);
-    color:  $color_white;
+    color: $color_white;
   }
 }
 
 @mixin button-secondary($args...) {
   @include button-base($args...);
-    background-color: desaturate(darken($color_sand, 10%), 5%);
+  background-color: desaturate(darken($color_sand, 10%), 5%);
+  color: $color_black;
+  font-weight: normal;
+  &:hover,
+  &:active,
+  &:focus {
     color: $color_black;
-    font-weight: normal;
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color_black;
-      background-color:  desaturate(darken($color_sand, 15%), 5%);
-      color: $color_black;
-    }
+    background-color: desaturate(darken($color_sand, 20%), 5%);
+  }
 }
 
 @mixin button-tertiary($args...) {
