@@ -833,12 +833,12 @@ dt {
 
   .new-request__make-new-requests {
     @include button-base;
-    background-color: $color_orange;
+    background-color: desaturate(darken($color_secondary, 10%), 5%);
     color: $color_white;
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($color_orange, 10%);
+      background-color: darken($color_secondary, 20%);
     }
   }
 }
