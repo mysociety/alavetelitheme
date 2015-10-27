@@ -345,8 +345,6 @@ a.link_button_green_large {
   background-color: $color_primary;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     background-color: transparent;
-    right: auto;
-    top: 1.5em;
   }
 }
 
@@ -355,8 +353,9 @@ a.link_button_green_large {
   border-bottom: 0;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     position: absolute;
-    left: 160px;
-    top: 0.8em;
+    left: ($logo-width + 40px);
+    top: 2.2em;
+    right: auto;
   }
   .locale-list-trigger {
     margin-bottom: 0;
