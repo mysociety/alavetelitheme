@@ -613,6 +613,70 @@ div.correspondence {
   }
 }
 
+.correspondence__delivery {
+  &:hover {
+    cursor: help;
+  }
+
+  &:after {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: currentColor; // ie: same as this element's `color` attribute, which is inherited
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA90lEQVQ4T72Sb00DURDEf+MACXUAOKgDcEBwUBRQB1QCVUBRQFAAdVAU0CoYMpd7zeu7O9Lwgf1yuey+2fmzoinbF8AdcAvM+/YnsAJeJe3rJ6p/bF8Bb0BAxipA95Ly7eoIYHsGfPzyuLzZAdeFSQ2wAW6qtQcgm8LmsqHzICmSBgwCkuGv6JeUbdheAE8VyLukzp8TD/rhJbCpddqOoS9nAYykku2PjTdDCRNxJpEkU9e2l9fFOZBQJm23pqa1Bhb1LYwC9Mf03WxO/s8t0ymA0M5NlNpKaqWcHtKIB+WM09qVSP/K4Jj7uQDZngRK/T9Aa+Ikgx/88WMR7frYlwAAAABJRU5ErkJggg=='); // question mark
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    border-radius: 100%;
+    margin: 0 0.3em 0 0.5em;
+    vertical-align: -0.15em;
+  }
+}
+
+.correspondence__delivery--delivered {
+  &:link,
+  &:visited {
+    color: $status-success;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($status-success, 10%);
+  }
+
+  &:after {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAApklEQVQ4T6WT7Q2DMAxEfRt0hK7CJIWJqk5QulFH6AhscChRjIKxUz74F+H3cE4H5OKDMzzJG4ApsYcFJHsReYpIB+B7SFDgd9k6bdDtFhhYb/5aBCTvAH5eJgH8AdBnQTUwABhrSQvOIToDi+QfrIL0xYdZfShnDUxf57XrWb2CJ7FxbOBVD0i2JC68KVIgCWG3iUbShMMqF4nYwLyO7G5i9NNdFsz6Dk3LsbyjSwAAAABJRU5ErkJggg=='); // tick
+  }
+}
+
+.correspondence__delivery-info {
+  padding: 1em;
+  margin: 0 -1em 1em -1em;
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding: 1.2em;
+    margin: 0 -1.2em 1em -1.2em;
+  }
+
+  background: mix(#fff, $status-success, 80%);
+  display: none; // is shown by javascript
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+
+  textarea {
+    width: 100%;
+    height: 6em;
+    font-family: monospace;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    margin: 0;
+  }
+}
+
 .describe_state_form input[type="radio"] + label {
   display:inline;
 }
