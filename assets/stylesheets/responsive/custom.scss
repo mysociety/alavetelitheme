@@ -321,6 +321,10 @@ a.link_button_green_large {
 
 /* Logged and local options act like submenus */
 #logged_in_bar{
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    top: 0;
+  }
+
   a {
     @extend %menu-item;
     background-color: transparent;
@@ -333,7 +337,6 @@ a.link_button_green_large {
     }
   }
   #logged_in_links {
-    top: 2em;
     a {
       font-weight: normal;
     }
