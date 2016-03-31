@@ -48,11 +48,11 @@ organisations:</p>
 
 <ul>
   <li> Those formally subject to the FOI Act</li>
-  <li> Those formally subject to the Environmental Regulations (a less well  
+  <li> Those formally subject to the Environmental Regulations (a less well
   defined group)</li>
   <li> Those which voluntarily comply with the FOI Act</li>
   <li> Those which aren't subject to the Act but we think should be, on grounds
-  such as them having significant public responsibilities. 
+  such as them having significant public responsibilities.
   </li>
 </ul>
 
@@ -91,9 +91,12 @@ Information is a powerful tool. Although you may not use this site to
 run your campaign, we encourage you to use it to get the information you
 need. We also encourage to run your campaign elsewhere - one effective
 and very easy way is to <%= link_to 'start your own blog',
-"http://wordpress.com/"%>. You are welcome to link to your campaign
-from this site in an annotation to your request (you can make
-annotations after submitting the request).
+"http://wordpress.com/"%>.
+<% if AlaveteliConfiguration::enable_annotations %>
+  You are welcome to link to your campaign from this site in an
+  annotation to your request (you can make annotations after submitting
+  the request).
+<% end %>
 </p>
 
 </dd>
@@ -151,9 +154,9 @@ are breaking the law.</p>
     checking that they received the request. It was sent to them by email.
     </li>
     <li>If they have not received it, the problem is most likely due to
-    "spam filters". Refer the authority to the measures in the answer 
-    '<a href="/help/officers#spam_problems">I can see a request on <%= site_name %>, but we never got it by email!</a>' 
-    in the FOI officers section of this help. 
+    "spam filters". Refer the authority to the measures in the answer
+    '<a href="/help/officers#spam_problems">I can see a request on <%= site_name %>, but we never got it by email!</a>'
+    in the FOI officers section of this help.
     </li>
     <li>If you're still having no luck, then you can ask for an internal review,
     and then complain to the Information Commissioner about the authority.
@@ -168,7 +171,7 @@ then read our page '<a href="/help/unhappy">Unhappy about the response you got?<
 
 <dt id="reuse">It says I can't re-use the information I got!<a href="#reuse">#</a> </dt>
 <dd>
-<p>Authorities often add legal boilerplate about the 
+<p>Authorities often add legal boilerplate about the
 "<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of Public Sector
 Information Regulations 2005</a>", which at first glance implies you may not
 be able do anything with the information.
@@ -192,7 +195,7 @@ pages on the Information Commissioner's website.</p>
 the process is very similar. There are differences around time
 limits for compliance.
 See the <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
-Information Commissioner's guidance</a> for details.</p> 
+Information Commissioner's guidance</a> for details.</p>
 </dd>
 
 <dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a> </dt>
@@ -230,7 +233,7 @@ you manage FOI requests in secret, then <a href="/help/contact">contact us</a>.
 <dd>
 <p>Some public authorities, such as <a href="http://www.whatdotheyknow.com/body/south_east_water">South East Water</a>,
 don't come under the Freedom of Information Act, but do come under another law called
-the Environmental Information Regulations (EIR). 
+the Environmental Information Regulations (EIR).
 </p>
 
 <p>It's a very similar law, so you make a request
@@ -243,7 +246,7 @@ means. It is quite broad.
 <p>You can, of course, request environmental information from other
 authorities. Just make a Freedom of Information (FOI) request as normal. The
 authority has a duty to work out if the Environmental Information Regulations
-(EIR) is the more appropriate legislation to reply under. 
+(EIR) is the more appropriate legislation to reply under.
 </p>
 </dd>
 
@@ -266,18 +269,20 @@ responses actually came from the authority. If this really matters to you,
 you can always make the same request again via <%= site_name %>.
 </dd>
 
-<dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+<% if AlaveteliConfiguration::enable_annotations %>
+  <dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
 
-<dd> 
-<p>Annotations on <%= site_name %> are to help
-people get the information they want, or to give them pointers to places they
-can go to help them act on it. We reserve the right to remove anything else.
-</p>
-<p>Endless, political discussions are not allowed.
-Post a link to a suitable forum or campaign site elsewhere.</p>
-<dd>
+  <dd>
+  <p>Annotations on <%= site_name %> are to help
+  people get the information they want, or to give them pointers to places they
+  can go to help them act on it. We reserve the right to remove anything else.
+  </p>
+  <p>Endless, political discussions are not allowed.
+  Post a link to a suitable forum or campaign site elsewhere.</p>
+  <dd>
 
-</dl>
+  </dl>
+<% end %>
 
 <p><strong>Next</strong>, read about <a href="/help/privacy">your privacy</a> --&gt;
 
