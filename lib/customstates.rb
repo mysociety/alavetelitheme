@@ -1,5 +1,5 @@
-# See `doc/THEMES.md` for more explanation of this file
-# This example adds a "transferred" state to requests.
+# See `http://alaveteli.org/docs/customising/themes/#customising-the-request-states`
+# for more explanation of this file
 
 module InfoRequestCustomStates
 
@@ -19,32 +19,48 @@ module InfoRequestCustomStates
     end
 
     # Mixin methods for InfoRequest
-    module ClassMethods 
+    module ClassMethods
+
+        # Return the name of a custom status.
+        # Example of how to add a custom status:
+        # def theme_display_status(status)
+        #     if status == 'transferred'
+        #         _("Transferred.")
+        #     else
+        #         raise _("unknown status ") + status
+        #     end
+        # end
         def theme_display_status(status)
-            if status == 'transferred'
-                _("Transferred.")
-            else
-                raise _("unknown status ") + status        
-            end
+            raise _("unknown status ") + status
         end
 
+        # Return the list of custom statuses added by the theme.
+        # Example of how to add a custom status:
+        # def theme_extra_states
+        #     return ['transferred']
+        # end
         def theme_extra_states
-            return ['transferred']
+            return []
         end
+
     end
 end
 
 module RequestControllerCustomStates
 
+    # `theme_describe_state` is called after the core describe_state code.
+    # It should end by raising an error if the status is unknown.
+    # Example of how to add a custom status:
+    # def theme_describe_state(info_request)
+    #     if info_request.calculate_status == 'transferred'
+    #         flash[:notice] = _("Authority has transferred your request to a different public body.")
+    #         redirect_to request_url(@info_request)
+    #     else
+    #         raise "unknown calculate_status " + info_request.calculate_status
+    #     end
+    # end
     def theme_describe_state(info_request)
-        # called after the core describe_state code.  It should
-        # end by raising an error if the status is unknown
-        if info_request.calculate_status == 'transferred'
-            flash[:notice] = _("Authority has transferred your request to a different public body.")
-            redirect_to request_url(@info_request)
-        else
-            raise "unknown calculate_status " + info_request.calculate_status
-        end
+        raise "unknown calculate_status " + info_request.calculate_status
     end
 
 end

@@ -6,13 +6,14 @@
 #
 Rails.configuration.to_prepare do
     # Example adding an instance variable to the frontpage controller
-    GeneralController.class_eval do
-        def mycontroller
-            @say_something = "Greetings friend"
-        end
-    end
-    HelpController.class_eval do
-        def help_out
-        end
-    end
+    # GeneralController.class_eval do
+    #     def mycontroller
+    #         @say_something = "Greetings friend"
+    #     end
+    # end
+    # Example adding a new action to an existing controller
+    # HelpController.class_eval do
+    #     def help_out
+    #     end
+    # end
 end
