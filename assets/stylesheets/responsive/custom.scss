@@ -22,12 +22,12 @@ $action-color: $color_green;
 $font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
-$button-bg: $action-color;
+$button-bg: darken($color_green, 10%);
 $button-color: $color_white;
 
-$status-success: $color_green;
-$status-failure: $color_red;
-$status-pending: $color_orange;
+$status-success: darken($color_green, 18%);
+$status-failure: darken($color_red, 10%);
+$status-pending: darken($color_orange, 28%);
 
 $notice-color: $color_green;
 $error-color: $color_red;
