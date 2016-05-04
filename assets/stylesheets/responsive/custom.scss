@@ -616,6 +616,11 @@ div.correspondence {
   }
 }
 
+.correspondence_delivery {
+  // TODO: Different background colours for different statuses
+  background-color: mix($status-success, $color_neutral_light, 15%);
+}
+
 .describe_state_form input[type="radio"] + label {
   display:inline;
 }
