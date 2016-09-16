@@ -1,37 +1,3 @@
-$color_sand: #f3f1eb;
-$color_black: #333333;
-$color_orange: #f4a140;
-$color_blue: #4faded;
-$color_green: #62b356;
-$color_yellow: #ffd836;
-$color_red: #e04b4b;
-$color_violet: #a94ca6;
-$color_purple: #5c377f;
-$color_white: #ffffff;
-
-$color_neutral_light: $color_sand;
-$color_neutral_dark: $color_black;
-$color_primary: $color_violet;
-$color_secondary: $color_orange;
-
-$body-bg: $color_neutral_light;
-
-$body-font-color: $color_neutral_dark;
-$link-color: darken($color_blue, 20%);
-$action-color: $color_green;
-$font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$form_input-bg: $color_white;
-
-$button-bg: darken($color_green, 10%);
-$button-color: $color_white;
-
-$status-success: darken($color_green, 18%);
-$status-failure: darken($color_red, 10%);
-$status-pending: darken($color_orange, 28%);
-
-$notice-color: $color_green;
-$error-color: $color_red;
-$action-color: $color_orange;
 
 /* Mixin styles */
 
@@ -218,11 +184,11 @@ a.link_button_green_large {
 /* Header */
 
 #banner_inner {
-  background-color: $color_primary;
+  background-color: $banner_inner_bg;
 }
 
 #topnav {
-  background-color: darken($color_primary, 10%);
+  background-color: $topnav_bg;
 }
 
 .site-title__logo {
@@ -542,23 +508,6 @@ a.link_button_green_large {
       right: 4px;
     }
   }
-
-  /* Pad evenly top and bottom on smaller devices */
-  #logo_wrapper{
-
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      @include lte-ie7 {
-        padding-bottom: 2em;
-      }
-    }
-    @media(max-width: $main_menu-mobile_menu_cutoff ){
-      padding: 0.5em 0 0.5em 0.9375em;
-      img {
-        height: 30px;
-      }
-    }
-  }
-
 }
 
 
