@@ -42,6 +42,7 @@ $alaveteli_route_extensions << 'custom-routes.rb'
                                'assets',
                                asset_type)
   Rails.application.config.assets.paths.unshift theme_asset_path
+  Rails.application.config.sass.load_paths.unshift theme_asset_path
 end
 
 # Tell FastGettext about the theme's translations: look in the theme's
