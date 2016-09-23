@@ -45,6 +45,14 @@ $alaveteli_route_extensions << 'custom-routes.rb'
   Rails.application.config.sass.load_paths.unshift theme_asset_path
 end
 
+  responsive_stylesheet_path = File.join(File.dirname(__FILE__),
+                               '..',
+                               'app',
+                               'assets',
+                               'stylesheets',
+                               'responsive')
+Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
+
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if
 # it isn't found, look in the Alaveteli locale directory next:
