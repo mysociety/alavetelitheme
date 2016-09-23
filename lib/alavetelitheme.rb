@@ -51,7 +51,9 @@ end
                                'assets',
                                'stylesheets',
                                'responsive')
+puts "Adding #{responsive_stylesheet_path} to sass load path"
 Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
+puts "Sass load path #{Rails.application.config.sass.load_paths}"
 
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if
