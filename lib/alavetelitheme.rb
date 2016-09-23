@@ -50,7 +50,8 @@ end
                                'app',
                                'assets',
                                'stylesheets',
-                               'responsive')
+                               'responsive',
+                               'custom.scss')
 puts "Adding #{responsive_stylesheet_path} to sass load path"
 Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
 puts "Sass load path #{Rails.application.config.sass.load_paths}"
