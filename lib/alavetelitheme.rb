@@ -55,6 +55,8 @@ end
 puts "PREPENDING #{responsive_stylesheet_path}"
 Alaveteli::Application.assets.prepend_path responsive_stylesheet_path
 
+puts "ENVIRONMENT:"
+puts Alaveteli::Application.config.assets.class
 puts "PATHS:"
 puts Alaveteli::Application.config.assets.paths
 
