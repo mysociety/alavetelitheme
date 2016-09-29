@@ -57,6 +57,7 @@ Alaveteli::Application.assets.prepend_path responsive_stylesheet_path
 
 puts "ENVIRONMENT:"
 puts Alaveteli::Application.config.assets.class
+puts Rails.application.config.assets.class
 puts "PATHS:"
 puts Alaveteli::Application.config.assets.paths
 
