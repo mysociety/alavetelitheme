@@ -41,7 +41,7 @@ $alaveteli_route_extensions << 'custom-routes.rb'
                                'app',
                                'assets',
                                asset_type)
-  Rails.application.config.assets.paths.unshift theme_asset_path
+  Rails.application.config.assets.prepend_path theme_asset_path
   #Rails.application.config.sass.load_paths.unshift theme_asset_path
 end
 
