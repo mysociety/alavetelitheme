@@ -56,7 +56,7 @@ puts "PREPENDING #{responsive_stylesheet_path}"
 Rails.application.config.assets.prepend_path responsive_stylesheet_path
 
 puts "PATHS:"
-puts Rails.application.config.assets
+puts Rails.application.config.assets.paths
 
 #puts "Adding #{responsive_stylesheet_path} to sass load path"
 #Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
