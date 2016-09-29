@@ -45,12 +45,14 @@ $alaveteli_route_extensions << 'custom-routes.rb'
   #Rails.application.config.sass.load_paths.unshift theme_asset_path
 end
 
-  #responsive_stylesheet_path = File.join(File.dirname(__FILE__),
-                               #'..',
-                               #'app',
-                               #'assets',
-                               #'stylesheets',
-                               #'responsive')
+  responsive_stylesheet_path = File.join(File.dirname(__FILE__),
+                               '..',
+                               'app',
+                               'assets',
+                               'stylesheets',
+                               'responsive')
+Rails.application.config.assets.prepend_path responsive_stylesheet_path
+                              
 #puts "Adding #{responsive_stylesheet_path} to sass load path"
 #Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
 #puts "Sass load path #{Rails.application.config.sass.load_paths}"
