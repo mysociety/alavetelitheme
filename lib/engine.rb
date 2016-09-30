@@ -14,6 +14,8 @@ class AlavetelithemeEngine < Rails::Engine
       theme_asset_path = File.expand_path(theme_asset_path)
       puts "Alavetelitheme<Railtie|prepending|#{theme_asset_path}"
       app.config.assets.prepend_path theme_asset_path
+      puts "AlavetelithemeEngine|first_path|#{app.config.assets.paths.first}"
+      puts "AlavetelithemeEngine|last_path|#{app.config.assets.paths.last}"
     end
   end
 end
