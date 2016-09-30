@@ -61,6 +61,14 @@ puts Rails.application.config.assets.class
 puts "PATHS:"
 puts Alaveteli::Application.config.assets.paths
 
+
+class Alavetelitheme < Rails::Railtie
+  initializer "alavetelitheme.configure_rails_initialization" do |app|
+    puts "Alavetelitheme<Railtie|#{app}"
+  end
+end
+
+
 #puts "Adding #{responsive_stylesheet_path} to sass load path"
 #Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
 #puts "Sass load path #{Rails.application.config.sass.load_paths}"
