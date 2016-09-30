@@ -1,5 +1,4 @@
-module Alavetelitheme
-class Engine < Rails::Engine
+class AlavetelithemeEngine < Rails::Engine
   initializer "alavetelitheme.configure_rails_initialization" do |app|
     puts "Alavetelitheme<Engine|#{app}"
     #puts "Alavetelitheme<Railtie|#{app}"
@@ -15,5 +14,4 @@ class Engine < Rails::Engine
       app.config.assets.prepend_path theme_asset_path
     end
   end
-end
 end
