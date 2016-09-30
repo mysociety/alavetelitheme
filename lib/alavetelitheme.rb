@@ -34,26 +34,26 @@ end
 # something unique (e.g. yourtheme-custom-routes.rb":
 $alaveteli_route_extensions << 'custom-routes.rb'
 
-# Prepend the asset directories in this theme to the asset path:
-['stylesheets', 'images', 'javascripts'].each do |asset_type|
-  theme_asset_path = File.join(File.dirname(__FILE__),
-                               '..',
-                               'app',
-                               'assets',
-                               asset_type)
-  puts "PREPENDING #{theme_asset_path}"
-  Alaveteli::Application.assets.prepend_path theme_asset_path
-  #Rails.application.config.sass.load_paths.unshift theme_asset_path
-end
-
-  responsive_stylesheet_path = File.join(File.dirname(__FILE__),
-                               '..',
-                               'app',
-                               'assets',
-                               'stylesheets',
-                               'responsive')
-puts "PREPENDING #{responsive_stylesheet_path}"
-Alaveteli::Application.assets.prepend_path responsive_stylesheet_path
+# # Prepend the asset directories in this theme to the asset path:
+# ['stylesheets', 'images', 'javascripts'].each do |asset_type|
+#   theme_asset_path = File.join(File.dirname(__FILE__),
+#                                '..',
+#                                'app',
+#                                'assets',
+#                                asset_type)
+#   puts "PREPENDING #{theme_asset_path}"
+#   Alaveteli::Application.assets.prepend_path theme_asset_path
+#   #Rails.application.config.sass.load_paths.unshift theme_asset_path
+# end
+#
+#   responsive_stylesheet_path = File.join(File.dirname(__FILE__),
+#                                '..',
+#                                'app',
+#                                'assets',
+#                                'stylesheets',
+#                                'responsive')
+# puts "PREPENDING #{responsive_stylesheet_path}"
+# Alaveteli::Application.assets.prepend_path responsive_stylesheet_path
 
 puts "ENVIRONMENT:"
 puts Alaveteli::Application.config.assets.class
