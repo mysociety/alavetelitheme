@@ -1,4 +1,6 @@
 class AlavetelithemeEngine < Rails::Engine
+  puts "AlavetelithemeEngine|class|#{self.class}"
+
   initializer "alavetelitheme.configure_rails_initialization" do |app|
     puts "Alavetelitheme<Engine|#{app}"
     #puts "Alavetelitheme<Railtie|#{app}"
