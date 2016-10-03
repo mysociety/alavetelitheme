@@ -25,6 +25,6 @@ class AlavetelithemeEngine < Rails::Engine
                                  'assets',
                                  'stylesheets')
     theme_sass_path = File.expand_path(theme_asset_path)
-    config.sass.load_paths << theme_sass_path
+    config.sass.load_paths.unshift(theme_sass_path)
   end
 end
