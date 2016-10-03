@@ -26,5 +26,6 @@ class AlavetelithemeEngine < Rails::Engine
                                  'stylesheets')
     theme_sass_path = File.expand_path(theme_asset_path)
     config.sass.load_paths.unshift(theme_sass_path)
+    config.sass.load_paths.unshift("#{ theme_sass_path }/responsive")
   end
 end
