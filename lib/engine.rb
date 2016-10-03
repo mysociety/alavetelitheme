@@ -17,5 +17,14 @@ class AlavetelithemeEngine < Rails::Engine
       puts "AlavetelithemeEngine|first_path|#{app.config.assets.paths.first}"
       puts "AlavetelithemeEngine|last_path|#{app.config.assets.paths.last}"
     end
+
+
+    theme_asset_path = File.join(File.dirname(__FILE__),
+                                 '..',
+                                 'app',
+                                 'assets',
+                                 'stylesheets')
+    theme_sass_path = File.expand_path(theme_asset_path)
+    config.sass.load_paths << theme_sass_path
   end
 end
