@@ -18,18 +18,6 @@ class AlavetelithemeEngine < Rails::Engine
       puts "AlavetelithemeEngine|last_path|#{app.config.assets.paths.last}"
     end
 
-    # Explicitly add responsive dir
-    theme_asset_path = File.join(File.dirname(__FILE__),
-                                 '..',
-                                 'app',
-                                 'assets',
-                                 'stylesheets',
-                                 'responsove')
-    theme_asset_path = File.expand_path(theme_asset_path)
-    puts "Alavetelitheme<Railtie|prepending|#{theme_asset_path}"
-    app.config.assets.paths.unshift theme_asset_path
-    puts "AlavetelithemeEngine|first_path|#{app.config.assets.paths.first}"
-    puts "AlavetelithemeEngine|last_path|#{app.config.assets.paths.last}"
 
     theme_asset_path = File.join(File.dirname(__FILE__),
                                  '..',
