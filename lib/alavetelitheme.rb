@@ -51,6 +51,7 @@ end
                                'assets',
                                'stylesheets',
                                'responsive')
+Rails.application.config.assets.paths.unshift responsive_stylesheet_path
 Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
 
 # Tell FastGettext about the theme's translations: look in the theme's
