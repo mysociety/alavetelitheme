@@ -41,6 +41,7 @@ $alaveteli_route_extensions << 'custom-routes.rb'
                                'app',
                                'assets',
                                asset_type)
+  puts "Prepending #{theme_asset_path}"
   Rails.application.config.assets.paths.unshift theme_asset_path
   Rails.application.config.sass.load_paths.unshift theme_asset_path
 end
@@ -51,8 +52,12 @@ end
                                'assets',
                                'stylesheets',
                                'responsive')
+  puts "Prepending #{responsive_stylesheet_path}"
 Rails.application.config.assets.paths.unshift responsive_stylesheet_path
 Rails.application.config.sass.load_paths.unshift responsive_stylesheet_path
+
+puts "LOAD PATHS AFTER THEME INIT"
+puts Rails.application.config.assets.paths
 
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if
