@@ -10,6 +10,10 @@ Rails.configuration.to_prepare do
   # OutgoingMessage.class_eval do
   #   # Add intro paragraph to new request template
   #   def default_letter
+  #     # this line allows the default_letter text added by this
+  #     # method to be replaced by the value supplied by the API
+  #     # e.g. http://demo.alaveteli.org/new/tgq?default_letter=this+is+a+test
+  #     return @default_letter if @default_letter
   #     return nil if self.message_type == 'followup'
   #     "If you uncomment this line, this text will appear as default text in every message"
   #   end
