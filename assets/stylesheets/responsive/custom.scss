@@ -550,7 +550,7 @@ div.correspondence {
 
 .incoming.correspondence {
   border-top: 8px solid $color_secondary;
-  a {
+  .correspondence_text a {
     color: $color_secondary;
   }
   a.link_to_this {
