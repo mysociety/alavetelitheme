@@ -550,7 +550,7 @@ div.correspondence {
 
 .incoming.correspondence {
   border-top: 8px solid $color_secondary;
-  a {
+  .correspondence_text a {
     color: $color_secondary;
   }
   a.link_to_this {
@@ -563,6 +563,11 @@ div.correspondence {
   a.link_to_this {
     background-color: $color_primary;
   }
+}
+
+a.correspondence__header__date,
+a.correspondence__header__date:visited {
+  color: #777;
 }
 
 .describe_state_form input[type="radio"] + label {
