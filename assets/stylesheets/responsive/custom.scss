@@ -806,6 +806,29 @@ dt {
     }
   }
 
+  .intro__title {
+    color: $color_white;
+    text-shadow: 0 1px 2px transparentize($color_black, 0.7);
+  }
+
+  .new-request__content {
+    background-color: $color_neutral_dark;
+    border-radius: 5px;
+    padding: 1.888888889em;
+  }
+
+  .new-request__title {
+    color: $color_white;
+    font-size: 1.4375em;
+    margin: 0 0 0.5em;
+  }
+
+  .new-request__description {
+    color: transparentize($color_white, 0.2);
+    @include ie8 {
+      color: $color_white;
+    }
+  }
   .new-request__make-new-requests {
     @include button-base;
     background-color: desaturate(darken($color_secondary, 10%), 5%);
@@ -818,26 +841,3 @@ dt {
   }
 }
 
-.intro__title {
-  color: $color_white;
-  text-shadow: 0 1px 2px transparentize($color_black, 0.7);
-}
-
-.new-request__content {
-  background-color: $color_neutral_dark;
-  border-radius: 5px;
-  padding: 1.888888889em;
-}
-
-.new-request__title {
-  color: $color_white;
-  font-size: 1.4375em;
-  margin: 0 0 0.5em;
-}
-
-.new-request__description {
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
-}
