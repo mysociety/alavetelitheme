@@ -540,6 +540,23 @@ a.link_button_green_large {
 }
 
 /* Request page */
+.request-header__action-bar__actions {
+  .action-menu__button {
+    @include button-secondary();
+  }
+
+  .action-bar__follow-button {
+    .track__action {
+      @include button-primary();
+    }
+  }
+
+  .action-bar__follower-count {
+    padding: 3px;
+    font-size: 1.1rem;
+  }
+}
+
 div.correspondence {
   background-color: $color_white;
   box-shadow: 0 2px 2px transparentize($color_black, 0.8);
