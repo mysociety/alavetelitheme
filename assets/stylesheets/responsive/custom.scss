@@ -173,6 +173,28 @@ a.link_button_green_large {
   @include button-primary($size: large);
 }
 
+
+/* Action Bar Mixins */
+
+@mixin follow-button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+@mixin follower-count {
+  color: $color_dark_grey;
+  padding: 0.56em 1.25em;
+  border: 1px solid $color_light_grey;
+  position: relative;
+  left: -3px;
+  line-height: 1.6em;
+  border-left: 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /* Popups */
 
 .popup {
@@ -552,23 +574,12 @@ a.link_button_green_large {
   .action-bar__follow-button {
     .track__action {
       @include button-primary();
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      margin-bottom: 0;
+      @include follow-button();
     }
   }
 
   .action-bar__follower-count {
-    color: $color_dark_grey;
-    padding: 0.56em 1.25em;
-    border: 1px solid $color_light_grey;
-    position: relative;
-    left: -3px;
-    line-height: 1.6em;
-    border-left: 0;
-    border-radius: 3px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    @include follower-count();
   }
 }
 
@@ -817,23 +828,12 @@ dt {
     .track_action,
     .link_button_green {
       @include button-secondary();
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      margin-bottom: 0;
+      @include follow-button();
     }
   }
 
   .action-bar__follower-count {
-    color: $color_dark_grey;
-    padding: 0.56em 1.25em;
-    border: 1px solid $color_light_grey;
-    position: relative;
-    left: -3px;
-    line-height: 1.6em;
-    border-left: 0;
-    border-radius: 3px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    @include follower-count();
   }
 }
 
