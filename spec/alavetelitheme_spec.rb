@@ -5,8 +5,8 @@ require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','s
 
 describe "testing the truth" do
 
-    it 'should be true' do
-        assert true
-    end
+  it 'should be true' do
+    assert true
+  end
 
 end
