@@ -3,10 +3,10 @@
 ALAVETELI_TEST_THEME = 'alavetelitheme'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','spec','spec_helper'))
 
-describe "testing the truth" do
+describe 'testing the truth' do
 
   it 'should be true' do
-    assert true
+    expect(true).to eq(true)
   end
 
 end
