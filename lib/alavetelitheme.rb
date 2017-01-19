@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 theme_name = File.split(File.expand_path("../..", __FILE__))[1]
 theme_name.gsub!('-', '_')
 THEME_NAME = theme_name
