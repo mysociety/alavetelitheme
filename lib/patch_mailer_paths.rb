@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Add a callback - to be executed before each request in development,
 # and at startup in production - to patch existing app classes.
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # See `http://alaveteli.org/docs/customising/themes/#customising-the-request-states`
 # for more explanation of this file
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 theme_name = File.split(File.expand_path("../..", __FILE__))[1]
 theme_name.gsub!('-', '_')
 THEME_NAME = theme_name
@@ -38,6 +39,7 @@ $alaveteli_route_extensions << 'custom-routes.rb'
 ['stylesheets', 'images', 'javascripts'].each do |asset_type|
   theme_asset_path = File.join(File.dirname(__FILE__),
                                '..',
+                               'app',
                                'assets',
                                asset_type)
   Rails.application.config.assets.paths.unshift theme_asset_path
