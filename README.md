@@ -1,4 +1,4 @@
-Alavetelitheme
+opramachine-theme
 ==============
 
 This is a "hello world" type theme package for Alaveteli.
