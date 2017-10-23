@@ -1,7 +1,273 @@
-# Your theme's locale files will override the core locale files.  This
-# is a good place to put both translations specific to your theme, and
-# "translations" of the core English words (e.g. you might want to
-# call FOI "RTI" throughougout, like this:
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 2.0.4\n"
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 #
-# msgid "Make and browse Freedom of Information (FOI) requests"
-# msgstr "Make and browse Right to Know (RTI) requests"
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+msgid "Confirm your FOI request to "
+msgstr "Confirm your OPRA request to "
+
+msgid "Clarify your FOI request - "
+msgstr "Clarify your OPRA request - "
+
+msgid "Classify an FOI response from "
+msgstr "Classify an OPRA response from "
+
+msgid "Confirm you want to follow all successful FOI requests"
+msgstr "Confirm you want to follow all successful OPRA requests"
+
+msgid "FOI"
+msgstr "OPRA"
+
+msgid "FOI email address for {{public_body}}"
+msgstr "OPRA email address for {{public_body}}"
+
+msgid "FOI request – {{title}}"
+msgstr "OPRA request – {{title}}"
+
+msgid "FOI requests"
+msgstr "OPRA requests"
+
+msgid "FOI requests by '{{user_name}}'"
+msgstr "OPRA requests by '{{user_name}}'"
+
+msgid "FOI requests {{start_count}} to {{end_count}} of {{total_count}}"
+msgstr "OPRA requests {{start_count}} to {{end_count}} of {{total_count}}"
+
+msgid "FOI response requires admin ({{reason}}) - {{title}}"
+msgstr "OPRA response requires admin ({{reason}}) - {{title}}"
+
+msgid ""
+"If you find this service useful as an FOI officer, please ask your web "
+"manager to link to us from your organisation's FOI page."
+msgstr ""
+"If you find this service useful as an OPRA custodian of records, please ask "
+"your web manager to link to us from your agency's OPRA page."
+
+msgid "Listing FOI requests"
+msgstr "Listing OPRA requests"
+
+msgid "New response to your FOI request - "
+msgstr "New response to your OPRA request - "
+
+msgid "Not a valid FOI request"
+msgstr "Not a valid OPRA request"
+
+msgid "One FOI request found"
+msgstr "One OPRA request found"
+
+msgid ""
+"Please describe more what the request is about in the subject. There is no "
+"need to say it is an FOI request, we add that on anyway."
+msgstr ""
+"Please describe more what the request is about in the subject. There is no "
+"need to say it is an OPRA request, we add that on anyway."
+
+msgid ""
+"Requests for personal information and vexatious requests are not considered "
+"valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
+msgstr ""
+"Requests for private personal information are not considered valid for OPRA "
+"purposes (<a href=\"/help/about\">read more</a>)."
+
+msgid "Respond to the FOI request"
+msgstr "Respond to the OPRA request"
+
+msgid "Some notes have been added to your FOI request - "
+msgstr "Some notes have been added to your OPRA request - "
+
+msgid "Somebody added a note to your FOI request - "
+msgstr "Somebody added a note to your OPRA request - "
+
+msgid ""
+"Thank you for responding to this FOI request! Your response has been "
+"published below, and a link to your response has been emailed to "
+msgstr ""
+"Thank you for responding to this OPRA request! Your response has been "
+"published below, and a link to your response has been emailed to "
+
+msgid "Then you can classify the FOI response you have got from "
+msgstr "Then you can classify the OPRA response you have got from "
+
+msgid "Then you can upload an FOI response. "
+msgstr "Then you can upload an OPRA response. "
+
+msgid "Then you will be following all new FOI requests."
+msgstr "Then you will be following all new OPRA requests."
+
+msgid "Then you will be notified whenever an FOI request succeeds."
+msgstr "Then you will be notified whenever an OPRA request succeeds."
+
+msgid "Then you'll be allowed to send FOI requests."
+msgstr "Then you'll be allowed to send OPRA requests."
+
+msgid "Then your FOI request to {{public_body_name}} will be sent."
+msgstr "Then your OPRA request to {{public_body_name}} will be sent."
+
+msgid ""
+"This request has been <strong>hidden</strong> from the site, because an "
+"administrator considers it not to be an FOI request"
+msgstr ""
+"This request has been <strong>hidden</strong> from the site, because an "
+"administrator considers it not to be an OPRA request"
+
+msgid "To classify the response to this FOI request"
+msgstr "To classify the response to this OPRA request"
+
+msgid "To report this FOI request"
+msgstr "To report this OPRA request"
+
+msgid "To send your FOI request"
+msgstr "To send your OPRA request"
+
+msgid "To update the status of this FOI request"
+msgstr "To update the status of this OPRA request"
+
+msgid "Upload FOI response"
+msgstr "Upload OPRA response"
+
+msgid "View FOI email address"
+msgstr "View OPRA email address"
+
+msgid "View FOI email address for '{{public_body_name}}'"
+msgstr "View OPRA email address for '{{public_body_name}}'"
+
+msgid "View FOI email address for {{public_body_name}}"
+msgstr "View OPRA email address for {{public_body_name}}"
+
+msgid "View Freedom of Information requests made by {{user_name}}:"
+msgstr "View Open Public Records Act requests made by {{user_name}}:"
+
+msgid "Was the response you got to your FOI request any good?"
+msgstr "Was the response you got to your OPRA request any good?"
+
+msgid "Write your FOI follow up message to "
+msgstr "Write your OPRA follow up message to "
+
+msgid "You have made no Freedom of Information requests using this site."
+msgstr "You have made no Open Public Records Act requests using this site."
+
+msgid "You're long overdue a response to your FOI request - "
+msgstr "You're long overdue a response to your OPRA request - "
+
+msgid "Your {{count}} Freedom of Information request"
+msgid_plural "Your {{count}} Freedom of Information requests"
+msgstr[0] "Your {{count}} Open Public Records Act request"
+msgstr[1] "Your {{count}} Open Public Records Act requests"
+
+msgid "Your response to an FOI request was not delivered"
+msgstr "Your response to an OPRA request was not delivered"
+
+msgid "[FOI #{{request}} email]"
+msgstr "[OPRA #{{request}} email]"
+
+msgid "the main FOI contact address for {{public_body}}"
+msgstr "the main OPRA contact address for {{public_body}}"
+
+msgid "{{count}} FOI requests found"
+msgstr "{{count}} OPRA requests found"
+
+msgid "{{title}} - a Freedom of Information request to {{public_body}}"
+msgstr "{{title}} - an Open Public Records Act request to {{public_body}}"
+
+msgid "{{user_name}} - Freedom of Information requests"
+msgstr "{{user_name}} - Open Public Records Act requests"
+
+msgid "Make a new FOI request"
+msgstr "Make a new OPRA request"
+
+msgid " What are you investigating using Freedom of Information? "
+msgstr " What are you investigating using the Open Public Records Act? "
+
+msgid "A Freedom of Information request"
+msgstr "An Open Public Records Act request"
+
+msgid "Freedom of Information Act"
+msgstr "Open Public Records Act"
+
+msgid "Freedom of Information requests made"
+msgstr "Open Public Records Act requests made"
+
+msgid "Freedom of Information requests made by this person"
+msgstr "Open Public Records Act requests made by this person"
+
+msgid "Freedom of Information requests made by you"
+msgstr "Open Public Records Act requests made by you"
+
+msgid "Freedom of Information requests made using this site"
+msgstr "Open Public Records Act requests made using this site"
+
+msgid "Freedom of information requests to"
+msgstr "Open Public Records Act requests to"
+
+msgid ""
+"Make a new <strong>Freedom of Information</strong> request to {{public_body}}"
+msgstr ""
+"Make a new <strong>Open Public Records Act</strong> request to "
+"{{public_body}}"
+
+msgid "New Freedom of Information requests"
+msgstr "New Open Public Records Act requests"
+
+msgid ""
+"Nobody has made any Freedom of Information requests to {{public_body_name}} "
+"using this site yet."
+msgstr ""
+"Nobody has made any Open Public Records Act requests to {{public_body_name}} "
+"using this site yet."
+
+msgid "Search Freedom of Information requests, public authorities and users"
+msgstr "Search Open Public Records Act requests, public authorities and users"
+
+msgid ""
+"This is a plain-text version of the Freedom of Information request "
+"\"{{request_title}}\".  The latest, full version is available online at "
+"{{full_url}}"
+msgstr ""
+"This is a plain-text version of the Open Public Records Act request "
+"\"{{request_title}}\". The latest, full version is available online at "
+"{{full_url}}"
+
+msgid ""
+"This is an HTML version of an attachment to the Freedom of Information "
+"request"
+msgstr ""
+"This is an HTML version of an attachment to the Open Public Records Act "
+"request"
+
+msgid "Make and browse Freedom of Information (FOI) requests"
+msgstr "Make and browse Open Public Records Act (OPRA) requests"
+
+msgid ""
+"Please pass this on to the person who conducts Freedom of Information "
+"reviews."
+msgstr "Please pass this on to the person who oversees OPRA responses."
+
+msgid "Successful Freedom of Information requests"
+msgstr "Successful OPRA requests"
+
+msgid "Freedom of Information"
+msgstr "OPRA"
+
+msgid "Confirm your FOI request to {{public_body_name}}"
+msgstr "Confirm your OPRA request to {{public_body_name}}"
