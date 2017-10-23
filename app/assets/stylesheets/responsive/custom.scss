@@ -33,6 +33,52 @@
   }
 }
 
+
+#navigation .more-menu {
+  background-color: #333;
+}
+
+.account-link:after {
+  position: relative;
+  top: -0.15em;
+  margin-left: 1em;
+  font-size: 0.5em;
+  content: "▼";
+}
+
+.logged-in-menu {
+  color: black;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+#navigation .logged-in-menu a,
+#navigation .logged-in-menu__signout-link a {
+  color: #197ace;
+  text-decoration: none;
+  transition: none;
+  &:hover {
+    color: #197ace;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+}
+
+#navigation .logged-in-menu__signout-link a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #888;
+  &:hover {
+    color: #888;
+  }
+}
+
+.pro-pill {
+  color: #567386;
+  font-weight: 600;
+  background-color: #FFFF00;
+}
+
 /* General styles */
 body{
   background-color: $body-bg;
