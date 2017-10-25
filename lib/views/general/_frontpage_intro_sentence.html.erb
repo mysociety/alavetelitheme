@@ -1,0 +1,7 @@
+<h1 class="intro__title"><%= _("Opening up New Jersey Government, one request at a time.") %></h1>
+<p class="intro__description">
+  <%= _("Every citizen has the right to access information held by state & local government agencies under the Open Public Records Act.") %>
+  <% if AlaveteliConfiguration.authority_must_respond %>
+    <%= _("By law, they have to respond to your request.") %>
+  <% end %>
+</p>
