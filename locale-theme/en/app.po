@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-27 18:47+0100\n"
-"PO-Revision-Date: 2017-10-25 01:30-0400\n"
+"PO-Revision-Date: 2017-10-26 12:39-0400\n"
 "Last-Translator: louisecrow <louise@mysociety.org>\n"
 "Language-Team: English (http://www.transifex.com/mysociety/alaveteli/language/en/)\n"
 "Language: en\n"
@@ -275,7 +275,7 @@ msgid "A <strong>summary</strong> of the response if you have received it by pos
 msgstr "A <strong>summary</strong> of the response if you have received it by post. "
 
 msgid "A Freedom of Information request"
-msgstr "A Open Public Records Act request"
+msgstr "An Open Public Records Act request"
 
 msgid "A full history of my FOI request and all correspondence is available on the Internet at this address: {{url}}"
 msgstr "A full history of my OPRA request and all correspondence is available on the Internet at this address: {{url}}"
@@ -4012,7 +4012,7 @@ msgid "You have now changed your email address used on {{site_name}}"
 msgstr "You have now changed your email address used on {{site_name}}"
 
 msgid "You have the <strong>right</strong> to request information from any publicly-funded body, and get answers. {{site_name}} helps you make a Freedom of Information request. It also publishes all requests online."
-msgstr "You have the <strong>right</strong> to request information from any publicly-funded body, and get answers. {{site_name}} helps you make a Open Public Records Act request. It also publishes all requests online."
+msgstr "You have the <strong>right</strong> to request information from any publicly-funded body, and get answers. {{site_name}} helps you make an Open Public Records Act request. It also publishes all requests & responses online."
 
 msgid "You just tried to sign up to {{site_name}}, when you already have an account. Your name and password have been left as they previously were. Please click on the link below."
 msgstr "You just tried to sign up to {{site_name}}, when you\\nalready have an account. Your name and password have been\\nleft as they previously were.\\n\\nPlease click on the link below."
@@ -4678,7 +4678,7 @@ msgid "{{thing_changed}} was changed from <code>{{from_value}}</code> to <code>{
 msgstr "{{thing_changed}} was changed from <code>{{from_value}}</code> to <code>{{to_value}}</code>"
 
 msgid "{{title}} - a Freedom of Information request to {{public_body}}"
-msgstr "{{title}} - a Open Public Records Act request to {{public_body}}"
+msgstr "{{title}} - an Open Public Records Act request to {{public_body}}"
 
 msgid "{{title}} - a batch request"
 msgstr "{{title}} - a batch request"
