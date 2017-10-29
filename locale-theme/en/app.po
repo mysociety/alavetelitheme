@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-27 18:47+0100\n"
-"PO-Revision-Date: 2017-10-26 12:39-0400\n"
+"PO-Revision-Date: 2017-10-29 08:48-0400\n"
 "Last-Translator: louisecrow <louise@mysociety.org>\n"
 "Language-Team: English (http://www.transifex.com/mysociety/alaveteli/language/en/)\n"
 "Language: en\n"
@@ -36,7 +36,7 @@ msgid " (you)"
 msgstr " (you)"
 
 msgid " - view and make Freedom of Information requests"
-msgstr " - view and make Open Public Records Act requests"
+msgstr " - view and make NJ Open Public Records Act requests"
 
 msgid " < "
 msgstr " < "
@@ -275,7 +275,7 @@ msgid "A <strong>summary</strong> of the response if you have received it by pos
 msgstr "A <strong>summary</strong> of the response if you have received it by post. "
 
 msgid "A Freedom of Information request"
-msgstr "An Open Public Records Act request"
+msgstr "An OPRA request"
 
 msgid "A full history of my FOI request and all correspondence is available on the Internet at this address: {{url}}"
 msgstr "A full history of my OPRA request and all correspondence is available on the Internet at this address: {{url}}"
