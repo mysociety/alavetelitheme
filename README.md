@@ -1,7 +1,8 @@
+
 opramachine-theme
 ==============
 
-This is a "hello world" type theme package for Alaveteli.
+This is the theme package for the Alaveteli instance behind OPRAmachine.com.
 
 The intention is to support simple overlaying of templates and
 resources without the need to touch the core Alaveteli software.
@@ -28,3 +29,4 @@ To run tests, in the Alaveteli Rails.root (with this theme installed):
 
 
 Copyright (c) 2011 mySociety, released under the MIT license
+Changes copyrifht (c) 2017 Gavin C. Rozzi under the MIT license
