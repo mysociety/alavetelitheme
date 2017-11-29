@@ -1,3 +1,4 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/gavinrozzi/opramachine-theme.png?columns=all)](https://waffle.io/gavinrozzi/opramachine-theme?utm_source=badge)
 
 opramachine-theme
 ==============
