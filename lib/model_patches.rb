@@ -16,7 +16,7 @@ Rails.configuration.to_prepare do
   #     # e.g. http://demo.alaveteli.org/new/tgq?default_letter=this+is+a+test
   return @default_letter if @default_letter
   return nil if self.message_type == 'followup'
-  "This is a request for public records made under OPRA and the common law right of access. I certify under penalty of NJSA 2C:28-3 that I have not been convicted of an indictable offense. Please acknowledge receipt of this message.
+  "This is a request for public records made under OPRA and the common law right of access. Please acknowledge receipt of this message.
   Records requested:"
   end
  end
