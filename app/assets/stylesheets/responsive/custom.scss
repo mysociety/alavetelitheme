@@ -51,12 +51,16 @@
 }
 
 .logged-in-menu {
-  color: black;
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  color: $link-color;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: $color_black;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .navigation .logged-in-menu a,
 .navigation .logged-in-menu__signout-link a {
+  color: $color_white;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     color: $link-color;
     text-decoration: none;
@@ -67,20 +71,6 @@
       color: $color_black;
       background-color: transparent;
       text-decoration: underline;
-    }
-  }
-}
-
-.navigation .logged-in-menu a,
-.navigation .logged-in-menu__signout-link a {
-  color: $color_black;
-  padding: 0;
-  .no-js & {
-    @extend %menu-item;
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
     }
   }
 }
@@ -291,12 +281,16 @@ a.link_button_green_large {
   border-bottom: none;
   a {
     @extend %menu-item;
-  }
-  /* Show which section is currently selected */
-  li.selected a{
-    @extend %selected-menu-item;
+    color: transparentize($color_white, 0.2);
+    @media( min-width: $main_menu-mobile_menu_cutoff ) {
+      padding: 0.875em 1em;
+    }
   }
 
+  /* Show which section is currently selected */
+  li.selected a {
+    @extend %selected-menu-item;
+  }
   /* Vertically align the search box */
   #navigation_search{
     input{
@@ -366,30 +360,6 @@ a.link_button_green_large {
 .undescribed_requests {
   background-color: desaturate(lighten($action-color, 30%),10%);
   border-color: $action-color;
-}
-
-/* Logged and local options act like submenus */
-#logged_in_bar{
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    top: 0;
-  }
-
-  a {
-    @extend %menu-item;
-    background-color: transparent;
-    font-weight: normal;
-    color: $color_white;
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-    }
-  }
-  #logged_in_links {
-    a {
-      font-weight: normal;
-    }
-  }
 }
 
 /* LANGUAGE SWITCHER */
@@ -963,11 +933,4 @@ dt {
 // User menu
 .pro-pill {
   background-color: desaturate(darken($color_secondary, 10%), 5%);
-}
-
-#logged_in_bar {
-  .logged-in-menu a,
-  .logged-in-menu__signout-link a {
-    color: $link-color;
-  }
 }
