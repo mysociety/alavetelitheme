@@ -55,25 +55,33 @@
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-#navigation .logged-in-menu a,
-#navigation .logged-in-menu__signout-link a {
-  color: #197ace;
-  text-decoration: none;
-  transition: none;
-  &:hover {
-    color: #197ace;
-    background-color: transparent;
-    text-decoration: underline;
+.navigation .logged-in-menu a,
+.navigation .logged-in-menu__signout-link a {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: $link-color;
+    text-decoration: none;
+    transition: none;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color_black;
+      background-color: transparent;
+      text-decoration: underline;
+    }
   }
 }
 
-#navigation .logged-in-menu__signout-link a {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.8em;
-  color: #888;
-  &:hover {
-    color: #888;
+.navigation .logged-in-menu a,
+.navigation .logged-in-menu__signout-link a {
+  color: $color_black;
+  padding: 0;
+  .no-js & {
+    @extend %menu-item;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 
@@ -276,7 +284,7 @@ a.link_button_green_large {
   }
 }
 
-#navigation{
+.navigation {
   border-bottom: none;
   a {
     @extend %menu-item;
@@ -306,15 +314,15 @@ a.link_button_green_large {
       margin-top: 0.626em;
     }
   }
+}
 
-  #navigation_search_button{
-    background-color: $color_white;
-    border: none;
-    transition: all 0.3s ease-out;
-    color: $color_primary;
-    border-radius: 0;
-    font-size: inherit;
-  }
+#navigation_search_button{
+  background-color: $color_white;
+  border: none;
+  transition: all 0.3s ease-out;
+  color: $color_primary;
+  border-radius: 0;
+  font-size: inherit;
 }
 
 .greeting {
