@@ -34,8 +34,11 @@
                             href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
       </li>
 
-      <li>We are a <strong>charity</strong> and not part of the
+      <li>We are <strong>journalists</strong> and not part of the
         Government.</li>
+
+        <li>To speak with our team via phone call <strong>(732)-504-3636</strong>
+        </li>
     </ul>
   <% end %>
 </div>
@@ -87,13 +90,13 @@
 
   <p class="form_note">
     We can only help you with <strong>technical problems</strong>, or questions
-    about Freedom of Information.
+    about Open Public Records.
   </p>
 
 
   <div class="form_button">
     <%= hidden_field_tag(:submitted_contact_form, 1) %>
-    <%= submit_tag "Send message to the charity", :data => { :disable_with => "Sending..." } %>
+    <%= submit_tag "Send message to the journalists", :data => { :disable_with => "Sending..." } %>
     &lt;-- we run this site, not the Government!
   </div>
 

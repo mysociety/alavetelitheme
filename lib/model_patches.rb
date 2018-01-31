@@ -8,15 +8,16 @@
 Rails.configuration.to_prepare do
 
   # Example of adding a default text to each message
-  # OutgoingMessage.class_eval do
+  OutgoingMessage.class_eval do
   #   # Add intro paragraph to new request template
-  #   def default_letter
+  def default_letter
   #     # this line allows the default_letter text added by this
   #     # method to be replaced by the value supplied by the API
   #     # e.g. http://demo.alaveteli.org/new/tgq?default_letter=this+is+a+test
-  #     return @default_letter if @default_letter
-  #     return nil if self.message_type == 'followup'
-  #     "If you uncomment this line, this text will appear as default text in every message"
-  #   end
-  # end
+  return @default_letter if @default_letter
+  return nil if self.message_type == 'followup'
+  "This is a request for public records made under OPRA and the common law right of access. Please acknowledge receipt of this message.
+  Records requested:"
+  end
+ end
 end
