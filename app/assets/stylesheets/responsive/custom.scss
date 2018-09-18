@@ -48,6 +48,9 @@
       }
     }
   }
+  .account-link--with-pro-pill {
+    padding-right: 3em;
+  }
 }
 
 .logged-in-menu {
@@ -55,6 +58,7 @@
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     color: $color_black;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    top: 1.8em;
   }
 }
 
