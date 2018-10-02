@@ -39,39 +39,70 @@
 
 .js-loaded {
   .account-link {
-    padding-right: 2em;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      //make it appear like it's aligned with the grid, even though it isn't
-      margin-right: 0.935em;
-      &:after {
-        top: 2em;
-      }
+    &:after {
+      border-top-color: rgba(255,255,255,0.4);
     }
+  }
+}
+
+.logged_in_bar {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding-top: 1.6em;
   }
 }
 
 .logged-in-menu {
-  color: $link-color;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    color: $color_black;
+    color: black;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
   }
-}
-
-.navigation .logged-in-menu a,
-.navigation .logged-in-menu__signout-link a {
-  color: $color_white;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    color: $link-color;
+  li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  a:link,
+  a:visited {
+    color: #fff;
+    cursor: pointer;
     text-decoration: none;
-    transition: none;
     &:hover,
     &:active,
     &:focus {
-      color: $color_black;
-      background-color: transparent;
-      text-decoration: underline;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.1);
     }
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      color: $link-color;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $color_black;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
+  .js-loaded & {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      //positioned alongside the button
+      top: 3.5em;
+    }
+  }
+}
+
+.alaveteli-pro .account-link,
+.alaveteli-pro .account-link:visited,
+.account-link,
+.account-link:link,
+.account-link:visited,
+.sign_in_link,
+.sign_in_link:link,
+.sign_in_link:visited {
+  color: #fff;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
   }
 }
 
@@ -291,19 +322,6 @@ a.link_button_green_large {
   li.selected a {
     @extend %selected-menu-item;
   }
-  /* Vertically align the search box */
-  #navigation_search{
-    input{
-      margin-top:0.313em;
-      margin-bottom:0.313em;
-      height: 1.875em;
-      @include ie8 {
-        height: 33px;
-        font-size: 1.1em;
-        padding: 0;
-      }
-    }
-  }
 
   /* Vertically align the label image for older IE*/
   @include ie8 {
@@ -370,26 +388,26 @@ a.link_button_green_large {
   }
 }
 
-/* Dropdown list for switching locale */
+//* locale-list */
 .locale-list {
-  border-bottom: 0;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    position: absolute;
-    left: ($logo-width + 40px);
-    top: 2.2em;
-    right: auto;
+    position: relative;
+    background-color: transparent;
+    left: -50px;
+    padding-top: 2em;
   }
-  .locale-list-trigger {
-    margin-bottom: 0;
-    color: $color_white;
-    color: transparentize($color_white, 0.8);
-    @include respond-min($main_menu-mobile_menu_cutoff) {
-      margin-top: 0;
-      border: 1px solid desaturate(lighten($color_primary, 5%), 5%);
-      border-radius: 3px;
-      color: $link-color;
-      padding: 0;
-    }
+}
+
+p.locale-list-trigger {
+  margin-bottom: 0;
+  color: $color_white;
+  color: rgba(255, 255, 255, 0.8);
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    margin-top: 0;
+    border: 1px solid desaturate(lighten($color_primary, 3%), 5%);
+    border-radius: 3px;
+    color: $link-color;
+    padding: 0;
   }
 }
 
@@ -401,22 +419,21 @@ a.link_button_green_large {
   @include respond-min($main_menu-mobile_menu_cutoff) {
     padding: 0.66em 2em 0.66em 0.66em;
   }
-}
-
-.locale-list-trigger .current-locale:after {
-  display: block;
-  position: absolute;
-  content: '';
-  right: 10px;
-  top: 12px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  @include ie8 {
-    border-top: 5px solid $color_white;
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    right: 10px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    @include ie8 {
+      border-top: 5px solid $color_white;
+    }
+    border-top: 5px solid rgba(255,255,255,0.4);
   }
-  border-top: 5px solid transparentize($color_white, 0.6);
 }
 
 .locale-list-trigger .current-locale,
@@ -432,27 +449,24 @@ a.link_button_green_large {
 
 .locale-list .available-languages {
   display: none;
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 0.8125em;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     position: absolute;
-    top: 2em;
-    left: 0;
+    top: 3.4375em;
+    left: 0.9375em;
     z-index: 1000;
     border-radius: 3px;
     font-size: 1em;
-    min-width: 100%;
+    width: 100%;
+    max-width: 10em;
   }
 
 }
 
 .locale-list li {
   list-style-type: none;
-  border-bottom: 1px solid desaturate(lighten($color_primary, 3%), 5%);
+  border-top: 1px solid rgba(255,255,255,0.2);
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    border-bottom-color: $color_neutral_dark;
+    border-color: $color_dark_grey;
     display: block;
   }
   &:last-child {
@@ -469,27 +483,23 @@ a.link_button_green_large {
 .locale-list .available-languages a,
 .locale-list .available-languages a:link,
 .locale-list .available-languages a:visited {
-  display: block;
-  background-color: $color_primary;
-  padding: 0.66em 1em;
-  width: 100%;
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: lighten($color_neutral_dark, 6%);
-  }
   transition: background-color 0.5s ease-out;
+  color: #fff;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    background-color: darken($color_dark_grey, 10%);
+    display: block;
+    padding: 0.5em 1em;
+    width: 100%;
+  }
 }
 
 .locale-list .available-languages a:hover,
 .locale-list .available-languages a:focus {
   border-bottom: none;
-  background-color: darken($color_primary, 5%);
+  background-color: rgba(0,0,0,0.1);
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: $color_neutral_dark
+    background-color: darken($color_mid_grey, 10%);
   }
   color: $color_white;
 
@@ -502,12 +512,11 @@ a.link_button_green_large {
 }
 
 .locale-list.active .current-locale {
-  background-color: $color_primary;
   color: $color_white;
   border-color: $color_primary;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: lighten($color_neutral_dark, 6%);
-    border-bottom: 1px solid lighten($color_neutral_dark, 2%);
+    background-color: darken($color_dark_grey, 10%);
+    border-color: $color_black;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -517,16 +526,16 @@ a.link_button_green_large {
   @include ie8 {
     border-top-color: $color_white;
   }
-  border-top-color: transparentize($color_white, 0.6);
+  border-top-color: rgba(255,255,255,0.4);
 }
 
-
-.locale-list.active .locale-list-trigger {
-  border-color: transparent;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    border-color: $color_neutral_dark;
-  }
-}
+  .locale-list .locale-list-trigger,
+  .locale-list.active .locale-list-trigger {
+    @include respond-min($main_menu-mobile_menu_cutoff) {
+      border: 0;
+      padding: 0;
+    }
+  } 
 
 
 #banner {
