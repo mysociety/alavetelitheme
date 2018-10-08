@@ -84,7 +84,7 @@
   .js-loaded & {
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       //positioned alongside the button
-      top: 3.5em;
+      top: 4.1em;
     }
   }
 }
