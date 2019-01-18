@@ -9,7 +9,7 @@ class ActionController::Base
   # template to use for a view.  It does so by creating a method
   # uniquely named for this theme.
   path_function_name = "set_view_paths_for_#{THEME_NAME}"
-  before_filter path_function_name.to_sym
+  before_action path_function_name.to_sym
   send :define_method, path_function_name do
     self.prepend_view_path File.join(File.dirname(__FILE__), "views")
   end
