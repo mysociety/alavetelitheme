@@ -11,15 +11,15 @@
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
+  color: transparentize($midnight-blue, 0.2);
   @include ie8 {
-    color: $color_white;
+    color: $midnight-blue;
   }
   transition: background-color 0.5s ease-out;
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($color_primary, 15%);
+    background-color: darken($color_primary = #E6722A, 15%);
     color: $color_white;
   }
 
@@ -28,8 +28,8 @@
 /* Selected menu item */
 %selected-menu-item {
   font-weight: bold;
-  color: $color_primary;
-  background-color: $color_neutral_light;
+  color: $color_primary = #100467;
+  background-color: $color_neutral_light = #E6722A;
   &:hover,
   &:active,
   &:focus {
