@@ -1,0 +1,77 @@
+<% @title = "Om" %>
+<%#-*- coding: utf8 -*-%>
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+  <h1 id="introduction">Introduktion till Handlingar.se<a href="#introduction">#</a> </h1>
+  <dl>
+
+  <dt id="purpose">Vad är Handlingar.se för? <a href="#purpose">#</a> </dt>
+
+  <dd>
+  <p>
+  För att hjälpa dig att ta reda på insiderinformation om den svenska regeringen och svenska offentliga myndigheter.
+  Webbplatsen hjälper människor få tillgång till information om staten, kommuner,
+  riksdagen, sjukvårdsinstanserna, de militära styrkorna, statligt finansierade skolor och universitet och
+  andra offentliga myndigheter.
+  </p>
+  <p>
+  Du kan också använda webbplatsen för att ta reda på information som tillsynsmyndigheterna har om företag,
+  välgörenhetsorganisationer och andra organisationer.
+  </p>
+  </dd>
+
+  <dt id="premise">Hur fungerar denna webbplats? <a href="#premise">#</a> </dt>
+
+  <dd>Du väljer den myndighet som du vill ha information från, sedan skriver
+  du en kort anteckning och fråga som beskriver vad du vill veta. Vi skickar då din begäran
+  till den offentliga myndigheten. Alla mottagna svar publiceras automatiskt på
+  webbplatsen för dig och alla andra för att hitta och läsa.</dd>
+
+  <dt id="whybother_me">Varför skulle jag bry mig om att göra detta? <a href="#whybother_me">#</a> </dt>
+
+  <dd>Du betalar skatt, och sedan gör regeringen, landsting och kommunen saker med pengarna.
+  Alla typer av saker som påverkar ditt liv, från hälso- och sjukvården till det nationella försvaret. Några
+  saker gör de dåligt, vissa saker gör de väl. Ju mer vi tar reda på hur staten, landstingen och kommuner
+  fungerar, desto bättre kan vi lägga fram förslag för att förbättra det som
+  görs dåligt, och för att fira de saker som görs väl.
+  Vissa människor använder också platsen för forskning och vissa för att bygga innovativa lösningar.</dd>
+
+  <dt id="whybother_them">Varför skulle den offentliga myndigheten bry sig om att svara? <a href="#whybother_them">#</a> </dt>
+
+  <dd>Under grundlagen Tryckfrihetsförordningen och Offentlighetsprincipen måste de svara. Svaret
+  kommer antingen att innehålla den information du vill, eller
+  ge en giltig rättslig anledning till varför den inte lämnas ut, t.ex. elektroniskt. </dd>
+
+  <dt id="useful">Blir användbar information utgiven via webbplatsen? <a href="#useful">#</a> </dt>
+  <dd>
+  Ja. Tusentals dokument har släppts via liknande webbplatser runt om i världen
+  Se till exempel : <a href="http://www.guardian.co.uk/news/datablog/2012/mar/20/freedom-of-information-foi"> 366
+  Intressanta saker som vi känner på grund av WhatDoTheyKnow</a>, Storbritanniens motsvarighet till Handlingar.se.
+  </dd>
+
+  <dt id="how_many">Hur många personer använder webbplatsen? <a href="#how_many">#</a> </dt>
+  <dd>
+  Vi har <%= number_with_delimiter(User.count.round(-4), :locale => @locale) %> registrerade användare och kommer framöver undersöka hur många handlingar som begärts ut av dem.
+  </dd>
+
+  <dt id="who">Vem driver Handlingar.se? <a href="#who">#</a> </dt>
+
+  <dd>
+  <p>Handlingar.se drivs och underhålls som ett projekt
+  av en grupp av människor på en ideell bas.
+  </p>
+  </dd>
+
+  <dt id="updates">Hur kan jag hålla jämna steg med nyheter om Handlingar.se?<a href="#updates">#</a> </dt>
+
+  <dd>Vi har <a href="<%= blog_path %>">blogg</a> och en <a href="https://twitter.com/handlingar">Twitter</a>
+  </dd>
+
+
+  </dl>
+
+  <p><strong>Härnäst,</strong> kan du läsa om <a href="<%= help_requesting_path %>">att göra begäran om allmän handling</a>
+
+  <div id="hash_link_padding"></div>
+</div>
