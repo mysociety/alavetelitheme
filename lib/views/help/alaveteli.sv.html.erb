@@ -1,0 +1,29 @@
+<% @title = "Making requests" %>
+
+<%= render :partial => 'sidebar' %>
+<div id="left_column_flip" class="left_column_flip">
+  <% if params[:country_name] %>
+    <h1><%= _("Would you like to see a website like this in your country?") %></h1>
+  <% else %>
+    <h1>Drivs av Alaveteli</h1>
+  <% end %>
+  <p>Den här hemsidan drivs av Alaveteli.  Alaveteli är fri mjukvara
+    för att begära ut handlingar enligt offentlighetsprincipen.
+    Den kan enkelt översättas till vilket språk som helst, och anpassas
+    till variationer av lagstiftning som offentlighetsprincipen.</p>
+
+  <p>Utvecklingen av ALaveteli sponsras och stöds av ett antal
+    stiftelser och välgörenhetsorganisationer som är intresserade
+    av demokratisk insyn runtom i världen.</p>
+
+  <p>Om du vill sätta upp en Alaveteli-hemsida i ditt eget land kan vi hjälpa.
+    Du kommer behöva några få dagar till att få sidan konfigurerad och redo
+    att användas och kommer sen behöva spendera minst en timma per vecka i
+    att moderera och hantera sidan (mer för populära plattformar).</p>
+
+  <p>Läs mer på <a href="https://alaveteli.org">Alaveteli-hemsidan</a>,
+    eller <a href="mailto:hello@alaveteli.org">skicka oss ett  
+      e-postmeddelande</a>.</p>
+
+  <div id="hash_link_padding"></div>
+</div>
