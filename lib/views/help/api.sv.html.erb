@@ -1,0 +1,87 @@
+<% @title = "Applikationsprogrammeringsgränssnitt - vårt API" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+<h1><%=@title %></h1>
+
+<h2> Introduktion </h2>
+
+<p>Den här sidan förklarar hur programmerare kan göra andra webbplatser och programvara
+interagera med Handlingar.se via en "API".
+</p>
+
+<p>Handlingar.se inte har ett fullständigt API ännu, men vi lägger successivt till
+massor av saker som har liknande användning till ett API som de begärt.
+</p>
+
+<hr>
+
+<h2> 1. Länka till nya förfrågningar </h2>
+
+<p>För att uppmuntra användarna att göra förfrågningar till en särskild myndighet, använder webbadresser av formen:
+<%= link_to new_request_to_body_url(:url_name => "regeringskansliets_forvaltningsavdelning") , new_request_to_body_url(:url_name => "regeringskansliets_forvaltningsavdelning") %>.
+Dessa är de parametrar som du kan lägga till till dessa webbadresser, antingen i webbadressen eller från ett formulär.
+
+<ul>
+    <li> <strong>title</strong> - standardsammanfattning av den nya begäran.</li>
+    <li> <strong>default_letter</strong> - standardtexten i kroppen av brevet. Hälsningen (Kära ...) och signaturen (Din ...) lindas runt detta. </li>
+    <li> <strong>body</strong> - som ett alternativ till default_letter ställer detta hela standardtexten begäran, så att du kan skräddarsy hälsningen och signoff. </li>
+    <li> <strong>tags</strong> - blankstegs-separerad lista med taggar, så att du kan hitta och knyta upp alla begäranden som görs senare, t.ex. <em>openlylocal spending_id:12345</em>. Denna ":" indikerar att den är en maskin-tagg. Värdena för maskin-taggar kan också inkludera kolon, användbara för URI:er.
+</ul>
+
+<hr>
+
+<h2> 2. RSS-flöden (egentligen Atom)  </h2>
+
+<p>Det finns Atom-feeds på de flesta sidor som listar förfrågningar om allmänna handlingar som du kan
+använda för att få uppdateringar och länkar i XML-format. Hitta webbadressen till Atom-flödet på
+något av följande sätt:
+<ul>
+    <li>Leta efter <%= image_tag "feed-16.png", :alt => "RSS icon" %> RSS-flödets länkar.</li>
+    <li>Undersök <tt>&lt;link rel="alternate" type="application/atom+xml"&gt;</tt> taggen i "head" på HTML. </li>
+    <li>Lägg till <tt>/feed</tt> på början av en annan webbadress som URL.
+</ul>
+
+<p>I synnerhet även komplicerade sökfrågor har Atom-flöden.
+Du kan göra alla möjliga saker med dem, till exempel fråga enligt myndighet, efter fil-typ, efter datumintervall eller efter status. Se  <a href="<%= advanced_search_path %>">tips för avancerad sökning</a> för mer information.
+
+<hr>
+
+<h2> 3. JSON-strukturerade data </h2>
+
+<p>En hel del sidor har JSON-versioner som låter dig ladda ner information om
+objekt i en strukturerad form. Hitta dem genom att:
+<ul>
+    <li>Lägga till <tt>.json</tt> slutet av webbadressen i URL:en. </li>
+    <li>Leta efter <tt>&lt;link rel="alternate" type="application/json"&gt;</tt> taggen i "head" på HTML.</li>
+</ul>
+</p>
+
+<p>Förfrågningar, användare och myndigheter har alla JSON-versioner som innehåller grundläggande
+information om dem. Varje Atom-flöde har en JSON-motsvarighet, innehållande
+information om listan över händelser i fodret.
+</p>
+
+<hr>
+<h2> 4. kalkylblad för alla myndigheter </h2>
+
+<p>
+Ett kalkylblad fillistning varje kropp i Handlingar.se är tillgänglig här:
+<%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
+</p>
+
+<h2> 5. Skriv-API </h2>
+
+<p>
+Skriv API är utformad för att kunna användas av användare eller myndigheter för att skapa sina egna förfrågningar i systemet men kan användas på fler sätt. API:et används idag av t.ex. mySocietys <a href="https://github.com/mysociety/foi-register">mjukvara för förfrågningar om allmän handling och e-diarium </a> att stödja användning av Alaveteli som ett publiceringsverktyg och e-diarium för allmänna handlingar vid en viss offentlig aktör. Mer teknisk information om skriv-API finns på <a href="http://alaveteli.org/docs/developers/api/">hemsidan Alaveteli.org</a>.
+</p>
+
+<hr>
+
+<p>Vänligen <a href="<%= help_contact_path %>">kontakta oss</a> om du behöver en API-funktion som inte finns ännu. Det är väldigt
+mycket ett pågående arbete, och vi lägger till saker när folk frågar oss.</p>
+
+<div id="hash_link_padding"></div>
+
+</div>
