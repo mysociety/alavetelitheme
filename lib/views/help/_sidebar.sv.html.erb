@@ -1,0 +1,19 @@
+<div id="right_column_flip">
+    <h2>Hjälpsidor</h2>
+    <ul class="no_bullets">
+      <li><%= link_to_unless_current "Introduktion", help_about_path %></li>
+      <li><%= link_to_unless_current "Att göra begäran om allmän handling", help_requesting_path %></li>
+      <li><%= link_to_unless_current "Din integritet", help_privacy_path %></li>
+      <li><%= link_to_unless_current "För registratorer och dokumentcontrollers", help_officers_path %></li>
+      <li><%= link_to_unless_current "Erkännanden", help_credits_path %></li>
+      <li><%= link_to_unless_current "API-programmerare", help_api_path %></li>
+      <li><%= link_to_unless_current "Hjälp oss", help_general_path(:action => 'help_out') %></li>
+      <li><%= link_to_unless_current "Avancerad sökning", advanced_search_path %></li>
+      <li><%= link_to_unless_current "Alaveteli", help_alaveteli_path %></li>
+    </ul>
+
+    <h2 id="contact">Kontakta oss</h2>
+    <p>Om din fråga inte besvaras här, eller om du ville bara låta oss veta
+    något om webbplatsen, t.ex. feedback, <a href="<%= help_contact_path %>">kontakta oss</a>.
+    </p>
+</div>
