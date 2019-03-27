@@ -19,7 +19,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($color_primary = #E6722A, 15%);
+    background-color: darken($color_primary #E6722A, 15%);
     color: $color_white;
   }
 
@@ -28,8 +28,8 @@
 /* Selected menu item */
 %selected-menu-item {
   font-weight: bold;
-  color: $color_primary = #100467;
-  background-color: $color_neutral_light = #E6722A;
+  color: $color_primary #100467;
+  background-color: $color_neutral_light #E6722A;
   &:hover,
   &:active,
   &:focus {
@@ -535,7 +535,7 @@ p.locale-list-trigger {
       border: 0;
       padding: 0;
     }
-  } 
+  }
 
 
 #banner {
