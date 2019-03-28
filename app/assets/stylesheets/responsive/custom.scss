@@ -13,7 +13,7 @@
   text-decoration: none;
   color: transparentize($color_blue #100467, 0.2);
   @include ie8 {
-    color: $color_blue:;
+    color: $color_blue;
   }
   transition: background-color 0.5s ease-out;
   &:hover,
