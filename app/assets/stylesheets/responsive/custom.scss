@@ -11,9 +11,9 @@
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($midnight-blue, 0.2);
+  color: transparentize($color_blue:, 0.2);
   @include ie8 {
-    color: $midnight-blue;
+    color: $color_blue:;
   }
   transition: background-color 0.5s ease-out;
   &:hover,
