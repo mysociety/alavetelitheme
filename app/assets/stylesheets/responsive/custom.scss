@@ -19,7 +19,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($color_primary #E6722A, 15%);
+    background-color: darken($color_primary, 15%);
     color: $color_white;
   }
 
