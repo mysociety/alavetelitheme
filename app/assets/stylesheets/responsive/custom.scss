@@ -11,7 +11,7 @@
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($color_blue #100467, 0.2);
+  color: transparentize($color_blue, 0.2);
   @include ie8 {
     color: $color_blue;
   }
