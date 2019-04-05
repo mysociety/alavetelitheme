@@ -935,7 +935,7 @@ dt {
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($color_secondary, 20%);
+      background-color: darken($color_primary, 20%);
     }
   }
 }
