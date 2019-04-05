@@ -699,6 +699,7 @@ a.link_to_this {
   .new-request-cta {
     .new-request__make-new-requests {
       @include button-primary();
+      color: $color_primary ;
     }
   }
 }
