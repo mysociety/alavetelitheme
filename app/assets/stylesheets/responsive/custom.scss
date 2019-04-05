@@ -930,7 +930,7 @@ dt {
   }
   .new-request__make-new-requests {
     @include button-base;
-    background-color: desaturate(darken($color_secondary, 10%), 5%);
+    background-color: desaturate(darken($color_primary, 10%), 5%);
     color: $color_white;
     &:hover,
     &:active,
