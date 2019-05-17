@@ -35,6 +35,16 @@ end
 # something unique (e.g. yourtheme-custom-routes.rb":
 $alaveteli_route_extensions << 'custom-routes.rb'
 
+# Prepend the asset directories in this theme to the asset path:
+['stylesheets', 'images', 'javascripts'].each do |asset_type|
+  theme_asset_path = File.join(File.dirname(__FILE__),
+                               '..',
+                               'app',
+                               'assets',
+                               asset_type)
+  Rails.application.config.assets.paths.unshift theme_asset_path
+end
+
 # Append individual theme assets to the asset path
 theme_asset_path = File.join(File.dirname(__FILE__),
                              '..',
@@ -46,25 +56,8 @@ LOOSE_THEME_ASSETS = lambda do |logical_path, filename|
   filename.start_with?(theme_asset_path) &&
   !['.js', '.css', ''].include?(File.extname(logical_path))
 end
+
 Rails.application.config.assets.precompile.unshift(LOOSE_THEME_ASSETS)
-
-def append_theme_assets
-  # Prepend the asset directories in this theme to the asset path:
-  ['stylesheets', 'images', 'javascripts'].each do |asset_type|
-    theme_asset_path = File.join(File.dirname(__FILE__),
-                                 '..',
-                                 'app',
-                                 'assets',
-                                 asset_type)
-    Rails.application.assets.prepend_path theme_asset_path
-    # for completeness / to avoid confusion
-    Rails.application.config.assets.paths = Rails.application.assets.paths
-  end
-end
-
-Rails.application.config.after_initialize do
-  append_theme_assets
-end
 
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if
