@@ -17,21 +17,22 @@
 
   <% end %>
 
-  <h2>Contact the <%= site_name %> team</h2>
+  <h2>Contactez l'équipe de <%= site_name %></h2>
   <% if !flash[:notice] %>
     <ul>
       <li>
-        Please read the  <a href="<%= help_about_path %>">help page</a> first, as it may
-        answer your question quicker.
+        Merci de d’abord lire les <a href="<%= help_about_path %>">pages d’aide</a> vous y trouverez 
+        les réponses aux questions les plus courantes.
       </li>
 
-      <li>We'd love to hear how you've found using this site.
-        Either fill in this form, or send an email to <a
-                            href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
+      <li>
+        Nous aimerions savoir comment vous avez trouvé ce site. Pour nous l’indiquer, vous pouvez remplir le formulaire 
+        ou envoyer un email à <a href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
       </li>
 
-      <li>We are a <strong>charity</strong> and not part of the
-        Government.</li>
+      <li>
+        Nous sommes une association indépendante de toutes autorités publiques.
+      </li>
     </ul>
   <% end %>
 </div>
@@ -40,24 +41,24 @@
 
   <% if not @user %>
     <p>
-      <label class="form_label" for="contact_name">Your name:</label>
+      <label class="form_label" for="contact_name">Votre nom:</label>
       <%= f.text_field :name, :size => 20 %>
       (or <%= link_to "sign in", signin_path(:r => request.fullpath) %>)
     </p>
 
     <p>
-      <label class="form_label" for="contact_email">Your email:</label>
+      <label class="form_label" for="contact_email">Votre adresse email:</label>
       <%= f.text_field :email, :size => 20 %>
     </p>
   <% end %>
 
   <p>
-    <label class="form_label" for="contact_subject">Subject:</label>
+    <label class="form_label" for="contact_subject">Sujet:</label>
     <%= f.text_field :subject, :size => 50 %>
   </p>
 
   <p>
-    <label class="form_label" for="contact_message">Message to website:</label>
+    <label class="form_label" for="contact_message">Votre message :</label>
     <%= f.text_area :message, :rows => 10, :cols => 60 %>
   </p>
 
@@ -82,15 +83,14 @@
   <% end %>
 
   <p class="form_note">
-    We can only help you with <strong>technical problems</strong>, or questions
-    about Freedom of Information.
+    Nous ne pouvons vous fournir d’aide que sur les problèmes techniques liés à l’utilisation 
+    de ce site ou à propos de questions générales sur l’accès aux informations publiques.
   </p>
 
 
   <div class="form_button">
     <%= hidden_field_tag(:submitted_contact_form, 1) %>
-    <%= submit_tag "Send message to the charity", :data => { :disable_with => "Sending..." } %>
-    &lt;-- we run this site, not the Government!
+    <%= submit_tag "Envoter votre demande a <%= site_name %>", :data => { :disable_with => "Sending..." } %>
   </div>
 
 <% end %>
