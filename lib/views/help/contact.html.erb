@@ -1,4 +1,4 @@
-<% @title = "Contact us" %>
+<% @title = "Contactez-nous" %>
 
 <%= foi_error_messages_for :contact %>
 
@@ -7,15 +7,11 @@
 <div id="contact_preamble" class="contact_preamble">
 
   <% if !flash[:notice] %>
-    <h2>Contact an authority to get official information</h2>
+    <h2>Contactez une autorité publique pour obtenir l’accès aux informations</h2>
     <ul>
-      <li><a href="<%= new_request_path %>">Go here</a> to make a request, in public, for information
-        from public authorities.</li>
-
+      <li><a href="<%= new_request_path %>">Rendez-vous ici</a> pour faire une demande, qui sera publique, pour obtenir des informations des autorités.</li>
       <li>
-        Asking for private information about yourself?
-        Please read our
-        <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">help page</a>.
+        Vous souhaitez demander des informations personnelles sur vous-même ? Lisez d’abord notre page d'<a href="<%= help_requesting_path(:anchor => 'data_protection') %>">aide à ce sujet</a>.
       </li>
     </ul>
 
