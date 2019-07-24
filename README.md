@@ -1,30 +1,16 @@
-Alavetelitheme
-==============
+# Thème DADA France
 
-This is a "hello world" type theme package for Alaveteli.
+Le thème et le contenu statique du site DADA.
 
-The intention is to support simple overlaying of templates and
-resources without the need to touch the core Alaveteli software.
+Ce repo est étroitement lié au [repo de configuration et déploiement](https://github.com/okfnfr/dada-core).
 
-Typical usage should be limited to that described in the [documentation](http://alaveteli.org/docs/customising/themes/):
+## Comment contribuer
 
+Jetez un oeil aux [tickets](https://github.com/okfnfr/dada-france-theme/issues).
 
-## To install:
+Si vous contribuez du code sur ce repo, il ne sera déployé sur le site qu'après un `git push` sur le repo principal.
 
-In the Alaveteli `general.yml` configuration file change the default mysociety  theme repository to your theme repository in the [`THEME_URLS`](http://alaveteli.org/docs/customising/config/#theme_urls) setting:
+Il y'a 2 branches principales:
 
-    THEME_URLS:
-      - 'git://github.com/YOUR_GITHUB_USERNAME/YOUR_THEME_NAME.git'
-
-You can then switch the theme the application is using:
-
-    bundle exec rake themes:install
-
-## To run tests:
-
-To run tests, in the Alaveteli Rails.root (with this theme installed):
-
-        bundle exec rspec lib/themes/alavetelitheme/spec
-
-
-Copyright (c) 2011 mySociety, released under the MIT license
+- `staging` est deployée sur le site de développement/test (https://dadastaging.okfn.fr pour l'instant)
+- `master` est deployée sur le site de production
