@@ -1,4 +1,4 @@
-<% @title = "FOI officer questions" %>
+<% @title = "FAQ pour les administrations" %>
 
 <%= render :partial => 'sidebar' %>
 
@@ -7,87 +7,47 @@
 
   <dl>
 
-    <dt id="top">I just got here from bottom of an FOI request, what is going on? <a href="#top">#</a> </dt>
+    <dt id="top">Je viens de recevoir un courriel de <%= site_name %>, qu'est-ce que c'est?<a href="#top">#</a> </dt>
 
-    <dd><p><%= site_name %> is a service run by a charity. It helps ordinary members
-        of the public make FOI requests, and easily track and share the responses.</p>
+    <dd><p><%= site_name %> permet à ses utilisateurs de faire des demandes d'accès aux documents administratifs et leur permet de suivre les réponses et de les partager facilement, tel que le prévoit la loi.</p>
 
-      <p>The FOI request you received was made by someone using <%= site_name %>. You can
-        simply reply to the request as you would any other request from an individual.
-        The only difference is that your response will be automatically published on
-        the Internet.
+      <p>La demande d'accès que vous avez reçue a été faite par un utilisateur de <%= site_name %>.
+        Vous pouvez simplement répondre à la demande via l’email reçu.
+        Toutes les réponses des autorités publiques seront automatiquement publiées sur Internet.
       </p>
-      <p>If you have privacy or other concerns, please read the answers below.
-        You might also like to read the <a
-        href="<%= help_about_path %>">introduction to <%= site_name %></a> to find out more about what
-        the site does from the point of view of a user. You can also search the
-        site to find the authority that you work for, and view the status of
-        any requests made using the site.
+      <p>Si vous avez des questions concernant la protection de la vie privée, veuillez lire les réponses ci-dessous.
+        Vous pouvez également lire la <a href="<%= help_about_path %>">présentation de <%= site_name %></a> pour en savoir plus sur
+        l'utilité du site du point de vue des utilisateurs.
+        Vous pouvez également faire une recherche sur le site pour trouver le service public pour
+        lequel vous travaillez et visualiser les autres demandes faites à l'aide de <%= site_name %>.
 
-      <p>Finally, we welcome comments and
-        thoughts from FOI officers, please <a href="<%= help_contact_path %>">get in touch</a>.
+      <p>Enfin, nous serions ravis de recevoir des commentaires de la part des PRADA, n'hésitez donc pas
+        à <a href="<%= help_contact_path %>">nous contacter</a>.
       </p>
     </dd>
 
-    <dt id="responses">Why are you publishing responses to FOI requests? <a href="#responses">#</a> </dt>
+    <dt id="realpeople">Les personnes qui font des demandes sont-elles des personnes réelles ?<a href="#realpeople">#</a> </dt>
 
-    <dd>We think there are lots of benefits. Most importantly it will encourage the
-      public to be more interested and involved in the work of government. We
-      also hope that it will reduce the number of duplicate requests on any
-      subject that a public body will receive. Given that Freedom of Information
-      responses contain public information, which anybody could easily request
-      again from the public authority, we think there should be no reason not to
-      publish it widely.
+    <dd>Oui. Afin de pouvoir suivre les réponses nous utilisons des adresses électroniques générées par ordinateur pour chaque demande.
+    Cependant, avant de pouvoir envoyer une demande, chaque utilisateur doit s'inscrire sur le site avec une adresse email unique que nous avons vérifiée.
+    Vous pouvez trouver sur Transparencia la liste de toutes les demandes faites par chaque utilisateur.
     </dd>
 
-    <dt id="realpeople">Are the people making requests real people? <a href="#realpeople">#</a> </dt>
+    <dt id="spam_problems">Je peux voir une demande sur <%= site_name %>, mais je n&apos;ai jamais reçu di&apos;email!<a href="#spam_problems">#</a> </dt>
 
-    <dd>Yes. For the purposes of keeping track of responses we use
-      computer-generated email addresses for each request. However, before
-      they can send a request, each user must register on the site with a
-      unique email address that we then verify. You can search this site and
-      find a page listing all requests that each person has made.
-    </dd>
+    <dd><p>Si une demande apparaît sur le site, cela signifie que nous avons tenté de l'envoyer à l'autorité par email.
+    Tous les messages d'échec de livraison apparaîtront automatiquement sur le site. Vous pouvez vérifier l'adresse que
+    nous utilisons en cliquant sur le lien "Voir l'adresse email de demande d'accès à l'information " qui apparaît sur la page de l'autorité publique.
+    <a href="<%= help_contact_path %>">Contactez-nous</a> s'il y a une meilleure adresse que nous pouvons utiliser.</p>
 
-    <dt id="email_only">An email isn't a sufficient address for an FOI request! <a href="#email_only">#</a> </dt>
+    <p>Les demandes n'arrivent parfois pas parce qu'elles sont bloquées par les “filtres anti-spam” du département informatique de l'autorité publique.
+    Les autorités peuvent s’assurer que cela ne se reproduise plus en demandant à leur service informatique de rajouter les emails
+    @<strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong> à la liste des emails autorisés.
+    A votre demande, nous pouvons vous renvoyer les demandes déjà réalisées et/ou vous donner des
+    détails techniques concernant le problème de livraison afin que votre service informatique puisse régler le problème.</p>
 
-    <dd>Yes it is. In the UK, this
-      <a href="https://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives guidance on the matter, specifically
-      in the context of requests made via WhatDoTheyKnow, a similar site to <%= site_name %>.
-    </dd>
-
-    <dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
-
-    <dd><p><%= site_name %> is not making any requests. We are sending requests on
-        behalf of our users, who are real people making the requests. </p>
-      <p>Look at it like this - if lots of different people made requests from
-        different Hotmail email addresses, then you would not think that Microsoft were
-        making vexatious requests. It is exactly the same if lots of requests are made
-        via <%= site_name %>. Moreover, since all requests are public it is much easier
-        for you to see if one of our users is making vexatious requests. </p>
-
-    </dd>
-
-    <dt id="spam_problems">I can see a request on <%= site_name %>, but we never got it by email!<a href="#spam_problems">#</a> </dt>
-
-    <dd><p>If a request appears on the site, then we have attempted to send it to
-        the authority by email. Any delivery failure messages will automatically
-        appear on the site. You can check the address we're using with the "View FOI
-        email address" link which appears on the page for the authority. <a
-        href="<%= help_contact_path %>">Contact us</a> if there is a better address we can
-        use.</p>
-      <p>Requests are sometimes not delivered because they are quietly removed by
-        "spam filters" in the IT department of the authority. Authorities can make
-        sure this doesn't happen by asking their IT departments to "whitelist"
-        any email from <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
-        If you <a href="<%= help_contact_path %>">ask us</a> we will resend any request,
-        and/or give technical details of delivery so an IT department can chase
-        up what happened to the message.
-      </p>
-      <p>Finally, you can respond to any request from your web browser, without
-        needing any email, using the "respond to request" link at the bottom of
-        each request page.
-      </p>
+    <p>Enfin, vous pouvez répondre à toute demande depuis votre navigateur internet, sans avoir besoin d'email,
+    en utilisant simplement le lien "répondre à la demande", en bas de chaque page de demande.</p>
     </dd>
 
     <dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
