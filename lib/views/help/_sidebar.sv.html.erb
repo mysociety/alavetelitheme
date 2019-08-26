@@ -9,6 +9,9 @@
       <li><%= link_to_unless_current "API-programmerare", help_api_path %></li>
       <li><%= link_to_unless_current "Avancerad sökning", advanced_search_path %></li>
       <li><%= link_to_unless_current "Alaveteli", help_alaveteli_path %></li>
+      <% if feature_enabled?(:alaveteli_pro) %>
+        <li><%= link_to_unless_current "Pro", help_pro_path %></li>
+      <% end %>
     </ul>
 
     <h2 id="contact">Kontakta oss</h2>
