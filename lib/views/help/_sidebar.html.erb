@@ -1,17 +1,17 @@
 <div id="right_column_flip" class="right_column_flip">
-<h2>Help pages</h2>
+<h2>Pages d'aide</h2>
 <ul class="no_bullets">
   <li><%= link_to_unless_current "Introduction", help_about_path %></li>
   <li><%= link_to_unless_current "Envoyer des demandes", help_requesting_path %></li>
   <li><%= link_to_unless_current "Votre vie privée", help_privacy_path %></li>
   <li><%= link_to_unless_current "FAQ pour les autorités publiques", help_officers_path %></li>
   <li><%= link_to_unless_current "A propos du logiciel", help_alaveteli_path %></li>
-  <li><%= link_to_unless_current "Credits", help_credits_path %></li>
+  <li><%= link_to_unless_current "Crédits", help_credits_path %></li>
   <li><%= link_to_unless_current "Développeurs API", help_api_path %></li>
   <li><%= link_to_unless_current "Recherche avancée", advanced_search_path %></li>
 </ul>
 
-<h2 id="contact" class="contact">Contact us</h2>
+<h2 id="contact" class="contact">Contactez-nous</h2>
 <p>
   Si vous ne trouvez pas de réponse à votre question dans ces pages d’aide ou si vous souhaitez nous transmettre un commentaire sur ce site,
   <a href="<%= help_contact_path %>">contactez-nous</a>.

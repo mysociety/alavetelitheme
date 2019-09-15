@@ -4,7 +4,6 @@
 
 <div id="left_column_flip" class="left_column_flip">
   <h1 id="introduction">Introduction à <%= site_name %> <a href="#introduction">#</a></h1>
-  <p>Cette page sera bientôt traduite en français.</p>
   <dl>
 
     <dt id="purpose">A quoi sert <%= site_name %> ?<a href="#purpose">#</a> </dt>
@@ -32,7 +31,7 @@
       réalisées mais parfois aussi de mauvaises. Plus les citoyens s'intéresseront à l’action publique, 
       plus ils seront capables de faire des propositions pour améliorer les choses qui sont mal réalisées et 
       pour s’exprimer sur ce qui a été bien fait. Plus les dirigeants publics se sentiront observés, plus 
-      ils seront prudents dans la gestion de nos impôts,.. La démocratie s’en trouvera renforcée, grâce à 
+      ils seront prudents dans la gestion de nos impôts... La démocratie s’en trouvera renforcée, grâce à 
       votre regard vigilant.
     </dd>
 
@@ -58,10 +57,7 @@
     <dt id="reporting_unavailable">Pourquoi il n'est plus possible de signaler certaines demandes ? <a href="#reporting_unavailable">#</a></dt>
     <dd>
       <p>
-        Si une requête a déja été signalée aux administrateurs du site, 
-        vous ne pouvez plus la signaler une deuxième fois - pour éviter 
-        que les administrateurs recoivent plusieurs signalements du même 
-        problème avant d'avoir eu l'occasion de l'examiner. 
+        Si une requête a déjà été signalée aux administrateurs du site, il est impossible de la signaler à nouveau tant que la demande initiale est en cours de traitement.
       </p>
 
       <p>
@@ -73,20 +69,16 @@
     </dd>
 
     <dt id="who">Qui s'occupe de <%= site_name %> ? <a href="#who">#</a> </dt>
-    <dd><%= site_name %> runs on <a href="http://alaveteli.org">Alaveteli</a>, which was created and run by <a href="http://www.mysociety.org">mySociety</a>,
-      and was initially <a href="http://www.mysociety.org/2006/12/06/funding-for-freedom-of-information/">funded by the JRSST Charitable Trust</a>. mySociety is a project of the
-      registered charity <a href="http://www.ukcod.org.uk/UK_Citizens_Online_Democracy">UK Citizens Online Democracy</a>.
-      If you like what we're doing, then you can
-      <a href="https://www.mysociety.org/donate/">make a donation</a>.
+    <dd><%= site_name %> fonctionne grâce au logiciel open source <a href="http://alaveteli.org">Alaveteli</a>, créé et géré par <a href="http://www.mysociety.org">mySociety</a>, initiallement créé par la <a href="http://www.mysociety.org/2006/12/06/funding-for-freedom-of-information/">fondation JRSST (Joseph Rowntree Reform Trust  - Charitable Trust)</a>. MySociety est un projet de l'association <a href="http://www.ukcod.org.uk/UK_Citizens_Online_Democracy">UK Citizens Online Democracy</a>. Si vous appréciez notre travail, vous pouvez contribuer en <a href="https://www.mysociety.org/donate/">faisant un don</a> sur le site de l'association.
     </dd>
 
     <dt id="updates">Comment puis-je rester au courant de l’actualité de <%= site_name %> ?<a href="#updates">#</a> </dt>
-    <dd>We have a <a href="<%= blog_path %>">blog</a><% if !MySociety::Config.get('TWITTER_USERNAME', '').empty? %> and a <a href=https://twitter.com/<%= MySociety::Config.get('TWITTER_USERNAME', '') %>>twitter feed</a><% end %>.
+    <dd>Vous pouvez suivre le <a href="https://fr.okfn.org/blog/">blog</a> d'Open Knowledge France.
     </dd>
 
   </dl>
 
-  <p><strong>Next</strong>, read about <a href="<%= help_requesting_path %>">making requests</a> --&gt;</p>
+  <p><strong>A suivre:</strong> en savoir plus sur <a href="<%= help_requesting_path %>">comment faire une demande --&gt;</a></p>
 
   <div id="hash_link_padding"></div>
 </div>
