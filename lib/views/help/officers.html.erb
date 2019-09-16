@@ -30,10 +30,10 @@
 
     <dd>Oui. Afin de pouvoir suivre les réponses nous utilisons des adresses électroniques générées par ordinateur pour chaque demande.
     Cependant, avant de pouvoir envoyer une demande, chaque utilisateur doit s'inscrire sur le site avec une adresse email unique que nous avons vérifiée.
-    Vous pouvez trouver sur Transparencia la liste de toutes les demandes faites par chaque utilisateur.
+    Vous pouvez trouver sur <%= site_name %> la liste de toutes les demandes faites par chaque utilisateur.
     </dd>
 
-    <dt id="spam_problems">Je peux voir une demande sur <%= site_name %>, mais je n&apos;ai jamais reçu di&apos;email!<a href="#spam_problems">#</a> </dt>
+    <dt id="spam_problems">Je peux voir une demande sur <%= site_name %>, mais je n&apos;ai jamais reçu d&apos;email!<a href="#spam_problems">#</a> </dt>
 
     <dd><p>Si une demande apparaît sur le site, cela signifie que nous avons tenté de l'envoyer à l'autorité par email.
     Tous les messages d'échec de livraison apparaîtront automatiquement sur le site. Vous pouvez vérifier l'adresse que
@@ -50,7 +50,7 @@
     en utilisant simplement le lien "répondre à la demande", en bas de chaque page de demande.</p>
     </dd>
 
-    <dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
+    <dt id="days">Comment sont calculées les délais de réponse affichés sur la page des demandes ?<a href="#days">#</a> </dt>
 
     <dd>
 
@@ -64,35 +64,20 @@
         the request arrives out of office hours, is just that - detail. What matters
         here is that the law says authorities must respond <strong>promptly</strong>.</p>
 
-      <p>If you've got a good reason why the request is going to take a while to
-        process, requesters find it really helpful if you can send a quick email with a
-        sentence or two saying what is happening. </p>
-
-      <p>FOI officers often have to do a lot of <strong>hard work</strong> to answer
-        requests, and this is hidden from the public. We think it would help everyone
-        to have more of that complexity visible.</p>
+      <p>Si vous avez connaissance d'un motif pouvant justifier un délai de réponse important, il est recommandé d'en informer brièvement les demandeurs par email à ce sujet. Les administrateurs PRADA ont souvent beaucoup de travail à fournir pour répondre à certains requêtes, mais ce processus reste invisible et inconnu du public. Nous pensons que cela aiderait tout le monde de rendre cette complexité de traitement plus visible.</p>
 
     </dd>
 
-    <dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
+    <dt id="days2">Non mais vraiment, comment calculez vous les délais ?<a href="#days2">#</a> </dt>
 
     <dd>
 
-      <p>Please read the answer to the previous question first. Legally, authorities
-        must respond <strong>promptly</strong> to FOI requests. If they fail to do that,
-        it is best if they show the hard work they are doing by explaining what is
-        taking the extra time to do.
-      </p>
+    <p>Merci de vous référer d'abord à la question précédente. Les administrations sont tenues de répondre rapidement aux demandes de documents administratifs. Si elles n'y parviennent pas, il est souhaitable qu'elles démontrent le fait qu'un travail interne de recherche et de mise en forme est en cours et qu'elles expliquent en quoi un délai supplémentaire est nécessaire.</p>
 
-      <p>That said, <%= site_name %> does show the maximum legal deadline
-        for response on each request. Here's how we calculate it.</p>
-
+    <p>Ceci étant dit, <%= site_name %> indique la durée légale maximale de réponse pour chaque demande. Voici comment nous le calculons :</p>
       <ul>
 
-        <li>If the day we deliver the request by email is a working day, we count that
-          as "day zero", even if it was delivered late in the evening. Days end at
-          midnight.  We then count the next working day as "day one", and so on up to
-          <strong><%= AlaveteliConfiguration::reply_late_after_days %> working days</strong>.</li>
+        <li>Si le jour où la demande est délivrée par email est un jour ouvré, nous comptons ce jour comme le "jour 0", même si la demande a été délivrée tard dans la soirée. Les journées finissent à minuit. Nous  comptons ensuite le jour ouvré suivant comme le "jour 1", et ainsi de suite jusqu'aux <strong><%= AlaveteliConfiguration::reply_late_after_days %> jours ouvrés</strong>.</li>
 
         <li>If the day the request email was delivered was a non-working day, we count
           the next working day as "day one". Delivery is delivery, even if it happened on
@@ -109,12 +94,9 @@
 
     </dd>
 
-    <dt id="large_file">How can I send a large file, which won't go by email?<a href="#large_file">#</a> </dt>
+    <dt id="large_file">Comment puis-je envoyer de gros fichiers qui ne passent pas par email ?<a href="#large_file">#</a> </dt>
 
-    <dd>Instead of email, you can respond to a request directly from your web
-      browser, including uploading a file. To do this, choose "respond to request" at
-      the bottom of the request's page. <a href="<%= help_contact_path %>">Contact us</a> if it
-      is too big for even that (more than, say, 50Mb).
+    <dd>Au lieu d'utiliser l'email, vous pouvez répondre à une requête directement depuis votre navigateur internet et transmettre des pièces jointes volumineuses. Pour faire cela, choisissez "Répondre à une demande" en bas de la page de la demande. <a href="<%= help_contact_path %>">Contactez-nous</a> si le fichier est trop gros même pour notre outil (au-delà de 50Mb).
     </dd>
 
     <dt id="names">Why do you publish the names of civil servants and the text of emails? <a href="#names">#</a> </dt>

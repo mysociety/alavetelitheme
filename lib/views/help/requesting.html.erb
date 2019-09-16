@@ -41,7 +41,7 @@
     <dt id="authorities">Pourquoi ajoutez-vous des autorités qui ne sont pas soumises à la loi sur la Publicité de l’administration ?<a href="#authorities">#</a> </dt>
 
     <dd>
-      <p><%= site_name %> lvous permet de faire des requêtes à toutes sortes d'organisations :</p>
+      <p><%= site_name %> vous permet de faire des requêtes à toutes sortes d'organisations :</p>
 
       <ul>
         <li> Celles qui sont formellement soumises à la législation sur la Publicité de l’administration</li>
@@ -51,7 +51,7 @@
         de transparence.</li>
       </ul>
 
-      <p>Dans ce cas, le but de Transparencia est d’étendre le champ d’application de la loi pour la 
+      <p>Dans ce cas, le but de <%= site_name %> est d’étendre le champ d’application de la loi pour la 
       liberté d’accès à l'information. Même si une organisation n'est pas légalement obligée de répondre 
       à une requête, elle peut cependant le faire de son plein gré.
       </p>
@@ -98,10 +98,10 @@
 
       <p>
         Faire une demande d'accès à l’information est gratuit (demandez les documents sous forme électronique). 
-        Dans certains cas, les autorités publiques peuvent demander le payement d’une somme pour couvrir les 
+        Dans certains cas, les autorités publiques peuvent demander le paiement d’une somme pour couvrir les 
         frais de photocopies si les documents demandés doivent absolument être transmis sur papier mais la 
         plupart des documents peuvent être transmis par les autorités publiques par voie électronique simplement 
-        en répondant à l’email que Transparencia leur a envoyé.
+        en répondant à l’email que <%= site_name %> leur a envoyé.
       </p>
 
     </dd>
@@ -176,17 +176,17 @@
         l’autorité sans passer par le site <%= site_name %>. Si vous voyez que quelqu'un a inclus des renseignements 
         personnels à votre sujet, peut-être involontairement, dans une demande, veuillez nous contacter afin que nous 
         puissions les retirer. Toujours en raison de la publication automatique sur le site des réponses des autorités 
-        publiques, Transparencia ne peut pas être utilisé pour demander des documents soumis au droit d’auteur.
+        publiques, <%= site_name %> ne peut pas être utilisé pour demander des documents soumis au droit d’auteur.
       </p>
     </dd>
 
 
-    <dt id="private_requests">Je voudrais garder ma demande secrète (au moins jusqu'à ce que je publie mon article) <a href="#private_requests">#</a> </dt>
+    <dt id="private_requests">Je voudrais que ma demande reste secrète (au moins jusqu'à ce que je publie mon article) <a href="#private_requests">#</a> </dt>
 
     <dd>
       <p>
         <%= site_name %> est actuellement conçu uniquement pour des demandes publiques. Si vous êtes journaliste et 
-        souhaitez un délai d’exclusivité, contactez notre équipe à info@transparencia.be pour une collaboration. 
+	souhaitez un délai d’exclusivité, contactez notre équipe <a href="contact@<%= AlaveteliConfiguration::incoming_email_domain %>">par email</a> pour une collaboration. 
         Par défaut toutes les réponses que nous recevons sont automatiquement publiées sur le site web afin que tout 
         le monde puisse les lire. Si vous souhaitez faire une demande non publique, vous devez contacter 
         directement l'autorité publique.
@@ -209,7 +209,7 @@
     <dd>
       <%= site_name %> archive les demandes d'informations faites par le biais du site. Il n’est pas possible d’archiver 
       d'autres types de données. L'une des raisons est qu'avec les demandes faites en dehors du site nous ne pouvons 
-      pas vérifier si c’est bien l'autorité publique qui a répondu et qu'elle fut sa réponse. C’est pourquoi nous vous 
+      pas vérifier si c’est bien l'autorité publique qui a répondu et quelle fut sa réponse. C’est pourquoi nous vous 
       conseillons de faire vos demandes directement via <%= site_name %>.
     </dd>
 
@@ -217,7 +217,7 @@
 
       <dd>
         <p>
-          Les commentaires sur Transparencia sont là pour aider les personnes à obtenir les informations 
+          Les commentaires sur <%= site_name %> sont là pour aider les personnes à obtenir les informations 
           qu'ils recherchent. Nous nous réservons le droit de supprimer tout autre commentaire. 
           Les discussions politiques ne sont pas autorisées.
         </p>
@@ -225,7 +225,7 @@
 
   </dl>
 
-  # <p><strong>Suivant</strong>, , en savoir plus sur comment<a href="<%= help_privacy_path %>">saisir la CADA</a> --&gt;
+  # <p><strong>A suivre:</strong> en savoir plus sur <a href="<%= help_privacy_path %>">votre vie privée</a> --&gt;
 
     <div id="hash_link_padding"></div>
 </div>
