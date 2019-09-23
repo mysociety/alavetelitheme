@@ -1,56 +1,57 @@
-<% @title = "Credit where credit’s due" %>
+<% @title = "Crédits" %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip" class="left_column_flip">
 <h1 id="credits"><%= @title %> <a href="#credits">#</a> </h1>
 
-<p>Alaveteli, the software that powers <%= site_name %>, is a project of <a href="https://www.mysociety.org">mySociety</a>, a UK organisation. mySociety builds websites that empower citizens to hold authorities to account. And this is one of those sites.</p>
+<p>Alaveteli, le logiciel derrière <%= site_name %>, est un projet de MySociety, une organisation britannique. <a href="https://www.mysociety.org">mySociety</a> construit des sites web permettant aux citoyens de demander des comptes aux administrations. Ce site est la déclinaison française d'Alaveteli.</p>
 
 <dl>
-<dt id="development">Development <a href="#development">#</a></dt>
+<dt id="development">Développement <a href="#development">#</a></dt>
 <dd>
- Hearty cheers to <a href="http://alaveteli.org/">Alaveteli</a>&rsquo;s many <a href="https://github.com/mysociety/alaveteli/graphs/contributors">contributors</a>.</p>
+ Nos remerciements chaleureux vont aux nombreux <a href="https://github.com/mysociety/alaveteli/graphs/contributors">contributeurs d'Alaveteli</a>.</p>
 </dd>
 
-<dt id="helpus">How to help <a href="#helpus">#</a></dt>
+<dt id="helpus">Comment aider ?<a href="#helpus">#</a></dt>
 <dd>
-  <dt id="volunteer">Become a volunteer <a href="#volunteer">#</a></dt>
+  <dt id="volunteer">Devenir bénévole<a href="#volunteer">#</a></dt>
   <dd>
-    <p>If you have a passion for transparency, a great deal of patience, and a bit of spare time, consider becoming one of <%= site_name %>'s volunteer admin team. Work includes user support, helping to resolve legal issues, and shaping the site’s direction, and is primarily managed via email.</p>
-    <p>In the first instance, <%= link_to 'get in touch', help_contact_path %>.</p>
+    <p>Si vous souhaitez vous engager en faveur de la transparence, que vous êtes doté de patience et d'un peu de temps libre, pourquoi ne pas devenir administrateur ou administratrice bénévole de DadaFrance ? Les tâches incluent le soutien aux utilisateurs, l'aide à la résolution de questions juridiques ou légales, l'évolution du site. Tout est géré essentiellement par email.
+N'hésitez pas à <%= link_to 'nous contacter', help_contact_path %> pour toute question sur le bénévolat à DadaFrance.
+.</p>
   </dd>
 
-  <dt id="donate">Make a donation <a href="#donate">#</a></dt>
+  <dt id="donate">Faire un don <a href="#donate">#</a></dt>
   <dd>
-    <p>mySociety, Alaveteli's parent organisation, is a charity. WhatDoTheyKnow, our most-visited Alaveteli site, costs thousands of pounds each year, for overheads such as servers, maintenance and development.</p>
+  <p>MySociety, la société parente d'Alaveteli, est une association à but non lucratif. WhatDoTheyKnow, l'instance Alaveteli la plus visitée, coûte plusieurs milliers d'euros par an, pour les serveurs, la maintenance et le développement.</p>
+  <p>Votre contribution, même modeste, aide vraiment. <a href="https://www.mysociety.org/donate/">Faire un don</a>.</p>
 
-    <p>Your contributions, however small, really help. <a href="https://www.mysociety.org/donate/">Donate here</a>.</p>
   </dd>
 
-  <dt id="classification">Sort things out <a href="#classification">#</a></dt>
+  <dt id="classification">Faire du tri <a href="#classification">#</a></dt>
   <dd>
-    <p>Admin can be fun! Help people find successful requests, and monitor performance of authorities, by <a href="<%= categorise_play_path %>">playing the categorisation game</a>.</p>
+    <p>Être admin peut être sympa ! Aidez les utilisateurs à dénicher les demandes favorables qu'ils recherchent, monitorez les performances des administrations en <a href="<%= categorise_play_path %>">jouant au jeu de la catégorisation</a>.</p>
 
-    <p>Or be a dear, and find out FOI email addresses of <a href="<%= help_requesting_path(:anchor => 'missing_bodies') %>">authorities that we're missing</a>.</p>
+    <p>Ou encore, aidez-nous à trouver les <a href="<%= help_requesting_path(:anchor => 'missing_bodies') %>">adresses emails manquantes des administrations</a>.</p>
   </dd>
 
-  <dt id="promote">Spread the word <a href="#promote">#</a></dt>
+  <dt id="promote">Passer le mot <a href="#promote">#</a></dt>
   <dd>
-    <p>We don’t have a massive marketing budget, so word of mouth really helps.</p>
+    <p>Nous n'avons pas de gros budget marketing, et le bouche à oreille nous aide vraiment. Voici quelques suggestions d'actions pour nous aider :</p>
       <ul>
-        <li>Write a blog post about <%= site_name %>, or an interesting request that you've found.</li>
-        <li>Post about the site, and what you can do with it, on a forum that you frequent.</li>
-        <li>Tell friends about it.</li>
-        <li>Let your local newspaper or community magazine know how useful we are.</li>
-        <li>Give a talk.</li>
-        <li><%= mail_to 'hello@mysociety.org', 'Ask us for leaflets', :encode => "javascript" %> to leave in your local library or coffee shop.</li>
+        <li>Écrire un article de blog sur DadaFrance, ou une demande intéressante que vous avez identifié,</li>
+        <li>Poster à propos de ce site et de ce qu'il permet de faire sur des forums que vous fréquentez,</li>
+        <li>Parler de ce site à vos amis,</li>
+        <li>Faire savoir au journal local ou au magazine de votre communauté à quel point ce site est utile,</li>
+        <li>Prenez la parole pour présenter l'initiative (au travail, dans votre asso...),</li>
+        <li><%= mail_to 'contact@madada.fr', 'Demandez nous des flyers', :encode => "javascript" %> à déposer à la bibliothèque du coin ou votre café favori...</li>
       </ul>
   </dd>
 </dd>
 
-  <dt id="code">Improve our code <a href="#code">#</a></dt>
+  <dt id="code">Améliorer notre code <a href="#code">#</a></dt>
   <dd>
-    <p>Seen something that could work better? If you're a programmer, <a href="https://github.com/mysociety/alaveteli/">get the source code</a> for our parent project, <a href="http://alaveteli.org/">Alaveteli</a> and send us a pull request. <%= site_name %> is coded in <a href="http://rubyonrails.org/">Ruby on Rails</a>.</p>
+  <p>Vous avez repéré quelque chose qui pourrait être amélioré ? Si vous êtes développeur, <a href="https://github.com/mysociety/alaveteli/">accédez au code source</a> du projet ou <a href="https:??github.com/mysociety/alaveteli/">celui d'Alaveteli</a> et envoyez nous un Pull Request. <%= site_name %> est codé en <a href="http://rubyonrails.org/">Ruby on Rails</a>.</p>
   </dd>
 </dl>
 
