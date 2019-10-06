@@ -825,7 +825,7 @@ dt {
 .steps__step-number {
   height: 3.5em;
   width: 3.5em;
-  background-color: $color_primary;
+  background-color: #414856;
   box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   padding: 1em;
   border-radius: 100%;
@@ -894,6 +894,12 @@ dt {
     padding: 5em 0 8em;
     background-image: image-url('homepage-background.jpg');
   }
+
+.hero__intro {
+  background-color: #0b6ba8;
+  border-radius: 5px;
+  padding: 1.888888889em;
+}
 
   a {
     color: $color_secondary;
