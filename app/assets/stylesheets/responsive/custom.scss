@@ -312,7 +312,7 @@ a.link_button_green_large {
   border-bottom: none;
   a {
     @extend %menu-item;
-    color: transparentize($color_white, 0.2);
+    color: #414856;
     @media( min-width: $main_menu-mobile_menu_cutoff ) {
       padding: 0.875em 1em;
     }

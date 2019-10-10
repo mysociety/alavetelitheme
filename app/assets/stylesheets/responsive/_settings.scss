@@ -6,8 +6,8 @@ $base-font-size: 16px;
 // Specify the filename and dimensions of your logo file here
 $logo-filename: 'logo.png';
 $logo-highdpi-filename: 'logo@2.png'; //Should be at least 2x the size, in the same proportions
-$logo-width: 275px;
-$logo-height: 44px;
+$logo-width: 100px;
+$logo-height: 58px;
 
 $color_sand: #f3f1eb;
 $color_black: #333333;
@@ -26,10 +26,10 @@ $color_dark_grey: #6c6b68;
 
 $color_neutral_light: $color_sand;
 $color_neutral_dark: $color_black;
-$color_primary: $color_red;
-$color_secondary: $color_orange;
+$color_primary: #ececec;
+$color_secondary: #262a33;
 
-$body-bg: $color_neutral_light;
+$body-bg: $color_primary;
 
 $body-font-color: $color_neutral_dark;
 $link-color: darken($color_blue, 20%);
@@ -50,4 +50,4 @@ $error-color: $color_red;
 $action-color: $color_orange;
 
 $banner_inner_bg: $color_primary;
-$topnav_bg: darken($color_primary, 10%);
+$topnav_bg: #0b6ba8;
