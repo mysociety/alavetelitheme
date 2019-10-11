@@ -3,7 +3,7 @@
     <div class="hero__intro">
       <%= render :partial => "frontpage_intro_sentence" %>
 
-      <p class="intro__browse">
+      <p class="intro__browse" style="font-size: 1.6em;">
         <%= _("Browse <a href=\"{{requests_url}}\">" \
               "{{number_of_requests}} requests</a> to " \
               "<a href=\"{{authorities_url}}\">" \
@@ -13,12 +13,6 @@
             :authorities_url => list_public_bodies_default_path,
             :number_of_authorities => number_with_delimiter(@number_of_authorities)) %>
       </p>
+      <%= render :partial => "new_request" %>
     </div>
-
-    <div class="hero__new-request">
-      <div class="new-request__content">
-        <%= render :partial => "new_request" %>
-      </div>
-    </div>
-  </div>
 </div>

@@ -4,9 +4,9 @@
 <div id="banner" class="banner <%= @in_pro_area ? 'banner--pro' : '' %>" role="banner">
   <div id="banner_inner" class="banner_inner">
     <div id="banner_content" class="banner_content">
-      <div class="banner_site-title">
+      <div class="banner_site-title" style="font-size: 1.6em;width: 50%;">
         <!--<h1><%= link_to site_name, frontpage_path, :class => 'site-title__logo' %><div id="logo"/>Ma demande d'accès à un document administratif</h1>-->
-        <h1><%= link_to site_name, frontpage_path, :class => 'site-title__logo' %>Ma demande d'accès à un document administratif</h1>
+        <h1 style="font-weight: normal;"><%= link_to site_name, frontpage_path, :class => 'site-title__logo' % style="float: left;margin-right: 1em;">Ma demande d'accès à un document administratif</h1>
       </div>
 
       <div class="rsp_menu_button">
@@ -24,7 +24,7 @@
             <%= _("Search") %>
           </label>
           <%= text_field_tag 'query', params[:query], { :class => "navigation_search_button", :id => "navigation_search_button", :type => "search", :placeholder => _("Search"), :title => _("type your search term here") } %>
-          <button type="submit">
+          <button type="submit" style="background-color: #063a5b;">
             <span class="visually-hidden">
               <%= _("Submit Search") %>
             </span>
