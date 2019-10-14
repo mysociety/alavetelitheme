@@ -296,6 +296,8 @@ a.link_button_green_large {
 }
 
 .site-title__logo {
+  float: left;
+  margin-right: 1.5em;
   // Smaller logo on mobiles
   width: ($logo-width / 2);
   height: ($logo-height / 2);
@@ -312,7 +314,7 @@ a.link_button_green_large {
   border-bottom: none;
   a {
     @extend %menu-item;
-    color: #414856;
+    color: white;
     @media( min-width: $main_menu-mobile_menu_cutoff ) {
       padding: 0.875em 1em;
     }
@@ -948,4 +950,8 @@ dt {
 // User menu
 .pro-pill {
   background-color: desaturate(darken($color_secondary, 10%), 5%);
+}
+
+.steps__step-number {
+  background-color: $color_secondary;
 }
