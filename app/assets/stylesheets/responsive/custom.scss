@@ -29,11 +29,11 @@
 %selected-menu-item {
   font-weight: bold;
   color: $color_primary;
-  background-color: $color_neutral_light;
+  background-color: lighten($topnav_bg,30%);
   &:hover,
   &:active,
   &:focus {
-    background-color: $color_neutral_light;
+    background-color: lighten($topnav_bg,30%);
   }
 }
 
