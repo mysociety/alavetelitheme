@@ -28,12 +28,12 @@
 /* Selected menu item */
 %selected-menu-item {
   font-weight: bold;
-  color: $color_primary;
-  background-color: #c6c6c6;
+  color: $topnav_bg;
+  background-color: #ececec;
   &:hover,
   &:active,
   &:focus {
-    background-color: #c6c6c6;
+    background-color: #ececec;
   }
 }
 
