@@ -28,8 +28,8 @@
 /* Selected menu item */
 %selected-menu-item {
   font-weight: bold;
-  color: #c6c6c6;
-  background-color: lighten($topnav_bg,30%);
+  color: $color_primary;
+  background-color: #c6c6c6;
   &:hover,
   &:active,
   &:focus {
