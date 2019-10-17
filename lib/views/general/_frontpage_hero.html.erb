@@ -1,0 +1,19 @@
+<div class="homepage-hero">
+  <div class="row">
+    <div class="hero__intro">
+      <%= render :partial => "frontpage_intro_sentence" %>
+
+      <p class="intro__browse" style="font-size: 1.6em;">
+        <%= _("Browse <a href=\"{{requests_url}}\">" \
+              "{{number_of_requests}} requests</a> to " \
+              "<a href=\"{{authorities_url}}\">" \
+              "{{number_of_authorities}} authorities</a>",
+            :requests_url => request_list_successful_path,
+            :number_of_requests => number_with_delimiter(@number_of_requests),
+            :authorities_url => list_public_bodies_default_path,
+            :number_of_authorities => number_with_delimiter(@number_of_authorities)) %>
+      </p>
+      <a class="new-request__make-new-requests" href="/selectionner_autorite" style="float: right;">Faire une demande »</a>
+    </div>
+  </div>  
+</div>

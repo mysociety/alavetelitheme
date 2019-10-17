@@ -28,12 +28,12 @@
 /* Selected menu item */
 %selected-menu-item {
   font-weight: bold;
-  color: $color_primary;
-  background-color: $color_neutral_light;
+  color: $topnav_bg;
+  background-color: #ececec;
   &:hover,
   &:active,
   &:focus {
-    background-color: $color_neutral_light;
+    background-color: #ececec;
   }
 }
 
@@ -97,12 +97,12 @@
 .sign_in_link,
 .sign_in_link:link,
 .sign_in_link:visited {
-  color: #fff;
+  color: #666666;
   text-decoration: none;
   &:hover,
   &:active,
   &:focus {
-    color: #fff;
+    color: #666666;
   }
 }
 
@@ -296,6 +296,8 @@ a.link_button_green_large {
 }
 
 .site-title__logo {
+  float: left;
+  margin-right: 1.5em;
   // Smaller logo on mobiles
   width: ($logo-width / 2);
   height: ($logo-height / 2);
@@ -312,7 +314,7 @@ a.link_button_green_large {
   border-bottom: none;
   a {
     @extend %menu-item;
-    color: transparentize($color_white, 0.2);
+    color: white;
     @media( min-width: $main_menu-mobile_menu_cutoff ) {
       padding: 0.875em 1em;
     }
@@ -825,7 +827,7 @@ dt {
 .steps__step-number {
   height: 3.5em;
   width: 3.5em;
-  background-color: $color_primary;
+  background-color: #414856;
   box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   padding: 1em;
   border-radius: 100%;
@@ -895,6 +897,12 @@ dt {
     background-image: image-url('homepage-background.jpg');
   }
 
+.hero__intro {
+  background-color: #0b6ba8;
+  border-radius: 5px;
+  padding: 1.888888889em;
+}
+
   a {
     color: $color_secondary;
     &:hover,
@@ -942,4 +950,8 @@ dt {
 // User menu
 .pro-pill {
   background-color: desaturate(darken($color_secondary, 10%), 5%);
+}
+
+.steps__step-number {
+  background-color: $color_secondary;
 }
