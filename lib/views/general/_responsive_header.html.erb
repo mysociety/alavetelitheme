@@ -4,10 +4,11 @@
 <div id="banner" class="banner <%= @in_pro_area ? 'banner--pro' : '' %>" role="banner">
   <div id="banner_inner" class="banner_inner">
     <div id="banner_content" class="banner_content">
-      <div class="banner_site-title" style="font-size: 1.6em;width: 50%;">
+      <div class="banner_site-title" style="font-size: 1.6em;width: 50%;padding-top: 1em;padding-bottom: 1em;">
         <!--<h1><%= link_to site_name, frontpage_path, :class => 'site-title__logo' %><div id="logo"/>Ma demande d'accès à un document administratif</h1>-->
         <h1 style="font-weight: normal;">
-          <%= link_to site_name, frontpage_path, :class => 'site-title__logo' % style="float: left;margin-right: 1em;"%>
+          <%= link_to site_name, frontpage_path, :class => 'site-title__logo' % style="float: left;margin-right: 0.5em;" %>
+          <a href="/" style="float: left;margin-right: 1.5em;" class="site-title__logo"></a>
         Ma demande d'accès à un document administratif
         </h1>
       </div>
