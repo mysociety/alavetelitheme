@@ -1,12 +1,19 @@
-<% @title = "Votre vie privée" %>
+<% @title = "Politique de confidentialité - Données personnelles et cookies" %>
 
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip" class="left_column_flip">
-  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
+  <h1 id="confidentialite"><%= @title %> <a href="#confidentialite">#</a></h1>
   <dl>
 
-    <dt id="email_address">Qui peut voir mon adresse email ? <a href="#email_address">#</a> </dt>
+    <dd>
+    <p>MaDADA est géré par OpenKnowledge France, une association loi 1901. Pour obtenir plus d'informations sur l'association, visitez <a href="https://fr.okfn.org/"> notre site web</a>.</p>
+
+    <p>De par notre engagement pour la transparence, nous attachons la plus grande importance à la protection de la vie privée, et la sécurité de nos utilisateurs. La longueur de ce document en est une conséquence. Nous sommes conscients que ces documents sont rarement attractifs, et nous avons fait de notre mieux pour le rendre clair et compréhensible.</p>
+
+    <p>Nous espérons qu'il couvre l'ensemble des questions que vous pouvez vous poser. Si ce n'est pas le cas, n'hésitez pas à nous contacter.</p>
+
+    <dt id="adresse_email">Qui peut voir mon adresse email ? <a href="#adresse_email">#</a> </dt>
 
     <dd>
       <p>
@@ -16,24 +23,23 @@
         qui aura été créé spécifiquement pour votre demande. 
       </p>
       <p>
-        Si vous envoyez un message via le site à un autre utilisateur, ce dernier verra votre adresse email. 
-        Vous serez averti quand cela arrive.
+        Si vous envoyez un message via le site à un autre utilisateur, ce dernier verra votre adresse email. Un avertissement vous le rappellera au moment de l'envoi.
       </p>
     </dd>
 
-    <dt id="nasty_spam">Allez-vous envoyer du spam sur mon adresse email ? <a href="#nasty_spam">#</a> </dt>
+    <dt id="spam">Allez-vous envoyer du spam sur mon adresse email ? <a href="#spam">#</a> </dt>
     <dd>
       Non. Une fois que vous vous inscrivez sur <%= site_name %>, nous ne vous enverrons que des emails qui concernent une demande que vous avez faite, une alerte email à laquelle vous vous êtes inscrit, l’activité de la plateforme ou à d'autres occasions pour lesquelles vous avez donné votre autorisation. Nous ne donnerons ou ne vendrons jamais votre adresse email à des tiers, à moins que nous soyons obligés légalement de le faire, ou si vous nous l'avez demandé.
     </dd>
 
-    <dt id="public_request">Pourquoi mon nom et ma demande apparaissent publiquement sur le site ? <a href="#public_request">#</a> </dt>
+    <dt id="demande_publique">Pourquoi mon nom et ma demande apparaissent publiquement sur le site ? <a href="#demande_publique">#</a> </dt>
 
     <dd>
       <p>
         Nous publions votre demande sur Internet, afin que tout le monde puisse la lire et 
         puisse utiliser les informations que vous avez reçues des autorités publiques. 
         Normalement, nous ne supprimons pas les demandes (plus de détails voir 
-        (<a href="#delete_requests">Pouvez-vous supprimer mes informations personnelles ?</a>).
+        (<a href="#supprimer_une_demande">Pouvez-vous supprimer mes informations personnelles ?</a>).
       </p>
       <p>
         Votre nom est lié à votre demande, c'est pourquoi il est publié. L'utilisation de votre vrai 
@@ -43,7 +49,7 @@
       </p>
     </dd>
 
-    <dt id="real_name">Puis-je faire une demande d'informations sous un pseudonyme?<a href="#real_name">#</a> </dt>
+    <dt id="pseudonyme">Puis-je faire une demande d'informations sous un pseudonyme?<a href="#pseudonyme">#</a> </dt>
 
 
     <dd>
@@ -84,7 +90,7 @@
 
     </dd>
 
-    <dt id="full_address">L’autorité publique demande mon adresse postale <a href="#full_address">#</a> </dt>
+    <dt id="adresse_postale">L’autorité publique demande mon adresse postale <a href="#adresse_postale">#</a> </dt>
 
     <dd>
       <p>
@@ -94,7 +100,7 @@
       </p>
     </dd>
 
-    <dt id="postal_answer">L’autorité a besoin d'une adresse postale pour m'envoyer une réponse par la Poste ! <a href="#postal_answer">#</a> </dt>
+    <dt id="reponse_postale">L’autorité a besoin d'une adresse postale pour m'envoyer une réponse par la Poste ! <a href="#reponse_postale">#</a> </dt>
 
     <dd>
       <p>
@@ -107,7 +113,7 @@
       </p>
     </dd>
 
-    <dt id="delete_requests">Pouvez-vous supprimer mes demandes, ou modifier mon nom ?  <a href="#delete_requests">#</a> </dt>
+    <dt id="supprimer_une_demande">Pouvez-vous supprimer mes demandes, ou modifier mon nom ?  <a href="#supprimer_une_demande">#</a> </dt>
 
     <dd>
 
@@ -119,14 +125,14 @@
 
       <p>
         Dans des circonstances exceptionnelles, nous pouvons supprimer ou modifier votre nom sur le site, 
-        (<a href="#takedown">voir la question suivante</a>). De même, nous pouvons également supprimer d'autres informations 
+        (<a href="#suppression">voir la question suivante</a>). De même, nous pouvons également supprimer d'autres informations 
         personnelles. Si vous êtes inquiet à ce sujet, consultez la section sur les pseudonymes 
         avant de faire votre demande.
       </p>
 
     </dd>
 
-    <dt id="takedown">Pouvez-vous supprimer mes informations personnelles ? <a href="#takedown">#</a> </dt>
+    <dt id="suppression">Pouvez-vous supprimer mes informations personnelles ? <a href="#suppression">#</a> </dt>
 
     <dd>
 
@@ -164,6 +170,70 @@
       </p>
     </dd>
 
+  </dl>
+  <h2>Cookies et services externes</h2>
+
+  <dl>
+    <dt id="cookies">Cookies<a href="#cookies">#</a> </dt>
+
+    <dd>
+    <p>Afin de rendre notre service plus facile d'utilisation et plus utile, nous utilisons de petits fichiers enregistrés sur votre navigateur web (sur votre ordinateur ou smartphone), appelés "cookies". C'est une pratique très courante, et la plupart des sites web utilisent ce système.</p>
+
+    <p>Ces cookies nous permettent par exemple de savoir que vous êtes connecté.e, et ainsi de ne pas vous redemander un mot de passe à chaque page. La liste ci-dessous décrit les cookies que nous utilisons:</p>
+    <table>
+        <tbody><tr>
+          <th scope="col">Non</th>
+          <th scope="col">Contenu typique</th>
+          <th scope="col">Expiration</th>
+        </tr>
+        <tr>
+          <td>_wdtk_cookie_session</td>
+          <td>Un identifiant unique aléatoire</td>
+          <td>Lorsque le navigateur est fermé, ou après un mois, si vous avez coché "Souvenez-vous de moi" lorsque vous vous êtes connecté.e</td>
+        </tr>
+        <tr>
+          <td>seen_foi2</td>
+          <td>Le chiffre 1 si vous avez vu une notification</td>
+          <td>7 jours</td>
+        </tr>
+        <tr>
+          <td>has_seen_country_message</td>
+          <td>Le chiffre 1 si vous avez vu le message concernant les services FOI dans d'autres pays</td>
+          <td>1 an</td>
+        </tr>
+        <tr>
+          <td>last_request_id</td>
+          <td>Un numéro identifiant la dernière demande que vous avez vue sur notre site</td>
+          <td>A la fermeture du navigateur</td>
+        </tr>
+        <tr>
+          <td>last_body_id</td>
+          <td>Un numéro identifiant la dernière administratio que vous avez vue sur notre site</td>
+          <td>A la fermeture du navigateur</td>
+        </tr>
+        <tr>
+          <td>widget_vote</td>
+          <td>Un identifiant aléatoire relatif à un vote "Je veux aussi savoir" sur une demande qui vous intéresse</td>
+          <td>A la fermeture du navigateur</td>
+        </tr>
+      </tbody></table>
+    </dd>
+
+    <dt id="statistiques">Statistiques d'utilisation<a href="#statistiques">#</a> </dt>
+
+    <dd>
+    <p> Nous utilisons <a href="https://matomo.org/">matomo</a> pour collecter des statistiques sur l'utilisation du site, dans le but d'améliorer le service. Nous avons désactivé l'usage des cookies sur matomo.
+    Les statistiques sur nous conservons incluent :
+      <ul>
+        <li>L'adresse IP (nous n'en conservons qu'une partie, qui ne permet pas d'identifier un utilisateur de manière unique)</li>
+        <li>Les pages visitées</li>
+        <li>L'origine de la visite</li>
+        <li>Des informations sur votre navigateur web (logiciel, version…)</li>
+        <li>Ces données ne sont pas partagées, ni agrégées avec celles d'autres sites. L'historique des visites est détruit après 6 mois.</li>
+      </ul>
+      Vous pouvez consulter la politique de confidentialité de matomo sur <a href="https://matomo.org/privacy-policy/">leur site (en anglais)</a>.
+    </p>
+    </dd>
 
   </dl>
     <div id="hash_link_padding"></div>
