@@ -8,3 +8,5 @@
 *~
 *#*#
 TAGS
+*.sw[a-z]
+*DONT-CHECKIN*
