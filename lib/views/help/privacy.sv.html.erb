@@ -2,191 +2,149 @@
 
 <%= render :partial => 'sidebar' %>
 
-<div id="left_column_flip">
-<h1 id="privacy"><%= @title %> <a href="#privacy">#</a> </h1>
-<dl>
+<div id="left_column_flip" class="left_column_flip">
+  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
+  <dl>
 
-<dt id="email_address">Vem är det som får se min e-postadress?<a href="#email_address">#</a> </dt>
+    <dt id="email_address">Vem är det som får se min e-postadress? <a href="#email_address">#</a> </dt>
 
-<dd><p>Vi kommer inte att ge ut din e-postadress till någon förutom om vi blir tvugna
+    <dd><p>Vi kommer inte att ge ut din e-postadress till någon förutom om vi blir tvugna
 enligt lag eller om du ber oss att göra det. Detta inkluderar den offentliga myndighet
-som du skickar en begäran till. De får endast se den e-postadress @handlingar.se som
-är specifik för den begäran. </p>
-<p>Om du skickar ett meddelande till en annan användare på plattformen, då kommer det att
+som du skickar en begäran till. De får endast se den e-postadress  @<%= AlaveteliConfiguration::incoming_email_domain %> som
+är specifik för den begäran. 
+        </p>
+      <p>Om du skickar ett meddelande till en annan användare på plattformen, då kommer det att
 visa din e-postadress till denne. Du kommer att bli informerad att detta kommer hända.</p>
-</dd>
+    </dd>
 
-<dt id="nasty_spam">Kommer ni skicka ohyggliga, brutala spammängder e-post till min e-postadress? <a href="#nasty_spam">#</a> </dt>
-<dd><p>Nej. Efter att du registrerat dig på Handlingar.se kommer vi endast att
+    <dt id="nasty_spam">Kommer ni skicka ohyggliga, brutala spammängder e-post till min e-postadress?  <a href="#nasty_spam">#</a> </dt>
+    <dd>Nej. Efter att du registrerat dig på <%= site_name %> kommer vi endast att
 skicka e-postmeddelanden relaterade till en begäran om allmän handling som
 du gjort, en e-postnotifiering du har registrerat för, eller för andra
 anledningar som du specifikt själv har valt. Vi kommer aldrig ge eller
 sälja din e-postadress till någon annan, med undantaget om att vi är tvugna
 enligt lag eller om du ber oss.
-</p></dd>
+     
+    </dd>
 
-<dt id="public_request">Varför kommer mitt namn och min begäran om allmän handling publiceras offentligt på hemsidan? <a href="#public_request">#</a> </dt>
+    <dt id="public_request">Varför kommer mitt namn och min begäran om allmän handling publiceras offentligt på hemsidan?  <a href="#public_request">#</a> </dt>
 
-<dd>
-<p>Vi publicerar din begäran på Internet så att vem som helst kan läsa den och
+    <dd>
+      <p>Vi publicerar din begäran på Internet så att vem som helst kan läsa den och
 få användning av informationen som du har funnit. Du har rätt att använda pseudonym
 för att få vara anonym då Offentlighetsprincipen innehåller ett Eftersökningsskydd
 och därför behöver du inte få ditt riktiga namn publicerat. Vi tar normalt inte bort
 förfrågningar, se för (<a href="#delete_requests">mer detaljer</a>).
-</p>
-<p>
-Enligt svensk grundlag har du den fulla rättigheten att inte behöva
+      </p>
+      <p>
+     Enligt svensk grundlag har du den fulla rättigheten att inte behöva
 använda ditt riktiga namn för att din begäran ska vara en giltig
 begäran om allmän handling. Det är till och med en kriminell handling av myndigheter att aktivt eftersöka vem som begärt ett dokument och t.ex. försöka finna ditt riktiga namn.
 Se nästa fråga för alternativ om du inte vill publicera ditt riktiga namn.
-</p>
-<p>Ditt namn är icke-relevant för din begäran så det måste inte också publiceras.
+      </p>
+      <p>Ditt namn är icke-relevant för din begäran så det måste inte också publiceras.
 Däremot kan det vara mer rättvist att använda ditt eget namn, då vi kommer
 publicera namnet på tjänstepersonen som skriver ett svar till din begäran.
 Genom att använda ditt riktiga namn hjälper du också människor komma i kontakt
 med dig för att assistera dig med din granskning, forskning eller för att driva
 på samhällsförändring med dig.
-</p>
-</dd>
+      </p>
+    </dd>
 
-<dt id="real_name">Kan jag göra en begäran om allmän handling om jag använder en pseudonym? <a href="#real_name">#</a> </dt>
+    <dt id="real_name">Kan jag göra en begäran om allmän handling om jag använder en pseudonym? <a href="#real_name">#</a> </dt>
 
 
-<dd>
-<p>Ja, genom att använda en pseudonym utnyttjar du din fullständiga rätt
+    <dd>
+      <p>Ja, genom att använda en pseudonym utnyttjar du din fullständiga rätt
 att begära ut en allmän handling enligt Tryckfrihetsförordningen och Offentlighetsprincipen som du kan läsa om
 <a href="https://www.regeringen.se/sa-styrs-sverige/det-demokratiska-systemet-i-sverige/offentlighetsprincipen/">här</a>.
 Genom att använda Handlingar.se kan du bättre nyttja din rätt till anonymitet än via exempelvis det formulär som finns
 på Regeringskansliets hemsida <a href="https://www.regeringen.se/regeringskansliet/ta-del-av-allman-handling/">här</a>
-</p>
+      </p>
 
-<p>I flera fall är det bra överväga att göra en begäran med hjälp av en uppenbar pseudonym.
+      <p>I flera fall är det bra överväga att göra en begäran med hjälp av en uppenbar pseudonym.
 Du bör hänvisa till denna rättighet vid överklagan om en offentlig myndighet vägrar en begäran om du
 använde en pseudonym.</p>
 
-<p>Men var försiktig, även om myndigheten följer god praxis,
+      <p>Men var försiktig, även om myndigheten följer god praxis,
 kommer en pseudonym förmodligen att göra det omöjligt för dig att överklaga myndighetens beslut senare om hanteringen av din begäran.
-</p>
+      </p>
 
-<p>Det finns flera bra alternativ till att använda en pseudonym.</p>
+      <p>Det finns flera bra alternativ till att använda en pseudonym.</p>
 
-<ul>
-<li>Använd en annan form av ditt namn. En vägledning berättar
+      <ul>
+        <li>Använd en annan form av ditt namn. En vägledning berättar
 att "Mr Arthur Thomas Roberts" kan göra en giltig begäran som "Arthur Roberts",
-"A. T. Roberts", eller "Mr Roberts", men <strong>inte</strong> som "Arthur" eller "A.T.R.". </li>
-<li>I de flesta fall kan du använda något namn som du är "allmänt känt och / eller
+"A. T. Roberts", eller "Mr Roberts", men <strong>inte</strong> som "Arthur" eller "A.T.R.".
+        </li>
+        <li>I de flesta fall kan du använda något namn som du är "allmänt känt och / eller
 används regelbundet ". </li>
-<li>Använd namnet på en organisation, namnet på ett företag, firma
-ett företag, eller firmanamn på en enskild näringsidkare. </li>
-<li>Be någon annan att göra begäran för din räkning. </li>
-<li>Du kan, om du är verkligen fastnat, be oss att göra begäran om
+        <li>Använd namnet på en organisation, namnet på ett företag, firma
+ett företag, eller firmanamn på en enskild näringsidkare.</li>
+        <li>Be någon annan att göra begäran för din räkning. </li>
+        <li>Du kan, om du verkligen fastnat, be oss att göra begäran för
 din räkning. Vänligen <a href="<%= help_contact_path %>">kontakta oss</a> med
 en bra anledning till varför du inte kan göra begäran själv och kan inte
-be en vän till. Vi har sällan resurser att göra detta.</li>
-</ul>
+be en vän. Vi har sällan resurser att göra detta.</li>
+      </ul>
 
-<p>Försök inte att imitera någon annan. Sådant beteende accepteras ej och stängs av.</p>
+      <p>Försök inte att imitera någon annan. Sådant beteende accepteras ej och stängs av.</p>
 
-</dd>
+    </dd>
 
-<dt id="anonymous">Varför finns det anonyma förfrågningar på sajten? <a href="#anonymous">#</a> </dt>
-<dd>
-Vissa myndigheter kan måhända använda programvaran för <a href="https://github.com/mysociety/foi-register">automatiserad diarieföring</a> för att kunna använda Handlingar.se som en redovisningslogg för alla eller delar av sin aktivitet för allmänna handlingar.
-När människor gör förfrågningar till myndigheten kommer deras namn vanligen inte offentliggöras precis som de skulle i en myndighet redovisningslogg på en myndighets webbplats.
-</dd>
+    <dt id="full_address">De har bett om min postadress!  <a href="#full_address">#</a> </dt>
 
-<dt id="full_address">De har bett om min postadress! <a href="#full_address">#</a> </dt>
+    <dd>
+      <p>Om en myndighet ber dig för din fullständiga, fysisk adress, svara på dem att den e-postadress du använder är tillräckligt.
+      </p>
+  
 
-<dd>
-<p>Om en myndighet ber dig för din fullständiga, fysisk adress, svara på dem att den e-postadress du använder är tillräckligt.</p>
-</dd>
+    <dt id="postal_answer">Nej nej, de behöver en postadress att skicka papperssvaret! <a href="#postal_answer">#</a> </dt>
 
-<dt id="postal_answer">Nej nej, de behöver en postadress att skicka papperssvaret! <a href="#postal_answer">#</a> </dt>
-
-<dd>
-<p>Om en myndighet bara har en papperskopia av den information som du vill,
+    <dd>
+      <p>Om en myndighet bara har en papperskopia av den information som du vill,
 kan de be dig om en postadress. Till att börja med kan du försöka övertala dem
 att scanna in dokumenten för dig. Du kan även <a href="https://www.whatdotheyknow.com/request/car_parking_charges_policy_and_a#outgoing-532">erbjuda att ge dem en scanner</a> som i detta särskilda internationella fallet
 generade myndigheten till att hitta en de redan hade.</p>
 
-<p>Om det inte fungerar, och du vill ge din postadress privat
+      <p>Om det inte fungerar, och du vill ge din postadress privat
 för att få handlingarna, markera din begäran som "De kommer att svara med post", och det kommer att
 ge dig en e-postadress som ska användas för detta ändamål.</p>
-</dd>
+    </dd>
 
-<dt id="cookies">Hur arbetar ni med cookies och tredjepartstjänster?<a href="#cookies">#</a> </dt>
+    <dt id="delete_requests">Kan ni ta ned personlig information om mig?<a href="#delete_requests">#</a> </dt>
 
-<dd>
-   <p> <strong>Vår användning av cookies och externa tjänster: vad du bör veta, och hur du hoppar av från dem om du vill. </strong> </p>
+    <dd>
 
-   <p> Sammanfattning: Vi bryr oss mycket om våra användares integritet.
-    
-<p> <strong> Kakor </strong> </p>
-
-  <p> För att göra vår tjänst lättare eller mer användbar, lägger vi ibland små datafiler på din dator eller mobiltelefon,
-    så kallade cookies; många webbplatser gör detta. Vi använder denna information för att, till exempel,
-    komma ihåg att du har loggat in så att du inte behöver göra det på varje sida,
-    eller att mäta hur människor använder webbplatsen så att vi kan förbättra det och se till att den fungerar ordentligt.
-    Nedan listar vi cookies och tjänster som denna webbplats kan använda.
-
-  <table>
-  <tr> <th scope="col"> Enw </th> <th scope="col"> Typiskt innehåll </th> <th scope="col"> Utgår </th> </tr>
-  <tr> <td> _wdtk_cookie_session </td> <td> En slumpmässigt unik identifierare </td> <td> När webbläsaren stängs, eller en månad om "Kom ihåg mig" används </td> </tr>
-  <tr> <td> seen_foi2 </td> <td> Nummer 1 om du har sett ett meddelande </td> <td> 7 dagar </td> </tr>
-  <tr> <td> last_request_id </td> <td> Ett nummer, identifierar den sista begäran om allmän handling du tittat på på webbplatsen </td> <td> När webbläsaren stängs </td> </tr>
-  <tr> <td> last_body_id </td> <td> Ett nummer, identifierar den sista myndighet du tittat på på webbplatsen </td> <td> När webbläsaren stängs </td> </tr>
-  </table>
-
-
-<p> <strong> Vår egen loggning </strong> </p>
-
-<p> Utöver den information du ger oss om dig själv för att kunna använda webbplatsen (t.ex. ditt namn
-och e-postadress), samlar vi in och loggar viss ytterligare information för att analysera och lösa problem
-med webbplatsen. Våra webbserver-loggar upprätthåller en historia av sidförfrågningar. Detta innehåller information om
-förfrågningar, inklusive användarens IP-adress, uppgifter som lämnats (som kan inkludera din e-postadress när
-du loggar in på sajten), begäran datum och tid, begärd sida, webbläsarversion och
-<a href="https://en.wikipedia.org/wiki/HTTP_referer">hänvisare</a>. Vi håller regelbundet denna information
-under 28 dagar.
-
-
-  <p> <strong> Tack till </strong> </p>
-
-  <p> Bitar av formuleringar lånade från <a href="https://www.pts.se/sv/Bransch/Regler/Lagar/Lag-om-elektronisk-kommunikation/Cookies-kakor/Fragor-och-svar-om-kakor-for-webbplatsinnehavare/"> PTS.se kakor </a>.
-</dd>
-
-<dt id="delete_requests">Kan du ta bort min begäran, eller ändra mitt namn? <a href="#delete_requests">#</a> </dt>
-
-<dd>
-
-<p>Handlingar.se är en permanent offentligt arkiv av förfrågningar om allmänna handlingar. Även om du inte kan finna svaret på
+      <p><%= site_name %> är en permanent offentligt arkiv av förfrågningar om allmänna handlingar. Även om du inte kan finna svaret på
 en begäran användbar längre, kan det vara av intresse för andra. För denna
 anledning kommer vi inte att ta bort förfrågningar.
-</p>
+      </p>
 
-<p>I undantagsfall kan vi ta bort eller ändra namn
+      <p>I undantagsfall kan vi ta bort eller ändra namn
 på hemsidan, <a href="#takedown">se nästa fråga</a>. På samma sätt kan vi också ta bort annan personlig information.
-</p>
+      </p>
 
-<p>Om du är orolig för detta innan du gör din förfrågan,
+      <p>Om du är orolig för detta innan du gör din förfrågan,
 se avsnittet om <a href="#real_name">pseudonymer</a>.</p>
 
-</dd>
+    </dd>
 
-<dt id="takedown">Kan ni ta ned personlig information om mig?<a href="#takedown">#</a> </dt>
+    <dt id="takedown">Kan ni ta ned personlig information om mig?<a href="#takedown">#</a> </dt>
 
-<dd>
+    <dd>
 
-<p>Om du ser någon personlig information om dig på webbplatsen som du vill
+      <p>Om du ser någon personlig information om dig på webbplatsen som du vill
 oss att ta bort eller dölja, vänligen <a href="<%= help_contact_path %>">låt oss veta</a>. Ange exakt vilken information du anser vara problematiska och varför, och
 där det visas på webbplatsen.</p>
 
-<p>Om det är känslig personlig information som av misstag har
+      <p>Om det är känslig personlig information som av misstag har
 publicerats, då tar vi vanligtvis bort det. Normalt kommer vi bara att överväga
 begäran om att ta bort personlig information som kommer från de enskilt
 berörda, men för känslig information skulle vi uppskatta att alla
 påpekar all känslig information de finner.</p>
 
-<p>Vi anser att det finns ett starkt allmänintresse i
+      <p>Vi anser att det finns ett starkt allmänintresse i
 att behålla namnen på tjänstemän eller anställda inom offentliga myndigheter. Vi kommer bara
 avlägsna sådana namn i undantagsfall, till exempel där utlämnandet av
 ett namn och position av sysselsättningen avsevärt skulle kunna riskera en individs
@@ -196,46 +154,21 @@ linjechef. Denna begäran måste visa att risken har upplevts
 som har företräde framför allmänintresset, och måste visa att åtgärder har
 vidtagits för att dölja namnet på organisationens egen webbplats.</p>
 
-<p>Du har rätt enligt <a
+      <p>Du har rätt enligt <a
 href="https://www.datainspektionen.se/lagar-och-regler/personuppgiftslagen/dina-rattigheter/">Personuppgiftslagen (PUL)</a>
 att begära att vi tar bort din personliga information om
 motiveringen är att det orsakar dig betydande och omotiverade skador eller
 nöd. Vi kommer att överväga något sådant meddelande, som inte uttryckligen behöver
 nämna lagen och balansera det mot något allmänintresse i att publicera
 material. Det finns en viss vägledning om dessa meddelanden <a
-href="https://www.datainspektionen.se/lagar-och-regler/personuppgiftslagen/anmala-behandling/">på Datainspektionens hemsida</p>
+href="https://www.datainspektionen.se/lagar-och-regler/personuppgiftslagen/anmala-behandling/">på Datainspektionens hemsida.</p>
 
-</dd>
-
-<dt id="public_servant_takedown"> Jag är en offentlig tjänsteman - kan ni ta ner personlig information om mig? <a href="#public_servant_takedown">#</a></dt>
-
-<dd>
-
-<p>Även om vi har ett allmänt antagande att mer öppenhet är bättre, kommer vi
-överväga begäran om att ta bort namnen på tjänstemän när det verkar osannolikt
-att det allmänna intresset kommer att skadas genom att göra så.</p>
-
-<p>Det innebär att:
-  <ul>
-    <li>Om du är en beslutsfattare i någon nivå, eller om du svarar på
-en begäran om allmän handling kommer vi normalt inte ta bort dina uppgifter från dokument och
-e-postmeddelanden som skickas av en offentlig institution. Ansvarighet i beslutsfattandet är i centrum
-av ett gott styre.</li>
-    <li>Om du håller en junior, icke-beslutsfattande position kommer vi att överväga förfrågningar om att
-ta bort dina uppgifter. Att ta bort dessa uppgifter är svårt för våra volontärer att
-göra, så låt oss veta varför detta verkligen är viktigt för dig. Om vi ​​är överens om att ta bort
-dina uppgifter kommer vi att vidta rimliga åtgärder för att göra så, men i vissa fall kanske inte
-kunna av tekniska skäl.</li>
-  </ul>
-</p>
-
-</dd>
-
-</dl>
-
-<p><strong>Läs mer</strong> vid hjälpen för <a href="<%= help_officers_path %>">registratorer och offentliga tjänstemän</a> --&gt;
-
-<div id="hash_link_padding"></div>
+    </dd>
 
 
+  </dl>
+
+  <p><strong>Läs mer</strong> om <a href="<%= help_officers_path %>">Registratorer och tjänstepersoner</a> --&gt;
+
+    <div id="hash_link_padding"></div>
 </div>
