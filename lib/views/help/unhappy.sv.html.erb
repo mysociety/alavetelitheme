@@ -11,3 +11,86 @@
 <p>Guide kommer snart! Innan dess rekommenderar vi denna generella guide till att göra en överklagan som du finner vid
   <a href="http://www.allmanhandling.se/?page_id=5836">AllmanHandling.se</a> eller denna
   om beslut kring sekretess, också vid <a href="http://www.allmanhandling.se/?p=5784">AllmanHandling.se</a>.</p>
+
+
+<% @title = "Missnöjd över en begäran om allmän handling?" %>
+
+
+<% if @info_request %>
+  <h1>Missnöjd över svaret du fick på din begäran om allmän handling  '<%=request_link(@info_request) %>'?
+  </h1>
+<% else %>
+  <h1>Missnöjd över svaret du fick?</h1>
+<% end %>
+
+<p>Om ...</p>
+
+<ul>
+  <li>Du fick inget svar inom 20 arbetsdagar</li>
+  <li>Du fick inte all information du begärde <strong>eller</strong></li>
+  <li>Din begäran avslogs, men utan en giltig anledning enligt lagen</li>
+</ul>
+
+<p>... du kan</p>
+
+<ol>
+  <li>Begära en <strong>intern granskning</strong> hos den offentliga myndigheten.</li>
+  <li>Se,<strong>"2. Göra en överklagan"</strong>.</li>
+  <li>Hursomhelst, använd<strong> också andra medel</strong> för att få svar på din fråga.</li>
+</ol>
+
+<h1 id="internal_review">1.Begär en intern granskning<a class="hover_a" href="#internal_review">#</a> </h1>
+
+<p>
+  <% if @info_request %>
+    <%= link_to "Request an internal review", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
+  <% else %>
+   Längst ner på den relevanta förfrågningssidan på <%= site_name %> välj
+     "begära en intern granskning". Skriv sedan ett meddelande som ber om en intern
+     granskning av din begäran. Du kanske vill inkludera en länk till hemsidan
+     för att klargöra vilken begäran du pratar om.
+  <% end %>
+</p>
+
+<p>Interna recensioner bör vara snabba. Om en tar längre än 20 arbetsdagar
+   då ska myndigheten skriva och låta dig veta, och det borde aldrig ta
+   längre än 40 arbetsdagar (se denna
+  <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/foi_good_practice_guidance_5.pdf">good
+    exempel guiden</a>).
+Du får då antingen informationen
+   du begärde ursprungligen, eller så får du höra att granskningen upprätthåller
+   ursprungligt beslut.
+</p>
+
+<h1 id="complaining">2. Göra en överklagan <a class="hover_a" href="#complaining">#</a> </h1>
+
+<p>Guide kommer snart! Innan dess rekommenderar vi denna generella guide till att göra en överklagan som du finner vid
+  <a href="http://www.allmanhandling.se/?page_id=5836">AllmanHandling.se</a> eller denna
+  om beslut kring sekretess, också vid <a href="http://www.allmanhandling.se/?p=5784">AllmanHandling.se</a>.
+
+
+<h1 id="other_means">3.  Använda andra medel för att få svar på din fråga. <a class="hover_a" href="#other_means">#</a> </h1>
+
+<p>Du kan försöka fortsätta din fråga eller din granskning på andra sätt.</p>
+
+<ul>
+  <li>Gör en <strong>ny begäran</strong> för sammanfattande information eller för
+     dokumentation som indirekt hänför sig till frågor i din nekade begäran.
+    <a href="<%= help_contact_path %>">Fråga oss om råd</a> om du sitter fast.</li>
+  <li>Om några<strong>andra offentliga myndigheter</strong> eller statlig ägda företag är involverade, gör en begäran till dom.</li>
+
+  <% if can_ask_the_eu?(@country_code) %>
+    <li>
+      Använd <%= link_to 'asking for the information from the European Union',
+      'http://www.asktheeu.org' %>. Var och en av de 500 miljoner människorna
+       som bor i Europeiska unionen (både medborgare och invånare) har
+       lagligt garanterad rätt att begära information från EU: s myndigheter.
+      <%= link_to 'Ask The EU', 'http://www.asktheeu.org' %> är en version av
+       denna webbplats för Europeiska unionen.
+    </li>
+  <% end %>
+  <li>Fråga <strong>andra granskare</strong> som är intresserade av liknande frågor. </li>
+     
+  <li>Du kan bilda en liten lokal kampanjgrupp och ordna ett möte
+     med personal från myndigheten.</li>
+</ul>
