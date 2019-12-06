@@ -1,221 +1,190 @@
-<% @title = "Registratorer och tjänstepersoner" %>
+<% @title = "Registratorer och tjänstepersoner"%>
 
 <%= render :partial => 'sidebar' %>
-<div id="left_column_flip">
 
-<h1 id="officers"><%= @title %> <a href="#officers">#</a> </h1>
+<div id="left_column_flip" class="left_column_flip">
+  <h1 id="officers"><%= @title %> <a href="#officers">#</a> </h1>
 
-<dl>
+  <dl>
 
-  <dt id="top">
-    Jag kom just hit från botten av en begäran om allmän handling, vad är det som händer? <a href="#top">#</a>
-  </dt>
-  <dd>
-      <p>
-        <%= site_name %> är en tjänst som drivs av volontärer. Den hjälper medborgare
-  och allmänheten att göra förfrågningar om allmänna handlingar och enkelt spåra och dela svaren.
-      </p>
-      <p>
-      Begäran om allmän handling som du fick gjordes av någon som använder <%= site_name %>. Du kan
+    <dt id="top"> Jag kom just hit från botten av en begäran om allmän handling, vad är det som händer?  <a href="#top">#</a> </dt>
+
+    <dd><p><%= site_name %> är en tjänst som drivs av volontärer. Den hjälper medborgare
+  och allmänheten att göra förfrågningar om allmänna handlingar och enkelt följa och dela svaren.</p>
+
+      <p>  Begäran om allmän handling som du fick gjordes av någon som använder <%= site_name %>. Du kan
   helt enkelt svara på begäran som du skulle svara någon annan begäran från en individ.
   Den enda skillnaden är att ditt svar automatiskt kommer att publiceras offentligt på
-  Internet.</p>
-      <p>
-        Om du har integritet eller andra problem, läs svaren nedan.
+  Internet.
+      </p>
+      <p>  Om du har integritets eller andra problem, läs svaren nedan.
   Du kanske också gillar att läsa  <a href="/help/about"> introduktion till <%= site_name %></a>
   att ta reda på mer om vad platsen gör från synpunkt av en användare.
   Du kan också söka på webbplatsen för att hitta den myndighet som du arbetar för, och visa status för
-  alla förfrågningar göras med hjälp av webbplatsen.
-      </p>
-      <p>
-        Slutligen välkomnar vi synpunkter och tankar från registratorer, vänligen ta <a href="<%= help_contact_path %>">kontakt</a> med oss.
+        alla förfrågningar göras med hjälp av webbplatsen. </p>
+
+      <p>  Slutligen välkomnar vi synpunkter och tankar från registratorer, vänligen ta <a href="<%= help_contact_path %>">kontakt</a> med oss.
       </p>
     </dd>
-    </dl>
-      <dl>
-        <dt id="responses">
-          Varför publiceras svaret på en begäran om allmän handling? <a href="#responses">#</a>
-        </dt>
-        <dd>
-          Vi tror att det finns många fördelar.
+
+    <dt id="responses">   Varför publiceras svaret på en begäran om allmän handling? <a href="#responses">#</a> </dt>
+
+    <dd> Vi tror att det finns många fördelar.
           Mest viktigt är att det kommer uppmana allmänheten att bli mer intresserade och involverade i myndigheternas och offentlig sektors arbete i samhället.
           Vi hoppas också att det kommer minimera antalet dubbla förfrågningar om allmänna handlingar på ämnen som en myndighet tar emot.
           Givet att svar på allmänna handlingar inneåller allmän information, som vem som helst enkelt kan begära ut igen,
           tror vi att det inte borde finnas en anledning att publicera det offentligt såvida det inte innehåller känsliga uppgifter om medborgare.
-        </dd>
-        <dt id="realpeople">
-          Är människorna som begär ut allmänna handlingar riktiga människor? <a href="https://handlingar.se/help/officers#realpeople">#</a>
-        </dt>
-        <dd>
-          Ja. För att kunna hålla översikt och ta fram statistik av svaren om på förfrågningar om allmän handling
+    </dd>
+
+    <dt id="realpeople"> Är människorna som begär ut allmänna handlingar riktiga människor? <a href="#realpeople">#</a> </dt>
+
+    <dd> Ja. För att kunna hålla översikt och ta fram statistik av svaren om på förfrågningar om allmän handling
           använder vi dator-genererade e-postadresser för varje begäran.
           Däremot, innan en användare kan skicka en begäran, behöver varje enskild användare registrera sig på sidan med en
           unik e-postadress som vi sen kan verifiera. Du kan söka denna webbplats och finna en sida som listar alla
           förfrågningar som varje person har gjort.
-        </dd>
-        <dt id="email_only">
-          Ett e-postmeddelande är inte en tillräckligt medium för att göra en begäran om allmän handling och få elektroniskt svar! <a href="#email_only">#</a>
-        </dt>
-        <dd>
-          Jo, det är det. Enligt E-delegationens <a href="https://www.oppnadata.se/juridik-och-rekommendationer/regelverket/regler-om-att-lamna-ut-information-2-kap-tf-m-m/">regler om att lämna ut information</a> är e-postmeddelande är ett tillräckligt medium.
+    </dd>
+
+    <dt id="email_only"> Ett e-postmeddelande är inte ett tillräckligt medium för att göra en begäran om allmän handling och få elektroniskt svar! <a href="#email_only">#</a> </dt>
+
+    <dd>  Jo, det är det. Enligt E-delegationens <a href="https://www.oppnadata.se/juridik-och-rekommendationer/regelverket/regler-om-att-lamna-ut-information-2-kap-tf-m-m/">regler om att lämna ut information</a> är e-postmeddelande är ett tillräckligt medium.
           Däremot har myndigheter ingen formell skyldighet att lämna ut elektroniska handlingar - speciellt inte <a href="https://www.regeringen.se/contentassets/93d404b4554140cab61cd59d55712715/allmanna-handlingar-i-elektronisk-form---offentlighet-och-integritet-sou-20104">om handlingen innehåller känsliga personuppgifter</a>.
           Enligt Datainspektionen lämnar dock många myndigheter redan ut allmänna handlingar i elektroniskt format så vida det inte innehåller känsliga personuppgifter på grund av dess flera fördelar.
           Så här skriver de i <a href="https://www.datainspektionen.se/Documents/remissvar/2010-06-23-e-offentlighet.pdf">"Betänkandet ”Allmänna handlingar i elektronisk form – offentlighet och integritet (SOU 2010:4)"</a>:
           "I stor utsträckning tillhandahåller också myndigheterna allmänna handlingar i elektronisk form när det inte innebär några integritetsrisker."
-          Detta går hand-i-hand med filosofin som Handlingar.se-projektet sympatiserar med. Projektet handlar om demokratisk insyn, att uppmärksamma, utbilda och stärka medborgare och förnya offentlighetsprincipen.
+          Detta går hand-i-hand med filosofin som <%= site_name %> sympatiserar med. Projektet handlar om demokratisk insyn, att uppmärksamma, utbilda och stärka medborgare och förnya offentlighetsprincipen.
           Projektet handlar inte om att begära ut och publicera enskilda individers personuppgifter utan om att stärka demokratin i Sverige.
-        </dd>
-        <dt id="vexatious">
-          Gör inte ni massor av besvärande förfrågningar? <a href="#vexatious">#</a>
-        </dt>
-      </dl>
-      <p>
-        Handlingar.se gör inte några förfrågningar. Vi skickar förfrågningar på
-        uppdrag av våra användare, som är verkliga människor som gör begäran om allmän handling.
-      </p>
-      <p>
-        Titta på det så här - om massor av olika människor gjort förfrågningar från
+    </dd>
+
+    <dt id="vexatious">     Gör inte ni massor av besvärande förfrågningar? <a href="#vexatious">#</a> </dt>
+
+    <dd><p><%= site_name %> gör inte några förfrågningar. Vi skickar förfrågningar på
+        uppdrag av våra användare, som är verkliga människor som gör begäran om allmän handling. </p>
+      <p> Titta på det så här - om massor av olika människor gjort förfrågningar från
         olika Hotmail e-postadresser, då skulle du inte tro att det var Microsoft som
         gjorde besvärande förfrågningar. Det är exakt likadant om massor av förfrågningar görs
-        via Handlingar.se. Dessutom är det mycket lättare att granska eftersom att alla förfrågningar är offentliga
+        via  <%= site_name %>. Dessutom är det mycket lättare att granska eftersom att alla förfrågningar är offentliga
         för dig att se om någon av våra användare gör besvärande och problematiska förfrågningar.
+        
       </p>
-      <dl>
-        <dt id="spam_problems">
-          Jag kan se en begäran om allmän handling via Handlingar.se, men vi fick aldrig det via e-post!<a href="#spam_problems">#</a>
-        </dt>
-      </dl>
-      <p>
-        Om en begäran visas på webbplatsen, så har vi försökt att skicka den till
+
+    </dd>
+
+    <dt id="spam_problems">   Jag kan se en begäran om allmän handling via <%= site_name %>, men vi fick aldrig det via e-post!<a href="#spam_problems">#</a> </dt>
+
+    <dd><p>Om en begäran visas på webbplatsen, så har vi försökt att skicka den till
         myndigheten via e-post. Eventuella felmeddelanden kring leverans visas automatiskt
         visas på webbplatsen. Man kan kontrollera adressen vi använder med "Visa
-        e-postadress"-länken som visas på sidan för myndigheten.
-        <a href="<%= help_contact_path %>">Kontakta oss</a> om det finns en bättre adress kan vi
-        använda.
-      </p>
-      <p>
-        En begäran kan ibland inte levereras eftersom de diskret avlägsnas genom
+        e-postadress"-länken som visas på sidan för myndigheten. <a
+        href="<%= help_contact_path %>">Kontakta oss</a> om det finns en bättre adress vi kan använda</p>
+      <p>  En begäran kan ibland inte levereras eftersom de diskret avlägsnas genom
         "spamfilter" hos IT-avdelningen vid myndigheten. Myndigheter kan säkerställa
          att detta inte sker genom att be sina IT-avdelningar att "vitlista"
-         att meddelande från <strong>@handlingar.se</strong>. Om du <a href="<%= help_contact_path %>">kontaktar oss</a>, kommer vi återupprepa sändningen av begäran,
+         att meddelande från <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
+        Om du <a href="<%= help_contact_path %>">kontaktar oss</a> kommer vi återupprepa sändningen av begäran,
          och/eller ge tekniska detaljer om leveransen till IT-avdelningen så att de kan ta
          reda på vad som hände med meddelandet.
       </p>
-      <p>
-        Slutligen kan man svara på en begäran från din webbläsare, utan
+      <p>  Slutligen kan man svara på en begäran från din webbläsare, utan
         behöva någon e-post, med hjälp av "svara på begäran"-länken längst ned på
         botten av sidan för varje begäran.
       </p>
-      <dl>
-        <dt id="days">
-          Hur beräknas tidsfristen som visas på sidor om begäran om allmän handling? <a href="#days">#</a>
-        </dt>
-      </dl>
-      <p>
-        Tryckfrihetsförordningen säger:
-      </p>
-      <blockquote>
-        <p>
-          En begäran om kopia av allmän handling ska behandlas <strong>"skyndsamt"</strong> enligt
-          <a href="http://www.riksdagen.se/sv/Dokument-Lagar/Lagar/Svenskforfattningssamling/Tryckfrihetsforordning-19491_sfs-1949-105/#K2">Tryckfrihetsförordningen Kapitel 2, 13 §</a>.
-        </p>
-      </blockquote>
-      <p>
-        Den nördiga detaljen exakt hur helger räknas, och vad som händer om
+    </dd>
+
+    <dt id="days">Hur beräknas tidsfristen som visas på sidor om begäran om allmän handling?<a href="#days">#</a> </dt>
+
+    <dd>
+
+      <p>Tryckfrihetsförordningen säger:</p>
+
+      <blockquote><p> En begäran om kopia av allmän handling ska behandlas <strong>"skyndsamt"</strong> enligt
+          <a href="http://www.riksdagen.se/sv/Dokument-Lagar/Lagar/Svenskforfattningssamling/Tryckfrihetsforordning-19491_sfs-1949-105/#K2">Tryckfrihetsförordningen Kapitel 2, 13 §</a>.</p></blockquote>
+
+      <p> Den nördiga detaljen exakt hur helger räknas, och vad som händer om
         begäran anländer utanför kontorstid, är just det - detalj. Vad som spelar roll
-        här är att lagen säger myndigheterna måste svara <strong>skyndsamt - alltså snabbt och hastigt.</strong>
-      </p>
-      <p>
-        Om du har en bra anledning till varför begäran kommer att ta ett tag att
+        här är att lagen säger myndigheterna måste svara <strong>skyndsamt - alltså snabbt och hastigt.</strong></p>
+
+      <p> Om du har en bra anledning till varför begäran kommer att ta ett tag att
         handlägga, tycker medborgare ofta att det är bra om du kan skicka en snabb uppdatering via e-post med en
-        mening eller två för att berätta vad som händer.
-      </p>
-      <p>
-        Offentliga tjänstemän ofta måste göra en hel del <strong>hårt arbete</strong> för att svara
+        mening eller två för att berätta vad som händer. </p>
+
+      <p>Offentliga tjänstemän ofta måste göra en hel del <strong>hårt arbete</strong> för att svara
         på förfrågningar, och detta är dolt för allmänheten. Vi tror att det skulle hjälpa alla
-        ha mer av denna komplexitet synlig.
-      </p>
-      <dl>
-        <dt id="days2">
-          Men allvarligt, hur beräknar ni deadline?<a href="#days2">#</a>
-        </dt>
-      </dl>
-      <p>
-        Vänligen läs svaret på föregående fråga först. Enligt lag måste myndigheter
+        ha mer av denna komplexitet synlig.</p>
+
+    </dd>
+
+    <dt id="days2">Men allvarligt, hur beräknar ni deadline?<a href="#days2">#</a> </dt>
+
+    <dd>
+
+      <p>  Vänligen läs svaret på föregående fråga först. Enligt lag måste myndigheter
         svara <strong>"skyndsamt"</strong> på begäran om allmän handling. Om de inte gör det,
         är det bäst om de visar det hårda arbete de gör genom att förklara vad som är
         tar extra tid att göra.
       </p>
-      <p>
-        Med det sagt, Handlingar.se kan inte visa maximal laglig deadline
+
+      <p> Med det sagt, <%= site_name %> kan inte visa maximal laglig deadline
         för svar på varje begäran därför har vi satt en deadline som verkade tänkbar när vi forskat kring ämnet.
         Mer detaljerad information om detta kan finnas vid <a href="http://www.allmanhandling.se/?p=3036">AllmanHandling.se</a>.
         Som sagt, Handlingar.se visar en uppskattad maximal tidsfrist för att svara på varje begäran som kan verka rimlig för "skyndsamt" hanterad handläggning.
         Nedanför beskrivs hur vi beräknar det.
-      </p>
+
       <ul>
+
         <li>Om den dagen vi levererar begäran via e-post är en arbetsdag, räknar vi att
           som "dag noll", även om det levererades sent på kvällen. Dagar slutar vid
-          midnatt. Vi räknar sedan nästa arbetsdag som "dag ett", och så vidare upp till <strong>14 arbetsdagar.</strong>
-        </li>
+          midnatt. Vi räknar sedan nästa arbetsdag som "dag ett", och så vidare upp till <strong><%= AlaveteliConfiguration::reply_late_after_days %> arbetsdagar.</strong></li>
+          
+       
+
         <li>Om den dag begäran e-postmeddelandet levererades var en icke-arbetsdag, räknar vi
           nästa arbetsdag som "dag ett". Leverans är leveransen, även om det hände på
-          helgen.
-        </li>
+          helgen. </li>
+
         <li>Förfrågare uppmuntras att markera när de har <strong>klarat ut</strong>
           deras begäran så klockan återställs, men ibland blir detta fel. Om du
-          ser ett problem med en särskild begäran, låt oss veta så kommer vi att fixa det.
-        </li>
+          ser ett problem med en särskild begäran, låt oss veta så kommer vi att fixa det.</li>
       </ul>
-      <p>
-        Datumet sålunda beräknade visas på begäran med texten "Enligt lag
-        bör Regeringskansliet normalt ha svarat genom att ... ". Det finns bara
-        ett fall som inte är normalt, se nästa fråga om <a href="#public_interest_test">allmänintressets tids-tillägg</a>.
+
+      <p>Datumet sålunda beräknade visas på begäran med texten "Enligt lag
+        bör Regeringskansliet normalt ha svarat genom att ... ".
       </p>
-      <p>
-        Om du är riktigt nördig om allt detta, läs den kompletta samlingen av perspektiv på <a href="http://allmanhandling.se">AllmanHandling.se</a>.
-        Samtidigt, kom ihåg att lagen säger myndigheterna måste hantera din begäran
-        <strong>skyndsamt</strong>. Det är verkligen det viktiga.
-      </p>
-      <dl>
-        <dt id="large_file">
+
+    </dd>
+
+    <dt id="large_file">
         Hur kan jag skicka en stor fil, som inte kommer gå genom e-post?<a href="#large_file">#</a>
-        </dt>
-        <dd>
-          Istället för e-post kan du svara på en begäran från din webbläsare, inklusive att ladda upp en fil.
+        </dt><a href="#large_file">#</a> </dt>
+
+    <dd> Istället för e-post kan du svara på en begäran från din webbläsare, inklusive att ladda upp en fil.
           För att göra detta, välj "svara på begäran" vid botten av sidan för begäran om allmän handling.
-          <a href="<%= help_contact_path %>">Kontakta oss</a> om den är för stor även för det (mer än, t.ex. 50Mb).
-        </dd>
-        <dt id="names">
-          Varför publicerar ni namnen på tjänstemän och innehållet från e-postmeddelanden?
-          <a href="#names">#</a>
-        </dt>
-        <dd>
-          Vi anser att vad politiker och tjänstemän gör under tiden av sin anställning
+          <a href="<%= help_contact_path %>">Kontakta oss</a> om den är för stor även för det (mer än, t.ex. 50Mb). 
+    </dd>
+
+    <dt id="names">Varför publicerar ni namnen på tjänstemän och innehållet från e-postmeddelanden?<a href="#names">#</a> </dt>
+
+    <dd> Vi anser att vad politiker och tjänstemän gör under tiden av sin anställning
           och position är allmän information. Vi kommer endast att ta bort innehåll under
           speciella förhållanden, se vår <a href="<%= help_privacy_path(:anchor => 'takedown') %>">moderationspolicy</a>.
-        </dd>
-        <dt id="mobiles">
-          Publicerar ni e-postadresser eller mobiltelefonnummer? <a href="#mobiles">#</a>
-        </dt>
-      </dl>
-      <p>
-        För att förebygga spam tar vi automatiskt bort de flesta e-postadresser och några
+    </dd>
+
+    <dt id="mobiles">Publicerar ni e-postadresser eller mobiltelefonnummer?  <a href="#mobiles">#</a> </dt>
+
+    <dd><p> För att förebygga spam tar vi automatiskt bort de flesta e-postadresser och några
         mobilnummer från svar på förfrågningar. Vänligen <a href="<%= help_contact_path %>">kontakta oss</a> om vi har
-        missat något. För tekniska anledningar tar vi inte alltid bort dem från bilagor, så som vissa PDF:er.
-      </p>
-      <p>
-        Om du behöver veta vad en adress var som vi har tagit bort, vänligen <a
+        missat något. För tekniska anledningar tar vi inte alltid bort dem från bilagor, så som vissa PDF:er.</p>
+    <p>Om du behöver veta vad en adress var som vi har tagit bort, vänligen <a
         href="/help/contact">ta kontakt med oss</a>. Händelsevis bildar en e-postadress
         en viktig del av ett svar och vi kommer att publicera den uppe i en maskerad form
         i en notering.
-      </p>
-      <dl>
-        <dt id="copyright">
-          <a name="commercial" id="commercial"></a>Vad är er policy kring upphovsrätt för dokument?<a href="https://handlingar.se/help/officers#copyright">#</a>
-        </dt>
-        <dd>
-          Sveriges grundlag, i detta fall Tryckfrihetsförordningen med Offentlighetsprincipen
+      <% end %>
+    </p>
+    </dd>
+
+    <dt id="copyright"><a id="commercial"></a>Vad är er policy kring upphovsrätt för dokument?<a href="#copyright">#</a> </dt>
+
+    <dd>Sveriges grundlag, i detta fall Tryckfrihetsförordningen med Offentlighetsprincipen
           är blind för vem som begär ut en allmän handling. Därför kan vem som helst i världen
           begära ut samma dokument och få en kopia av den med rätten att vara anonym.
 
@@ -223,17 +192,21 @@
           upphovsrättsskyddade material, kan du vänligen <a href="<%= help_contact_path %>">kontakta oss</a>
           och be oss om att ta bort det. Däremot, för att spara på skattebetalares pengar genom att förebygga
           dubbla förfrågningar, och för en bättre relation till allmänheten, kan vi råda dig om att inte göra det.
-</dd>
+    </dd>
 
-</dl>
-
-
-</dl>
-
-<p><strong>Om du inte redan har det</strong>, läs <a href="/help/about">inledningen</a> --&gt;
-<br><strong>Eller</strong>, <a href="/help/credits">erkännanden</a> eller <a href="/help/api"> API för utvecklare</a> --&gt;
-
-<div id="hash_link_padding"></div>
+    <dt id="allowed_responses">Mitt svar på en gammal begäran på <% = site_name%> gick inte igenom! <a href="#allowed_responses"> # </a> </dt>
+       <dd> Efter sex månaders inaktivitet begränsar <% = site_name%> vem som kan svara på en begäran för att stoppa
+       spammare som är inriktade på gamla förfrågningar. Vid den tidpunkten kan begäran bara besvaras av någon som är
+       från myndigheten. Efter tolv månader är begäran stängd för svar från vem som helst. Om du behöver en
+       gammal begäran att öppnas igen så att du kan besvara den, vänligen <a href="<%= help_contact_path %> ">
+       kontakta oss </a>.
+      </dd>
 
 
+  </dl>
+
+  <p><strong>Om du inte redan har det</strong>, läs <a href="<%= help_about_path %>">inledningen</a> --&gt;
+    <br><strong>eller</strong>,<a href="<%= help_credits_path %>">erkännanden</a> eller <a href="<%= help_api_path %>">API avsnittet</a> --&gt;
+
+    <div id="hash_link_padding"></div>
 </div>
