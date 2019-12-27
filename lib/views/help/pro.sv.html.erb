@@ -8,119 +8,119 @@
   </h1>
 
   <ul>
-    <li><%= link_to 'Private requests', '#private-requests' %></li>
-    <li><%= link_to 'Batch', '#batch' %></li>
+    <li><%= link_to 'Privata förfrågningar', '#private-requests' %></li>
+    <li><%= link_to 'Serieförfrågningar', '#batch' %></li>
   </ul>
 
   <h2 id="private-requests">
-    Private requests
+    Privata förfrågningar
    <a href="#private-requests">#</a>
   </h2>
 
   <p>
-    Pro users can set a privacy period on a request to delay publication while
-    you work on your story or investigation.
+    Pro-användare kan sätta en embargoperiod på en fråga för att försena publicering medan
+    du arbetar på din artikel eller undersökning.
   </p>
 
   <p>
-    When a request is private we guarantee that it will only be visible on
-    <%= AlaveteliConfiguration.site_name %> for the period you select.
-    <%= AlaveteliConfiguration.pro_site_name %> administrators will also be able
-    to view your request, but will only do so in the event that they need to fix
-    a problem with it (e.g. failed delivery to the authority). They will not
-    reveal the contents of your request or any response you get to anyone else.
-    The authority may still publish it in a disclosure log as usual.
+    När en fråga är privat garanterar vi att den bara kommer vara synlig på
+    <%= AlaveteliConfiguration.site_name %> för den period du väljer.
+    <%= AlaveteliConfiguration.pro_site_name %> administratörer kommer också att kunna
+    se din begäran, men kommer bara kunna göra så i det fall att de behöver fixa
+    ett problem med det (t.ex. misslyckad leverans till myndigheten). De kommer inte
+    avslöja innehållet av dinfråga eller något svar du skickar till någon annan.
+    Myndigheten kan fortfarande publicera det i registraturens diarie som vanligt.
   </p>
 
   <h3 id="how-long-can-i-keep-requests-private">
-    How long can I keep requests private?
+    Hur länge kan jag hålla förfrågningar privata?
    <a href="#how-long-can-i-keep-requests-private">#</a>
   </h3>
 
   <p>
-    Privacy periods can be set for 3, 6 and 12 month periods.
+    Embargoperioder kan sättas för 3, 6 eller 12 månadersperioder.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-embargo.jpg',
-                  alt: 'Adding a privacy period' %>
+                  alt: 'Lägger till en embargoperiod' %>
   </p>
 
   <p>
-    You will be automatically notified a week before the privacy period expires,
-    and on the date of expiry.
+    Du kommer automatiskt bli notifierad en vecka innan och på datumet,
+    som embargoperioden upphör.
   </p>
 
   <p>
-    Once the privacy period ends, your request and following correspondence,
-    including <strong>your name</strong>, will be <strong>
-    <%= link_to 'displayed publicly',
-      help_privacy_path(anchor: 'public_request') %></strong> on this website.
+    När embargoperioden är över kommer din förfrågan och följande korresponsden,
+    inklusive <strong>ditt namn</strong>, att bli <strong>
+    <%= link_to 'offentligt publicerad',
+      help_privacy_path(anchor: 'public_request') %></strong> på denna webbsida.
   </p>
 
   <h3 id="i-need-more-time-can-i-extend-a-privacy-period">
-    I need more time. Can I extend a privacy period?
+    Jag behöver mer tid. Kan jag förlänga en embargoperiod?
    <a href="#i-need-more-time-can-i-extend-a-privacy-period">#</a>
   </h3>
 
   <p>
-    Privacy periods can be extended, but only in the week before the expiry
-    date.
+    Embargoperioder kan förlängas, men bara under veckan innan datumet det
+    upphör.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-embargo-extension.jpg',
-                  alt: 'Extending a privacy period' %>
+                  alt: 'Hur du förlänger en embargoperiod' %>
   </p>
 
   <p>
-    There is no limit to the number of times a privacy period may be extended,
-    but each extension requires manual confirmation.
+    Det finns ingen begränsning på antalet gånger en embargoperiod kan förlängas,
+    men varje förlängning kräver manuell bekräftan.
   </p>
 
   <h3 id="how-do-i-publish-a-request">
-    How do I publish a request?
+    Hur publicerar jag en begäran om allmän handling?
    <a href="#how-do-i-publish-a-request">#</a>
   </h3>
 
   <p>
-    Requests can be published at any time.
+    Förfrågningar kan publiceras när som helst.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-embargo-publish.jpg',
-                  alt: 'Publish a request' %>
+                  alt: 'Att publicera en begäran' %>
   </p>
 
   <h3 id="can-i-make-private-batch-requests">
-    Can I make private batch requests?
+    Kan jag göra privata serieförfrågningar?
    <a href="#can-i-make-private-batch-requests">#</a>
   </h3>
 
   <p>
-    Privacy periods can also be set on batch requests, and their operation
-    follows the same principles as individual requests. Changes to a privacy
-    period on one request belonging to a batch are mirrored to all requests in
-    the batch.
+    Embargoperioder kan även bli satta för serieförfrågningar, och deras hantering
+    följer samma principer som individuella förfrågningar. Förändringar på en period
+    med embargo på en förfrågan som tillhör en serieförfrågan speglas till alla förfrågningar
+    i serien.
   </p>
 
   <h2 id="batch">
-    Batch
+    Serieförfrågningar
    <a href="#batch">#</a>
   </h2>
 
   <p>
-    Batch makes it easy to send and manage requests to multiple authorities.
+    Serieförfrågningar gör det enkelt att skicka och hantera förfrågningar till flera myndigheter.
   </p>
 
   <h3 id="how-do-i-make-a-batch-request">
-    How do I make a batch request?
+    Hur gör jag en serieförfrågan?
    <a href="#how-do-i-make-a-batch-request">#</a>
   </h3>
 
   <p>
-    Batch allows you to select a list of authorities and write a template
-    request. The request gets sent individually to each authority like a mail
+    Serieförfrågan tillåter dig att välja en lista av myndigheter och skriva en mall
+    till förfrågan. Begäran blir individuellt skickad till varje myndighet som ett e-postmeddelande
     merge.
   </p>
 
@@ -135,60 +135,60 @@
   </p>
 
   <h3 id="how-do-i-manage-a-batch-request">
-    How do I manage a batch request?
+    Hur hanterar jag en serieförfrågan?
    <a href="#how-do-i-manage-a-batch-request">#</a>
   </h3>
 
   <p>
-    Progress of a batch can be managed with a convenient progress meter to see
-    how close you are to getting responses from all authorities and making it
-    easy to choose which action to take next.
+    Utvecklingen av en serieförfrågan kan hanteras med en behändig utvecklingsindikator för att se
+    hur nära du är att få svaren från alla myndigheter och göra det
+    enkelt att välja vilket steg du ska ta härnäst.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-batch-list.jpg',
-                  alt: 'Managing batch requests' %>
+                  alt: 'Att hantera serieförfråningar' %>
   </p>
 
   <h3 id="how-do-i-manage-batch-privacy-periods">
-    How do I manage batch privacy periods?
+    Hur hanterar jag serieförfrågningars embargoperioder?
    <a href="#how-do-i-manage-batch-privacy-periods">#</a>
   </h3>
 
   <p>
-    Batches can be made private, and privacy periods easily managed across the
-    batch.
+    Serieförfrågningar kan göras privata, och privata perioder kan enkelt hanteras över hela
+    serieförfrågan.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-batch-privacy.jpg',
-                  alt: 'Manage batch privacy' %>
+                  alt: 'Hantera serieförfrågans privata status' %>
   </p>
 
   <h3 id="how-many-authorities-can-i-add-to-a-batch">
-    How many authorities can I add to a batch?
+    Hur många myndigheter kan jag lägga till en serieförfrågan?
    <a href="#how-many-authorities-can-i-add-to-a-batch">#</a>
   </h3>
 
   <p>
-    The maximum number of authorities that can be added to a batch is
+    Det maximala antalet att myndigheter som kan läggas till är
     <%= AlaveteliConfiguration.pro_batch_authority_limit %>.
   </p>
 
   <h3 id="how-many-batch-requests-can-i-make">
-    How many batch requests can I make?
+    Hur många serieförfrågningar kan jag göra?
    <a href="#how-many-batch-requests-can-i-make">#</a>
   </h3>
 
   <p>
-    We recommend sending a pilot batch to a sample of authorities to test the
-    request. Once you know the authorities hold the type of data that you’re
-    asking for you can then request from the remaining authorities.
+    Vi rekommenderar att du skickar ett begränsat test av en serieförfrågan till ett prov av myndigheter för att testa
+    frågan. När du vet att myndigheterna håller den typen av data som du frågar efter
+    kan du då skicka begära ut från återstående myndigheter.
   </p>
 
   <p>
-    There’s no limit to the number of batches that can be sent, but Pro users
-    are required to abide by our guidelines about writing
+    Det finns ingen begräsning på antalet serieförfrågningar som kan skickas, men Pro-användare
+    krävs följa våra riktlinjer kring formuleringar
     <%= link_to 'responsible requests',
       help_requesting_path(anchor: 'responsible') %>.
   </p>
