@@ -9,6 +9,7 @@
   <li><%= link_to_unless_current "Credits", help_credits_path %></li>
   <li><%= link_to_unless_current "Programmers API", help_api_path %></li>
   <li><%= link_to_unless_current "Advanced search", advanced_search_path %></li>
+  <li><%= link_to_unless_current "For nonprofits", help_nonprofits_path %></li>
   <% if feature_enabled?(:alaveteli_pro) %>
     <li><%= link_to_unless_current "Pro", help_pro_path %></li>
   <% end %>
