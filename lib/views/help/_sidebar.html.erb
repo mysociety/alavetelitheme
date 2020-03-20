@@ -9,7 +9,14 @@
   <li><%= link_to_unless_current "Credits", help_credits_path %></li>
   <li><%= link_to_unless_current "Programmers API", help_api_path %></li>
   <li><%= link_to_unless_current "Advanced search", advanced_search_path %></li>
+    <li><%= link_to_unless_current "For companies", help_companies_path %></li>
+  <li><%= link_to_unless_current "For authorities", help_authorities_path %></li>
   <li><%= link_to_unless_current "For nonprofits", help_nonprofits_path %></li>
+  <li><%= link_to_unless_current "For citizens", help_citizens_path %></li>
+  <li><%= link_to_unless_current "Merch", advanced_merch_path %></li>
+  <li><%= link_to_unless_current "Donate", help_donate_path %></li>
+  
+
   <% if feature_enabled?(:alaveteli_pro) %>
     <li><%= link_to_unless_current "Pro", help_pro_path %></li>
   <% end %>
