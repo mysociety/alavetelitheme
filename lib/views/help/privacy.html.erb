@@ -1,182 +1,634 @@
 <% @title = "Your privacy" %>
-
 <%= render :partial => 'sidebar' %>
-
 <div id="left_column_flip" class="left_column_flip">
-  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
-  <dl>
-
-    <dt id="email_address">Who gets to see my email address? <a href="#email_address">#</a> </dt>
-
-    <dd><p>We will not disclose your email address to anyone unless we are obliged to by law,
-        or you ask us to. This includes the public authority that you are sending a
-        request to.  They only get to see an email address
-        @<%= AlaveteliConfiguration::incoming_email_domain %> which is specific to that request.  </p>
-      <p>If you send a message to another user on the site, then it will reveal your
-        email address to them. You will be told that this is going to happen.</p>
-    </dd>
-
-    <dt id="nasty_spam">Will you send nasty, brutish spam to my email address? <a href="#nasty_spam">#</a> </dt>
-    <dd>Nope. After you sign up to <%= site_name %> we will only send you emails
-      relating to a request you made, an email alert that you have signed up for,
-      or for other reasons that you specifically authorise. We will never give or
-      sell your email addresses to anyone else, unless we are obliged to by law, or
-      you ask us to.
-    </dd>
-
-    <dt id="public_request">Why will my name and my request appear publicly on the site? <a href="#public_request">#</a> </dt>
-
-    <dd>
-      <p>We publish your request on the Internet so that anybody can read it and
-        make use of the information that you have found. We do not normally delete
-        requests (<a href="#delete_requests">more details</a>).
-      </p>
-      <p>
-        Your name is tangled up with your request, so has to be published as well.
-        It is only fair, as we're going to publish the name of the civil servant who
-        writes the response to your request.  Using your real name also helps people
-        get in touch with you to assist you with your research or to campaign with you.
-      </p>
-      <p>By law, you must use your real name for the request to be a valid Freedom of
-        Information request. See the next question for alternatives if you do not want
-        to publish your full name.
-      </p>
-    </dd>
-
-    <dt id="real_name">Can I make an FOI request using a pseudonym? <a href="#real_name">#</a> </dt>
+  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a> </h1>
 
 
-    <dd>
-      <p>Technically, you must use your real name for your request to be a valid Freedom of Information request in UK law. See this
-        <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/name_of_applicant_fop083_v1.pdf">guidance from the Information Commissioner</a> (January 2009).
-      </p>
+  <h2 id="personal_information">
+    What personal information we collect
+    <a href="#personal_information">#</a>
+  </h2>
 
-      <p>However, the same guidance also says it is good practice for the public
-        authority to still consider a request made using an obvious pseudonym.
-        You should refer to this if a public authority refuses a request because you
-        used a pseudonym.</p>
+  <h3 id="personal_information_foi">
+    When you make an FOI request
+    <a href="#personal_information_foi">#</a>
+  </h3>
+  <p>
+    In using Handlingar to send an FOI request, you are providing us with
+    the following personal information:
+  </p>
+  <ul>
+    <li>Your name</li>
+    <li>Your email address</li>
+    <li>Your IP address</li>
+  </ul>
+  <p>
+    Some of this information is passed on to the public authority who receive
+    your request, and is published on the website. This page explains:
+  </p>
+  <ul>
+    <li>what we do with each type of information</li>
+    <li>who sees it</li>
+    <li>how it is used</li>
+    <li>how long it is retained</li>
+    <li>our protocols for altering or removing information</li>
+    <li>
+      what to do if you are unhappy with the way we have handled your data
+    </li>
+  </ul>
 
-      <p>Be careful though, even if the authority follows this good practice, the
-        pseudonym will probably make it impossible for you to complain to the
-        Information Commissioner later about the handling of your request.
-      </p>
+  <h3 id="personal_information_contact">
+    When you email Handlingar through our contact form, directly, or via
+    mySociety
+    <a href="#personal_information_contact">#</a>
+  </h3>
+  <p>
+    Support mail is handled by the Handlingar volunteer admin team via a
+    central mailbox, which they must access with adherence to our strict
+    security protocols.
+  </p>
+  <p>
+    As with any other email, this results in us holding your
+    email address and, if provided, your name, along with the content of your
+    message.
+  </p>
 
-      <p>There are several good alternatives to using a pseudonym.</p>
+  <h2 id="personal_information_who">
+    Who gets to see your personal information
+    <a href="#personal_information_who">#</a>
+  </h2>
 
+  <h3 id="name">
+    Your name
+    <a href="#name">#</a>
+  </h3>
+
+  <p>
+    When you submit an FOI request through Handlingar, your name (or the name you are
+    making your request under is:
+  </p>
+
+  <ol type="a">
+    <li>sent to the public authority, and</li>
+    <li>published on the website along with the request.</li>
+  </ol>
+
+
+  <h3 id="email_address">
+    Your email address
+    <a href="#email_address">#</a>
+  </h3>
+  <p>
+    Your email address is not shared with the public authority, nor is it
+    published on the website. Handlingar automatically generates a
+    @Handlingar.se email address specific to each request — your message
+    will have this address in the ‘from’ line and it’s also the address that
+    responses are sent to.
+  </p>
+  <p>
+    When the public authority replies via this custom email address, their
+    response is published on your request’s page on Handlingar.se. At the
+    same time, our system alerts you, by sending a message to the personal email
+    address you have provided when creating your request, to let you know there
+    is a response: this too is an automated process.
+  </p>
+  <p>
+    So, your email address is largely kept private. There are two exceptions to
+    this. Firstly, site administrators may access your email address in the
+    process of administering the site, and may use your email address to contact
+    you about your use of the site. We also occasionally contact users who have
+    made a particularly interesting request, as we like to write about these on
+    the mySociety blog.
+  </p>
+  <p>
+    Secondly, if you send a message to another user on the site, your email
+    address is shared with them. You’ll see an alert to warn you of this before
+    you submit your message.
+  </p>
+  <p>
+    We will not disclose your email address to anyone else unless we are obliged
+    to by law, or you ask us to.
+  </p>
+  <h4>
+    Will your email address be used for any other purposes?
+  </h4>
+  <p>
+    No. After you sign up to Handlingar we will only send you emails
+    relating to a request you made, an email alert that you have signed up for,
+    or for other reasons that you specifically authorise. We will never give or
+    sell your email addresses to anyone else, unless we are obliged to by law,
+    or you ask us to.
+  </p>
+  <p>
+    In theory, spam could be received via the ‘send this user an email’
+    function. Abuse of this service is not common and you can report any
+    messages which you consider inappropriate to us via the
+    <a href="https://www.handlingar.se/help/contact">Contact Us</a> form. 
+    Upon consideration, we may suspend users who have abused this service.
+  </p>
+
+  <h3 id="request">
+    Your request
+    <a href="#request">#</a>
+  </h3>
+  <p>
+    Your request is sent to the public authority from whom you are requesting
+    information. At the same time, it is published on this website where anyone
+    can see it.
+  </p>
+
+  <h3 id="ip_address">
+    Your IP address
+    <a href="#ip_address">#</a>
+  </h3>
+  <p>
+    The IP address associated with your use of the site (which may or may not be
+    sufficient to identify you, depending on circumstances), is recorded
+    automatically to our logs.  It will not normally be seen by anyone - see the
+    <a href="#our_logging">section on our own logging</a> for more information.
+  </p>
+  <p>
+    We do not share IP addresses with anyone else unless required to by law (for
+    example in the course of a police investigation for which a court order has
+    been received).
+  </p>
+
+  <h3 id="full_address">
+    Your postal address
+    <a href="#full_address">#</a>
+  </h3>
+  <p>
+    You do not need to supply a postal address in order to make an FOI request.
+    If a public authority asks you for your full, physical address, reply to
+    them saying that section 8.1.b of the FOI Act asks for an "address for
+    correspondence", and that the email address you are using is sufficient.
+  </p>
+
+
+  <h4 id="postal_answer">
+    What to do if the authority asks for a postal address to send a paper
+    response
+    <a href="#postal_answer">#</a>
+  </h4>
+  <p>
+    If an authority only has a paper copy of the information that you
+    want, they may ask you for a postal address. Naturally, since one of
+    the principles of Handlingar is that, by sharing responses to FOI
+    requests, we are providing resources for everyone to use, we prefer
+    that they provide the information by email.
+  </p>
+  <p>
+    So you might try persuading them to scan in the documents for you.
+    You can even <a href="http://www.whatdotheyknow.com/request/car_parking_charges_policy_and_a#outgoing-532">offer to gift them a
+    scanner</a>.
+  </p>
+  <p>
+    If that doesn’t work, and you want to provide your postal address
+    privately in order to receive the documents, mark your request as
+    “They are going to reply by postal mail”, and it will give you an
+    email address to use for that purpose.
+  </p>
+  <h3 id="our_logging">
+    Our own logging
+    <a href="#our_logging">#</a>
+  </h3>
+  <p>
+    In addition to the information you give us about yourself in order to use
+    the site (e.g. your name and email address), we collect and log some
+    additional information in order to analyse and fix problems with the site.
+  </p>
+  <p>
+    Our webserver logs maintain a history of page requests. This includes
+    information about requests, including the client IP address, data submitted
+    (which might include your email address when you log on to the site),
+    request date and time, page requested, browser version and <a
+    href="https://en.wikipedia.org/wiki/HTTP_referer">referrer</a>. We routinely
+    keep this information for 60 days. Note that in normal circumstances, this
+    data is infrequently accessed by a human, and when it is, they are likely to
+    be assessing it in bulk, in order to understand an issue with the site,
+    rather than at a granular level of individual users.
+  </p>
+
+  <h3 id="research">
+    Research
+    <a href="#research">#</a>
+  </h3>
+  <p>
+    We sometimes analyses data such as requests and responses from
+    Handlingar for research. We adhere to strict internal privacy policies
+    which mean that any personal data is kept secure. Data such as names and
+    email addresses is excluded from the research datasets, and where possible
+    redacted from the body of the text.
+  </p>
+
+
+
+
+  <h2 id="Names">
+    Names
+    <a href="#Names">#</a>
+  </h2>
+
+  <a name="public_request"></a>
+  <h3 id="public_names">
+    Why do users’ names and requests appear publicly on the site?
+    <a href="#public_names">#</a>
+  </h3>
+
+  <p>
+    Your name is an integral part of your request, so has to be published with
+    it. It is only fair, as we are also going to publish the name of the civil
+    servant who writes the response to your request. Using your real name also
+    helps people get in touch with you to assist you with your research or to
+    campaign with you.
+  </p>
+  <p>
+    But perhaps most importantly, it means that our users think twice before
+    making a request: if you know that your name will be permanently attached to
+    it for all to see, then you are far more likely to make a responsible, valid
+    and useful request.
+  </p>
+  <p>
+    By law, you must use your real name for the request to be a valid Freedom of
+    Information request — but see the next question for alternatives if you do
+    not want to publish your full name.
+  </p>
+  <p>
+    Your requests will be grouped together and appear on your profile on the site.
+  </p>
+
+  <h3 id="real_name">
+    Can FOI requests be made under a pseudonym?
+    <a href="#real_name">#</a>
+  </h3>
+  <p>
+  Yes, by using a pseudonym you exercise your full right to request a public document under the Freedom of the Press Ordinance and the Principle of Public Access
+  </p>
+  <p>
+    Be aware, though, that even if the authority follows this good practice, the
+    pseudonym will probably make it impossible for you to complain to the
+    Information Commissioner later about the handling of your request.
+  </p>
+  <p>
+    There are several good alternatives to using a pseudonym.
+  </p>
+  <ul>
+    <li>
+      Use a different form of your name. The guidance says
+      that “Mr Arthur Thomas Roberts” can make a valid request as “Arthur
+      Roberts”, “A. T. Roberts”, or “Mr Roberts”, but <strong>not</strong> as
+      “Arthur” or “A.T.R.”.
+    </li>
+  
+    <li>
+      In most cases, you may use any name by which you are “widely known and/or
+      is regularly used”.
+    </li>
+    <li>
+      Use the name of an organisation, the name of a company, the trading name
+      of a company, or the trading name of a sole trader.
+    </li>
+    <li>
+      Ask someone else to make the request on your behalf.
+    </li>
+    <li>
+      You may, if you are really stuck, ask us to make the request on
+      your behalf. Please <a href="<%= help_contact_path %>">contact us</a> with
+      a good reason why you cannot make the request yourself and cannot
+      ask a friend to. Do not impersonate someone else. This is an abuse of
+      our terms of service.
+    </li>
+  </ul>
+
+  <p>
+    Sometimes, for various reasons including proven endangerment to the
+    individual, we will remove a user’s name from the site; when we do so we
+    make this clear; typically by replacing the name with “[name removed]”.
+    For more information, see our section on <a href="#erasure">your right to
+    erasure</a>.
+  </p>
+
+  <h2 id="consequences">
+    What are the possible or definite consequences of using Handlingar?
+    <a href="#consequences">#</a>
+  </h2>
+  <h3 id="consequences_making_a_request">
+    When making an FOI request
+    <a href="#consequences_making_a_request">#</a>
+  </h3>
+  <p>
+    As you have seen from the points above, using Handlingar results in the
+    publication of your name and request online, in most cases permanently. Some
+    possible consequences of this are:
+  </p>
+  <ul>
+    <li>
+      Your request appearing in results when your name is put into search engines.
+    </li>
+    <li>
+      Contact from others with an interest in your request, potentially including
+      the press, via the user contact facility.
+    </li>
+  </ul>
+  <h3 id="consequences_registering">
+    When registering with the site
+    <a href="#consequences_registering">#</a>
+  </h3>
+  <p>
+    Creating an account on the site allows you to make FOI requests, but it’s
+    also a required step for those who wish to sign up for email alerts
+    (“following” a specific request, user or authority) or add annotations to
+    request pages.
+  </p>
+
+  <ul>
+    <li>
+      We collect your name and email address; these are only looked at if there’s
+      a problem with an account.
+    </li>
+    <li>
+      Users with accounts gain a public profile page on the site: this may be
+      accessed by anyone who clicks on the name attached to any FOI request you
+      have sent through the site or any annotation you have made.
+    </li>
+    <li>
+      Your profile page displays:
       <ul>
-        <li>Use a different form of your name. The guidance says
-          that "Mr Arthur Thomas Roberts" can make a valid request as "Arthur Roberts",
-          "A. T. Roberts", or "Mr Roberts", but <strong>not</strong> as "Arthur" or "A.T.R.".
+        <li>
+          Your name
         </li>
-        <li>In most cases, you may use any name by which you are "widely known and/or
-          is regularly used".</li>
-        <li>Use the name of an organisation, the name of a company, the trading name of
-            a company, or the trading name of a sole trader.</li>
-        <li>Ask someone else to make the request on your behalf.</li>
-        <li>You may, if you are really stuck, ask us to make the request on
-          your behalf. Please <a href="<%= help_contact_path %>">contact us</a> with
-          a good reason why you cannot make the request yourself and cannot
-          ask a friend to. We don't have the resources to do this for everyone.</li>
+        <li>
+          The date you joined the site
+        </li>
+        <li>
+          Any text you provide to describe yourself
+        </li>
+        <li>
+          A list of the requests and annotations you have made
+        </li>
       </ul>
-
-      <p>Please do not try to impersonate someone else.</p>
-
-    </dd>
-
-    <dt id="full_address">They've asked for my postal address! <a href="#full_address">#</a> </dt>
-
-    <dd>
-      <p>If a public authority asks you for your full, physical address, reply to them saying
-        that section 8.1.b of the FOI Act asks for an "address for correspondence",
-        and that the email address you are using is sufficient.
+      <p>
+        The page does not display your email address, but does allow others to
+        get in touch with you via a messaging system.
       </p>
       <p>
-        The Ministry of Justice has <a href="http://www.justice.gov.uk/guidance/foi-procedural-what.htm">guidance
-          on this</a> &ndash;
-        <em>"As well as hard copy written correspondence, requests that are
-          transmitted electronically (for example, in emails) are acceptable
-          ... If a request is received by email and no postal address is given, the email
-          address should be treated as the return address."
-        </em>
+        The page does not display details of alerts you have subscribed to,
+        although these are visible to you (and only you) when you are logged in.
       </p>
-      <p>As if that isn't enough, the Information Commissioner's
-        <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/practical_application/foi_hints_for_practitioners_handing_foi_and_eir_requests_2008_final.pdf">Hints for Practitioners</a> say
-        <em>"Any correspondence could include a request for information. If it is written (this includes e-mail), legible, gives the name of the applicant, an address for reply (which could be electronic), and includes a description of the information required, then it will fall within the scope of the legislation."</em>
-      </p>
-    </dd>
+    </li>
+  </ul>
+  <p>
+    This data (your name, email address, alert subscriptions) is not used for
+    any purpose other than the running of the site and will not be shared
+    externally.
+  </p>
 
-    <dt id="postal_answer">No no, they need a postal address to send a paper response! <a href="#postal_answer">#</a> </dt>
+  <h2 id="retention_periods">
+    Retention periods
+    <a href="#retention_periods">#</a>
+  </h2>
 
-    <dd>
-      <p>If an authority only has a paper copy of the information that you want,
-        they may ask you for a postal address. To start with, try persuading them
-        to scan in the documents for you. You can even <a href="https://www.whatdotheyknow.com/request/car_parking_charges_policy_and_a#outgoing-532">offer to gift them a scanner</a>, which in that particular case
-        embarrassed the authority into finding one they had already.</p>
-
-      <p>If that doesn't work, and you want to provide your postal address privately
-        in order to receive the documents, mark your request as "They are going to reply by post", and it will
-        give you an email address to use for that purpose.</p>
-    </dd>
-
-    <dt id="delete_requests">Can you delete my requests, or alter my name?  <a href="#delete_requests">#</a> </dt>
-
-    <dd>
-
-      <p><%= site_name %> is a permanent, public archive of Freedom of
-        Information requests. Even though you may not find the response to
-        a request useful any more, it may be of interest to others. For this
-        reason, we will not delete requests.
-      </p>
-
-      <p>Under exceptional circumstances we may remove or change your name
-        on the website, <a href="#takedown">see the next question</a>.
-        Similarly, we may also remove other personal information.
-      </p>
-
-      <p>If you're worried about this before you make your request,
-        see the section on <a href="#real_name">pseudonyms</a>.</p>
-
-    </dd>
-
-    <dt id="takedown">Can you take down personal information about me? <a href="#takedown">#</a> </dt>
-
-    <dd>
-
-      <p>If you see any personal information about you on the site which you'd like
-        us to remove or hide, then please <a href="<%= help_contact_path %>">let us know</a>.
-        Specify exactly what information you believe to be problematic and why, and
-        where it appears on the site.</p>
-
-      <p>If it is sensitive personal information that has been accidentally
-        posted, then we will usually remove it. Normally we will only consider
-        requests to remove personal information which come from the individual
-        concerned, but for sensitive information we would appreciate anyone
-        pointing out anything they see.</p>
-
-      <p>We consider that there is a strong public interest in
-        retaining the names of officers or servants of public authorities. We will only
-        remove such names in exceptional circumstances, such as where the disclosure of
-        a name and position of employment would substantially risk an individual's
-        safety. If you are such an official and you wish to have your name removed for
-        such an urgent reason, you must supply us with a request to do so from your
-        line manager. This request must demonstrate that a risk has been perceived
-        which outweighs the public interest, and must demonstrate that efforts have
-        been made to conceal the name on the organisation's own website.</p>
-
-      <p>For all other requests we apply a public interest test to decide
-        whether information should be removed.
-         <a href="http://www.statutelaw.gov.uk/content.aspx?ActiveTextDocId=3190650">Section 32</a>
-        of the Data Protection Act 1998 permits us to do this, as the material we
-        publish is journalistic. We cannot easily edit many types of attachments (such
-        as PDFs, or Microsoft Word or Excel files), so we will usually ask
-        that authorities resend these with the personal information removed.</p>
-
-    </dd>
+  <h3 id="retention_requests">
+    FOI requests
+    <a href="#retention_requests">#</a>
+  </h3>
+  <p>
+    As detailed above, sending an FOI request through this site results in your
+    name and email address being stored, along with the body of your request, on
+    our servers. Your email address is accessible only to site administrators.
+    At the current time, the policy is to retain this information indefinitely.
+  </p>
 
 
-  </dl>
+  <h3 id="retention_support">
+    Support emails
+    <a href="#retention_support">#</a>
+  </h3>
+  <p>
+    We retain emails sent to and from this central mailbox for two years —
+    correspondence is automatically and permanently deleted after that point,
+    although any email that needs to be kept on file for specific legal reasons,
+    such as in-progress police investigations or lawsuits, is retained
+    separately. Misdirected mail of a sensitive nature, such as a request for
+    help with personal circumstances, is kept for a shorter period of thirty
+    days.
+  </p>
 
-  <p><strong>Learn more</strong> from the help for <a href="<%= help_officers_path %>">FOI officers</a> --&gt;
+  <h2 id="legal_basis">
+    Legal basis for processing
+    <a href="#legal_basis">#</a>
+  </h2>
+  <p>
+    In most cases our legal basis for processing personal information is
+    "legitimate interest" (this is as laid out in <a
+    href="https://gdpr-info.eu/art-6-gdpr/">6(1)(f)</a> – of the GDPR, in force
+    from 25 May 2018). We believe that we are pursuing a legitimate interest in
+    processing personal data to provide our service to benefit of our users and
+    the benefit of society. There is a benefit to our users in that we offer an
+    easy way to make, track and publish Freedom of Information requests. The
+    service also has a benefit to the public as any information released in
+    response to the request is publicly available in a historic archive for
+    anyone to use. There is also a benefit to authorities responding to
+    requests, in that the automatic publication of the requests reduces
+    duplicate requesting.
+  </p>
+  <p>
+    We believe that our processing of our users' data is as they would expect
+    when they use our service. If you use Handlingar to make a FOI request,
+    you are consenting to your data being processed as described on this page.
+    We make clear how we handle users' data, and link to this page, at
+    appropriate places within our service, including during the process of
+    signing up, and making a request.
+  </p>
+  <p>
+    On rare occasions the legal basis of "compliance with a legal obligation"
+    will apply when we are legally obliged to hold material, for example where
+    a court order has been issued (<a
+    href="https://gdpr-info.eu/art-6-gdpr/">6(1)(c)</a> of the GDPR).
+  </p>
+  <p>
+    In almost all cases our processing of personal information will be lawful
+    under Article 6 of the GDPR but we may also rely on <a
+    href="http://www.legislation.gov.uk/ukpga/2018/12/part/6/crossheading/the-special-purposes/enacted"
+    >the "special purposes" derogations in the Data Protection Act 2018</a>,
+    especially those applying to academic and journalistic purposes. Often use
+    of our service is academic or journalistic in nature, and the provision of
+    our service as a whole may be considered a journalistic endeavour.
+  </p>
 
-    <div id="hash_link_padding"></div>
+  <h2 id="your_rights">
+    Your rights
+    <a href="#your_rights">#</a>
+  </h2>
+
+  <h3 id="erasure">
+    Your right to erasure
+    <a href="#erasure">#</a>
+  </h3>
+  <p>
+    See also <a href="#right_to_object">your right to object</a>.
+  </p>
+  <h4>
+    Your own requests, annotations and user profile
+  </h4>
+
+  <p>
+    Handlingar, as well as providing a service by which you can easily make
+    an FOI request, also acts as an online archive of information.
+  </p>
+  <p>
+    <strong>Requests</strong> We publish your request on the internet so that
+    anybody can read it
+    and make use of the information that you have found. Even though you may not
+    find the response to a request useful any more, it may be of interest to
+    others, and may have been used to support research, news articles, lobbying
+    or other activities. For this reason, we will not normally delete the
+    substance of requests and responses.
+  </p>
+  <p>
+    <strong>Names</strong> If you have made requests for information via our
+    site and are
+    considering asking us to remove your name, please do take a moment to
+    reflect and reconsider. Typically Freedom of Information requests made via
+    our service form a positive part of an individual’s online footprint; a
+    public record of civic activism is something to be proud of.
+  </p>
+  <p>
+    That said, we understand that there can be good reasons why you may want us
+    to remove your name and will make our best efforts to do so if you ask us
+    to. Similarly, we may also remove other personal information. Note that if
+    your name has been released as part of an authority’s response, we may not
+    be able to remove it easily, however we will of course consider formal
+    “right to be forgotten” / “right of erasure” requests and remove material if
+    we are unable to justify continuing to hold and process it.
+  </p>
+  <p>
+    If you’re worried about your name being associated with your request,  and
+    you’ve not made it yet, then  see our advice on using
+    <a href="#real_name">pseudonyms</a>.
+  </p>
+  <p>
+    <strong>Email addresses</strong> We also hold your email address. If you ask
+    us to cease
+    holding your email address while you are awaiting a response, we will not be
+    able to notify you when a response does come in. For this reason we strongly
+    advise keeping an active email address associated with your account while
+    you have correspondence in progress. As a user you can change the email
+    address associated with your account at any time yourself, or you can get in
+    touch with us an ask us to remove your email address from your account.
+  </p>
+  <p>
+    Other information we hold on users of our service is described under:
+    <a href="#consequences_registering">“When registering with the site”</a> and
+    <a href="#our_logging">“Our own logging”</a>.
+    As a user you can view and edit much of this material yourself, but if you
+    feel the need to ask us to delete material do get in touch.
+  </p>
+  <h4>
+    Removal of personal information from requests and responses
+  </h4>
+  <p>
+    If you see any personal information about you on the site which you’d like
+    us to remove or hide, then please <a href="<%=
+        help_contact_path %>">let us know</a>. Specify exactly what
+    information you believe to be problematic and why, and let us know where it
+    appears on the site.
+  </p>
+  <p>
+     We will consider any such notice, and balance it against any public
+     interest in publishing the material. There is some guidance about this <a
+     href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-to-erasure/">on the ICO’s website</a>.
+   </p>
+   <p>
+    If it is sensitive personal information that has been accidentally posted,
+    then we will usually remove it. Normally we will only consider requests to
+    remove personal information which come from the individual concerned, but
+    for sensitive information or large volumes of breached personal data we
+    would appreciate being notified by anyone.
+  </p>
+  <h4>
+    Removal of public servants’ personal information from responses
+  </h4>
+  <p>
+     We
+    automatically publish responses to requests made through the site in full.
+    Where these responses include the personal information of public servants,
+    we consider the legal basis for our processing of this information to be
+    that we have a legitimate interest as described in
+    <a href="https://gdpr-info.eu/art-6-gdpr/">Article 6(1)(f)</a>
+    of the GDPR). Our legitimate interest is in benefiting society by preserving and
+    promoting transparency and openness, and the accountability of those in
+    positions of power and in maintaining a historic public archive of Freedom of
+    Information requests and responses.  We will consider requests to remove the
+    names of public servants when it seems that the interests, rights and
+    freedoms of the data subject outweigh the public interest in publishing.
+  </p>
+  <p>
+    This means that:
+  </p>
+  <ul>
+    <li>
+      If you are a decision-maker of any seniority, or if you are responding to an
+      FOI request, we will not normally remove your details from documents and
+      emails sent by a public body or from FOI requests. Accountability of
+      decision-making is at the heart of good government.
+    </li>
+    <li>
+      If you hold a junior, non-decision making post we will consider requests
+      to remove your details. Removing these details is time-consuming for our
+      volunteers, so please let us know why this really matters to you. If we
+      are not required to act by law but agree to remove your details we will
+      take reasonable steps to do so — but in some cases may not be able to as
+      it can be difficult to remove material from some types of document, such
+      as images and PDFs.
+    </li>
+  </ul>
+  <p>
+    We are happy try to assist FOI officers who want us to help them remove
+    their signatures from the website, but generally in such circumstances we
+    require replacement responses to be prepared and sent to the requester
+    before we will remove the original documents. We are generally unable to
+    edit attachments which have been released via our service.
+  </p>
+  <p>
+
+  <h3 id="right_to_access">
+    Your right to access
+    <a href="#right_to_access">#</a>
+  </h3>
+  <p>
+    You may contact us at any time to ask to see what personal data we hold
+    about you.  If you have used our service to make a request,  then the vast
+    majority of information we hold about you is shown publicly on our website
+    or visible to you on your user profile.
+  </p>
+  <h3 id="right_to_object">
+    Your right to object
+    <a href="#right_to_object">#</a>
+  </h3>
+    <p>
+    See also <a href="#erasure">your right to erasure</a>.
+    </p>
+    <p>
+    The General Data Protection Regulation gives you the right to object to our
+    processing of your personal information and to ask us to stop processing it.
+    However, it also gives us the right to continue to process it if we can demonstrate
+    compelling legitimate grounds for the processing that override your
+    interests, rights and freedoms. To exercise your right to object, you must
+    <a href="<%= help_contact_path %>">contact us</a>, giving
+    specific reasons why you are objecting to the processing of your personal data.
+    These reasons should be based upon your particular situation.
+    </p>
+
+  </h3>
+  <h3 id="right_to_complain">
+    Your right to lodge a complaint
+    <a href="#right_to_complain">#</a>
+  </h3>
+  <p>
+  If you believe that we are in breach of the GDPR, you have the right to contact Datainspektionen to make a report or make a complaint. If you want to exercise your rights, such as right to access, or <a href="https://www.handlingar.se/help/contact">contact Us</a> regarding our processing of your personal data, you are welcome to do so to us. 
+  
+  </p>
+
+  
 </div>
