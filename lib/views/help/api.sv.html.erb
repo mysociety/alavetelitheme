@@ -4,24 +4,25 @@
 
 <div id="left_column_flip" class="left_column_flip">
   <h1><%=@title %></h1>
+  
  
   <dl>
     <dt>Introduktion</dt>
     <dd>
-      <p>Den här sidan förklarar hur programmerare kan göra andra webbplatser och programvara
-interagera med <%= site_name %> via en "API" (Application Programming Interface)..
+      <p>Den här sidan förklarar hur programmerare kan göra andra webbplatser och mjukvara interagera med plattformen handlingar.se via vårt "API" (Application Programming Interface).
+
       </p>
 
-      <p> <%= site_name %> har inte ett fullständigt API ännu, men vi lägger successivt till
-massor av saker som har liknande användning till ett API som de begärt.
+      <p> Handlingar.se har inte ett fullständigt API ännu. Vi lägger successivt till fler funktioner som skapar fler möjligheter för användning genom API. Vill du som myndighet, företag eller förening använda Handlingar.se via API? Ta gärna kontakt med oss så berättar vi mer.
+
       </p>
     </dd>
 
     <dt> 1. Länka till nya förfrågningar</dt>
     <dd>
-      <p>För att uppmuntra användarna att göra förfrågningar till en särskild myndighet, använder webbadresser av formen:
+      <p>För att uppmuntra användare att göra förfrågningar till en särskild myndighet, använder webbadresser formen: 
 <%= link_to new_request_to_body_url(:url_name => "regeringskansliets_forvaltningsavdelning") , new_request_to_body_url(:url_name => "regeringskansliets_forvaltningsavdelning") %>.
-Dessa är de parametrar som du kan lägga till till dessa webbadresser, antingen i webbadressen eller från ett formulär.
+Dessa är de parametrar som du kan lägga till dessa webbadresser, antingen i webbadressen eller från ett formulär.
       </p>
         <ul>
           <li> <strong>title</strong> - standardsammanfattning av den nya begäran.</li>
@@ -31,11 +32,10 @@ Dessa är de parametrar som du kan lägga till till dessa webbadresser, antingen
         </ul>
     </dd>
 
-    <dt> 2. RSS-flöden (egentligen Atom)</dt>
+    <dt> 2. RSS-flöden (egentligen Atom-flöden)</dt>
     <dd>
-      <p>Det finns Atom-feeds på de flesta sidor som listar förfrågningar om allmänna handlingar som du kan
-använda för att få uppdateringar och länkar i XML-format. Hitta webbadressen till Atom-flödet på
-något av följande sätt:
+      <p>Det finns Atom-feeds på de flesta sidor som listar förfrågningar om allmänna handlingar. De kan du använda för att få uppdateringar och länkar i XML-format. Hitta webbadressen till Atom-flödet på något av följande sätt:
+
       </p>
         <ul>
           <li>Leta efter <%= image_tag "feed-16.png", :alt => "RSS icon" %> RSS-flödets länkar.</li>
@@ -43,24 +43,22 @@ något av följande sätt:
           <li>Lägg till <tt>/feed</tt> på början av en annan webbadress som URL.
         </ul>
 
-        <p>I synnerhet även komplicerade sökfrågor har Atom-flöden.
-Du kan göra alla möjliga saker med dem, till exempel fråga enligt myndighet, efter fil-typ, efter datumintervall eller efter status. Se  <a href="<%= advanced_search_path %>">tips för avancerad sökning</a> för mer information.
+        <p>Även komplicerade sökfrågor har Atom-flöden. Du kan göra alla möjliga saker med dem, till exempel skapa fråga efter myndighet, efter fil-typ, efter datumintervall eller efter status. Se
+  <a href="<%= advanced_search_path %>">tips för avancerad sökning</a> för mer information.
         </p>
     </dd>
 
     <dt>3. JSON-strukturerade data</dt>
     <dd>
-      <p>En hel del sidor har JSON-versioner som låter dig ladda ner information om
-objekt i en strukturerad form. Hitta dem genom att: 
+      <p>En hel del sidor har JSON-versioner som låter dig ladda ner information om objekt i en strukturerad form. Hitta dem genom att:
       </p>
       <ul>
         <li>Lägga till  <code>.json</code> slutet av webbadressen i URL:en. </li>
         <li>Leta efter <tt>&lt;link rel="alternate" type="application/json"&gt;</tt> taggen i "head" på HTML.</li>
       </ul>
 
-      <p>Förfrågningar, användare och myndigheter har alla JSON-versioner som innehåller grundläggande
-information om dem. Varje Atom-flöde har en JSON-motsvarighet, innehållande
-information om listan över händelser i flödet.
+      <p>Förfrågningar, användare och myndigheter har alla JSON-versioner som innehåller grundläggande information om dem. Varje Atom-flöde har en JSON-motsvarighet, innehållande information om listan över händelser i flödet.
+
       </p>
     </dd>
 
@@ -77,19 +75,12 @@ information om listan över händelser i flödet.
     <dt>5. Skriv-API </dt>
     <dd>
       <p>
-      Skriv-API är utformad för att kunna användas av användare eller myndigheter för att skapa sina egna förfrågningar i systemet men kan användas på fler sätt. API:et används idag av t.ex. mySocietys <a href="https://github.com/mysociety/foi-register">mjukvara för förfrågningar om allmän handling och e-diarium </a> att stödja användning av Alaveteli som ett publiceringsverktyg och e-diarium för allmänna handlingar vid en viss offentlig aktör. Mer teknisk information om skriv-API finns på <a href="http://alaveteli.org/docs/developers/api/">hemsidan Alaveteli.org</a>.
+     API:et för att skriva är utformat för att kunna användas av användare eller myndigheter för att skapa sina egna förfrågningar i systemet men kan användas på fler sätt. API:et används idag av t.ex. mySocietys <a href="https://github.com/mysociety/foi-register">mjukvara för förfrågningar om allmän handling och e-diarium </a> Det kan stödja användning av Alaveteli som ett publiceringsverktyg och e-diarium för allmänna handlingar vid en offentlig organisation. Mer teknisk information om skriv-API finns på hemsidan  <a href="http://alaveteli.org/docs/developers/api/">hemsidan Alaveteli.org</a>.
       </p>
     </dd>
   </dl>
 
-  <p>Vänligen <a href="<%= help_contact_path %>">kontakta oss</a> om du behöver en API-funktion som inte finns ännu. Det är väldigt
-mycket ett pågående arbete, och vi lägger till saker när folk frågar oss.</p>
+  <p>Vänligen kontakta oss eller bidra till projektet Alaveteli om du behöver en API-funktion som inte finns ännu. Det är ett pågående arbete, och vi lägger till saker när folk frågar oss och vi har resurser att implementera tillägg. Vi tar också emot bidrag i form av kod eller pengar för att finansiera vidareutvecklingen.</p>
 
   <div id="hash_link_padding"></div>
 </div>
-
-
-
-
-
-
