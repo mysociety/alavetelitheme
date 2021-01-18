@@ -1,251 +1,126 @@
 <% @title = "Att göra en begäran" %>
 
 <%= render :partial => 'sidebar' %>
-<div id="left_column_flip" class="left_column_flip">
-  <h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a></h1>
-  <dl>
+<div id="left_column_flip">
 
-    <dt id="which_authority">Jag är inte säker på vilken myndighet jag ska göra min begäran om allmän handling till, hur kan jag ta reda på det? <a href="#which_authority">#</a> </dt>
-
-    <dd>
-      <p>Det kan vara svårt att reda ut den komplicerade strukturen av offentlig sektor, och fundera ut
-vem som har den information du behöver. Här är några tips:
-      </p>
-      <ul>
-        <li>Bläddra eller sök på <%= site_name %> efter liknande förfrågningar som din.</li>
-        <li>När du har hittat en myndighet du tror kan ha informationen du behöver, använd länken till höger på deras sida för att kontrollera vad de gör
-på deras hemsida. </li>
-        <li>Kontakta den myndighet per telefon eller e-post för att fråga om de har den typ av
-information som du söker efter.</li>
-        <li>Oroa dig inte alltför mycket om att hitta rätt myndighet från början. Om du har
-fel, borde de ge dig råd om vem du ska göra en sådan begäran om allmän handling till istället. 
-        </li>
-        <li>Om du har ett svårt fall kan du <a href="<%= help_contact_path %>">kontakta oss</a> för att få hjälp.</li>
-      </ul>
-
-    </dd>
+<h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a> </h1>
+<dl>
 
 
+<dt id="which_authority">Om du är osäker på vilken myndighet du ska skicka din fråga till<a href="#which_authority">#</a> </dt>
 
-    <dt id="missing_body">Ni saknar den myndighet som jag vill begära allmän handling av! <a href="#missing_body">#</a> </dt>
+<dd>
+<ul>
+<li>Bläddra eller sök på handlingar.se efter liknande frågor som din.</li>
+<li>När du har hittat en myndighet som du tror kan ha informationen du behöver, dubbelkolla vad de jobbar med på deras hemsida.</li>
+<li>Oroa dig inte alltför mycket om att hitta rätt myndighet från början. Om du tar fel så borde de ge dig råd om vilken myndighet du ska skicka din fråga till istället.</li>
+</ul>
 
-    <dd>
-      <p>Vänligen <a href="<%= new_change_request_path %>">kontakta oss</a> med namnet på den myndighet och,
-om du kan hitta det, deras registrators e-postadress eller liknande för att göra begäran om allmän handling.
-      </p>
-      <p>Om du vilja hjälpa lägga till en hel kategori myndigheter till plattformen, ser vi fram emot att höra från dig också.
-      </p>
+</dd>
 
-    </dd>
+<dt id="missing_body">Om myndigheten du vill skriva till saknas <a href="#missing_body">#</a> </dt>
 
-    <dt id="authorities">Varför inkluderar ni vissa myndigheter som formellt inte innefattas av Offentlighetsprincipen?<a href="#authorities">#</a> </dt>
+<dd>
+<p>Vänligen <a href="<%= new_change_request_path %>">kontakta oss</a> med myndighetens namn och deras registrators e-postadress eller liknande. Vi lägger till myndigheten på plattformen så att du kan ställa din fråga.
+</p>
+<p>Om du vilja hjälpa lägga till en hel kategori myndigheter till plattformen, ser vi fram emot att höra från dig också.
+</p>
 
-    <dd>
-      <p><%= site_name %> låter dig göra begäran om allmän handling till en rad
-organisationer:</p>
-
-      <ul>
-        <li> De som formellt omfattas av Offentlighetsprincipen enligt Tryckfrihetsförordningen</li>
-        <li> De som formellt omfattas av miljöbestämmelser (en mindre bra definierad grupp)</li>
-        <li> De som frivilligt följer Offentlighetsprincipen<</li>
-        <li> Those which aren't subject to the Act but we think should be, on grounds
-          such as them having significant public responsibilities.
-        </li>
-      </ul>
-
-      <p>I det sista fallet, använder vi webbplatsen för att lobba för expansion av
-  omfattningen av Offentlighetsprincipen. Även om en organisation inte är skyldig att svara
-  på en begäran om allmän handling, kan de fortfarande göra det frivilligt.
-      </p>
-
-    </dd>
-
-    <dt id="focused">Varför måste jag hålla min begäran om allmän handling fokuserad?<a href="#focused">#</a> </dt>
-
-    <dd>
-
-      <p>
-Vänligen lägg bara till i din förfrågan vad som behövs så att någon
-enkelt kan identifiera vilken information du efterfrågar. Vänligen låt det
-<i>inte</i> innefatta något av det följande:
-      </p>
-
-      <ul>
-        <li>argument om din sak</li>
-        <li>uttalanden som kan förtala eller förolämpa andra</li>
-        <li>frågor eller begäran om kommentar och åsikt snarare än om specifik information</li>
-      </ul>
-
-      <p>
-    Om du inkluderar de exempel ovannämnda, kan vi behöva ta bort din begäran för att undvika problem med ärekränkningar
-och klagoskrifter, vilket är smärtsamt för både dig och oss. Korta, koncisa budskap
-gör det lättare för myndigheterna att vara tydlig vilken information du är
-begär, vilket innebär att du kommer att få ett svar snabbare.
-      </p>
-
-      <p>
-       Om du vill ha information för att stödja ett argument eller kampanj, är Offentlighetsprincipen
-ett kraftfullt verktyg. Även om du får inte använda denna webbplats för att
-driva din kampanj rekommenderar vi att du använder den för att få ut den information du har
-behov för. Vi rekommenderar också att driva din kampanj någon annanstans  - ett effektiv
-och mycket enkelt sätt är att <%= link_to 'starta din egen blogg',
-          "http://wordpress.com/"%>.
-        <% if AlaveteliConfiguration::enable_annotations %>
-        Du är välkommen att länka till din kampanj
-från denna plats i en anteckning till din förfrågan (du kan göra
-anteckningar när du har skickat en begäran).
-        <% end %>
-      </p>
-
-    </dd>
-
-    <dt id="fees">Kostar det mig något att göra en begäran om allmän handling?<a href="#fees">#</a> </dt>
-
-    <dd>
-
-      <p>Att göra en begäran om allmän handling med hjälp av Offentlighetsprincipen är ofta kostnadsfritt
-- ofta beroende på om myndigheten väljer digitalt först eller ej.</p>
-
-      <p>Myndigheter inkluderar ibland onödigt, skrämmande, standardtext i
-kvitteringsmeddelanden som säger det och "kanske" tar ut en avgift. Ignorera sådana meddelanden.
-        They hardly ever will actually charge a fee.  De kommer faktiskt sällan att ta ut en avgift. Om de gör det, kan de bara betalt om
-du har särskilt avtalats i förväg för att betala.
-      </p>
-
-      <p>Ibland kommer en myndighet att vägra din begäran, och säga att kostnaden
-att hantera den överstiger ett antal svenska kronor (för staten) eller ett annat antal svenska kronor (för alla andra
-myndigheter). På denna punkt kan du finjustera begäran, t.ex. det skulle vara mycket billigare
-för en myndighet att berätta hur mycket
-spenderas på marshmallows under det senaste året än under de senaste tio åren. 
-      </p>
-
-    </dd>
+</dd>
 
 
 
-    <dt id="quickly_response">Hur snabbt kommer jag att få ett svar?  <a href="#quickly_response">#</a> </dt>
+<dt id="focused">Håll din begäran om allmän handling fokuserad <a href="#focused">#</a> </dt>
 
-    <dd>
-      <p>Enligt lag måste de offentliga myndigheterna svara <strong>skyndsamt</strong> på förfrågningar.
-      </p>
+<dd>
 
-      <p>Även om de inte är snabba, borde de i nästan alla fall svara inom
-1 arbetsdag. Om du är tvungen att klargöra din begäran, eller de är en skola,
-eller en eller två andra fall, då de kan ha mer tid för (<a href="<%= help_officers_path(:anchor => 'days') %>">detaljer</a>).
-       
-      </p>
-      <p><%= site_name %> kommer att skicka dig ett e-postmeddelande om du inte får ett snabbt svar. Du kan
-sedan skicka den offentliga myndigheten ett meddelande för att påminna dem,
-och berätta för dem att deras hantering inte upplevs som skyndsam, fråga då vad det är som tar tid.</p>
+<p>
+En tydlig och kort fråga gör det lättare för myndigheterna att förstå vilken information du  begär ut, vilket innebär att du kommer att få ett svar snabbare. För att undvika att din fråga raderas från plattformen så ska den inte innehålla:
 
-    </dd>
+</p>
 
-    <dt id="no_response">Vad händer om jag aldrig får ett svar? <a href="#no_response">#</a> </dt>
+<ul>
+<li>argument om din sak.</li>
+<li>uttalanden som kan förtala eller förolämpa andra.</li>
+<li>frågor eller begäran om kommentar och åsikt snarare än om specifik information.</li>
+</ul>
 
-    <dd>
-      <p>Det finns flera saker du kan göra om du aldrig får ett svar.</p>
-      <ul>
-        <li>Ibland har det varit ett verkligt problem och myndigheten aldrig
-    mottog begäran. Det är värt att ringa myndigheten och artigt
-    kontrollera att de tagit emot begäran. Det sändes till dem via e-post.
-        </li>
-        <li>Om de inte har fått det, är det mest sannolikt på grund av problem
-    med "spamfilter". Referera myndigheten till åtgärderna i svaret
-          '<a href="<%= help_officers_path(:anchor => 'spam_problems') %>">Jag kan se en begäran från <%= site_name %>, men vi fick aldrig det via e-post!</a>
-    i avsnittet för registratorer av denna hjälp.
-        </li>
-        <li>Om du fortfarande inte har något tur, då kan du be om en intern granskning,
-    och sedan klaga hos Justitieombudsmannen om myndigheten.
-          Läs vår sida '<a href="<%= help_general_path(:template => 'unhappy') %>">Missnöjd med svaret du fick?</a>'.
-      </ul>
-    </dd>
-
-    <dt id="not_satifised">Vad händer om jag inte är nöjd med svaret? <a href="#not_satifised">#</a> </dt>
-    <dd>Om du inte fick den information du begärt, eller du gjorde fick den i tid,
-läs då vår sida '<a href="<%= help_general_path(:template => 'unhappy') %>">Missnöjd med svaret du fick?</a>'.
-    </dd>
-
-    <dt id="reuse">Det säger att jag inte får återanvända den information jag fick!<a href="#reuse">#</a> </dt>
-    <dd>
-      <p>Myndigheterna lägger ibland juridisk standardtext om vidareuttnytjande av uppgifter i allmänna handlingar. Läs mer på E-delegationens hemsida
-<a href="https://oppnadata.se/juridik-och-rekommendationer/">OppnaData.se</a> - en guide som hjälper dig med vad du kan göra med allmän information.
-      </p>
-
-      <p>Du kan naturligtvis skriva artiklar om informationen eller sammanfatta det, eller
-citera delar av den. Vi tror också att du ska känna dig fri att publicera
-informationen i sin helhet så länge som det inte hämmar privatpersoners integritet, precis som vi gör, även om du i teorin kanske inte har
-tillåtelse att göra det. Se <a href="<%= help_officers_path(:anchor => 'copyright') %>">vår policy om upphovsrätt</a>.</p>
-
-    </dd>
+<p>
+Handlingar.se är för närvarande endast avsedd för offentliga förfrågningar. Alla svar som vi får publiceras automatiskt på hemsidan för alla att läsa.
+</p>
 
 
-    <dt id="data_protection">Kan jag begära information om mig själv eller om annan privatperson? <a href="#data_protection">#</a> </dt>
+</dd>
 
-    <dd>
-      <p>Nej. Förfrågningar gjorda med <%= site_name %> är offentliga, gjorda enligt Offentlighetsprincipen,
-och plattformen är inte designad för dig att hitta känslig information om en privat individ.
-Myndigheter ska inte skicka ut allmänna handlingar elektroniskt om de innehåller känsliga personliga uppgifter.
-De blir påminda om detta i förfrågningar som görs via plattformen.</p>
+<dt id="fees">Eventuella kostnader av att göra en begäran om allmän handling<a href="#fees">#</a> </dt>
 
-      <p>Om du vill veta vilken information en offentlig myndigheten har om dig själv,
-bör du göra en "Ämne: Åtkomstbegäran" genom privat användning av personuppgiftslagen.
-<a href="https://www.datainspektionen.se/lagar-och-regler/personuppgiftslagen/dina-rattigheter/">
-Datainspektionens hemsida</a> ger råd om hur du får tillgång din
-egen personliga information</p>
+<dd>
 
-      <p>Om du ser att någon har inkluderat personlig information, kanske
-omedvetet, i en begäran, vänligen <a href="<%= help_contact_path %>">kontakta oss</a> så att vi omedelbart kan ta bort det.</p>
-    </dd>
+<p>Att göra en begäran om allmän handling med hjälp av Offentlighetsprincipen är ofta kostnadsfritt - många gånger beroende på om myndigheten väljer digitalt först eller ej.
+</p>
+
+<p>Myndigheter inkluderar ibland standardtext i mailet som beskriver deras policy för att ta betalt för förfrågningar. Om de vill ta ut en kostnad, kan de bara göra det om det har särskilt avtalats i förväg, t.ex att du måste godkänna totalbeloppet och betala myndigheten innan svaret ges.
+</p>
+
+<p>Du kan även finjustera begäran om det skulle minska kostnaden. Om myndigheten tar betalt för antal sidor skulle det vara mycket billigare att fråga om t.ex hur mycket spenderas på X under det senaste året än under de senaste tio åren.
+ </p>
+
+</dd>
+
+<dt id="no_response">Allmänt om svar<a href="#no_response">#</a> </dt>
+<dd>
+<p>
+En begäran om kopia av allmän handling ska behandlas "skyndsamt" enligt 
+<a href="http://www.riksdagen.se/sv/Dokument-Lagar/Lagar/Svenskforfattningssamling/Tryckfrihetsforordning-19491_sfs-1949-105/#K2">Tryckfrihetsförordningen Kapitel 2, 16 §.</a>  De borde i nästan alla fall svara inom 1 arbetsdag. 
+</p>
+ 
+ <p>Handlingar.se kommer att skicka dig ett mail om du inte får ett snabbt svar. Då kan du påminna myndigheten och berätta för dem att deras hantering inte upplevs som skyndsam Om du aldrig får ett svar så finns det flera saker du kan göra:
+
+</p>
+ 
+ <p>Ibland har det uppstått problem när frågan skickades iväg och myndigheten fick aldrig begäran. Det är värt att ringa myndigheten och kontrollera om de tagit emot begäran. Det skickades till dem via mail.
+</p>
+ 
+ <ul>
+<li>Om de inte har fått det, är det mest sannolikt på grund av problem med "spamfilter". Referera myndigheten till åtgärderna i svaret 'Om begäran om allmän handling finns på Handlingar, men ni på myndigheten inte har tagit emot det’ för registratorer.</li>
+<li>Om du fortfarande inte har något tur, då kan du be om en intern granskning, och sedan klaga hos Justitieombudsmannen om myndigheten. Läs mer på 
+<a href="https://handlingar.se/sv/help/unhappy">'Missnöjd med svaret du fick?'</a>.</li>
 
 
-    <dt id="private_requests">Jag vill hålla min begäran om allmän handling hemlig! (Åtminstone tills jag publicerat min artikel)<a href="#private_requests">#</a> </dt>
+ 
+ 
+</dd>
 
-    <dd><p><%= site_name %> är för närvarande endast avsedd för offentliga förfrågningar. Alla
-svar som vi får publiceras automatiskt på hemsidan för alla
-att läsa. </p>
-      <p>Du bör kontakta myndigheten direkt om du vill gör en förfrågan i privat. Om du är intresserad av att få stöd att sätta upp ett system som hjälper
-dig hantera förfrågningar i hemlighet, vänligen <a href="<%= help_contact_path %>">kontakta oss</a>. 
-      </p>
-    </dd>
 
-  
 
-    <dt id="multiple">Kan jag göra samma begäran om allmän handling till massor av myndigheter, t.ex. alla råd och styrelser?<a href="#multiple">#</a> </dt>
+<dt id="data_protection">Att begära ut information om sig själv eller om annan privatperson<a href="#data_protection">#</a> </dt>
+<dd>
+<p>Förfrågningar gjorda med handlingar.se är offentliga, gjorda enligt Offentlighetsprincipen, och plattformen är inte designad för dig att hitta känslig information om en privat individ. Myndigheter ska inte skicka ut allmänna handlingar elektroniskt om de innehåller känsliga personliga uppgifter. De blir påminda om detta i förfrågningar som görs via plattformen.
+</p>
 
-    <dd>Ja, under vissa förutsättningar, som också innebär ett större ansvar i ditt användande.
-Vi ber dig att först skicka en testversion av din ansökan till ett fåtal av
-myndigheterna. Deras svar kommer att hjälpa dig att förbättra formuleringen i din begäran,
-så att du får den bästa informationen när du skickar begäran till alla
-myndigheterna. Om du är intresserad av att få stöd att skicka flera förfrågningar samtidigt, vänligen <a href="<%= help_contact_path %>">kontakta oss</a>. 
+<p>Om du vill veta vilken information en offentlig myndigheten har om dig själv, bör du fråga efter "Ämne: Registerutdrag" genom privat användning av personuppgiftslagen. 
+<a href="https://www.imy.se/">Integritetsskyddsmyndighetens hemsida</a> ger råd om hur du får tillgång din egen personliga information.</p>
 
-    </dd>
+<p> <a href="<%= help_contact_path %>">Kontakta oss</a> som du ser att någon har inkluderat personlig information, kanske omedvetet, i en begäran så att vi omedelbart kan ta bort det.
+</p> </dd>
 
-    <dt id="offsite">Jag gjorde en begäran utanför webbplatsen, hur gör jag för att ladda upp den till arkivet?<a href="#offsite">#</a> </dt>
 
-    <dd><%= site_name %> är ett arkiv av förfrågningar som endast sker via webbplatsen,
-och försöker inte vara ett arkiv över alla förfrågningar om allmänna handlingar. Vi kommer aldrig att stödja uppladdning
-andra förfrågningar. Till exempel skulle inte vi kunna verifiera att andra
-svar faktiskt kom från myndigheten. Om detta verkligen är viktigt för dig kan
-du alltid göra samma begäran igen via  <%= site_name %>.
-    </dd>
+<dt id="multiple">Att göra samma begäran om allmän handling till flera myndigheter samtidigt  <a href="#multiple">#</a> </dt>
+<dd>
+Under vissa förutsättningar kan det vara möjligt. Det innebär ett större ansvar i ditt användande. Vi ber dig att först skicka frågan till ett fåtal av myndigheterna. Deras svar kommer att hjälpa dig att förbättra formuleringen i din begäran, som du du skickar till alla myndigheterna. Om du är intresserad av att få stöd att skicka flera förfrågningar samtidigt, <a href="<%= help_contact_path %>">kontakta oss</a>.
+</dd>
 
-    <% if AlaveteliConfiguration::enable_annotations %>
-      <dt id="moderation">Hur modererar ni kommentarer vid förfrågningar? <a href="#moderation">#</a> </dt>
 
-      <dd>
-        <p>Anteckningar på <%= site_name %> är till för att hjälpa
-människor få den information de vill, eller att ge dem anvisningar till platser de
-kan gå för att hjälpa dem att agera baserat på det. Vi förbehåller oss rätten att ta bort allt annat
-och stänga av kommentarer på vissa förfrågningar. 
-        </p>
-        <p>Oändliga, politiska diskussioner är inte tillåtna.
-Posta en länk till ett lämpligt forum eller kampanjsida någon annanstans. </p>
-      </dd>
-    <% end %>
+<dt id="moderation">Hur plattformen modereras <a href="#moderation">#</a> </dt>
 
-  </dl>
+<dd>
+<p>Vi förbehåller oss rätten att ta bort eller stänga av kommentarer på vissa förfrågningar. Även att dölja eller ta bort själva begäran från plattformen om den innebär förtal, hets mot folkgrupp eller frågar om känslig information om en privat individ.  </p>
+<dd>
 
- <p><strong>Härnäst</strong>, läs om <a href="/help/privacy">din integritet</a> --&gt;
+</dl>
 
-    <div id="hash_link_padding"></div>
+<p><strong>Härnäst</strong>, läs om <a href="/help/privacy">din integritet</a> --&gt;
+
+<div id="hash_link_padding"></div>
+
 </div>
