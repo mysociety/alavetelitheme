@@ -1,100 +1,78 @@
 <% @title = "Kontakta oss" %>
 
-<%= foi_error_messages_for :contact %>
 
-<h1><%= @title %></h1>
 
-<div id="contact_preamble" class="contact_preamble">
-
-  <% if !flash[:notice] %>
-    <h2>Kontakta en myndighet för att få officiell information</h2>
-    <ul>
-      <li><a href="<%= new_request_path %>">Gå hit</a> för att göra en offentlig begäran om allmän handling och få information från svenska myndigheter.</li>
-
-      <li>
-         Begär du privat information om dig själv?
-            Vänligen läs vår hjälpsida om
-            <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">dataskydd</a> .
-      </li>
-    </ul>
-
-  <% end %>
-
-  <h2>Kontakta <%= site_name %> teamet</h2>
-  <% if !flash[:notice] %>
-    <ul>
-      <li>
-       Vänligen läs <a href="<%= help_about_path %>">hjälpsidan</a> först, eftersom det kan
+    <h1>Kontakta Handlingar.se-teamet</h1>
+    <% if !flash[:notice] %>
+          <ul>
+          <li> Vänligen läs <a href="<%= help_about_path %>">hjälpsidan</a> först, eftersom det kan
             besvara din fråga snabbare.
-      </li>
+          </li>
 
-      <li>Vi vill gärna höra hur du har hittat med hjälp av denna webbplats.
+          <li>Vi vill gärna höra hur du har hittat med hjälp av denna webbplats.
               Antingen fyll i detta formulär, eller skicka ett e-postmeddelande till <a
               href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
-      </li>
+          </li>
+</ul>
+          
+    <% end %>
 
-      <li>Vi är en <strong>icke-vinstdrivande ideell förening</strong> och inte en del av
-               Regeringen eller offentlig sektor.</li> 
-    </ul>
-  <% end %>
-</div>
 
 <%= form_for :contact do |f| %>
 
-  <% if not @user %>
+    <% if not @user %>
+        <p>
+            <label class="form_label" for="contact_name">Ditt namn:</label>
+            <%= f.text_field :name, :size => 20 %>
+            (Eller <%= link_to "logga in", signin_url(:r => request.fullpath) %>)
+        </p>
+
+        <p>
+            <label class="form_label" for="contact_email">Din e-postadress:</label>
+            <%= f.text_field :email, :size => 20 %>
+        </p>
+    <% end %>
+
     <p>
-      <label class="form_label" for="contact_name">Ditt namn:</label>
-      <%= f.text_field :name, :size => 20 %>
-      (Eller <%= link_to "logga in", signin_url(:r => request.fullpath) %>)
+        <label class="form_label" for="contact_subject">Ämne:</label>
+        <%= f.text_field :subject, :size => 50 %>
     </p>
 
     <p>
-      <label class="form_label" for="contact_email">Din e-postadress:</label>
-      <%= f.text_field :email, :size => 20 %>
+        <label class="form_label" for="contact_message">Meddelande till webbplatsen:</label>
+        <%= f.text_area :message, :rows => 10, :cols => 60 %>
     </p>
-  <% end %>
 
-  <p>
-    <label class="form_label" for="contact_subject">Ämne:</label>
-    <%= f.text_field :subject, :size => 50 %>
-  </p>
-
-  <p>
-    <label class="form_label" for="contact_message">Meddelande till webbplatsen:</label>
-    <%= f.text_area :message, :rows => 10, :cols => 60 %>
-  </p>
-
-  <p style="display:none;">
-    <%= f.label :comment, 'Fyll inte i detta fält' %>
-    <%= f.text_field :comment %>
-  </p>
-
-  <% if !@last_request.nil? %>
-    <p>
-      <label class="form_label" for="contact_message">Inkludera länk till begäran:</label>
-      <%=request_link(@last_request) %>
-      <%= submit_tag "remove", :name => 'remove' %>
+    <p style="display:none;">
+        <%= f.label :comment, "Fyll inte i detta fält" %>
+        <%= f.text_field :comment %>
     </p>
-  <% end %>
-  <% if !@last_body.nil? %>
-    <p>
-      <label class="form_label" for="contact_message">Inkludera länk till myndigheten:</label>
-      <%=public_body_link(@last_body) %>
-      <%= submit_tag "remove", :name => 'remove' %>
+
+    <% if !@last_request.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Inkludera länk till begäran:</label>
+            <%=request_link(@last_request) %>
+            <%= submit_tag "remove", :name => 'remove' %>
+        </p>
+    <% end %>
+    <% if !@last_body.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Inkludera länk till myndigheten:</label>
+            <%=public_body_link(@last_body) %>
+            <%= submit_tag "remove", :name => 'remove' %>
+        </p>
+    <% end %>
+
+    <p class="form_note">
+    Vi kan bara hjälpa dig med <strong>tekniska problem</strong>, eller frågor
+    om Offentlighetsprincipen.
     </p>
-  <% end %>
-
-  <p class="form_note">
-   Vi kan bara hjälpa dig med <strong>tekniska problem</strong>, eller frågor
-    om Offentlighetsprincipen (Freedom of Information). Se längre upp på sidan om du skulle vilja
-    kontakta regeringen.
-  </p>
 
 
-  <div class="form_button">
-    <%= hidden_field_tag(:submitted_contact_form, 1) %>
-    <%= submit_tag "Skicka ett meddelande till föreningen", :data => { :disable_with => "Skicka..." } %>
-    &lt;-- vi driver denna webbplats, inte regeringen!
-  </div>
+    <div class="form_button">
+        <%= hidden_field_tag(:submitted_contact_form, 1) %>
+        <%= submit_tag "Skicka meddelande", :disable_with => "Skicka..." %>
+  
+    </div>
 
 <% end %>
