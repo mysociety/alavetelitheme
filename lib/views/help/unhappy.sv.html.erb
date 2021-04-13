@@ -71,26 +71,25 @@ Du får då antingen informationen
 
 <h1 id="other_means">3.  Använda andra medel för att få svar på din fråga. <a class="hover_a" href="#other_means">#</a> </h1>
 
-<p>Du kan försöka fortsätta din fråga eller din granskning på andra sätt.</p>
+<p>Du kan försöka på andra sätt för att få svar din fråga eller granskning.</p>
 
 <ul>
   <li>Gör en <strong>ny begäran</strong> för sammanfattande information eller för
      dokumentation som indirekt hänför sig till frågor i din nekade begäran.
     <a href="<%= help_contact_path %>">Fråga oss om råd</a> om du sitter fast.</li>
-  <li>Om några<strong>andra offentliga myndigheter</strong> eller statlig ägda företag är involverade, gör en begäran till dom.</li>
+  <li>Om några <strong>andra offentliga myndigheter</strong> eller statlig ägda företag är involverade, gör en begäran till dom.</li>
 
   <% if can_ask_the_eu?(@country_code) %>
     <li>
-      Använd <%= link_to 'asking for the information from the European Union',
-      'http://www.asktheeu.org' %>. Var och en av de 500 miljoner människorna
+      Använd <%= link_to 'AskTheEu',
+      'http://www.asktheeu.org' %>. De 500 miljoner människorna
        som bor i Europeiska unionen (både medborgare och invånare) har
-       lagligt garanterad rätt att begära information från EU: s myndigheter.
-      <%= link_to 'Ask The EU', 'http://www.asktheeu.org' %> är en version av
-       denna webbplats för Europeiska unionen.
-    </li>
-  <% end %>
-  <li>Fråga <strong>andra granskare</strong> som är intresserade av liknande frågor. </li>
+       laglig garanterad rätt att begära information från EU: s myndigheter.     </li>
+   <li>Fråga <strong>andra granskare</strong> som är intresserade av liknande frågor. </li>
      
-  <li>Du kan bilda en liten lokal kampanjgrupp och ordna ett möte
+  <li>Du kan bilda en lokal kampanjgrupp och ordna ett möte
      med personal från myndigheten.</li>
 </ul>
+
+  <% end %>
+ 
