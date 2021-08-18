@@ -624,6 +624,14 @@ p.locale-list-trigger {
   @include follower-count();
 }
 
+.action-bar__reply {
+  .action-bar__reply-button {
+    @include button-primary();
+    color: #fff;
+  }
+}
+
+
 div.correspondence {
   background-color: $color_white;
   box-shadow: 0 2px 2px transparentize($color_black, 0.8);
