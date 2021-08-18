@@ -1,4 +1,3 @@
-
 /* Mixin styles */
 
 /* Hide text when it's replaced by an image */
@@ -602,25 +601,27 @@ p.locale-list-trigger {
 }
 
 /* Request page */
-.request-header__action-bar__actions {
+.after-actions {
   .action-menu__button {
     @include button-secondary();
+    padding-right: 1.5em;
     &:after {
       border-color: #a5a5a5 transparent transparent transparent;
       right: 7%;
     }
   }
+}
 
-  .action-bar__follow-button {
-    .track__action {
-      @include button-primary();
-      @include follow-button();
-    }
-  }
 
-  .action-bar__follower-count {
-    @include follower-count();
+.action-bar__follow-button {
+  .track__action {
+    @include button-primary();
+    @include follow-button();
   }
+}
+
+.action-bar__follower-count {
+  @include follower-count();
 }
 
 div.correspondence {
@@ -714,6 +715,7 @@ a.link_to_this {
     in Alaveteli core. When this is fixed it can be removed.
   */
 }
+
 
 /* Status lines and icons */
 .icon_waiting_classification,
