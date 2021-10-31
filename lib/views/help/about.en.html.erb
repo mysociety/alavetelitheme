@@ -1,22 +1,22 @@
 <% @title = "About" %>
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip" class="left_column_flip">
-  <h1 id="introduction">Introduction to WhatDoTheyKnow <a href="#introduction">#</a> </h1>
+  <h1 id="introduction">Introduction to Handlingar.se <a href="#introduction">#</a> </h1>
   <dl>
     <dt id="purpose">
-      What is WhatDoTheyKnow for?
+      What is Handlingar for?
       <a href="#purpose">#</a>
     </dt>
     <dd>
       <p>
-        Under the Freedom of Information Act, it’s everyone’s right to request
-        information from UK Government and UK public bodies.
+        According to the Principle of Public Access (offentlighetsprincipen), it’s everyone’s right to request
+        information from the Swedish government and Swedish public bodies.
       </p>
       <p>
-        WhatDoTheyKnow shows you how to make a Freedom of Information request and
-        access information about central government, local government, Parliament,
-        the NHS, the armed forces, state funded schools and universities and other
-        public authorities.
+        Handlingar.se shows you how to make a Freedom of Information request and
+        access information about central government, regional government, local government, The Swedish Riksdag,
+        the healthcare, the armed forces, state funded schools and universities and other
+        public authorities and subsidiary companies.
       </p>
       <p>
         You can also use the site to find out information that regulators hold
@@ -60,7 +60,7 @@
       <a href="#whybother_them">#</a>
     </dt>
     <dd>
-      Under Freedom of Information (FOI) law, or sometimes other access to
+      Under Freedom of Information (FOI) law, the Principle of Public Access (offentlighetsprincipen), or sometimes other access to
       information laws, public authorities have to respond. The response will
       either contain the information you want, or give a legal reason why it
       has not been provided.
@@ -70,9 +70,9 @@
       <a href="#useful">#</a>
     </dt>
     <dd>
-      Yes. Thousands of documents have been released through the site.
+      Yes. Hundreds of documents have been released through the site.
       See also: <a href="http://www.guardian.co.uk/news/datablog/2012/mar/20/freedom-of-information-foi">366
-      Interesting things that we know because of WhatDoTheyKnow</a>.
+      Interesting things that we know because of WhatDoTheyKnow, our partner's equivalent platform in the U.K.</a>.
     </dd>
     <dt id="reporting">
       What if I see a request I feel to be inappropriate?
@@ -108,47 +108,29 @@
       </p>
     </dd>
     <dt id="how_many">
-      How many people use WhatDoTheyKnow?
+      How many people use Handlingar.se?
       <a href="#how_many">#</a>
     </dt>
     <dd>
       <p>
         We have over <%= number_with_delimiter(User.count.round(-4), :locale => @locale) %>
-        registered users and around 15% to 20% of requests to UK Central
-        Government are made through WhatDoTheyKnow.
+        registered users.
       </p>
       <p>
         But that’s just the people who request information. Most visitors to our
         website don’t make requests themselves, but benefit from being able to
         access information that’s held in the requests and responses of others.
-        Around six million people per year visit the site.
       </p>
     </dd>
-    <dt id="who">Who makes WhatDoTheyKnow? <a href="#who">#</a> </dt>
+    <dt id="who">Who runs Handlingar.se? <a href="#who">#</a> </dt>
     <dd>
       <p>
-        WhatDoTheyKnow is run and maintained by
-        <a href="http://www.mysociety.org/?utm_source=whatdotheyknow.com&utm_medium=link">mySociety</a>.
-        mySociety is a registered charity in England and Wales (no.
-        <a href="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityWithPartB.aspx?RegisteredCharityNumber=1076346&SubsidiaryNumber=0">
-        1076346</a>).
-        mySociety is also a limited company registered in England and Wales (no.
-        <a href="http://opencorporates.com/companies/gb/03277032">03277032</a>)
-        and a registered data controller (no.
-        <a href="https://ico.org.uk/ESDWebPages/Entry/Z9602302">Z9602302</a>).
-        The <a href="https://www.mysociety.org/about/structure-and-governance/?utm_source=whatdotheyknow.com&utm_medium=link">
-        mySociety trustees</a> form the governing body of the charity
-        and are ultimately responsible for controlling the management and
-        administration of the charity. mySociety’s registered
-        office is mySociety, 483 Green Lanes, London, N13 4BS.
+        Handlingar.se is run and maintained by
+        <a href="https://okfn.se/">Open Knowledge Sweden</a>.
+        Open Knowledge Sweden is a registered non-profit in Sweden.
       </p>
       <p>
-        mySociety is not a public body.
-      </p>
-      <p>
-        The site was initially
-        <a href="http://www.mysociety.org/2006/12/06/funding-for-freedom-of-information/?utm_source=whatdotheyknow.com&utm_medium=link">
-        funded by the JRSST Charitable Trust</a>.
+        Open Knowledge Sweden is not a public body.
       </p>
       <p>
         If you like what we’re doing, then you can
@@ -156,13 +138,13 @@
       </p>
     </dd>
     <dt id="updates">
-      How can I keep up with news about WhatDoTheyKnow?
+      How can I keep up with news about Handlingar.se?
       <a href="#updates">#</a>
     </dt>
     <dd>
       We have a <a href="<%= blog_path %>">blog</a> and we’re on
-      <a href="https://www.facebook.com/whatdotheyknowcom/">Facebook</a> and
-      <a href="http://www.twitter.com/whatdotheyknow">Twitter</a> too.
+      <a href="https://www.facebook.com/handlingar">Facebook</a> and
+      <a href="http://www.twitter.com/handlingar">Twitter</a> too.
     </dd>
   </dl>
   <p>
