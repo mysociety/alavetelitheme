@@ -1,1 +1,89 @@
-
+  <%= @title %>
+  </h1>
+  <dl>
+    <dt id="terms">
+      Användarvillkor
+      <a href="#terms">#</a>
+    </dt>
+    <dd>
+      <p>
+        Plattformen Handlingar.se drivs ideelt, således även modereringen. Nedan listas användarvillkoren. 
+      </p>
+      <p>
+       För förtydliganden, <a href="<%=  help_contact_path %>">kontakta oss</a>.
+      </p>
+    </dd>
+    <dt id="donation">
+      Make a donation
+      <a href="#donation">#</a>
+    </dt>
+    <dd>
+      <p>
+        mySociety, WhatDoTheyKnow’s parent organisation, is a charity.
+        WhatDoTheyKnow, our most-visited site, costs thousands of pounds each
+        year, for overheads such as servers, maintenance and development.
+      </p>
+      <p>
+        Your contributions, however small, really help. <a href="<%= donation_url %>">Donate here</a>.
+      </p>
+    </dd>
+    <dt id="tasks">
+      Sort things out
+      <a href="#tasks">#</a>
+    </dt>
+    <dd>
+      <p>
+        Help identify successful requests, and monitor performance of
+        authorities, by <a href="<%= categorise_play_path %>">playing the
+        categorisation game</a>.
+      </p>
+      <p>
+        Or find out FOI email addresses of <a href="<%=
+        help_requesting_path(:anchor => 'missing_body') %>">authorities that
+        we’re missing</a>.
+      </p>
+    </dd>
+    <dt id="tellpeople">
+      Spread the word
+      <a href="#tellpeople">#</a>
+    </dt>
+    <dd>
+      <p>
+        Använd bara Handlingar.se för att begära information som alla kan förvänta sig att få om de ställde samma fråga. Använd alltså inte Handlingar.se för förfrågningar som kan innehålla känsliga uppgifter antingen om dig själv eller andra.
+      </p>
+      <ul>
+        <li>
+          Du kan även fråga efter "Ämne: Registerutdrag" genom användning av personuppgiftslagen. Integritetsskyddsmyndighetens hemsida ger råd om hur du får tillgång din egen personliga information.
+        </li>
+        <li>
+          Handlingar.se Teamet kan komma att kontakta dig per mail, för att uppmärksamma dig på våra användarvillkor kopplat till en begäran, användarnamn, eller anteckning du har gjort.
+        </li>
+        <li>
+          Tell friends about it.
+        </li>
+        <li>
+          Let your local newspaper or community magazine know how useful we are.
+        </li>
+        <li>
+          Give a talk.
+        </li>
+        <li>
+          <a href="<%= help_contact_path %>">Ask us</a> for leaflets to leave
+          in your local library or coffee shop.
+        </li>
+      </ul>
+    </dd>
+    <dt id="code">
+      Improve our code
+      <a href="#code">#</a>
+    </dt>
+    <dd>
+      <p>
+        Seen something that could work better? If you’re a coder, <a
+        href="https://github.com/mysociety/alaveteli/">get the source code</a>
+        for our parent project <a href="http://alaveteli.org/">Alaveteli</a> and
+        send us a pull request. WhatDotheyKnow is coded in <a
+        href="http://rubyonrails.org/">Ruby on Rails</a>.
+      </p>
+    </dd>
+  </dl>
