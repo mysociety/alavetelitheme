@@ -3,6 +3,7 @@
 
 Rails.application.routes.draw do
 # brand new controller for terms of use
-   get '/help/terms' => 'help#terms',
-      as: :help_terms
+
+  get '/help/terms' => 'help#terms', :as => 'help_terms'
+
 end
