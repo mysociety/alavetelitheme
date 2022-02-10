@@ -1,63 +1,79 @@
 <% @title = "Terms of use" %>
-
 <%= render :partial => 'sidebar' %>
-
 <div id="left_column_flip" class="left_column_flip">
-  <h1>
-    <%= @title %>
-  </h1>
-  <dl>
-    <dt id="terms">
-      Moderation
-      <a href="#terms">#</a>
-    </dt>
-    <dd>
-      <p>
-        The platform Handlingar.se is run non-profit, thus also the moderation. The terms of use are listed below.
-      </p>
-      <p>
-     For clarifications, <a href="<%=  help_contact_path %>">contact us</a>.
-      </p>
-    </dd>
-   
-    
-    <dt id="termsofuse">
-     Terms of use
-      <a href="#termsofuse">#</a>
-    </dt>
-    <dd>
-      <p>
-        Only use Handlingar.se to request information that everyone can expect to receive if they asked the same question. Do not use Handlingar.se for inquiries that may contain sensitive information either about yourself or others.
-      </p>
-      <ul>
-        <li>
-       You can, not on the platform, ask for "Subject: Register extract" by using the Personal Data Act. <a href="https://www.imy.se/">The website of the Privacy Protection Authority</a> provides advice on how to access your own personal information.
-        </li>
-        <li>
-         Volonteers running Handlingar.se may contact you by e-mail, to draw your attention to our terms of use linked to one of your requests, your username, or an annotation you have made. If the support team's request for change is not met they might have to suspend your account after a warning. 
-        </li>
-        <li>
-          Do not pretend to be someone else. Use a pseudonym in line with these <a href="https://handlingar.se/sv/help/privacy#real_name">recommendations.</a>
-        </li>
-        <li>
-      We reserve the right to remove or disable comments on certain requests. Also to hide or remove the actual request from the platform if it involves slander, incitement against ethnic group, contains or asks for sensitive information about a private individual.
-        </li>
-        <li>
-         <a href="<%=  help_contact_path %>">Contact us</a> if you see that someone has included personal information, perhaps unknowingly, in a request so that we can delete it immediately.
-        </li>
-      </ul>
-    </dd>
-      
-       <dt id="tasks">
-      Moderator
-      <a href="#tasks">#</a>
-    </dt>
-    <dd>
-      <p>
-       We are actively looking for non-profit forces. <a href="<%=  help_contact_path %>">Contact us</a> if you want to help or know more.  
-      </p>
-    </dd>
-  </dl>
+  <h1><%=@title %></h1>
+  <h2> How we expect people to use and behave on the site </h2>
+  <p>
+    Violation of any of the below rules is likely to lead to the suspension of
+    your account, and you will no longer be able to make requests or updates on
+    Handlingar.se.
+  </p>
+  <p>
+    In some cases, breaking these rules could lead to legal action being taken
+    against you by the authorities or an aggrieved party.
+  </p>
+  <ul>
+    <li>
+      Use Handlingar.se only to request specific information, not for general
+      correspondence with public authorities, and certainly not for personal
+      correspondence.
+    </li>
+    <li>
+      Do not include potentially defamatory/potential libellous comments (such
+      as allegations) in your requests and annotations.
+    </li>
+    <li>
+      Do not post information that is unlawful, harassing, defamatory, abusive,
+      threatening, harmful, obscene, discriminatory or profane
+    </li>
+    <li>
+      Only use Handlingar.se to request information which anyone could
+      expect to obtain if they requested it. If you have a specific right to
+      information, for example because you are seeking your own personal 
+      information, then you should correspond privately with the public body
+      concerned to request it. 
+    </li>
+    <li>
+      Keep messages sent via our service concise and tightly focused on the
+      subject of the request for information.
+    </li>
+    <li>
+      Do not try to impersonate someone else.
+    </li>
+    <li>
+      Do not use any language likely to offend in your requests and annotations.
+    </li>
+    <li>
+      No spamming.
+    </li>
+    <li>
+      Requests must be made in mixed case letters, i.e. not all in capitals and
+      not all in lowercase (this is automatically enforced by the software that
+      Handlingar runs on).
+    </li>
+    <li>
+      Do not make vexatious requests (requests with no serious purpose, or which
+      are intended to disrupt the operation of a public body). 
+    </li>
+    <li>
+      Do not use our service to request other people’s personal information and 
+      do not include such information in requests, annotations or follow-ups, 
+      unless it is fair to do so.
+    </li>
+    <li>
+      Do not seek to evade the actions of site administrators by, for example,
+      creating new accounts to evade a ban, or a rate-limiting cap, or by
+      republishing material which you know has been removed by moderators.
+    </li>
+  </ul>
+  <p>
+    By breaking the rules above, you risk being banned from using the site,
+    and/or your requests/annotations being removed.  In cases where it’s clear
+    that your intentions are not malicious, we will contact you first so that we
+    can give advice on how better to use the service.
+  </p>
+
+  <%= render partial: 'history' %>
 
   <div id="hash_link_padding"></div>
 </div>
