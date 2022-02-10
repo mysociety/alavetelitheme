@@ -5,7 +5,7 @@
 # classes are reloaded, but initialization is not run each time.
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
-Rails.configuration.to_prepare do
+tRails.configuration.to_prepare do
   # Example adding an instance variable to the frontpage controller
   # GeneralController.class_eval do
   #   def mycontroller
@@ -17,4 +17,11 @@ Rails.configuration.to_prepare do
   #   def help_out
   #   end
   # end
+  Rails.application.routes.draw do
+  # brand new controller example
+  # get '/mycontroller' => 'general#mycontroller'
+  # Additional help page example
+   get '/help/terms' => 'help#terms'
+  end
 end
+
