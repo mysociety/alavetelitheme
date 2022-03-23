@@ -6,6 +6,10 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
+  HelpController.class_eval do
+    def terms; end
+  end
+end
   # Example adding an instance variable to the frontpage controller
   # GeneralController.class_eval do
   #   def mycontroller
@@ -17,11 +21,11 @@ Rails.configuration.to_prepare do
   #   def help_out
   #   end
   # end
-  Rails.application.routes.draw do
+  # Rails.application.routes.draw do
   # brand new controller example
   # get '/mycontroller' => 'general#mycontroller'
   # Additional help page example
-   get '/help/terms' => 'help#terms'
-  end
-end
+  # get '/help/terms' => 'help#terms'
+  # end
+# end
 
