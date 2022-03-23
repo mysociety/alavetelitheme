@@ -23,11 +23,11 @@ end
   #   def help_out
   #   end
   # end
-  # Rails.application.routes.draw do
+   Rails.application.routes.draw do
   # brand new controller example
   # get '/mycontroller' => 'general#mycontroller'
   # Additional help page example
-  # get '/help/terms' => 'help#terms'
-  # end
-# end
+   get '/help/terms' => 'help#terms'
+   end
+ end
 
