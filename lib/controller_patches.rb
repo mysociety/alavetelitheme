@@ -7,6 +7,8 @@
 #
 Rails.configuration.to_prepare do
   HelpController.class_eval do
+    before_action :set_history, except: :index
+    
     def terms; end
   end
 end
