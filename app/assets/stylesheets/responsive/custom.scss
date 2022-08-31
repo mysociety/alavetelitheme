@@ -345,7 +345,7 @@ a.link_button_green_large {
 }
 /* Notices, errors */
 
-#notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
+#notice, #error, .errorExplanation, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
   border-top: 10px solid;
   font-size: 1em;
   margin:1em 0;
@@ -364,7 +364,7 @@ a.link_button_green_large {
   }
 }
 
-#notice, #request_header_text {
+#notice {
   background-color: desaturate(lighten($notice-color, 30%),10%);
   border-color: $notice-color;
 }
