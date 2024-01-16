@@ -11,9 +11,12 @@ If everything from [dev](https://github.com/handlingar/handlingar-theme/tree/dev
 
 Then we push [main](https://github.com/handlingar/handlingar-theme/tree/main) branch to production server.
 
+### Deploy updates on development server or production server
+Use the following instructions to deploy changes that have been made. See this [link](https://gitlab.com/handlingar/handlingar/-/wikis/Uppdatera-tema) from Handlingar Wiki.
+
 Read more about project work order at: [Handlingar Wiki](https://gitlab.com/handlingar/handlingar/-/wikis/)
 
-This theme is based on Alavetelitheme example theme.
+This theme is based on Alavetelitheme example theme. Read more below.
 
 Alavetelitheme
 ==============
