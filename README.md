@@ -1,3 +1,16 @@
+Handlingar Theme
+==============
+
+All suggested changes are pushed into [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch.
+
+These are then tested on the development server.
+
+If everything from [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch works correctly on development server we then do a Pull Request (PR) to [main](https://github.com/handlingar/handlingar-theme/tree/main) branch.
+
+Read more about project work order at: [Handlingar Wiki](https://gitlab.com/handlingar/handlingar/-/wikis/)
+
+This theme is based on Alavetelitheme example theme.
+
 Alavetelitheme
 ==============
 
