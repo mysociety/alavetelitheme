@@ -1,11 +1,15 @@
 Handlingar Theme
 ==============
 
-All suggested changes are pushed into [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch.
+Create pull request from [alavetelitheme master branch](https://github.com/mysociety/alavetelitheme/tree/master) to our [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch.
 
-These are then tested on the development server.
+Then do your suggested changes and pushed into [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch.
+
+Test these changes on the development server.
 
 If everything from [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch works correctly on development server we then do a Pull Request (PR) to [main](https://github.com/handlingar/handlingar-theme/tree/main) branch.
+
+Then we push [main](https://github.com/handlingar/handlingar-theme/tree/main) branch to production server.
 
 Read more about project work order at: [Handlingar Wiki](https://gitlab.com/handlingar/handlingar/-/wikis/)
 
