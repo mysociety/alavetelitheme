@@ -1,3 +1,23 @@
+Handlingar Theme
+==============
+
+Create pull request from [alavetelitheme master branch](https://github.com/mysociety/alavetelitheme/tree/master) to our [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch.
+
+Then do your suggested changes and pushed into [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch.
+
+Test these changes on the development server.
+
+If everything from [dev](https://github.com/handlingar/handlingar-theme/tree/dev) branch works correctly on development server we then do a Pull Request (PR) to [main](https://github.com/handlingar/handlingar-theme/tree/main) branch.
+
+Then we push [main](https://github.com/handlingar/handlingar-theme/tree/main) branch to production server.
+
+### Deploy updates on development server or production server
+Use the following instructions to deploy changes that have been made. See this [link](https://gitlab.com/handlingar/handlingar/-/wikis/Uppdatera-tema) from Handlingar Wiki.
+
+Read more about project work order at: [Handlingar Wiki](https://gitlab.com/handlingar/handlingar/-/wikis/)
+
+This theme is based on Alavetelitheme example theme. Read more below.
+
 Alavetelitheme
 ==============
 

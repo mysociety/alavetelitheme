@@ -5,3 +5,6 @@
 #
 # msgid "Skapa och bläddra bland förfrågningar om allmänna handlingar enligt offentlighetsprincipen"
 # msgstr "Skapa och hitta förfrågningar om allmänna handlingar"
+
+msgid "Services"
+msgstr "Tjänster"
