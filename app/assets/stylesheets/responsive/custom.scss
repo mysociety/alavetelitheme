@@ -895,13 +895,8 @@ dt {
     background-image: image-url('homepage-background.jpg');
   }
 
-  a {
-    color: $color_secondary;
-    &:hover,
-    &:active,
-    &:focus {
+  a, a:hover, a:active, a:focus {
       color: $color_white;
-    }
   }
 
   .intro__title {
