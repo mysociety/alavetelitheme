@@ -895,18 +895,17 @@ dt {
     background-image: image-url('homepage-background.jpg');
   }
 
-  a {
-    color: $color_secondary;
-    &:hover,
-    &:active,
-    &:focus {
+  a, a:hover, a:active, a:focus {
       color: $color_white;
-    }
   }
 
   .intro__title {
     color: $color_white;
     text-shadow: 0 1px 2px transparentize($color_black, 0.7);
+  }
+
+  .intro__browse a {
+    color: $color_white;
   }
 
   .new-request__content {

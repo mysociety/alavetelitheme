@@ -4,6 +4,7 @@
 /sqlitedbs
 /cache
 /old-cache
+/.vscode
 .*.swp
 *~
 *#*#
