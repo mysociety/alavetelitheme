@@ -715,6 +715,13 @@ a.link_to_this {
   */
 }
 
+/* Layout for lists of requests, authorities, users */
+.request_listing,.body_listing,.user_listing {
+  .head {
+    line-height: 1.7em;
+  }
+}
+
 /* Status lines and icons */
 .icon_waiting_classification,
 .icon_waiting_response,
