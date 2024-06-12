@@ -10,15 +10,11 @@
   <%= link_to _("View authorities"), list_public_bodies_default_path %>
 </li>
 
-<li><%= link_to _("Pro"), 'https://handlingar.se/sv/pro' %></li>
-
+<li><%= link_to _("Pro"), account_request_index_path %></li>
 
 <li><%= link_to _("Services"), 'https://about.handlingar.se/' %></li>
 
-<li><%= link_to _("Read blog"), 'https://handlingar.se/blog' %></li>
-
-
-
+<li><%= link_to _("Read blog"), blog_path %></li>
 
 <li class="<%= 'selected' if controller?('help') %>">
   <%= link_to _("Help"), help_about_path %>
