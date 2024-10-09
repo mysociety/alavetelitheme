@@ -277,8 +277,15 @@ a.link_button_green_large {
 /* Popups */
 
 .popup {
-  background-color: desaturate(lighten($notice-color, 30%),10%);
-  border: 3px solid $notice-color;
+  background-color: $color_black;
+  color: $color_white;
+
+  a, a:hover, a:active, a:focus, a:visited,
+  a:visited:hover,
+  a:visited:active,
+  a:visited:focus {
+    color: $color_white;
+  }
 }
 
 
